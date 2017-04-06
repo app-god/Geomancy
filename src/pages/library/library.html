@@ -10,6 +10,9 @@
 
   <ion-list>
     <ion-item *ngFor="let tetragram of tetragrams">
+      <div style="float: left; width: 100px;">
+        <tetragram [key]="tetragram.key"></tetragram>
+      </div>
       <h1>{{tetragram.name}}</h1>
     </ion-item>
   </ion-list>

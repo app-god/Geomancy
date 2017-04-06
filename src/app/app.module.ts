@@ -9,6 +9,7 @@ import { TabsPage } from '../pages/tabs/tabs';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { TetragramComponent } from '../components/tetragram/tetragram';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     HistoryPage,
     LibraryPage,
     NewPage,
-    TabsPage
+    TabsPage,
+    TetragramComponent
   ],
   imports: [
     BrowserModule,
