@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 
-import { NavController } from 'ionic-angular';
+import { NavController, ModalController } from 'ionic-angular';
+import { ReadingPage } from '../reading/reading'
 
 @Component({
   selector: 'page-new',
@@ -8,8 +9,13 @@ import { NavController } from 'ionic-angular';
 })
 export class NewPage {
 
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController, private modCtrl: ModalController) {
 
+  }
+
+  clickStart() {
+    let readingModal = this.modCtrl.create(ReadingPage)
+    readingModal.present()
   }
 
 }

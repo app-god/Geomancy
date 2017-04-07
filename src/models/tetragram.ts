@@ -8,13 +8,23 @@ export class Tetragram {
   row2: number
   row3: number
 
-  constructor(public key: number) {
+  constructor(public key: number = Math.floor(Math.random() * 15)) {
+    console.log(key)
     this.name = tetragramData[key].name
 
     this.row0 = (key >> 0) % 2
     this.row1 = (key >> 1) % 2
     this.row2 = (key >> 2) % 2
     this.row3 = (key >> 3) % 2
+  }
+
+  add(tetragram: Tetragram): Tetragram {
+    let row0 = (this.row0 + tetragram.row0 + 1) % 2
+    let row1 = (this.row1 + tetragram.row1 + 1) % 2
+    let row2 = (this.row2 + tetragram.row2 + 1) % 2
+    let row3 = (this.row3 + tetragram.row3 + 1) % 2
+    let key = (row3 << 3) + (row2 << 2) + (row1 << 1) + (row0 << 0)
+    return new Tetragram(key)
   }
 }
 
