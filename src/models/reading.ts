@@ -17,7 +17,7 @@ export class Reading {
   witness1: Tetragram
   judge: Tetragram
 
-  constructor() {
+  constructor(public question: string) {
     this.mother0 = new Tetragram()
     this.mother1 = new Tetragram()
     this.mother2 = new Tetragram()

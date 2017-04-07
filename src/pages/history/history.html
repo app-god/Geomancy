@@ -8,7 +8,9 @@
 
 <ion-content>
   <ion-list>
-    <ion-item>
+    <ion-item *ngFor="let reading of readings.reverse()">
+      <tetragram [tetragram]="reading.judge"></tetragram>
+      {{reading.question}}
     </ion-item>
   </ion-list>
 </ion-content>

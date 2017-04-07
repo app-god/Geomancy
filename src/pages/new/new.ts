@@ -9,12 +9,16 @@ import { ReadingPage } from '../reading/reading'
 })
 export class NewPage {
 
+  question: string = ''
+
   constructor(public navCtrl: NavController, private modCtrl: ModalController) {
 
   }
 
   clickStart() {
-    let readingModal = this.modCtrl.create(ReadingPage)
+    let readingModal = this.modCtrl.create(ReadingPage, {
+      question: this.question
+    })
     readingModal.present()
   }
 

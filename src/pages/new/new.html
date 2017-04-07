@@ -8,7 +8,7 @@
   <ion-list>
     <ion-item>
       <ion-label>Question</ion-label>
-      <ion-input placeholder="Enter Question Here"></ion-input>
+      <ion-input [(ngModel)]="question" placeholder="Enter Question Here"></ion-input>
     </ion-item>
   </ion-list>
   <button ion-button block large (click)="clickStart()">Start</button>

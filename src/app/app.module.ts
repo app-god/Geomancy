@@ -1,6 +1,8 @@
 import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser'
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
+import { IonicStorageModule } from '@ionic/storage'
+
 import { MyApp } from './app.component';
 import { HistoryPage } from '../pages/history/history';
 import { LibraryPage } from '../pages/library/library';
@@ -24,7 +26,8 @@ import { TetragramComponent } from '../components/tetragram/tetragram';
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    IonicStorageModule.forRoot()
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -36,6 +39,7 @@ import { TetragramComponent } from '../components/tetragram/tetragram';
     TabsPage
   ],
   providers: [
+    Storage,
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
