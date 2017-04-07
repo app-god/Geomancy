@@ -1,22 +1,13 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Tetragram } from '../../models/tetragram'
 
-/**
- * Generated class for the TetragramComponent component.
- *
- * See https://angular.io/docs/ts/latest/api/core/index/ComponentMetadata-class.html
- * for more info on Angular Components.
- */
 @Component({
   selector: 'tetragram',
   templateUrl: 'tetragram.html'
 })
-export class TetragramComponent implements OnInit {
+export class TetragramComponent {
 
-  @Input() key: number;
-  row0: number
-  row1: number
-  row2: number
-  row3: number
+  @Input() tetragram: Tetragram
 
   constructor() {
   }
@@ -28,12 +19,4 @@ export class TetragramComponent implements OnInit {
       return '0    0'
     }
   }
-
-  ngOnInit() {
-    this.row0 = (this.key >> 0) % 2
-    this.row1 = (this.key >> 1) % 2
-    this.row2 = (this.key >> 2) % 2
-    this.row3 = (this.key >> 3) % 2
-  }
-
 }

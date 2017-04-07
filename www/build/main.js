@@ -57157,6 +57157,7 @@ HistoryPage = __decorate([
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(39);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__models_tetragram__ = __webpack_require__(310);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LibraryPage; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -57169,81 +57170,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
+
 var LibraryPage = (function () {
     function LibraryPage(navCtrl) {
         this.navCtrl = navCtrl;
-        this.tetragrams = [
-            {
-                key: 0,
-                name: 'Via'
-            },
-            {
-                key: 1,
-                name: 'Caput Draconis'
-            },
-            {
-                key: 2,
-                name: 'Puella'
-            },
-            {
-                key: 3,
-                name: 'Fortuna Major'
-            },
-            {
-                key: 4,
-                name: 'Puer'
-            },
-            {
-                key: 5,
-                name: 'Acquisitio'
-            },
-            {
-                key: 6,
-                name: 'Carcer'
-            },
-            {
-                key: 7,
-                name: 'Tristitia'
-            },
-            {
-                key: 8,
-                name: 'Cauda Draconis'
-            },
-            {
-                key: 9,
-                name: 'Conjunctio'
-            },
-            {
-                key: 10,
-                name: 'Amissio'
-            },
-            {
-                key: 11,
-                name: 'Albus'
-            },
-            {
-                key: 12,
-                name: 'Fortuna Minor'
-            },
-            {
-                key: 13,
-                name: 'Rubeus'
-            },
-            {
-                key: 14,
-                name: 'Laetitia'
-            },
-            {
-                key: 15,
-                name: 'Populus'
-            }
-        ];
+        this.tetragrams = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+            .map(function (i) { return new __WEBPACK_IMPORTED_MODULE_2__models_tetragram__["a" /* Tetragram */](i); });
     }
     return LibraryPage;
 }());
 LibraryPage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* Component */])({
-        selector: 'page-library',template:/*ion-inline-start:"/Users/adam/AppGod/geomancy/src/pages/library/library.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      Library\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n\n  <ion-list>\n    <ion-item *ngFor="let tetragram of tetragrams">\n      <div style="float: left; width: 100px;">\n        <tetragram [key]="tetragram.key"></tetragram>\n      </div>\n      <h1>{{tetragram.name}}</h1>\n    </ion-item>\n  </ion-list>\n\n</ion-content>\n'/*ion-inline-end:"/Users/adam/AppGod/geomancy/src/pages/library/library.html"*/
+        selector: 'page-library',template:/*ion-inline-start:"/Users/adam/AppGod/geomancy/src/pages/library/library.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      Library\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n\n  <ion-list>\n    <ion-item *ngFor="let tetragram of tetragrams">\n      <div style="float: left; width: 100px;">\n        <tetragram [tetragram]="tetragram"></tetragram>\n      </div>\n      <h1>{{tetragram.name}}</h1>\n    </ion-item>\n  </ion-list>\n\n</ion-content>\n'/*ion-inline-end:"/Users/adam/AppGod/geomancy/src/pages/library/library.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* NavController */]])
 ], LibraryPage);
@@ -114317,6 +114255,7 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dyna
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__models_tetragram__ = __webpack_require__(310);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TetragramComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -114328,12 +114267,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
-/**
- * Generated class for the TetragramComponent component.
- *
- * See https://angular.io/docs/ts/latest/api/core/index/ComponentMetadata-class.html
- * for more info on Angular Components.
- */
+
 var TetragramComponent = (function () {
     function TetragramComponent() {
     }
@@ -114346,24 +114280,106 @@ var TetragramComponent = (function () {
         }
     };
     TetragramComponent.prototype.ngOnInit = function () {
-        this.row0 = (this.key >> 0) % 2;
-        this.row1 = (this.key >> 1) % 2;
-        this.row2 = (this.key >> 2) % 2;
-        this.row3 = (this.key >> 3) % 2;
     };
     return TetragramComponent;
 }());
 __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* Input */])(),
-    __metadata("design:type", Number)
-], TetragramComponent.prototype, "key", void 0);
+    __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1__models_tetragram__["a" /* Tetragram */])
+], TetragramComponent.prototype, "tetragram", void 0);
 TetragramComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* Component */])({
-        selector: 'tetragram',template:/*ion-inline-start:"/Users/adam/AppGod/geomancy/src/components/tetragram/tetragram.html"*/'<!-- Generated template for the TetragramComponent component -->\n<div>\n  {{renderRow(row0)}}\n</div>\n<div>\n  {{renderRow(row1)}}\n</div>\n<div>\n  {{renderRow(row2)}}\n</div>\n<div>\n  {{renderRow(row3)}}\n</div>\n'/*ion-inline-end:"/Users/adam/AppGod/geomancy/src/components/tetragram/tetragram.html"*/
+        selector: 'tetragram',template:/*ion-inline-start:"/Users/adam/AppGod/geomancy/src/components/tetragram/tetragram.html"*/'<!-- Generated template for the TetragramComponent component -->\n<div>\n  {{renderRow(tetragram.row0)}}\n</div>\n<div>\n  {{renderRow(tetragram.row1)}}\n</div>\n<div>\n  {{renderRow(tetragram.row2)}}\n</div>\n<div>\n  {{renderRow(tetragram.row3)}}\n</div>\n'/*ion-inline-end:"/Users/adam/AppGod/geomancy/src/components/tetragram/tetragram.html"*/
     }),
     __metadata("design:paramtypes", [])
 ], TetragramComponent);
 
+//# sourceMappingURL=tetragram.js.map
+
+/***/ }),
+/* 310 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Tetragram; });
+var Tetragram = (function () {
+    function Tetragram(key) {
+        this.key = key;
+        this.name = tetragramData[key].name;
+        this.row0 = (key >> 0) % 2;
+        this.row1 = (key >> 1) % 2;
+        this.row2 = (key >> 2) % 2;
+        this.row3 = (key >> 3) % 2;
+    }
+    return Tetragram;
+}());
+
+var tetragramData = [
+    {
+        key: 0,
+        name: 'Via'
+    },
+    {
+        key: 1,
+        name: 'Caput Draconis'
+    },
+    {
+        key: 2,
+        name: 'Puella'
+    },
+    {
+        key: 3,
+        name: 'Fortuna Major'
+    },
+    {
+        key: 4,
+        name: 'Puer'
+    },
+    {
+        key: 5,
+        name: 'Acquisitio'
+    },
+    {
+        key: 6,
+        name: 'Carcer'
+    },
+    {
+        key: 7,
+        name: 'Tristitia'
+    },
+    {
+        key: 8,
+        name: 'Cauda Draconis'
+    },
+    {
+        key: 9,
+        name: 'Conjunctio'
+    },
+    {
+        key: 10,
+        name: 'Amissio'
+    },
+    {
+        key: 11,
+        name: 'Albus'
+    },
+    {
+        key: 12,
+        name: 'Fortuna Minor'
+    },
+    {
+        key: 13,
+        name: 'Rubeus'
+    },
+    {
+        key: 14,
+        name: 'Laetitia'
+    },
+    {
+        key: 15,
+        name: 'Populus'
+    }
+];
 //# sourceMappingURL=tetragram.js.map
 
 /***/ })
