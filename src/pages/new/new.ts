@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 import { NavController, ModalController } from 'ionic-angular';
-import { ReadingPage } from '../reading/reading'
+import { RandomPage } from '../random/random'
 
 @Component({
   selector: 'page-new',
@@ -16,10 +16,10 @@ export class NewPage {
   }
 
   clickStart() {
-    let readingModal = this.modCtrl.create(ReadingPage, {
+    let randomModal = this.modCtrl.create(RandomPage, {
       question: this.question
     })
-    readingModal.present()
+    randomModal.present()
   }
 
 }

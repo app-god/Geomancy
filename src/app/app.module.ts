@@ -9,6 +9,7 @@ import { LibraryPage } from '../pages/library/library';
 import { NewPage } from '../pages/new/new';
 import { TabsPage } from '../pages/tabs/tabs';
 import { ReadingPage } from '../pages/reading/reading';
+import { RandomPage } from '../pages/random/random';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -22,6 +23,7 @@ import { TetragramComponent } from '../components/tetragram/tetragram';
     NewPage,
     TabsPage,
     ReadingPage,
+    RandomPage,
     TetragramComponent
   ],
   imports: [
@@ -36,6 +38,7 @@ import { TetragramComponent } from '../components/tetragram/tetragram';
     HistoryPage,
     NewPage,
     ReadingPage,
+    RandomPage,
     TabsPage
   ],
   providers: [

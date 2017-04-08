@@ -19,15 +19,7 @@ export class ReadingPage {
   reading: Reading
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public storage: Storage) {
-    let question = navParams.get('question')
-    this.reading = new Reading(question)
-
-    storage.get('history').then(history => {
-      history = history || []
-      history.push(this.reading)
-      storage.set('history', history)
-    })
-
+    this.reading = navParams.get('reading')
   }
 
   ionViewDidLoad() {
