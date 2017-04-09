@@ -22,8 +22,7 @@ export class HistoryPage {
   }
 
   showReading(reading) {
-    let readingModal = this.modCtrl.create(ReadingPage, { reading: reading })
-    readingModal.present()
+    this.navCtrl.push(ReadingPage, { reading: reading })
   }
 
 }

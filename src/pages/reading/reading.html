@@ -7,12 +7,45 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>reading</ion-title>
+    <ion-title>Reading</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
-  <tetragram [tetragram]="reading.judge"></tetragram>
+  <ion-list>
+    <ion-list-header>Mothers</ion-list-header>
+    <ion-item><tetragram [tetragram]="reading.mother0"></tetragram></ion-item>
+    <ion-item><tetragram [tetragram]="reading.mother1"></tetragram></ion-item>
+    <ion-item><tetragram [tetragram]="reading.mother2"></tetragram></ion-item>
+    <ion-item><tetragram [tetragram]="reading.mother3"></tetragram></ion-item>
+  </ion-list>
+
+  <ion-list>
+    <ion-list-header>Daughters</ion-list-header>
+    <ion-item><tetragram [tetragram]="reading.daughter0"></tetragram></ion-item>
+    <ion-item><tetragram [tetragram]="reading.daughter1"></tetragram></ion-item>
+    <ion-item><tetragram [tetragram]="reading.daughter2"></tetragram></ion-item>
+    <ion-item><tetragram [tetragram]="reading.daughter3"></tetragram></ion-item>
+  </ion-list>
+
+  <ion-list>
+    <ion-list-header>Nephews</ion-list-header>
+    <ion-item><tetragram [tetragram]="reading.nephew0"></tetragram></ion-item>
+    <ion-item><tetragram [tetragram]="reading.nephew1"></tetragram></ion-item>
+    <ion-item><tetragram [tetragram]="reading.nephew2"></tetragram></ion-item>
+    <ion-item><tetragram [tetragram]="reading.nephew3"></tetragram></ion-item>
+  </ion-list>
+
+  <ion-list>
+    <ion-list-header>Witnesses</ion-list-header>
+    <ion-item><tetragram [tetragram]="reading.witness0"></tetragram></ion-item>
+    <ion-item><tetragram [tetragram]="reading.witness1"></tetragram></ion-item>
+  </ion-list>
+
+  <ion-list>
+    <ion-list-header>Judge</ion-list-header>
+    <ion-item><tetragram [tetragram]="reading.judge"></tetragram></ion-item>
+  </ion-list>
 </ion-content>

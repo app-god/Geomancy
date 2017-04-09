@@ -17,12 +17,15 @@ export class Reading {
   witness1: Tetragram
   judge: Tetragram
 
+  date: number
+
   constructor(public question: string) {
+    this.date = Date.now()
     this.mother0 = new Tetragram()
     this.mother1 = new Tetragram()
     this.mother2 = new Tetragram()
     this.mother3 = new Tetragram()
-    console.log(this.mother0)
+
     this.daughter0 = this.createKeyFromRows(
       this.mother0.row0,
       this.mother1.row0,
