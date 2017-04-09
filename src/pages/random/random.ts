@@ -20,12 +20,16 @@ export class RandomPage {
     let question = navParams.get('question')
     this.reading = new Reading(question)
 
-    storage.get('history').then(history => {
-      history = history || []
-      history.push(this.reading)
-      storage.set('history', history)
+    storage.ready().then(() => {
+      storage.get('history').then(history => {
+        history = history || []
+        history.push(this.reading)
+        storage.set('history', history)
+        console.log(this.reading)
+        console.log(history)
+      })
     })
-    
+
     let modReading = this.modCtrl.create(ReadingPage, { reading: this.reading })
     modReading.present()
     this.viewCtrl.dismiss()

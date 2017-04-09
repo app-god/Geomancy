@@ -68,6 +68,5 @@ export class Reading {
     let r3 = row3 % 2
     let key = (r3 << 3) + (r2 << 2) + (r1 << 1) + (r0 << 0)
     return new Tetragram(key)
-
   }
 }

@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { NavController, ModalController } from 'ionic-angular';
 import { Storage } from '@ionic/storage'
 import { ReadingPage } from '../reading/reading'
+import { Reading } from '../../models/reading'
 
 @Component({
   selector: 'page-history',
@@ -16,8 +17,10 @@ export class HistoryPage {
   }
 
   ionViewWillEnter() {
-    this.storage.get('history').then(history => {
-      this.readings = history
+    this.storage.ready().then(() => {
+      this.storage.get('history').then(history => {
+        this.readings = history
+      })
     })
   }
 

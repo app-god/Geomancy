@@ -14,6 +14,9 @@
 
 
 <ion-content padding>
+  question: {{reading.question}}
+  <br>
+  date: {{reading.date | date}}
   <ion-list>
     <ion-list-header>Mothers</ion-list-header>
     <ion-item><tetragram [tetragram]="reading.mother0"></tetragram></ion-item>

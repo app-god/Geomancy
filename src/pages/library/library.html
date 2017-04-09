@@ -9,10 +9,11 @@
 <ion-content padding>
 
   <ion-list>
+    <ion-list-header>Tetragrams</ion-list-header>
     <ion-item *ngFor="let tetragram of tetragrams">
-      <div style="float: left; width: 20vw;">
+      <ion-thumbnail item-left>
         <tetragram [tetragram]="tetragram"></tetragram>
-      </div>
+      </ion-thumbnail>
       <h1>{{tetragram.name}}</h1>
     </ion-item>
   </ion-list>
