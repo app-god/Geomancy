@@ -17,6 +17,11 @@ export class Reading {
   witness1: Tetragram
   judge: Tetragram
 
+  mothers: Tetragram[]
+  daughters: Tetragram[]
+  nephews: Tetragram[]
+  witnesses: Tetragram[]
+
   date: number
 
   constructor(public question: string) {
@@ -25,6 +30,7 @@ export class Reading {
     this.mother1 = new Tetragram()
     this.mother2 = new Tetragram()
     this.mother3 = new Tetragram()
+    this.mothers = [this.mother0, this.mother1, this.mother2, this.mother3]
 
     this.daughter0 = this.createKeyFromRows(
       this.mother0.row0,
@@ -50,13 +56,16 @@ export class Reading {
       this.mother2.row3,
       this.mother3.row3
     )
+    this.daughters = [this.daughter0, this.daughter1, this.daughter2, this.daughter3]
     this.nephew0 = this.mother0.add(this.mother1)
     this.nephew1 = this.mother2.add(this.mother3)
     this.nephew2 = this.daughter0.add(this.daughter1)
     this.nephew3 = this.daughter2.add(this.daughter3)
+    this.nephews = [this.nephew0, this.nephew1, this.nephew2, this.nephew3]
 
     this.witness0 = this.nephew0.add(this.nephew1)
     this.witness1 = this.nephew2.add(this.nephew3)
+    this.witnesses = [this.witness0, this.witness1]
 
     this.judge = this.witness0.add(this.witness1)
   }

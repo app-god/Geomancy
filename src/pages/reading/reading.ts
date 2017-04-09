@@ -1,3 +1,4 @@
+import { Tetragram } from "../../models/tetragram";
 import { Reading } from "../../models/reading";
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';

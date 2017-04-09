@@ -18,6 +18,9 @@ export class RandomPage {
     public viewCtrl: ViewController) {
 
     let question = navParams.get('question')
+    if (question == '') {
+      question = "(blank)"
+    }
     this.reading = new Reading(question)
 
     storage.ready().then(() => {

@@ -17,56 +17,46 @@
   <h1>{{reading.question}}</h1>
   <ion-list>
     <ion-list-header>Mothers</ion-list-header>
-    <ion-item>
+    <ion-item *ngFor="let mother of reading.mothers">
       <ion-thumbnail item-left>
-        <tetragram [tetragram]="reading.mother0"></tetragram>
+        <tetragram [tetragram]="mother"></tetragram>
       </ion-thumbnail>
-      <h1>{{reading.mother0.name}}</h1>
-      <p>{{reading.mother0.desc}}</p>
-    </ion-item>
-    <ion-item>
-      <ion-thumbnail item-left>
-        <tetragram [tetragram]="reading.mother1"></tetragram>
-      </ion-thumbnail>
-      <h1>{{reading.mother1.name}}</h1>
-      <p>{{reading.mother1.desc}}</p>
-    </ion-item>
-    <ion-item>
-      <ion-thumbnail item-left>
-        <tetragram [tetragram]="reading.mother2"></tetragram>
-      </ion-thumbnail>
-      <h1>{{reading.mother2.name}}</h1>
-      <p>{{reading.mother2.desc}}</p>
-    </ion-item>
-    <ion-item>
-      <ion-thumbnail item-left>
-        <tetragram [tetragram]="reading.mother3"></tetragram>
-      </ion-thumbnail>
-      <h1>{{reading.mother3.name}}</h1>
-      <p>{{reading.mother3.desc}}</p>
+      <h1>{{mother.name}}</h1>
+      <p>{{mother.desc}}</p>
     </ion-item>
   </ion-list>
 
   <ion-list>
     <ion-list-header>Daughters</ion-list-header>
-    <ion-item><tetragram [tetragram]="reading.daughter0"></tetragram></ion-item>
-    <ion-item><tetragram [tetragram]="reading.daughter1"></tetragram></ion-item>
-    <ion-item><tetragram [tetragram]="reading.daughter2"></tetragram></ion-item>
-    <ion-item><tetragram [tetragram]="reading.daughter3"></tetragram></ion-item>
+    <ion-item *ngFor="let daughter of reading.daughters">
+      <ion-thumbnail item-left>
+        <tetragram [tetragram]="daughter"></tetragram>
+      </ion-thumbnail>
+      <h1>{{daughter.name}}</h1>
+      <p>{{daughter.desc}}</p>
+    </ion-item>
   </ion-list>
 
   <ion-list>
     <ion-list-header>Nephews</ion-list-header>
-    <ion-item><tetragram [tetragram]="reading.nephew0"></tetragram></ion-item>
-    <ion-item><tetragram [tetragram]="reading.nephew1"></tetragram></ion-item>
-    <ion-item><tetragram [tetragram]="reading.nephew2"></tetragram></ion-item>
-    <ion-item><tetragram [tetragram]="reading.nephew3"></tetragram></ion-item>
+    <ion-item *ngFor="let nephew of reading.nephews">
+      <ion-thumbnail item-left>
+        <tetragram [tetragram]="nephew"></tetragram>
+      </ion-thumbnail>
+      <h1>{{nephew.name}}</h1>
+      <p>{{nephew.desc}}</p>
+    </ion-item>
   </ion-list>
 
   <ion-list>
     <ion-list-header>Witnesses</ion-list-header>
-    <ion-item><tetragram [tetragram]="reading.witness0"></tetragram></ion-item>
-    <ion-item><tetragram [tetragram]="reading.witness1"></tetragram></ion-item>
+    <ion-item *ngFor="let witness of reading.witnesses">
+      <ion-thumbnail item-left>
+        <tetragram [tetragram]="witness"></tetragram>
+      </ion-thumbnail>
+      <h1>{{witness.name}}</h1>
+      <p>{{witness.desc}}</p>
+    </ion-item>
   </ion-list>
 
   <ion-list>
