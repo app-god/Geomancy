@@ -25,4 +25,10 @@ export class HistoryPage {
     this.navCtrl.push(ReadingPage, { reading: reading })
   }
 
+  deleteReading(reading) {
+    let readingIndex = this.readings.indexOf(reading)
+    this.readings.splice(readingIndex, 1)
+    this.storage.set('history', this.readings)
+  }
+
 }
