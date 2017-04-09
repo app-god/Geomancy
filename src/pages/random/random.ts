@@ -25,13 +25,14 @@ export class RandomPage {
       history.push(this.reading)
       storage.set('history', history)
     })
+    
+    let modReading = this.modCtrl.create(ReadingPage, { reading: this.reading })
+    modReading.present()
+    this.viewCtrl.dismiss()
 
   }
 
   ionViewDidLoad() {
-    let modReading = this.modCtrl.create(ReadingPage, { reading: this.reading })
-    modReading.present()
-    this.viewCtrl.dismiss()
   }
 
 }
