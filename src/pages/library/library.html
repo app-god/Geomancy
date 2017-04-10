@@ -10,13 +10,13 @@
 
   <ion-list>
     <ion-list-header>Tetragrams</ion-list-header>
-    <ion-item *ngFor="let tetragram of tetragrams">
+    <button ion-item *ngFor="let tetragram of tetragrams" (click)="showTetragram(tetragram)">
       <ion-thumbnail item-left>
         <tetragram [tetragram]="tetragram"></tetragram>
       </ion-thumbnail>
       <h1>{{tetragram.name}}</h1>
       <p>{{tetragram.desc}}</p>
-    </ion-item>
+    </button>
   </ion-list>
 
 </ion-content>

@@ -22,7 +22,7 @@
   <h1>{{reading.question}}</h1>
   <ion-list>
     <ion-list-header>Mothers</ion-list-header>
-    <ion-item *ngFor="let mother of reading.mothers">
+    <ion-item *ngFor="let mother of reading.mothers" (click)="showTetragram(mother)">
       <ion-thumbnail item-left>
         <tetragram [tetragram]="mother"></tetragram>
       </ion-thumbnail>
@@ -33,7 +33,7 @@
 
   <ion-list>
     <ion-list-header>Daughters</ion-list-header>
-    <ion-item *ngFor="let daughter of reading.daughters">
+    <ion-item *ngFor="let daughter of reading.daughters" (click)="showTetragram(daughter)">
       <ion-thumbnail item-left>
         <tetragram [tetragram]="daughter"></tetragram>
       </ion-thumbnail>
@@ -44,7 +44,7 @@
 
   <ion-list>
     <ion-list-header>Nephews</ion-list-header>
-    <ion-item *ngFor="let nephew of reading.nephews">
+    <ion-item *ngFor="let nephew of reading.nephews" (click)="showTetragram(nephew)">
       <ion-thumbnail item-left>
         <tetragram [tetragram]="nephew"></tetragram>
       </ion-thumbnail>
@@ -55,7 +55,7 @@
 
   <ion-list>
     <ion-list-header>Witnesses</ion-list-header>
-    <ion-item *ngFor="let witness of reading.witnesses">
+    <ion-item *ngFor="let witness of reading.witnesses" (click)="showTetragram(witness)">
       <ion-thumbnail item-left>
         <tetragram [tetragram]="witness"></tetragram>
       </ion-thumbnail>
@@ -66,7 +66,7 @@
 
   <ion-list>
     <ion-list-header>Judge</ion-list-header>
-    <ion-item>
+    <ion-item (click)="showTetragram(judge)">
       <ion-thumbnail item-left>
         <tetragram [tetragram]="reading.judge"></tetragram>
       </ion-thumbnail>
