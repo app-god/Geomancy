@@ -15,9 +15,12 @@ import { Tetragram } from '../../models/tetragram'
 })
 export class TetragramPage {
   tetragram: Tetragram
+  house: number
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.tetragram = navParams.get('tetragram')
+    console.log(this.tetragram)
+    this.house = navParams.get('house')
   }
 
   ionViewDidLoad() {

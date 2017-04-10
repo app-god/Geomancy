@@ -6,15 +6,15 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content>
   <ion-list no-lines>
     <ion-item-sliding *ngFor="let reading of readings.reverse()">
       <button ion-item (click)="showReading(reading)">
         <ion-thumbnail item-left>
           <tetragram [tetragram]="reading.judge"></tetragram>
         </ion-thumbnail>
-        <p style="float: right">{{reading.date | date:'medium'}}</p>
         <h1>{{reading.question}}</h1>
+        <p>{{reading.date | date:'medium'}}</p>
       </button>
 
       <ion-item-options side="right">

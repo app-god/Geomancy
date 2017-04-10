@@ -28,8 +28,8 @@ export class ReadingPage {
   ionViewDidLoad() {
   }
 
-  showTetragram(tetragram) {
-    this.navCtrl.push(TetragramPage, { tetragram: tetragram })
+  showTetragram(tetragram, house?: number) {
+    this.navCtrl.push(TetragramPage, { tetragram: tetragram, house: house })
   }
 
   close() {

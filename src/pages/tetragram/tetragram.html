@@ -7,14 +7,19 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>Tetragram</ion-title>
+    <ion-title>{{tetragram.name}}</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
-  <tetragram [tetragram]="tetragram"></tetragram>
-  <h1>{{tetragram.name}}</h1>
+  <div style="font-size: 200%;">
+    <tetragram [tetragram]="tetragram"></tetragram>
+  </div>
   <p>{{tetragram.desc}}</p>
+  <div *ngIf="house">
+    <h1>{{tetragram.name}} in house #{{house}}</h1>
+    <p>{{tetragram.interpretations[house - 1]}}</p>
+  </div>
 </ion-content>
