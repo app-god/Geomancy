@@ -25,7 +25,8 @@ export class HistoryPage {
   }
 
   showReading(reading) {
-    this.navCtrl.push(ReadingPage, { reading: reading })
+    let readingModal = this.modCtrl.create(ReadingPage, { reading: reading })
+    readingModal.present()
   }
 
   deleteReading(reading) {

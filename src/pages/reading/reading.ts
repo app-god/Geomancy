@@ -1,7 +1,7 @@
 import { Tetragram } from "../../models/tetragram";
 import { Reading } from "../../models/reading";
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ViewController } from 'ionic-angular';
 import { Storage } from '@ionic/storage'
 
 /**
@@ -19,11 +19,16 @@ export class ReadingPage {
 
   reading: Reading
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public storage: Storage) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public storage: Storage,
+    public viewCtrl: ViewController) {
     this.reading = navParams.get('reading')
   }
 
   ionViewDidLoad() {
+  }
+
+  close() {
+    this.viewCtrl.dismiss()
   }
 
 }
