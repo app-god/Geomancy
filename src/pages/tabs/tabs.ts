@@ -1,9 +1,11 @@
+import { IonicPage } from "ionic-angular";
 import { Component } from '@angular/core';
 
 import { NewPage } from '../new/new';
 import { LibraryPage } from '../library/library';
 import { HistoryPage } from '../history/history';
 
+@IonicPage()
 @Component({
   templateUrl: 'tabs.html'
 })

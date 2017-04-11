@@ -7,9 +7,7 @@ import { MyApp } from './app.component';
 import { HistoryPage } from '../pages/history/history';
 import { LibraryPage } from '../pages/library/library';
 import { NewPage } from '../pages/new/new';
-import { TabsPage } from '../pages/tabs/tabs';
 import { ReadingPage } from '../pages/reading/reading';
-import { RandomPage } from '../pages/random/random';
 import { TetragramPage } from '../pages/tetragram/tetragram';
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -22,9 +20,7 @@ import { TetragramComponent } from '../components/tetragram/tetragram';
     HistoryPage,
     LibraryPage,
     NewPage,
-    TabsPage,
     ReadingPage,
-    RandomPage,
     TetragramPage,
     TetragramComponent
   ],
@@ -40,9 +36,7 @@ import { TetragramComponent } from '../components/tetragram/tetragram';
     HistoryPage,
     NewPage,
     ReadingPage,
-    RandomPage,
-    TetragramPage,
-    TabsPage
+    TetragramPage
   ],
   providers: [
     Storage,

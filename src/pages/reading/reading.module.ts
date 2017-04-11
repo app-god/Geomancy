@@ -4,10 +4,10 @@ import { ReadingPage } from './reading';
 
 @NgModule({
   declarations: [
-    ReadingPage,
+    ReadingPage
   ],
   imports: [
-    IonicPageModule.forChild(ReadingPage),
+    IonicPageModule.forChild(ReadingPage)
   ],
   exports: [
     ReadingPage
