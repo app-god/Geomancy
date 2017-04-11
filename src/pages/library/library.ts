@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 
-import { NavController } from 'ionic-angular';
+import { NavController, IonicPage } from 'ionic-angular';
 
 import { Tetragram } from '../../models/tetragram'
-import { TetragramPage } from '../tetragram/tetragram'
 
+@IonicPage()
 @Component({
   selector: 'page-library',
   templateUrl: 'library.html'
@@ -19,7 +19,7 @@ export class LibraryPage {
   }
 
   showTetragram(tetragram) {
-    this.navCtrl.push(TetragramPage, { tetragram: tetragram })
+    this.navCtrl.push('TetragramPage', { tetragram: tetragram })
   }
 
 }

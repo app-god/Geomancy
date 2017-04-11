@@ -1,10 +1,9 @@
 import { Component } from '@angular/core';
 
-import { NavController, ModalController } from 'ionic-angular';
+import { IonicPage, NavController, ModalController } from 'ionic-angular';
 import { Storage } from '@ionic/storage'
-import { ReadingPage } from '../reading/reading'
-import { Reading } from '../../models/reading'
 
+@IonicPage()
 @Component({
   selector: 'page-history',
   templateUrl: 'history.html'
@@ -25,7 +24,7 @@ export class HistoryPage {
   }
 
   showReading(reading) {
-    let readingModal = this.modCtrl.create(ReadingPage, { reading: reading })
+    let readingModal = this.modCtrl.create('ReadingPage', { reading: reading })
     readingModal.present()
   }
 

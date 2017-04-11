@@ -1,9 +1,7 @@
-import { Tetragram } from "../../models/tetragram";
 import { Reading } from "../../models/reading";
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ViewController } from 'ionic-angular';
 import { Storage } from '@ionic/storage'
-import { TetragramPage } from '../tetragram/tetragram'
 
 /**
  * Generated class for the ReadingPage page.
@@ -29,7 +27,7 @@ export class ReadingPage {
   }
 
   showTetragram(tetragram, house?: number) {
-    this.navCtrl.push(TetragramPage, { tetragram: tetragram, house: house })
+    this.navCtrl.push('TetragramPage', { tetragram: tetragram, house: house })
   }
 
   close() {

@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, ViewController, NavParams, ModalController } from 'ionic-angular';
 import { Reading } from '../../models/reading'
 import { Storage } from '@ionic/storage'
-import { ReadingPage } from '../reading/reading'
 
 @IonicPage()
 @Component({
@@ -38,7 +37,7 @@ export class RandomPage {
     // this.viewCtrl.dismiss()
 
     this.navCtrl.pop(null, () => {
-      this.navCtrl.push(ReadingPage, { reading: this.reading })
+      this.navCtrl.push('ReadingPage', { reading: this.reading })
     })
 
   }
