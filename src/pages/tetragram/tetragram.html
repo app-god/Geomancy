@@ -22,4 +22,12 @@
     <h1>{{tetragram.name}} in house #{{house}}</h1>
     <p>{{tetragram.interpretations[house - 1]}}</p>
   </div>
+  <div *ngIf="!house">
+    <h1>Houses</h1>
+    <ol>
+      <li *ngFor="let interpretation of tetragram.interpretations">
+        {{interpretation}}
+      </li>
+    </ol>
+  </div>
 </ion-content>
