@@ -32,14 +32,9 @@ export class RandomPage {
       })
     })
 
-    // let modReading = this.modCtrl.create(ReadingPage, { reading: this.reading })
-    // modReading.present()
-    // this.viewCtrl.dismiss()
-
-    this.navCtrl.pop(null, () => {
-      this.navCtrl.push('ReadingPage', { reading: this.reading })
-    })
-
+    let modReading = this.modCtrl.create('ReadingPage', { reading: this.reading })
+    modReading.present()
+    this.viewCtrl.dismiss()
   }
 
   ionViewDidLoad() {

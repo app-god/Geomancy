@@ -15,11 +15,10 @@ export class NewPage {
   }
 
   clickStart() {
-    this.navCtrl.push('RandomPage', { question: this.question })
-    // let randomModal = this.modCtrl.create('RandomPage', {
-    //   question: this.question
-    // })
-    // randomModal.present()
+    let randomModal = this.modCtrl.create('RandomPage', {
+      question: this.question
+    })
+    randomModal.present()
   }
 
 }

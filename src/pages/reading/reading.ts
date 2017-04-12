@@ -16,24 +16,13 @@ import { houseToInterpretation } from '../../models/tetragram'
   templateUrl: 'reading.html',
 })
 export class ReadingPage {
-
-  h2i: number[] = houseToInterpretation
-  reading: Reading
+  tab1Root = 'ReadingFiguresPage'
+  tab2Root = 'LibraryPage'
+  tab3Root = 'LibraryPage'
+  paramsData
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public storage: Storage,
     public viewCtrl: ViewController) {
-    this.reading = navParams.get('reading')
+      this.paramsData = navParams.data
   }
-
-  ionViewDidLoad() {
-  }
-
-  showTetragram(tetragram, house?: number) {
-    this.navCtrl.push('TetragramPage', { tetragram: tetragram, house: house })
-  }
-
-  close() {
-    this.viewCtrl.dismiss()
-  }
-
 }
