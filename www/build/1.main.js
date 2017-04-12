@@ -49,6 +49,7 @@ ReadingPageModule = __decorate([
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Tetragram; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return houseToInterpretation; });
 var Tetragram = (function () {
     function Tetragram(key) {
         if (key === void 0) { key = Math.floor(Math.random() * 15); }
@@ -72,6 +73,7 @@ var Tetragram = (function () {
     return Tetragram;
 }());
 
+var houseToInterpretation = [10, 1, 4, 7, 11, 2, 5, 8, 12, 3, 6, 9];
 var tetragramData = [
     {
         key: 0,
@@ -471,6 +473,7 @@ TetragramComponent = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(49);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_storage__ = __webpack_require__(241);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__models_tetragram__ = __webpack_require__(316);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ReadingPage; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -481,6 +484,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+
 
 
 
@@ -496,6 +500,7 @@ var ReadingPage = (function () {
         this.navParams = navParams;
         this.storage = storage;
         this.viewCtrl = viewCtrl;
+        this.h2i = __WEBPACK_IMPORTED_MODULE_3__models_tetragram__["b" /* houseToInterpretation */];
         this.reading = navParams.get('reading');
     }
     ReadingPage.prototype.ionViewDidLoad = function () {
@@ -511,12 +516,12 @@ var ReadingPage = (function () {
 ReadingPage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPage */])(),
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* Component */])({
-        selector: 'page-reading',template:/*ion-inline-start:"/Users/adam/AppGod/geomancy/src/pages/reading/reading.html"*/'<!--\n  Generated template for the ReadingPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-buttons start>\n      <button ion-button icon-only (click)="close()">\n        <ion-icon name="close"></ion-icon>\n      </button>\n    </ion-buttons>\n    <ion-title>{{reading.question}}</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content>\n  <ion-list>\n    <ion-list-header>Mothers</ion-list-header>\n    <ion-item *ngFor="let mother of reading.mothers; let i = index" (click)="showTetragram(mother, i + 1)">\n      <ion-thumbnail item-left>\n        <tetragram [tetragram]="mother"></tetragram>\n      </ion-thumbnail>\n      <h1>{{mother.name}}</h1>\n      <p>{{mother.interpretations[i + 0]}}</p>\n    </ion-item>\n  </ion-list>\n\n  <ion-list>\n    <ion-list-header>Daughters</ion-list-header>\n    <ion-item *ngFor="let daughter of reading.daughters; let i = index" (click)="showTetragram(daughter, i + 5)">\n      <ion-thumbnail item-left>\n        <tetragram [tetragram]="daughter"></tetragram>\n      </ion-thumbnail>\n      <h1>{{daughter.name}}</h1>\n      <p>{{daughter.interpretations[i + 4]}}</p>\n    </ion-item>\n  </ion-list>\n\n  <ion-list>\n    <ion-list-header>Nephews</ion-list-header>\n    <ion-item *ngFor="let nephew of reading.nephews; let i = index" (click)="showTetragram(nephew, i + 9)">\n      <ion-thumbnail item-left>\n        <tetragram [tetragram]="nephew"></tetragram>\n      </ion-thumbnail>\n      <h1>{{nephew.name}}</h1>\n      <p>{{nephew.interpretations[i + 8]}}</p>\n    </ion-item>\n  </ion-list>\n\n  <ion-list>\n    <ion-list-header>Witnesses</ion-list-header>\n    <ion-item *ngFor="let witness of reading.witnesses" (click)="showTetragram(witness)">\n      <ion-thumbnail item-left>\n        <tetragram [tetragram]="witness"></tetragram>\n      </ion-thumbnail>\n      <h1>{{witness.name}}</h1>\n      <p>{{witness.desc}}</p>\n    </ion-item>\n  </ion-list>\n\n  <ion-list>\n    <ion-list-header>Judge</ion-list-header>\n    <ion-item (click)="showTetragram(reading.judge)">\n      <ion-thumbnail item-left>\n        <tetragram [tetragram]="reading.judge"></tetragram>\n      </ion-thumbnail>\n      <h1>{{reading.judge.name}}</h1>\n      <p>{{reading.judge.desc}}</p>\n    </ion-item>\n  </ion-list>\n</ion-content>\n'/*ion-inline-end:"/Users/adam/AppGod/geomancy/src/pages/reading/reading.html"*/,
+        selector: 'page-reading',template:/*ion-inline-start:"/Users/adam/AppGod/geomancy/src/pages/reading/reading.html"*/'<!--\n  Generated template for the ReadingPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-buttons start>\n      <button ion-button icon-only (click)="close()">\n        <ion-icon name="close"></ion-icon>\n      </button>\n    </ion-buttons>\n    <ion-title>{{reading.question}}</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content>\n  <ion-list>\n    <ion-list-header>Mothers</ion-list-header>\n    <ion-item *ngFor="let mother of reading.mothers; let i = index" (click)="showTetragram(mother, i + 1)">\n      <ion-thumbnail item-left>\n        <tetragram [tetragram]="mother"></tetragram>\n      </ion-thumbnail>\n      <h1>{{mother.name}}</h1>\n      <p>{{mother.desc}}</p>\n    </ion-item>\n  </ion-list>\n\n  <ion-list>\n    <ion-list-header>Daughters</ion-list-header>\n    <ion-item *ngFor="let daughter of reading.daughters; let i = index" (click)="showTetragram(daughter, i + 5)">\n      <ion-thumbnail item-left>\n        <tetragram [tetragram]="daughter"></tetragram>\n      </ion-thumbnail>\n      <h1>{{daughter.name}}</h1>\n      <p>{{daughter.desc}}</p>\n    </ion-item>\n  </ion-list>\n\n  <ion-list>\n    <ion-list-header>Nephews</ion-list-header>\n    <ion-item *ngFor="let nephew of reading.nephews; let i = index" (click)="showTetragram(nephew, i + 9)">\n      <ion-thumbnail item-left>\n        <tetragram [tetragram]="nephew"></tetragram>\n      </ion-thumbnail>\n      <h1>{{nephew.name}}</h1>\n      <p>{{nephew.desc}}</p>\n    </ion-item>\n  </ion-list>\n\n  <ion-list>\n    <ion-list-header>Witnesses</ion-list-header>\n    <ion-item *ngFor="let witness of reading.witnesses" (click)="showTetragram(witness)">\n      <ion-thumbnail item-left>\n        <tetragram [tetragram]="witness"></tetragram>\n      </ion-thumbnail>\n      <h1>{{witness.name}}</h1>\n      <p>{{witness.desc}}</p>\n    </ion-item>\n  </ion-list>\n\n  <ion-list>\n    <ion-list-header>Judge</ion-list-header>\n    <ion-item (click)="showTetragram(reading.judge)">\n      <ion-thumbnail item-left>\n        <tetragram [tetragram]="reading.judge"></tetragram>\n      </ion-thumbnail>\n      <h1>{{reading.judge.name}}</h1>\n      <p>{{reading.judge.desc}}</p>\n    </ion-item>\n  </ion-list>\n</ion-content>\n'/*ion-inline-end:"/Users/adam/AppGod/geomancy/src/pages/reading/reading.html"*/,
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__ionic_storage__["b" /* Storage */],
-        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* ViewController */]])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__ionic_storage__["b" /* Storage */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__ionic_storage__["b" /* Storage */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* ViewController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* ViewController */]) === "function" && _d || Object])
 ], ReadingPage);
 
+var _a, _b, _c, _d;
 //# sourceMappingURL=reading.js.map
 
 /***/ })

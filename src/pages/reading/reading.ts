@@ -2,6 +2,7 @@ import { Reading } from "../../models/reading";
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ViewController } from 'ionic-angular';
 import { Storage } from '@ionic/storage'
+import { houseToInterpretation } from '../../models/tetragram'
 
 /**
  * Generated class for the ReadingPage page.
@@ -16,6 +17,7 @@ import { Storage } from '@ionic/storage'
 })
 export class ReadingPage {
 
+  h2i: number[] = houseToInterpretation
   reading: Reading
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public storage: Storage,
