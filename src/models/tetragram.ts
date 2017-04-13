@@ -3,7 +3,7 @@ export class Tetragram {
 
   name: string
   desc: string
-  interpretations: string[]
+  houseMeanings: string[]
 
   row0: number
   row1: number
@@ -11,9 +11,9 @@ export class Tetragram {
   row3: number
 
   constructor(public key: number = Math.floor(Math.random() * 15)) {
-    this.name = tetragramData[key].name
-    this.desc = tetragramData[key].desc
-    this.interpretations = tetragramData[key].interpretations
+    this.name = tetragramInfo[key].name
+    this.desc = tetragramInfo[key].desc
+    this.houseMeanings = tetragramInfo[key].houseMeanings
 
     this.row0 = (key >> 0) % 2
     this.row1 = (key >> 1) % 2
@@ -33,12 +33,28 @@ export class Tetragram {
 
 export const houseToInterpretation: number[] = [10, 1, 4, 7, 11, 2, 5, 8, 12, 3, 6, 9]
 
-const tetragramData = [
+interface TetragramInfo {
+  key: number
+  name: string
+  desc: string
+  planet?: string
+  houseMeanings: string[]
+  rules: number[]
+  // exalted: number[]
+  // fall: number[]
+  // detriment: number[]
+  // sign?: string
+  // strongTriplicity?: number[]
+}
+
+const tetragramInfo: TetragramInfo[] = [
   {
     key: 0,
     name: 'Via',
     desc: 'Injurious to the goodness of other figures generally, but good for journeys and voyages.',
-    interpretations: [
+    planet: 'Moon',
+    rules: [1, 8],
+    houseMeanings: [
       'Evil except for prison.',
       'Indifferent.',
       'Very good in all.',
@@ -57,7 +73,9 @@ const tetragramData = [
     key: 1,
     name: 'Caput Draconis',
     desc: 'Good with good, evil with evil. Gives good issue for gain.',
-    interpretations: [
+    planet: null,
+    rules: [2, 7, 9, 12],
+    houseMeanings: [
       'Good in all things',
       'Good.',
       'Very good.',
@@ -76,7 +94,9 @@ const tetragramData = [
     key: 2,
     name: 'Puella',
     desc: 'Good in all demands, especially in those things relating to women.',
-    interpretations: [
+    planet: 'Venus',
+    rules: [2, 7],
+    houseMeanings: [
       'Good except in war.',
       'Very good.',
       'Good.',
@@ -95,7 +115,9 @@ const tetragramData = [
     key: 3,
     name: 'Fortuna Major',
     desc: 'Good for gain in all things where a person has hopes to win.',
-    interpretations: [
+    planet: 'Moon',
+    rules: [5],
+    houseMeanings: [
       'Good save in secrecy.',
       'Good except in sad things.',
       'Good in all.',
@@ -114,7 +136,9 @@ const tetragramData = [
     key: 4,
     name: 'Puer',
     desc: 'Evil in most demands, except in those things relating to war or love.',
-    interpretations: [
+    planet: '',
+    rules: [1, 8],
+    houseMeanings: [
       'Indifferent. Best in war.',
       'Good, but with trouble.',
       'Good fortune.',
@@ -133,7 +157,9 @@ const tetragramData = [
     key: 5,
     name: 'Acquisitio',
     desc: 'Generally good for profit and gain.',
-    interpretations: [
+    planet: 'Jupiter',
+    rules: [9, 12],
+    houseMeanings: [
       'Happy, success in all things.',
       'Very prosperous.',
       'Favor and riches.',
@@ -152,7 +178,9 @@ const tetragramData = [
     key: 6,
     name: 'Carcer',
     desc: 'Generally evil. Delay, binding, bar, restriction.',
-    interpretations: [
+    planet: 'Saturn',
+    rules: [10, 11],
+    houseMeanings: [
       'Evil except to fortify a place.',
       'Good in Saturnine questions; else evil.',
       'Evil.',
@@ -171,7 +199,9 @@ const tetragramData = [
     key: 7,
     name: 'Tristitia',
     desc: 'Evil in almost all things.',
-    interpretations: [
+    planet: 'Jupiter',
+    rules: [10, 11],
+    houseMeanings: [
       'Medium, but good for treasure and fortifying.',
       'Medium, but good to fortify.',
       'Evil in all.',
@@ -190,7 +220,9 @@ const tetragramData = [
     key: 8,
     name: 'Cauda Draconis',
     desc: 'Good with evil, and evil with good. Good for loss, and for passing out of an affair.',
-    interpretations: [
+    planet: null,
+    rules: [8, 10, 11],
+    houseMeanings: [
       'Good in all things.',
       'Good.',
       'Very good.',
@@ -209,7 +241,9 @@ const tetragramData = [
     key: 9,
     name: 'Conjunctio',
     desc: 'Good with good, or evil with evil. Recovery from things lost.',
-    interpretations: [
+    planet: 'Mercury',
+    rules: [3, 6],
+    houseMeanings: [
       'Good with good, evil with evil.',
       'Commonly good.',
       'Good fortune.',
@@ -228,7 +262,9 @@ const tetragramData = [
     key: 10,
     name: 'Amissio',
     desc: 'Good for loss of substance and sometimes for love, but very bad for gain.',
-    interpretations: [
+    planet: 'Venus',
+    rules: [2, 7],
+    houseMeanings: [
       'Ill in all things but for prisoners.',
       'Very ill for money, but good for love.',
       'Ill end–except for quarrels.',
@@ -247,7 +283,9 @@ const tetragramData = [
     key: 11,
     name: 'Albus',
     desc: 'Good for profit and for entering into a place or undertaking.',
-    interpretations: [
+    planet: 'Mercury',
+    rules: [3, 6],
+    houseMeanings: [
       'Good for marriage. Mercurial. Peace.',
       'Good in all.',
       'Very good.',
@@ -266,7 +304,9 @@ const tetragramData = [
     key: 12,
     name: 'Fortuna Minor',
     desc: 'Good in any manner in which a person wishes to proceed quickly.',
-    interpretations: [
+    planet: 'Sun',
+    rules: [5],
+    houseMeanings: [
       'Speed in victory and in love, but choleric.',
       'Very good.',
       'Good–but wrathful.',
@@ -285,7 +325,9 @@ const tetragramData = [
     key: 13,
     name: 'Rubeus',
     desc: 'Evil in all that is good and good in all that is evil.',
-    interpretations: [
+    planet: 'Mars',
+    rules: [1, 8],
+    houseMeanings: [
       'Destroy the figure if it falls here! It makes the judgement worthless.',
       'Evil in all demands.',
       'Evil except to let blood.',
@@ -304,7 +346,9 @@ const tetragramData = [
     key: 14,
     name: 'Laetitia',
     desc: 'Good for joy, present or to come.',
-    interpretations: [
+    planet: 'Jupiter',
+    rules: [9, 12],
+    houseMeanings: [
       'Good, except in war.',
       'Sickly.',
       'Ill.',
@@ -323,7 +367,9 @@ const tetragramData = [
     key: 15,
     name: 'Populus',
     desc: 'Sometimes good and sometimes bad; good with good, and evil with evil.',
-    interpretations: [
+    planet: 'Moon',
+    rules: [4],
+    houseMeanings: [
       'Good in marriages.',
       'Medium good.',
       'Rather good than bad.',

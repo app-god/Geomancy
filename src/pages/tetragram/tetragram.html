@@ -1,9 +1,3 @@
-<!--
-  Generated template for the TetragramPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
 
   <ion-navbar>
@@ -20,13 +14,13 @@
   <p>{{tetragram.desc}}</p>
   <div *ngIf="house">
     <h1>{{tetragram.name}} in house #{{house}}</h1>
-    <p>{{tetragram.interpretations[house - 1]}}</p>
+    <p>{{tetragram.houseMeanings[house - 1]}}</p>
   </div>
   <div *ngIf="!house">
     <h1>Houses</h1>
     <ol>
-      <li *ngFor="let interpretation of tetragram.interpretations">
-        {{interpretation}}
+      <li *ngFor="let meaning of tetragram.houseMeanings">
+        {{houseMeanings}}
       </li>
     </ol>
   </div>
