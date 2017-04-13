@@ -13,32 +13,10 @@
 </ion-header>
 
 
-<ion-content>
+<ion-content padding>
 
   <p>
     question: {{reading.question}}
   </p>
-
-  <ion-list>
-    <ion-list-header>Witnesses</ion-list-header>
-    <ion-item *ngFor="let witness of reading.witnesses" (click)="showTetragram(witness)">
-      <ion-thumbnail item-left>
-        <tetragram [tetragram]="witness"></tetragram>
-      </ion-thumbnail>
-      <h1>{{witness.name}}</h1>
-      <p>{{witness.desc}}</p>
-    </ion-item>
-  </ion-list>
-
-  <ion-list>
-    <ion-list-header>Judge</ion-list-header>
-    <ion-item (click)="showTetragram(reading.judge)">
-      <ion-thumbnail item-left>
-        <tetragram [tetragram]="reading.judge"></tetragram>
-      </ion-thumbnail>
-      <h1>{{reading.judge.name}}</h1>
-      <p>{{reading.judge.desc}}</p>
-    </ion-item>
-  </ion-list>
 
 </ion-content>

@@ -1,3 +1,8 @@
 page-reading-figures {
-
+  ion-col {
+    text-align: center;
+    &[col-4] {
+      font-size: 133%;
+    }
+  }
 }

@@ -7,37 +7,80 @@
 </ion-header>
 
 
-<ion-content>
-  <ion-list>
-    <ion-list-header>Mothers</ion-list-header>
-    <ion-item *ngFor="let mother of reading.mothers; let i = index" (click)="showTetragram(mother, i + 1)">
-      <ion-thumbnail item-left>
-        <tetragram [tetragram]="mother"></tetragram>
-      </ion-thumbnail>
-      <h1>{{mother.name}}</h1>
-      <p>{{mother.desc}}</p>
-    </ion-item>
-  </ion-list>
+<ion-content padding>
 
-  <ion-list>
-    <ion-list-header>Daughters</ion-list-header>
-    <ion-item *ngFor="let daughter of reading.daughters; let i = index" (click)="showTetragram(daughter, i + 5)">
-      <ion-thumbnail item-left>
-        <tetragram [tetragram]="daughter"></tetragram>
-      </ion-thumbnail>
-      <h1>{{daughter.name}}</h1>
-      <p>{{daughter.desc}}</p>
-    </ion-item>
-  </ion-list>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-4>
+        <tetragram [tetragram]="reading.witness1"></tetragram>
+        <p>Left Witness</p>
+      </ion-col>
+      <ion-col col-4>
+        <tetragram [tetragram]="reading.judge"></tetragram>
+        <p>Judge</p>
+      </ion-col>
+      <ion-col col-4>
+        <tetragram [tetragram]="reading.witness0"></tetragram>
+        <p>Right Witness</p>
+      </ion-col>
+    </ion-row>
 
-  <ion-list>
-    <ion-list-header>Nephews</ion-list-header>
-    <ion-item *ngFor="let nephew of reading.nephews; let i = index" (click)="showTetragram(nephew, i + 9)">
-      <ion-thumbnail item-left>
-        <tetragram [tetragram]="nephew"></tetragram>
-      </ion-thumbnail>
-      <h1>{{nephew.name}}</h1>
-      <p>{{nephew.desc}}</p>
-    </ion-item>
-  </ion-list>
+    <ion-row>
+      <ion-col col-3>
+        <tetragram [tetragram]="reading.mother3"></tetragram>
+        <p>Mother 4</p>
+      </ion-col>
+      <ion-col col-3>
+        <tetragram [tetragram]="reading.mother2"></tetragram>
+        <p>Mother 3</p>
+      </ion-col>
+      <ion-col col-3>
+        <tetragram [tetragram]="reading.mother1"></tetragram>
+        <p>Mother 2</p>
+      </ion-col>
+      <ion-col col-3>
+        <tetragram [tetragram]="reading.mother0"></tetragram>
+        <p>Mother 1</p>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col col-3>
+        <tetragram [tetragram]="reading.daughter3"></tetragram>
+        <p>Daughter 4</p>
+      </ion-col>
+      <ion-col col-3>
+        <tetragram [tetragram]="reading.daughter2"></tetragram>
+        <p>Daughter 3</p>
+      </ion-col>
+      <ion-col col-3>
+        <tetragram [tetragram]="reading.daughter1"></tetragram>
+        <p>Daughter 2</p>
+      </ion-col>
+      <ion-col col-3>
+        <tetragram [tetragram]="reading.daughter0"></tetragram>
+        <p>Daughter 1</p>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col col-3>
+        <tetragram [tetragram]="reading.nephew3"></tetragram>
+        <p>Nephew 4</p>
+      </ion-col>
+      <ion-col col-3>
+        <tetragram [tetragram]="reading.nephew2"></tetragram>
+        <p>Nephew 3</p>
+      </ion-col>
+      <ion-col col-3>
+        <tetragram [tetragram]="reading.nephew1"></tetragram>
+        <p>Nephew 2</p>
+      </ion-col>
+      <ion-col col-3>
+        <tetragram [tetragram]="reading.nephew0"></tetragram>
+        <p>Nephew 1</p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
 </ion-content>

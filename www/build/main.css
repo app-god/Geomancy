@@ -24316,3 +24316,11 @@ ion-navbar.toolbar {
 tetragram {
   text-align: center;
 }
+
+page-reading-figures ion-col {
+  text-align: center;
+}
+
+page-reading-figures ion-col[col-4] {
+  font-size: 133%;
+}
