@@ -11,11 +11,11 @@ import { Reading } from '../../models/reading'
 export class ReadingFiguresPage {
 
   h2i: number[] = houseToInterpretation
-  reading: Reading
+  reading
 
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-    this.reading = navParams.get('reading')
+    this.reading = navParams.data
   }
 
   showTetragram(tetragram, house?: number) {

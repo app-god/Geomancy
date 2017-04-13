@@ -10,6 +10,6 @@ export class ReadingOverviewPage {
   reading
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-    this.reading = navParams.get('reading')
+    this.reading = navParams.data
   }
 }

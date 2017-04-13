@@ -1,6 +1,8 @@
 import { Tetragram } from './tetragram'
 
 export class Reading {
+  question: string
+  
   mother0: Tetragram
   mother1: Tetragram
   mother2: Tetragram
@@ -24,33 +26,38 @@ export class Reading {
 
   date: number
 
-  constructor(public question: string) {
-    this.date = Date.now()
-    this.mother0 = new Tetragram()
-    this.mother1 = new Tetragram()
-    this.mother2 = new Tetragram()
-    this.mother3 = new Tetragram()
+  constructor(data: ReadingData) {
+
+    this.question = data.question
+
+    this.date = data.date
+
+    this.mother0 = new Tetragram(data.key0)
+    this.mother1 = new Tetragram(data.key1)
+    this.mother2 = new Tetragram(data.key2)
+    this.mother3 = new Tetragram(data.key3)
+
     this.mothers = [this.mother0, this.mother1, this.mother2, this.mother3]
 
-    this.daughter0 = this.createKeyFromRows(
+    this.daughter0 = this.createFromRows(
       this.mother0.row0,
       this.mother1.row0,
       this.mother2.row0,
       this.mother3.row0
     )
-    this.daughter1 = this.createKeyFromRows(
+    this.daughter1 = this.createFromRows(
       this.mother0.row1,
       this.mother1.row1,
       this.mother2.row1,
       this.mother3.row1
     )
-    this.daughter2 = this.createKeyFromRows(
+    this.daughter2 = this.createFromRows(
       this.mother0.row2,
       this.mother1.row2,
       this.mother2.row2,
       this.mother3.row2
     )
-    this.daughter3 = this.createKeyFromRows(
+    this.daughter3 = this.createFromRows(
       this.mother0.row3,
       this.mother1.row3,
       this.mother2.row3,
@@ -70,7 +77,7 @@ export class Reading {
     this.judge = this.witness0.add(this.witness1)
   }
 
-  createKeyFromRows(row0, row1, row2, row3) {
+  createFromRows(row0, row1, row2, row3) {
     let r0 = row0 % 2
     let r1 = row1 % 2
     let r2 = row2 % 2
@@ -78,4 +85,17 @@ export class Reading {
     let key = (r3 << 3) + (r2 << 2) + (r1 << 1) + (r0 << 0)
     return new Tetragram(key)
   }
+}
+
+export interface ReadingData {
+  question: string
+  date: number
+  key0: number
+  key1: number
+  key2: number
+  key3: number
+}
+
+export interface ReadingSaveData extends ReadingData {
+  judgeKey: number
 }

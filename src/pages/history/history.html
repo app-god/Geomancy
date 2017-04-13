@@ -8,17 +8,17 @@
 
 <ion-content>
   <ion-list no-lines>
-    <ion-item-sliding *ngFor="let reading of readings.reverse()">
-      <button ion-item (click)="showReading(reading)">
-        <ion-thumbnail item-left>
-          <tetragram [tetragram]="reading.judge"></tetragram>
-        </ion-thumbnail>
-        <h1>{{reading.question}}</h1>
-        <p>{{reading.date | date:'medium'}}</p>
+    <ion-item-sliding *ngFor="let readingData of readingsData.reverse()">
+      <button ion-item (click)="showReading(readingData)">
+        <!-- <ion-thumbnail item-left>
+          <tetragram [tetragram]="readingData.judge"></tetragram>
+        </ion-thumbnail> -->
+        <h1>{{readingData.question}}</h1>
+        <p>{{readingData.date | date:'medium'}}</p>
       </button>
 
       <ion-item-options side="right">
-        <button ion-button (click)="deleteReading(reading)"
+        <button ion-button (click)="deleteReading(readingData)"
           color="danger">Delete</button>
       </ion-item-options>
     </ion-item-sliding>

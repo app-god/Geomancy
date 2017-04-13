@@ -9,7 +9,7 @@ import { Storage } from '@ionic/storage'
   templateUrl: 'history.html'
 })
 export class HistoryPage {
-  readings = []
+  readingsData = []
 
   constructor(public navCtrl: NavController, public storage: Storage,
     public modCtrl: ModalController) {
@@ -18,21 +18,21 @@ export class HistoryPage {
   ionViewWillEnter() {
     this.storage.ready().then(() => {
       this.storage.get('history').then(history => {
-        this.readings = history
+        this.readingsData = history
       })
     })
   }
 
-  showReading(reading) {
-    let readingModal = this.modCtrl.create('ReadingPage', { reading: reading })
+  showReading(readingData) {
+    let readingModal = this.modCtrl.create('ReadingPage', { readingData: readingData })
     readingModal.present()
   }
 
-  deleteReading(reading) {
-    let readingIndex = this.readings.indexOf(reading)
-    this.readings.splice(readingIndex, 1)
+  deleteReading(readingData) {
+    let readingIndex = this.readingsData.indexOf(readingData)
+    this.readingsData.splice(readingIndex, 1)
     this.storage.ready().then(() => {
-      this.storage.set('history', this.readings)
+      this.storage.set('history', this.readingsData)
     })
   }
 

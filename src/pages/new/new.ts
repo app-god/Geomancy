@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { Storage } from '@ionic/storage'
 
 import { NavController, ModalController, LoadingController } from 'ionic-angular';
-import { Reading } from '../../models/reading'
+import { ReadingData } from '../../models/reading'
 
 @Component({
   selector: 'page-new',
@@ -28,18 +28,25 @@ export class NewPage {
     })
     loading.present()
 
-    let reading = new Reading(this.question)
+    let readingData: ReadingData = {
+      question: this.question,
+      date: Date.now(),
+      key0: Math.floor(Math.random() * 15),
+      key1: Math.floor(Math.random() * 15),
+      key2: Math.floor(Math.random() * 15),
+      key3: Math.floor(Math.random() * 15)
+    }
 
     this.storage.ready().then(() => {
       this.storage.get('history').then(history => {
         history = history || []
-        history.push(reading)
+        history.push(readingData)
         this.storage.set('history', history)
 
         loading.dismiss()
 
         let readingModal = this.modCtrl.create('ReadingPage', {
-          reading: reading
+          readingData: readingData
         })
         readingModal.present()
 
