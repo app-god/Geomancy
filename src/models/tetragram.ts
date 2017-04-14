@@ -31,8 +31,6 @@ export class Tetragram {
   }
 }
 
-export const houseToInterpretation: number[] = [10, 1, 4, 7, 11, 2, 5, 8, 12, 3, 6, 9]
-
 interface TetragramData {
   key: number
 }

@@ -2,7 +2,7 @@ import { Tetragram } from './tetragram'
 
 export class Reading {
   question: string
-  
+
   mother0: Tetragram
   mother1: Tetragram
   mother2: Tetragram
@@ -84,6 +84,17 @@ export class Reading {
     let r3 = row3 % 2
     let key = (r3 << 3) + (r2 << 2) + (r1 << 1) + (r0 << 0)
     return new Tetragram(key)
+  }
+
+  getTetragramForHouse(house: number): Tetragram {
+    let tetragrams: Tetragram[] = [
+      this.mother1, this.daughter1, this.nephew1,
+      this.mother2, this.daughter2, this.nephew2,
+      this.mother3, this.daughter3, this.nephew3,
+      this.mother0, this.daughter0, this.nephew0
+    ]
+
+    return tetragrams[house]
   }
 }
 
