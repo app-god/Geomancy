@@ -14,9 +14,9 @@ export class TetragramComponent {
 
   renderRow(key: number) {
     if (key == 0) {
-      return '0'
+      return '●'
     } else if (key == 1) {
-      return '0    0'
+      return '●    ●'
     }
   }
 }
