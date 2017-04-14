@@ -50,6 +50,7 @@ export class NewPage {
         })
         readingModal.present()
 
+        this.question = ''
         this.startDisabled = false
       })
     })
