@@ -5,6 +5,7 @@ export class Tetragram {
   desc: string
   houseMeanings: string[]
   planet: string
+  dots: number
 
   row0: number
   row1: number
@@ -12,11 +13,12 @@ export class Tetragram {
   row3: number
 
   constructor(public key: number = Math.floor(Math.random() * 15)) {
-    let info = tetragramInfo[key]
+    let info: TetragramInfo = tetragramInfo[key]
     this.name = info.name
     this.desc = info.desc
     this.houseMeanings = info.houseMeanings
     this.planet = info.planet
+    this.dots = info.dots
 
     this.row0 = (key >> 0) % 2
     this.row1 = (key >> 1) % 2
@@ -45,6 +47,7 @@ interface TetragramInfo {
   planet?: string
   houseMeanings: string[]
   rules: number[]
+  dots: number
   // exalted: number[]
   // fall: number[]
   // detriment: number[]
@@ -59,6 +62,7 @@ const tetragramInfo: TetragramInfo[] = [
     desc: 'Injurious to the goodness of other figures generally, but good for journeys and voyages.',
     planet: 'Moon',
     rules: [1, 8],
+    dots: 4,
     houseMeanings: [
       'Evil except for prison.',
       'Indifferent.',
@@ -80,6 +84,7 @@ const tetragramInfo: TetragramInfo[] = [
     desc: 'Good with good, evil with evil. Gives good issue for gain.',
     planet: null,
     rules: [2, 7, 9, 12],
+    dots: 5,
     houseMeanings: [
       'Good in all things',
       'Good.',
@@ -101,6 +106,7 @@ const tetragramInfo: TetragramInfo[] = [
     desc: 'Good in all demands, especially in those things relating to women.',
     planet: 'Venus',
     rules: [2, 7],
+    dots: 5,
     houseMeanings: [
       'Good except in war.',
       'Very good.',
@@ -122,6 +128,7 @@ const tetragramInfo: TetragramInfo[] = [
     desc: 'Good for gain in all things where a person has hopes to win.',
     planet: 'Moon',
     rules: [5],
+    dots: 6,
     houseMeanings: [
       'Good save in secrecy.',
       'Good except in sad things.',
@@ -143,6 +150,7 @@ const tetragramInfo: TetragramInfo[] = [
     desc: 'Evil in most demands, except in those things relating to war or love.',
     planet: '',
     rules: [1, 8],
+    dots: 5,
     houseMeanings: [
       'Indifferent. Best in war.',
       'Good, but with trouble.',
@@ -164,6 +172,7 @@ const tetragramInfo: TetragramInfo[] = [
     desc: 'Generally good for profit and gain.',
     planet: 'Jupiter',
     rules: [9, 12],
+    dots: 6,
     houseMeanings: [
       'Happy, success in all things.',
       'Very prosperous.',
@@ -185,6 +194,7 @@ const tetragramInfo: TetragramInfo[] = [
     desc: 'Generally evil. Delay, binding, bar, restriction.',
     planet: 'Saturn',
     rules: [10, 11],
+    dots: 6,
     houseMeanings: [
       'Evil except to fortify a place.',
       'Good in Saturnine questions; else evil.',
@@ -206,6 +216,7 @@ const tetragramInfo: TetragramInfo[] = [
     desc: 'Evil in almost all things.',
     planet: 'Jupiter',
     rules: [10, 11],
+    dots: 7,
     houseMeanings: [
       'Medium, but good for treasure and fortifying.',
       'Medium, but good to fortify.',
@@ -227,6 +238,7 @@ const tetragramInfo: TetragramInfo[] = [
     desc: 'Good with evil, and evil with good. Good for loss, and for passing out of an affair.',
     planet: null,
     rules: [8, 10, 11],
+    dots: 5,
     houseMeanings: [
       'Good in all things.',
       'Good.',
@@ -248,6 +260,7 @@ const tetragramInfo: TetragramInfo[] = [
     desc: 'Good with good, or evil with evil. Recovery from things lost.',
     planet: 'Mercury',
     rules: [3, 6],
+    dots: 6,
     houseMeanings: [
       'Good with good, evil with evil.',
       'Commonly good.',
@@ -269,6 +282,7 @@ const tetragramInfo: TetragramInfo[] = [
     desc: 'Good for loss of substance and sometimes for love, but very bad for gain.',
     planet: 'Venus',
     rules: [2, 7],
+    dots: 6,
     houseMeanings: [
       'Ill in all things but for prisoners.',
       'Very ill for money, but good for love.',
@@ -290,6 +304,7 @@ const tetragramInfo: TetragramInfo[] = [
     desc: 'Good for profit and for entering into a place or undertaking.',
     planet: 'Mercury',
     rules: [3, 6],
+    dots: 7,
     houseMeanings: [
       'Good for marriage. Mercurial. Peace.',
       'Good in all.',
@@ -311,6 +326,7 @@ const tetragramInfo: TetragramInfo[] = [
     desc: 'Good in any manner in which a person wishes to proceed quickly.',
     planet: 'Sun',
     rules: [5],
+    dots: 6,
     houseMeanings: [
       'Speed in victory and in love, but choleric.',
       'Very good.',
@@ -332,6 +348,7 @@ const tetragramInfo: TetragramInfo[] = [
     desc: 'Evil in all that is good and good in all that is evil.',
     planet: 'Mars',
     rules: [1, 8],
+    dots: 7,
     houseMeanings: [
       'Destroy the figure if it falls here! It makes the judgement worthless.',
       'Evil in all demands.',
@@ -353,6 +370,7 @@ const tetragramInfo: TetragramInfo[] = [
     desc: 'Good for joy, present or to come.',
     planet: 'Jupiter',
     rules: [9, 12],
+    dots: 7,
     houseMeanings: [
       'Good, except in war.',
       'Sickly.',
@@ -374,6 +392,7 @@ const tetragramInfo: TetragramInfo[] = [
     desc: 'Sometimes good and sometimes bad; good with good, and evil with evil.',
     planet: 'Moon',
     rules: [4],
+    dots: 8,
     houseMeanings: [
       'Good in marriages.',
       'Medium good.',

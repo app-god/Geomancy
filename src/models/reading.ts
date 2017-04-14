@@ -25,6 +25,7 @@ export class Reading {
   witnesses: Tetragram[]
 
   date: number
+  partOfFortune: number
 
   constructor(data: ReadingData) {
 
@@ -75,6 +76,17 @@ export class Reading {
     this.witnesses = [this.witness0, this.witness1]
 
     this.judge = this.witness0.add(this.witness1)
+
+    this.partOfFortune = [
+      this.mother0, this.mother1, this.mother2, this.mother3,
+      this.daughter0, this.daughter1, this.daughter2, this.daughter3,
+      this.nephew0, this.nephew1, this.nephew2, this.nephew3
+    ].map((tetragram) => {
+      return tetragram.dots
+    }).reduce((a, b) => {
+      return a + b
+    }, 0) % 12
+    console.log(this.partOfFortune)
   }
 
   createFromRows(row0, row1, row2, row3) {

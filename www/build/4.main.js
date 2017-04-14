@@ -58,6 +58,7 @@ var Tetragram = (function () {
         this.desc = info.desc;
         this.houseMeanings = info.houseMeanings;
         this.planet = info.planet;
+        this.dots = info.dots;
         this.row0 = (key >> 0) % 2;
         this.row1 = (key >> 1) % 2;
         this.row2 = (key >> 2) % 2;
@@ -81,6 +82,7 @@ var tetragramInfo = [
         desc: 'Injurious to the goodness of other figures generally, but good for journeys and voyages.',
         planet: 'Moon',
         rules: [1, 8],
+        dots: 4,
         houseMeanings: [
             'Evil except for prison.',
             'Indifferent.',
@@ -102,6 +104,7 @@ var tetragramInfo = [
         desc: 'Good with good, evil with evil. Gives good issue for gain.',
         planet: null,
         rules: [2, 7, 9, 12],
+        dots: 5,
         houseMeanings: [
             'Good in all things',
             'Good.',
@@ -123,6 +126,7 @@ var tetragramInfo = [
         desc: 'Good in all demands, especially in those things relating to women.',
         planet: 'Venus',
         rules: [2, 7],
+        dots: 5,
         houseMeanings: [
             'Good except in war.',
             'Very good.',
@@ -144,6 +148,7 @@ var tetragramInfo = [
         desc: 'Good for gain in all things where a person has hopes to win.',
         planet: 'Moon',
         rules: [5],
+        dots: 6,
         houseMeanings: [
             'Good save in secrecy.',
             'Good except in sad things.',
@@ -165,6 +170,7 @@ var tetragramInfo = [
         desc: 'Evil in most demands, except in those things relating to war or love.',
         planet: '',
         rules: [1, 8],
+        dots: 5,
         houseMeanings: [
             'Indifferent. Best in war.',
             'Good, but with trouble.',
@@ -186,6 +192,7 @@ var tetragramInfo = [
         desc: 'Generally good for profit and gain.',
         planet: 'Jupiter',
         rules: [9, 12],
+        dots: 6,
         houseMeanings: [
             'Happy, success in all things.',
             'Very prosperous.',
@@ -207,6 +214,7 @@ var tetragramInfo = [
         desc: 'Generally evil. Delay, binding, bar, restriction.',
         planet: 'Saturn',
         rules: [10, 11],
+        dots: 6,
         houseMeanings: [
             'Evil except to fortify a place.',
             'Good in Saturnine questions; else evil.',
@@ -228,6 +236,7 @@ var tetragramInfo = [
         desc: 'Evil in almost all things.',
         planet: 'Jupiter',
         rules: [10, 11],
+        dots: 7,
         houseMeanings: [
             'Medium, but good for treasure and fortifying.',
             'Medium, but good to fortify.',
@@ -249,6 +258,7 @@ var tetragramInfo = [
         desc: 'Good with evil, and evil with good. Good for loss, and for passing out of an affair.',
         planet: null,
         rules: [8, 10, 11],
+        dots: 5,
         houseMeanings: [
             'Good in all things.',
             'Good.',
@@ -270,6 +280,7 @@ var tetragramInfo = [
         desc: 'Good with good, or evil with evil. Recovery from things lost.',
         planet: 'Mercury',
         rules: [3, 6],
+        dots: 6,
         houseMeanings: [
             'Good with good, evil with evil.',
             'Commonly good.',
@@ -291,6 +302,7 @@ var tetragramInfo = [
         desc: 'Good for loss of substance and sometimes for love, but very bad for gain.',
         planet: 'Venus',
         rules: [2, 7],
+        dots: 6,
         houseMeanings: [
             'Ill in all things but for prisoners.',
             'Very ill for money, but good for love.',
@@ -312,6 +324,7 @@ var tetragramInfo = [
         desc: 'Good for profit and for entering into a place or undertaking.',
         planet: 'Mercury',
         rules: [3, 6],
+        dots: 7,
         houseMeanings: [
             'Good for marriage. Mercurial. Peace.',
             'Good in all.',
@@ -333,6 +346,7 @@ var tetragramInfo = [
         desc: 'Good in any manner in which a person wishes to proceed quickly.',
         planet: 'Sun',
         rules: [5],
+        dots: 6,
         houseMeanings: [
             'Speed in victory and in love, but choleric.',
             'Very good.',
@@ -354,6 +368,7 @@ var tetragramInfo = [
         desc: 'Evil in all that is good and good in all that is evil.',
         planet: 'Mars',
         rules: [1, 8],
+        dots: 7,
         houseMeanings: [
             'Destroy the figure if it falls here! It makes the judgement worthless.',
             'Evil in all demands.',
@@ -375,6 +390,7 @@ var tetragramInfo = [
         desc: 'Good for joy, present or to come.',
         planet: 'Jupiter',
         rules: [9, 12],
+        dots: 7,
         houseMeanings: [
             'Good, except in war.',
             'Sickly.',
@@ -396,6 +412,7 @@ var tetragramInfo = [
         desc: 'Sometimes good and sometimes bad; good with good, and evil with evil.',
         planet: 'Moon',
         rules: [4],
+        dots: 8,
         houseMeanings: [
             'Good in marriages.',
             'Medium good.',
@@ -485,7 +502,7 @@ var TetragramComponent = (function () {
 }());
 __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* Input */])(),
-    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__models_tetragram__["a" /* Tetragram */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__models_tetragram__["a" /* Tetragram */]) === "function" && _a || Object)
+    __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1__models_tetragram__["a" /* Tetragram */])
 ], TetragramComponent.prototype, "tetragram", void 0);
 TetragramComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* Component */])({
@@ -494,7 +511,6 @@ TetragramComponent = __decorate([
     __metadata("design:paramtypes", [])
 ], TetragramComponent);
 
-var _a;
 //# sourceMappingURL=tetragram.js.map
 
 /***/ }),

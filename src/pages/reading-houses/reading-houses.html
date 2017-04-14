@@ -21,6 +21,9 @@
         <tetragram [tetragram]="tetragram"></tetragram>
       </ion-thumbnail>
       {{tetragram.houseMeanings[i]}}
+      <p *ngIf="i == reading.partOfFortune">
+        Part of Fortune
+      </p>
     </ion-item>
   </ion-list>
 
