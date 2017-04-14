@@ -53,9 +53,11 @@ var Tetragram = (function () {
     function Tetragram(key) {
         if (key === void 0) { key = Math.floor(Math.random() * 15); }
         this.key = key;
-        this.name = tetragramInfo[key].name;
-        this.desc = tetragramInfo[key].desc;
-        this.houseMeanings = tetragramInfo[key].houseMeanings;
+        var info = tetragramInfo[key];
+        this.name = info.name;
+        this.desc = info.desc;
+        this.houseMeanings = info.houseMeanings;
+        this.planet = info.planet;
         this.row0 = (key >> 0) % 2;
         this.row1 = (key >> 1) % 2;
         this.row2 = (key >> 2) % 2;
@@ -487,7 +489,7 @@ __decorate([
 ], TetragramComponent.prototype, "tetragram", void 0);
 TetragramComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* Component */])({
-        selector: 'tetragram',template:/*ion-inline-start:"/Users/adam/AppGod/geomancy/src/components/tetragram/tetragram.html"*/'<!-- Generated template for the TetragramComponent component -->\n<div>\n  {{renderRow(tetragram.row0)}}\n</div>\n<div>\n  {{renderRow(tetragram.row1)}}\n</div>\n<div>\n  {{renderRow(tetragram.row2)}}\n</div>\n<div>\n  {{renderRow(tetragram.row3)}}\n</div>\n'/*ion-inline-end:"/Users/adam/AppGod/geomancy/src/components/tetragram/tetragram.html"*/
+        selector: 'tetragram',template:/*ion-inline-start:"/Users/adam/AppGod/geomancy/src/components/tetragram/tetragram.html"*/'<div>\n  <div>\n    {{renderRow(tetragram.row0)}}\n  </div>\n  <div>\n    {{renderRow(tetragram.row1)}}\n  </div>\n  <div>\n    {{renderRow(tetragram.row2)}}\n  </div>\n  <div>\n    {{renderRow(tetragram.row3)}}\n  </div>\n</div>\n'/*ion-inline-end:"/Users/adam/AppGod/geomancy/src/components/tetragram/tetragram.html"*/
     }),
     __metadata("design:paramtypes", [])
 ], TetragramComponent);

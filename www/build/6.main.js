@@ -50,9 +50,11 @@ var Tetragram = (function () {
     function Tetragram(key) {
         if (key === void 0) { key = Math.floor(Math.random() * 15); }
         this.key = key;
-        this.name = tetragramInfo[key].name;
-        this.desc = tetragramInfo[key].desc;
-        this.houseMeanings = tetragramInfo[key].houseMeanings;
+        var info = tetragramInfo[key];
+        this.name = info.name;
+        this.desc = info.desc;
+        this.houseMeanings = info.houseMeanings;
+        this.planet = info.planet;
         this.row0 = (key >> 0) % 2;
         this.row1 = (key >> 1) % 2;
         this.row2 = (key >> 2) % 2;

@@ -11,72 +11,72 @@
 
   <ion-grid>
     <ion-row>
-      <ion-col col-4>
+      <ion-col col-4 (click)="showTetragram(reading.witness1)">
         <tetragram [tetragram]="reading.witness1"></tetragram>
         <p>Left Witness</p>
       </ion-col>
-      <ion-col col-4>
+      <ion-col col-4 (click)="showTetragram(reading.judge)">
         <tetragram [tetragram]="reading.judge"></tetragram>
         <p>Judge</p>
       </ion-col>
-      <ion-col col-4>
+      <ion-col col-4 (click)="showTetragram(reading.witness0)">
         <tetragram [tetragram]="reading.witness0"></tetragram>
         <p>Right Witness</p>
       </ion-col>
     </ion-row>
 
     <ion-row>
-      <ion-col col-3>
+      <ion-col col-3 (click)="showTetragram(reading.mother3)">
         <tetragram [tetragram]="reading.mother3"></tetragram>
         <p>Mother 4</p>
       </ion-col>
-      <ion-col col-3>
+      <ion-col col-3 (click)="showTetragram(reading.mother2)">
         <tetragram [tetragram]="reading.mother2"></tetragram>
         <p>Mother 3</p>
       </ion-col>
-      <ion-col col-3>
+      <ion-col col-3 (click)="showTetragram(reading.mother1)">
         <tetragram [tetragram]="reading.mother1"></tetragram>
         <p>Mother 2</p>
       </ion-col>
-      <ion-col col-3>
+      <ion-col col-3 (click)="showTetragram(reading.mother0)">
         <tetragram [tetragram]="reading.mother0"></tetragram>
         <p>Mother 1</p>
       </ion-col>
     </ion-row>
 
     <ion-row>
-      <ion-col col-3>
+      <ion-col col-3 (click)="showTetragram(reading.daughter3)">
         <tetragram [tetragram]="reading.daughter3"></tetragram>
         <p>Daughter 4</p>
       </ion-col>
-      <ion-col col-3>
+      <ion-col col-3 (click)="showTetragram(reading.daughter2)">
         <tetragram [tetragram]="reading.daughter2"></tetragram>
         <p>Daughter 3</p>
       </ion-col>
-      <ion-col col-3>
+      <ion-col col-3 (click)="showTetragram(reading.daughter1)">
         <tetragram [tetragram]="reading.daughter1"></tetragram>
         <p>Daughter 2</p>
       </ion-col>
-      <ion-col col-3>
+      <ion-col col-3 (click)="showTetragram(reading.daughter0)">
         <tetragram [tetragram]="reading.daughter0"></tetragram>
         <p>Daughter 1</p>
       </ion-col>
     </ion-row>
 
     <ion-row>
-      <ion-col col-3>
+      <ion-col col-3 (click)="showTetragram(reading.nephew3)">
         <tetragram [tetragram]="reading.nephew3"></tetragram>
         <p>Nephew 4</p>
       </ion-col>
-      <ion-col col-3>
+      <ion-col col-3 (click)="showTetragram(reading.nephew2)">
         <tetragram [tetragram]="reading.nephew2"></tetragram>
         <p>Nephew 3</p>
       </ion-col>
-      <ion-col col-3>
+      <ion-col col-3 (click)="showTetragram(reading.nephew1)">
         <tetragram [tetragram]="reading.nephew1"></tetragram>
         <p>Nephew 2</p>
       </ion-col>
-      <ion-col col-3>
+      <ion-col col-3 (click)="showTetragram(reading.nephew0)">
         <tetragram [tetragram]="reading.nephew0"></tetragram>
         <p>Nephew 1</p>
       </ion-col>

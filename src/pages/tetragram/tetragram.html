@@ -11,17 +11,25 @@
   <div style="font-size: 200%;">
     <tetragram [tetragram]="tetragram"></tetragram>
   </div>
-  <p>{{tetragram.desc}}</p>
-  <div *ngIf="house">
-    <h1>{{tetragram.name}} in house #{{house}}</h1>
-    <p>{{tetragram.houseMeanings[house - 1]}}</p>
-  </div>
-  <div *ngIf="!house">
-    <h1>Houses</h1>
-    <ol>
-      <li *ngFor="let meaning of tetragram.houseMeanings">
-        {{houseMeanings}}
-      </li>
-    </ol>
-  </div>
+  <p class="big center">{{tetragram.desc}}</p>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col col-3>
+        Planet
+      </ion-col>
+      <ion-col col-9>
+        {{tetragram.planet}}
+      </ion-col>
+    </ion-row>
+    <ion-row *ngFor="let meaning of tetragram.houseMeanings; let i = index">
+      <ion-col col-3>
+        In House {{i + 1}}
+      </ion-col>
+      <ion-col col-9>
+        {{meaning}}
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
 </ion-content>

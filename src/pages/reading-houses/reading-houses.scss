@@ -1,3 +1,8 @@
 page-reading-houses {
-
+  ion-item {
+    &:hover {
+      background-color: silver;
+      cursor: pointer;
+    }
+  }
 }

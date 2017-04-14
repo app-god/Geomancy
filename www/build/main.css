@@ -24313,14 +24313,36 @@ ion-navbar.toolbar {
   }
 }
 
+ol li {
+  line-height: 200%;
+}
+
+.center {
+  text-align: center;
+}
+
+.big {
+  font-size: 150%;
+}
+
 tetragram {
   text-align: center;
 }
 
 page-reading-figures ion-col {
   text-align: center;
+  cursor: pointer;
+}
+
+page-reading-figures ion-col:hover {
+  background-color: silver;
 }
 
 page-reading-figures ion-col[col-4] {
   font-size: 133%;
+}
+
+page-reading-houses ion-item:hover {
+  background-color: silver;
+  cursor: pointer;
 }

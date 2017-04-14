@@ -15,8 +15,11 @@
 
 <ion-content padding>
   <ion-list>
-    <ion-item *ngFor="let tetragram of tetragrams; let i = index">
-      <tetragram [tetragram]="tetragram"></tetragram>
+    <ion-item *ngFor="let tetragram of tetragrams; let i = index"
+      (click)="showTetragram(tetragram)">
+      <ion-thumbnail item-left>
+        <tetragram [tetragram]="tetragram"></tetragram>
+      </ion-thumbnail>
       {{tetragram.houseMeanings[i]}}
     </ion-item>
   </ion-list>
