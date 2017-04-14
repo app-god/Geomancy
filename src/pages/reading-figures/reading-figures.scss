@@ -3,7 +3,7 @@ page-reading-figures {
     text-align: center;
     cursor: pointer;
     &:hover {
-      background-color: silver;
+      background-color: map-get($colors, primary);
     }
     &[col-4] {
       font-size: 133%;
