@@ -1,8 +1,5 @@
 page-reading-houses {
-  ion-card {
-    &:hover {
-      background-color: map-get($colors, primary);
-      cursor: pointer;
-    }
+  .house-title {
+    font-size: 150%;
   }
 }

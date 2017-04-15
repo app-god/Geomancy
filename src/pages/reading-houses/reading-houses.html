@@ -17,20 +17,27 @@
 
   <ion-card
     *ngFor="let tetragram of tetragrams; let i = index"
-    (click)="showTetragram(tetragram)">
+    >
 
-    <ion-card-content>
+    <ion-card-content no-padding>
       <ion-grid>
         <ion-row>
           <ion-col col-2>
-            <tetragram [tetragram]="tetragram"></tetragram>
+            <button ion-button style="height: 6em; width: 3em;"
+              (click)="showTetragram(tetragram)">
+              <tetragram [tetragram]="tetragram"></tetragram>
+            </button>
           </ion-col>
           <ion-col col-10>
-            <div *ngIf="i == reading.partOfFortune"
+            <ion-chip
+              color="secondary"
+              *ngIf="i == reading.partOfFortune"
               style="float: right">
-              Part of Fortune
-            </div>
-            <ion-card-title>House {{i + 1}}</ion-card-title>
+              <ion-label>
+                Part of Fortune
+              </ion-label>
+            </ion-chip>
+            <div class="house-title">House {{i + 1}}</div>
             {{tetragram.houseMeanings[i]}}
           </ion-col>
         </ion-row>
