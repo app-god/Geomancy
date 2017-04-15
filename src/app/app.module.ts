@@ -33,7 +33,6 @@ const cloudSettings: CloudSettings = {
     NewPage,
   ],
   providers: [
-    Storage,
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
