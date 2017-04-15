@@ -1,5 +1,5 @@
 page-reading-houses {
-  ion-item {
+  ion-card {
     &:hover {
       background-color: map-get($colors, primary);
       cursor: pointer;

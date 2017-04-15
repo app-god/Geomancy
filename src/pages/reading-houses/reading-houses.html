@@ -13,18 +13,29 @@
 </ion-header>
 
 
-<ion-content padding>
-  <ion-list>
-    <ion-item *ngFor="let tetragram of tetragrams; let i = index"
-      (click)="showTetragram(tetragram)">
-      <ion-thumbnail item-left>
-        <tetragram [tetragram]="tetragram"></tetragram>
-      </ion-thumbnail>
-      {{tetragram.houseMeanings[i]}}
-      <p *ngIf="i == reading.partOfFortune">
-        Part of Fortune
-      </p>
-    </ion-item>
-  </ion-list>
+<ion-content>
+
+  <ion-card
+    *ngFor="let tetragram of tetragrams; let i = index"
+    (click)="showTetragram(tetragram)">
+
+    <ion-card-content>
+      <ion-grid>
+        <ion-row>
+          <ion-col col-2>
+            <tetragram [tetragram]="tetragram"></tetragram>
+          </ion-col>
+          <ion-col col-10>
+            <div *ngIf="i == reading.partOfFortune"
+              style="float: right">
+              Part of Fortune
+            </div>
+            <ion-card-title>House {{i + 1}}</ion-card-title>
+            {{tetragram.houseMeanings[i]}}
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
 
 </ion-content>
