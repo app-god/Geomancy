@@ -24330,12 +24330,12 @@ tetragram {
 }
 
 tetragram .tetragram {
-  height: 6em;
+  height: 4em;
 }
 
 tetragram .tetragram-row {
-  height: 1.5em;
-  line-height: 1.5em;
+  height: 1em;
+  line-height: 1em;
 }
 
 page-history button:hover {

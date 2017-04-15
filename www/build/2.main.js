@@ -59,6 +59,7 @@ var Tetragram = (function () {
         this.houseMeanings = info.houseMeanings;
         this.planet = info.planet;
         this.dots = info.dots;
+        this.sign = info.sign;
         this.row0 = (key >> 0) % 2;
         this.row1 = (key >> 1) % 2;
         this.row2 = (key >> 2) % 2;
@@ -83,6 +84,7 @@ var tetragramInfo = [
         planet: 'Moon',
         rules: [1, 8],
         dots: 4,
+        sign: 'Cancer',
         houseMeanings: [
             'Evil except for prison.',
             'Indifferent.',
@@ -102,9 +104,10 @@ var tetragramInfo = [
         key: 1,
         name: 'Caput Draconis',
         desc: 'Good with good, evil with evil. Gives good issue for gain.',
-        planet: null,
+        planet: 'Venus',
         rules: [2, 7, 9, 12],
         dots: 5,
+        sign: 'Sagittarius',
         houseMeanings: [
             'Good in all things',
             'Good.',
@@ -127,6 +130,7 @@ var tetragramInfo = [
         planet: 'Venus',
         rules: [2, 7],
         dots: 5,
+        sign: 'Libra',
         houseMeanings: [
             'Good except in war.',
             'Very good.',
@@ -146,9 +150,10 @@ var tetragramInfo = [
         key: 3,
         name: 'Fortuna Major',
         desc: 'Good for gain in all things where a person has hopes to win.',
-        planet: 'Moon',
+        planet: 'Sun',
         rules: [5],
         dots: 6,
+        sign: 'Leo',
         houseMeanings: [
             'Good save in secrecy.',
             'Good except in sad things.',
@@ -168,9 +173,10 @@ var tetragramInfo = [
         key: 4,
         name: 'Puer',
         desc: 'Evil in most demands, except in those things relating to war or love.',
-        planet: '',
+        planet: 'Mars',
         rules: [1, 8],
         dots: 5,
+        sign: 'Aries',
         houseMeanings: [
             'Indifferent. Best in war.',
             'Good, but with trouble.',
@@ -193,6 +199,7 @@ var tetragramInfo = [
         planet: 'Jupiter',
         rules: [9, 12],
         dots: 6,
+        sign: 'Sagittarius',
         houseMeanings: [
             'Happy, success in all things.',
             'Very prosperous.',
@@ -215,6 +222,7 @@ var tetragramInfo = [
         planet: 'Saturn',
         rules: [10, 11],
         dots: 6,
+        sign: "Capricorn",
         houseMeanings: [
             'Evil except to fortify a place.',
             'Good in Saturnine questions; else evil.',
@@ -234,9 +242,10 @@ var tetragramInfo = [
         key: 7,
         name: 'Tristitia',
         desc: 'Evil in almost all things.',
-        planet: 'Jupiter',
+        planet: 'Saturn',
         rules: [10, 11],
         dots: 7,
+        sign: 'Aquarius',
         houseMeanings: [
             'Medium, but good for treasure and fortifying.',
             'Medium, but good to fortify.',
@@ -256,9 +265,10 @@ var tetragramInfo = [
         key: 8,
         name: 'Cauda Draconis',
         desc: 'Good with evil, and evil with good. Good for loss, and for passing out of an affair.',
-        planet: null,
+        planet: 'Mars',
         rules: [8, 10, 11],
         dots: 5,
+        sign: 'Virgo',
         houseMeanings: [
             'Good in all things.',
             'Good.',
@@ -281,6 +291,7 @@ var tetragramInfo = [
         planet: 'Mercury',
         rules: [3, 6],
         dots: 6,
+        sign: 'Virgo',
         houseMeanings: [
             'Good with good, evil with evil.',
             'Commonly good.',
@@ -303,6 +314,7 @@ var tetragramInfo = [
         planet: 'Venus',
         rules: [2, 7],
         dots: 6,
+        sign: 'Taurus',
         houseMeanings: [
             'Ill in all things but for prisoners.',
             'Very ill for money, but good for love.',
@@ -325,6 +337,7 @@ var tetragramInfo = [
         planet: 'Mercury',
         rules: [3, 6],
         dots: 7,
+        sign: 'Gemini',
         houseMeanings: [
             'Good for marriage. Mercurial. Peace.',
             'Good in all.',
@@ -347,6 +360,7 @@ var tetragramInfo = [
         planet: 'Sun',
         rules: [5],
         dots: 6,
+        sign: 'Leo',
         houseMeanings: [
             'Speed in victory and in love, but choleric.',
             'Very good.',
@@ -369,6 +383,7 @@ var tetragramInfo = [
         planet: 'Mars',
         rules: [1, 8],
         dots: 7,
+        sign: 'Scorpio',
         houseMeanings: [
             'Destroy the figure if it falls here! It makes the judgement worthless.',
             'Evil in all demands.',
@@ -391,6 +406,7 @@ var tetragramInfo = [
         planet: 'Jupiter',
         rules: [9, 12],
         dots: 7,
+        sign: 'Pisces',
         houseMeanings: [
             'Good, except in war.',
             'Sickly.',
@@ -413,6 +429,7 @@ var tetragramInfo = [
         planet: 'Moon',
         rules: [4],
         dots: 8,
+        sign: 'Cancer',
         houseMeanings: [
             'Good in marriages.',
             'Medium good.',
@@ -557,7 +574,7 @@ var ReadingHousesPage = (function () {
 ReadingHousesPage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPage */])(),
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["L" /* Component */])({
-        selector: 'page-reading-houses',template:/*ion-inline-start:"/Users/adam/AppGod/geomancy/src/pages/reading-houses/reading-houses.html"*/'<!--\n  Generated template for the ReadingHousesPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Houses</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content>\n\n  <ion-card\n    *ngFor="let tetragram of tetragrams; let i = index"\n    >\n\n    <ion-card-content no-padding>\n      <ion-grid>\n        <ion-row>\n          <ion-col col-2>\n            <button ion-button style="height: 6em; width: 3em;"\n              (click)="showTetragram(tetragram)">\n              <tetragram [tetragram]="tetragram"></tetragram>\n            </button>\n          </ion-col>\n          <ion-col col-10>\n            <ion-chip\n              color="secondary"\n              *ngIf="i == reading.partOfFortune"\n              style="float: right">\n              <ion-label>\n                Part of Fortune\n              </ion-label>\n            </ion-chip>\n            <div class="house-title">House {{i + 1}}</div>\n            {{tetragram.houseMeanings[i]}}\n          </ion-col>\n        </ion-row>\n      </ion-grid>\n    </ion-card-content>\n  </ion-card>\n\n</ion-content>\n'/*ion-inline-end:"/Users/adam/AppGod/geomancy/src/pages/reading-houses/reading-houses.html"*/,
+        selector: 'page-reading-houses',template:/*ion-inline-start:"/Users/adam/AppGod/geomancy/src/pages/reading-houses/reading-houses.html"*/'<!--\n  Generated template for the ReadingHousesPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Houses</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content>\n\n  <ion-card\n    *ngFor="let tetragram of tetragrams; let i = index"\n    >\n\n    <ion-card-content no-padding>\n      <ion-grid>\n        <ion-row>\n          <ion-col col-2>\n            <button ion-button style="padding: 1em; height: 100%; width: 100%;"\n              (click)="showTetragram(tetragram)">\n              <tetragram [tetragram]="tetragram"></tetragram>\n            </button>\n          </ion-col>\n          <ion-col col-10>\n            <ion-chip\n              color="secondary"\n              *ngIf="i == reading.partOfFortune"\n              style="clear: right; float: right">\n              <ion-label>\n                Part of Fortune\n              </ion-label>\n            </ion-chip>\n            <ion-chip\n              color="secondary"\n              style="clear: right; float: right">\n              <ion-label>\n                {{tetragram.planet}}\n              </ion-label>\n            </ion-chip>\n            <ion-chip\n              color="secondary"\n              style="clear: right; float: right">\n              <ion-label>\n                {{reading.getSignForHouse(i)}}\n              </ion-label>\n            </ion-chip>\n            <div class="house-title">House {{i + 1}}</div>\n            {{tetragram.houseMeanings[i]}}\n          </ion-col>\n        </ion-row>\n      </ion-grid>\n    </ion-card-content>\n  </ion-card>\n\n</ion-content>\n'/*ion-inline-end:"/Users/adam/AppGod/geomancy/src/pages/reading-houses/reading-houses.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
 ], ReadingHousesPage);

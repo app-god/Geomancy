@@ -108,6 +108,14 @@ export class Reading {
 
     return tetragrams[house]
   }
+
+  getSignForHouse(house: number): String {
+    const signs = ['Aries', 'Taurus', 'Gemini', 'Cancer', 'Leo', 'Virgo',
+      'Libra', 'Scorpio', 'Sagittarius', 'Capricorn', 'Aquarius', 'Pisces']
+    let firstSign = this.getTetragramForHouse(0).sign
+    let houseSignIndex = (signs.indexOf(firstSign) + house) % 12
+    return signs[houseSignIndex]
+  }
 }
 
 export interface ReadingData {
