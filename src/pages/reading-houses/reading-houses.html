@@ -37,28 +37,20 @@
                 Part of Fortune
               </ion-label>
             </ion-chip>
-            <!-- <ion-chip
-              color="secondary"
-              style="clear: right; float: right">
-              <ion-label>
-                {{house.tetragram.planet}}
-              </ion-label>
-            </ion-chip> -->
-            <ion-chip *ngIf="house.ruler == house.tetragram.planet"
+            <ion-chip *ngIf="house.exaltation == house.tetragram.planet"
               style="clear: right; float: right;"
-              color="secondary"
-            >
+              color="secondary">
               <ion-label>
-                Strongest
+                ★★
               </ion-label>
             </ion-chip>
-            <!-- <ion-chip
-              color="secondary"
-              style="clear: right; float: right">
+            <ion-chip *ngIf="house.ruler == house.tetragram.planet"
+              style="clear: right; float: right;"
+              color="secondary">
               <ion-label>
-                {{reading.getSignForHouse(i)}}
+                ★★★
               </ion-label>
-            </ion-chip> -->
+            </ion-chip>
             <div class="house-title">House {{i + 1}}</div>
             <div class="house-description">{{houses[i].description}}</div>
             {{house.tetragram.houseMeanings[i]}}
