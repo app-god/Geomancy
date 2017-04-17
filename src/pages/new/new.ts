@@ -3,6 +3,7 @@ import { Storage } from '@ionic/storage'
 
 import { NavController, ModalController, LoadingController } from 'ionic-angular';
 import { ReadingData } from '../../models/reading'
+import { House } from '../../models/house'
 
 @Component({
   selector: 'page-new',
@@ -12,11 +13,13 @@ export class NewPage {
   startDisabled = false
 
   question: string = ''
+  houses: House[]
 
   constructor(public navCtrl: NavController, private modCtrl: ModalController,
     private loadingCtrl: LoadingController,
     private storage: Storage) {
-
+    this.houses = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+      .map(number => { return new House(number)})
   }
 
   clickStart() {

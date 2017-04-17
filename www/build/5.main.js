@@ -593,10 +593,10 @@ HistoryPage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["L" /* Component */])({
         selector: 'page-history',template:/*ion-inline-start:"/Users/adam/AppGod/geomancy/src/pages/history/history.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      History\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <ion-list no-lines>\n    <ion-item-sliding *ngFor="let reading of readings">\n      <button ion-item (click)="showReading(reading)">\n        <!-- <ion-thumbnail item-left>\n          <tetragram [tetragram]="readingData.judge"></tetragram>\n        </ion-thumbnail> -->\n        <h1>{{reading.question}}</h1>\n        <p>{{reading.date | date:\'medium\'}}</p>\n      </button>\n\n      <ion-item-options side="right">\n        <button ion-button (click)="deleteReading(reading)"\n          color="danger">Delete</button>\n      </ion-item-options>\n    </ion-item-sliding>\n  </ion-list>\n</ion-content>\n'/*ion-inline-end:"/Users/adam/AppGod/geomancy/src/pages/history/history.html"*/
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__ionic_storage__["b" /* Storage */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__ionic_storage__["b" /* Storage */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* ModalController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* ModalController */]) === "function" && _c || Object])
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_2__ionic_storage__["b" /* Storage */],
+        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* ModalController */]])
 ], HistoryPage);
 
-var _a, _b, _c;
 //# sourceMappingURL=history.js.map
 
 /***/ })

@@ -1,12 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { House } from '../../models/house'
 
-/**
- * Generated class for the ReadingHousesPage page.
- *
- * See http://ionicframework.com/docs/components/#navigation for more info
- * on Ionic pages and navigation.
- */
 @IonicPage()
 @Component({
   selector: 'page-reading-houses',
@@ -14,13 +9,18 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class ReadingHousesPage {
   reading
-  tetragrams
+  houses: House[] = []
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.reading = navParams.data
-    this.tetragrams = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11].map((houseIndex) => {
-      return this.reading.getTetragramForHouse(houseIndex)
-    })
+
+    let houseNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+
+    for (let number of houseNumbers) {
+      let house = new House(number)
+      house.tetragram = this.reading.getTetragramForHouse(number - 1)
+      this.houses.push(house)
+    }
   }
 
   showTetragram(tetragram) {

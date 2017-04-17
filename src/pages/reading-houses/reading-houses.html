@@ -16,7 +16,7 @@
 <ion-content>
 
   <ion-card
-    *ngFor="let tetragram of tetragrams; let i = index"
+    *ngFor="let house of houses; let i = index"
     >
 
     <ion-card-content no-padding>
@@ -24,8 +24,8 @@
         <ion-row>
           <ion-col col-2>
             <button ion-button style="padding: 1em; height: 100%; width: 100%;"
-              (click)="showTetragram(tetragram)">
-              <tetragram [tetragram]="tetragram"></tetragram>
+              (click)="showTetragram(house.tetragram)">
+              <tetragram [tetragram]="house.tetragram"></tetragram>
             </button>
           </ion-col>
           <ion-col col-10>
@@ -37,22 +37,31 @@
                 Part of Fortune
               </ion-label>
             </ion-chip>
-            <ion-chip
+            <!-- <ion-chip
               color="secondary"
               style="clear: right; float: right">
               <ion-label>
-                {{tetragram.planet}}
+                {{house.tetragram.planet}}
+              </ion-label>
+            </ion-chip> -->
+            <ion-chip *ngIf="house.ruler == house.tetragram.planet"
+              style="clear: right; float: right;"
+              color="secondary"
+            >
+              <ion-label>
+                Strongest
               </ion-label>
             </ion-chip>
-            <ion-chip
+            <!-- <ion-chip
               color="secondary"
               style="clear: right; float: right">
               <ion-label>
                 {{reading.getSignForHouse(i)}}
               </ion-label>
-            </ion-chip>
+            </ion-chip> -->
             <div class="house-title">House {{i + 1}}</div>
-            {{tetragram.houseMeanings[i]}}
+            <div class="house-description">{{houses[i].description}}</div>
+            {{house.tetragram.houseMeanings[i]}}
           </ion-col>
         </ion-row>
       </ion-grid>

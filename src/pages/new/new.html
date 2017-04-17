@@ -10,6 +10,15 @@
       <ion-label>Question</ion-label>
       <ion-input [(ngModel)]="question" placeholder="Enter Question Here"></ion-input>
     </ion-item>
+
+    <ion-item>
+      <ion-label>Topic</ion-label>
+      <ion-select>
+        <ion-option [selected]="house.number == 1" [value]="house.number" *ngFor="let house of houses">
+          {{house.description}}
+        </ion-option>
+      </ion-select>
+    </ion-item>
   </ion-list>
   <button ion-button block large
     (click)="clickStart()"
