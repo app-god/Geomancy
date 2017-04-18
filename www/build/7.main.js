@@ -24,7 +24,7 @@ var TabsPageModule = (function () {
     return TabsPageModule;
 }());
 TabsPageModule = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["a" /* NgModule */])({
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["b" /* NgModule */])({
         declarations: [
             __WEBPACK_IMPORTED_MODULE_2__tabs__["a" /* TabsPage */],
         ],
@@ -73,7 +73,7 @@ var TabsPage = (function () {
 }());
 TabsPage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_ionic_angular__["e" /* IonicPage */])(),
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["K" /* Component */])({template:/*ion-inline-start:"/Users/adam/AppGod/geomancy/src/pages/tabs/tabs.html"*/'<ion-tabs>\n  <ion-tab [root]="tab1Root" tabTitle="New" tabIcon="home"></ion-tab>\n  <ion-tab [root]="tab2Root" tabTitle="Library" tabIcon="information-circle"></ion-tab>\n  <ion-tab [root]="tab3Root" tabTitle="History" tabIcon="contacts"></ion-tab>\n</ion-tabs>\n'/*ion-inline-end:"/Users/adam/AppGod/geomancy/src/pages/tabs/tabs.html"*/
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["L" /* Component */])({template:/*ion-inline-start:"/Users/adam/AppGod/geomancy/src/pages/tabs/tabs.html"*/'<ion-tabs>\n  <ion-tab [root]="tab1Root" tabTitle="New" tabIcon="home"></ion-tab>\n  <ion-tab [root]="tab2Root" tabTitle="Library" tabIcon="information-circle"></ion-tab>\n  <ion-tab [root]="tab3Root" tabTitle="History" tabIcon="contacts"></ion-tab>\n</ion-tabs>\n'/*ion-inline-end:"/Users/adam/AppGod/geomancy/src/pages/tabs/tabs.html"*/
     }),
     __metadata("design:paramtypes", [])
 ], TabsPage);

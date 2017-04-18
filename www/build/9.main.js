@@ -24,7 +24,7 @@ var LibraryHousesPageModule = (function () {
     return LibraryHousesPageModule;
 }());
 LibraryHousesPageModule = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["a" /* NgModule */])({
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["b" /* NgModule */])({
         declarations: [
             __WEBPACK_IMPORTED_MODULE_2__library_houses__["a" /* LibraryHousesPage */],
         ],
@@ -77,7 +77,7 @@ var LibraryHousesPage = (function () {
 }());
 LibraryHousesPage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPage */])(),
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* Component */])({
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["L" /* Component */])({
         selector: 'page-library-houses',template:/*ion-inline-start:"/Users/adam/AppGod/geomancy/src/pages/library-houses/library-houses.html"*/'<!--\n  Generated template for the LibraryHousesPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Houses</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content>\n\n  <ion-list>\n    <button ion-item *ngFor="let house of houses" (click)="showHouse(house)">\n      <h1>House {{house.number}}</h1>\n      <p>{{house.description}}</p>\n    </button>\n  </ion-list>\n\n</ion-content>\n'/*ion-inline-end:"/Users/adam/AppGod/geomancy/src/pages/library-houses/library-houses.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])

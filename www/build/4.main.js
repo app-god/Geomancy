@@ -26,7 +26,7 @@ var LibraryTetragramsPageModule = (function () {
     return LibraryTetragramsPageModule;
 }());
 LibraryTetragramsPageModule = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["a" /* NgModule */])({
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["b" /* NgModule */])({
         declarations: [
             __WEBPACK_IMPORTED_MODULE_2__library_tetragrams__["a" /* LibraryTetragramsPage */],
         ],
@@ -471,7 +471,7 @@ var TetragramComponentModule = (function () {
     return TetragramComponentModule;
 }());
 TetragramComponentModule = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["a" /* NgModule */])({
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["b" /* NgModule */])({
         declarations: [
             __WEBPACK_IMPORTED_MODULE_1__tetragram__["a" /* TetragramComponent */],
         ],
@@ -518,11 +518,11 @@ var TetragramComponent = (function () {
     return TetragramComponent;
 }());
 __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* Input */])(),
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["v" /* Input */])(),
     __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1__models_tetragram__["a" /* Tetragram */])
 ], TetragramComponent.prototype, "tetragram", void 0);
 TetragramComponent = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* Component */])({
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["L" /* Component */])({
         selector: 'tetragram',template:/*ion-inline-start:"/Users/adam/AppGod/geomancy/src/components/tetragram/tetragram.html"*/'<div class="tetragram">\n  <div class="tetragram-row">\n    {{renderRow(tetragram.row0)}}\n  </div>\n  <div class="tetragram-row">\n    {{renderRow(tetragram.row1)}}\n  </div>\n  <div class="tetragram-row">\n    {{renderRow(tetragram.row2)}}\n  </div>\n  <div class="tetragram-row">\n    {{renderRow(tetragram.row3)}}\n  </div>\n</div>\n'/*ion-inline-end:"/Users/adam/AppGod/geomancy/src/components/tetragram/tetragram.html"*/
     }),
     __metadata("design:paramtypes", [])
@@ -568,7 +568,7 @@ var LibraryTetragramsPage = (function () {
 }());
 LibraryTetragramsPage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPage */])(),
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* Component */])({
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["L" /* Component */])({
         selector: 'page-library-tetragrams',template:/*ion-inline-start:"/Users/adam/AppGod/geomancy/src/pages/library-tetragrams/library-tetragrams.html"*/'<!--\n  Generated template for the LibraryTetragramsPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Tetragrams</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content>\n\n  <ion-list>\n    <button ion-item *ngFor="let tetragram of tetragrams"\n      (click)="showTetragram(tetragram)">\n      <ion-thumbnail item-left>\n        <tetragram [tetragram]="tetragram"></tetragram>\n      </ion-thumbnail>\n      <h1>{{tetragram.name}}</h1>\n      <p>{{tetragram.desc}}</p>\n    </button>\n  </ion-list>\n\n</ion-content>\n'/*ion-inline-end:"/Users/adam/AppGod/geomancy/src/pages/library-tetragrams/library-tetragrams.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
