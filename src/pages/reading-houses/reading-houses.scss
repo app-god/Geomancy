@@ -2,4 +2,8 @@ page-reading-houses {
   .house-title {
     font-size: 150%;
   }
+
+  .topic-house {
+    border: solid thin color($colors, secondary)
+  }
 }

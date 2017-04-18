@@ -1,7 +1,10 @@
 import { Tetragram } from './tetragram'
+import { House } from './house'
 
 export class Reading {
   question: string
+  topic: string
+  house: House
 
   mother0: Tetragram
   mother1: Tetragram
@@ -30,6 +33,15 @@ export class Reading {
   constructor(data: ReadingData) {
 
     this.question = data.question
+    this.topic = data.topic
+
+    this.house = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+      .map(number => {
+        return new House(number)
+      })
+      .find(house => {
+        return house.description == this.topic
+      })
 
     this.date = data.date
 
@@ -120,6 +132,7 @@ export class Reading {
 
 export interface ReadingData {
   question: string
+  topic: string
   date: number
   key0: number
   key1: number

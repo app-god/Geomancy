@@ -23,12 +23,22 @@
       <ion-grid>
         <ion-row>
           <ion-col col-2>
-            <button ion-button style="padding: 1em; height: 100%; width: 100%;"
+            <button ion-button clear
+              color="light"
+              style="height: 100%; width: 100%"
               (click)="showTetragram(house.tetragram)">
               <tetragram [tetragram]="house.tetragram"></tetragram>
             </button>
           </ion-col>
           <ion-col col-10>
+            <ion-chip
+              color="secondary"
+              *ngIf="house.description == reading.topic"
+              style="clear: right; float: right">
+              <ion-label>
+                Topic
+              </ion-label>
+            </ion-chip>
             <ion-chip
               color="secondary"
               *ngIf="i == reading.partOfFortune"

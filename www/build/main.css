@@ -24358,3 +24358,7 @@ page-reading-figures ion-col[col-4] {
 page-reading-houses .house-title {
   font-size: 150%;
 }
+
+page-reading-houses .topic-house {
+  border: solid thin #E4D00A;
+}

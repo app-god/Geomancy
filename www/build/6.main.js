@@ -452,11 +452,22 @@ var tetragramInfo = [
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__tetragram__ = __webpack_require__(890);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__house__ = __webpack_require__(525);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Reading; });
+
 
 var Reading = (function () {
     function Reading(data) {
+        var _this = this;
         this.question = data.question;
+        this.topic = data.topic;
+        this.house = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+            .map(function (number) {
+            return new __WEBPACK_IMPORTED_MODULE_1__house__["a" /* House */](number);
+        })
+            .find(function (house) {
+            return house.description == _this.topic;
+        });
         this.date = data.date;
         this.mother0 = new __WEBPACK_IMPORTED_MODULE_0__tetragram__["a" /* Tetragram */](data.key0);
         this.mother1 = new __WEBPACK_IMPORTED_MODULE_0__tetragram__["a" /* Tetragram */](data.key1);

@@ -13,6 +13,7 @@ export class NewPage {
   startDisabled = false
 
   question: string = ''
+  topic: string = ''
   houses: House[]
 
   constructor(public navCtrl: NavController, private modCtrl: ModalController,
@@ -20,6 +21,7 @@ export class NewPage {
     private storage: Storage) {
     this.houses = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
       .map(number => { return new House(number)})
+    this.topic = this.houses[0].description
   }
 
   clickStart() {
@@ -33,6 +35,7 @@ export class NewPage {
 
     let readingData: ReadingData = {
       question: this.question,
+      topic: this.topic,
       date: Date.now(),
       key0: Math.floor(Math.random() * 15),
       key1: Math.floor(Math.random() * 15),

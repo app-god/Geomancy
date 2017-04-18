@@ -13,8 +13,11 @@
 
     <ion-item>
       <ion-label>Topic</ion-label>
-      <ion-select>
-        <ion-option [selected]="house.number == 1" [value]="house.number" *ngFor="let house of houses">
+      <ion-select [(ngModel)]="topic">
+        <ion-option
+          [selected]="house.topic == topic"
+          [value]="house.description"
+          *ngFor="let house of houses">
           {{house.description}}
         </ion-option>
       </ion-select>
