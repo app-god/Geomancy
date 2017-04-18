@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
 import { LibraryPage } from './library';
-import { TetragramComponentModule } from '../../components/tetragram/tetragram.module'
 
 @NgModule({
   declarations: [
@@ -9,7 +8,6 @@ import { TetragramComponentModule } from '../../components/tetragram/tetragram.m
   ],
   imports: [
     IonicPageModule.forChild(LibraryPage),
-    TetragramComponentModule
   ],
   exports: [
     LibraryPage

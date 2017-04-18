@@ -2,8 +2,6 @@ import { Component } from '@angular/core';
 
 import { NavController, IonicPage } from 'ionic-angular';
 
-import { Tetragram } from '../../models/tetragram'
-
 @IonicPage()
 @Component({
   selector: 'page-library',
@@ -11,15 +9,24 @@ import { Tetragram } from '../../models/tetragram'
 })
 export class LibraryPage {
 
-  tetragrams: Tetragram[]
+  topics = [
+    {
+      name: 'Tetragrams',
+      description: 'description',
+      page: 'LibraryTetragramsPage'
+    },
+    {
+      name: 'Houses',
+      description: 'description',
+      page: 'LibraryHousesPage'
+    }
+  ]
 
   constructor(public navCtrl: NavController) {
-    this.tetragrams = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
-      .map(i => { return new Tetragram(i) })
   }
 
-  showTetragram(tetragram) {
-    this.navCtrl.push('TetragramPage', { tetragram: tetragram })
+  showPage(page) {
+    this.navCtrl.push(page)
   }
 
 }

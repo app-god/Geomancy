@@ -9,13 +9,10 @@
 <ion-content>
 
   <ion-list>
-    <ion-list-header>Tetragrams</ion-list-header>
-    <button ion-item *ngFor="let tetragram of tetragrams" (click)="showTetragram(tetragram)">
-      <ion-thumbnail item-left>
-        <tetragram [tetragram]="tetragram"></tetragram>
-      </ion-thumbnail>
-      <h1>{{tetragram.name}}</h1>
-      <p>{{tetragram.desc}}</p>
+    <button ion-item *ngFor="let topic of topics"
+      (click)="showPage(topic.page)">
+      <h1>{{topic.name}}</h1>
+      <p>{{topic.description}}</p>
     </button>
   </ion-list>
 

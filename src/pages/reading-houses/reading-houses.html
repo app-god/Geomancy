@@ -37,6 +37,13 @@
                 Part of Fortune
               </ion-label>
             </ion-chip>
+            <ion-chip *ngIf="house.tetragram.key == reading.judge.key"
+              style="clear: right; float: right;"
+              color="secondary">
+              <ion-label>
+                Judge
+              </ion-label>
+            </ion-chip>
             <ion-chip *ngIf="house.exaltation == house.tetragram.planet"
               style="clear: right; float: right;"
               color="secondary">
