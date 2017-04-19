@@ -26,7 +26,7 @@ var ReadingHousesPageModule = (function () {
     return ReadingHousesPageModule;
 }());
 ReadingHousesPageModule = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["b" /* NgModule */])({
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["a" /* NgModule */])({
         declarations: [
             __WEBPACK_IMPORTED_MODULE_2__reading_houses__["a" /* ReadingHousesPage */],
         ],
@@ -471,7 +471,7 @@ var TetragramComponentModule = (function () {
     return TetragramComponentModule;
 }());
 TetragramComponentModule = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["b" /* NgModule */])({
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["a" /* NgModule */])({
         declarations: [
             __WEBPACK_IMPORTED_MODULE_1__tetragram__["a" /* TetragramComponent */],
         ],
@@ -518,11 +518,11 @@ var TetragramComponent = (function () {
     return TetragramComponent;
 }());
 __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["v" /* Input */])(),
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* Input */])(),
     __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1__models_tetragram__["a" /* Tetragram */])
 ], TetragramComponent.prototype, "tetragram", void 0);
 TetragramComponent = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["L" /* Component */])({
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* Component */])({
         selector: 'tetragram',template:/*ion-inline-start:"/Users/adam/AppGod/geomancy/src/components/tetragram/tetragram.html"*/'<div class="tetragram">\n  <div class="tetragram-row">\n    {{renderRow(tetragram.row0)}}\n  </div>\n  <div class="tetragram-row">\n    {{renderRow(tetragram.row1)}}\n  </div>\n  <div class="tetragram-row">\n    {{renderRow(tetragram.row2)}}\n  </div>\n  <div class="tetragram-row">\n    {{renderRow(tetragram.row3)}}\n  </div>\n</div>\n'/*ion-inline-end:"/Users/adam/AppGod/geomancy/src/components/tetragram/tetragram.html"*/
     }),
     __metadata("design:paramtypes", [])
@@ -573,7 +573,7 @@ var ReadingHousesPage = (function () {
 }());
 ReadingHousesPage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPage */])(),
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["L" /* Component */])({
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* Component */])({
         selector: 'page-reading-houses',template:/*ion-inline-start:"/Users/adam/AppGod/geomancy/src/pages/reading-houses/reading-houses.html"*/'<!--\n  Generated template for the ReadingHousesPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Houses</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content>\n\n  <ion-card\n    *ngFor="let house of houses; let i = index">\n\n    <ion-card-content no-padding>\n      <ion-grid>\n        <ion-row>\n          <ion-col col-2>\n            <button ion-button clear\n              color="light"\n              style="height: 100%; width: 100%"\n              (click)="showTetragram(house.tetragram)">\n              <tetragram [tetragram]="house.tetragram"></tetragram>\n            </button>\n          </ion-col>\n          <ion-col col-10>\n            <ion-chip\n              color="secondary"\n              *ngIf="house.topics.indexOf(reading.topic) >= 0"\n              style="clear: right; float: right">\n              <ion-label>\n                Topic\n              </ion-label>\n            </ion-chip>\n            <ion-chip\n              color="secondary"\n              *ngIf="i == reading.partOfFortune"\n              style="clear: right; float: right">\n              <ion-label>\n                Part of Fortune\n              </ion-label>\n            </ion-chip>\n            <ion-chip *ngIf="house.tetragram.key == reading.judge.key"\n              style="clear: right; float: right;"\n              color="secondary">\n              <ion-label>\n                Judge\n              </ion-label>\n            </ion-chip>\n            <ion-chip *ngIf="house.exaltation == house.tetragram.planet"\n              style="clear: right; float: right;"\n              color="secondary">\n              <ion-label>\n                ★★\n              </ion-label>\n            </ion-chip>\n            <ion-chip *ngIf="house.ruler == house.tetragram.planet"\n              style="clear: right; float: right;"\n              color="secondary">\n              <ion-label>\n                ★★★\n              </ion-label>\n            </ion-chip>\n            <div class="house-title">House {{i + 1}}</div>\n            <div class="house-topics">{{house.topics.join(\', \')}}</div>\n            <div>{{house.tetragram.houseMeanings[i]}}</div>\n          </ion-col>\n        </ion-row>\n      </ion-grid>\n    </ion-card-content>\n  </ion-card>\n\n</ion-content>\n'/*ion-inline-end:"/Users/adam/AppGod/geomancy/src/pages/reading-houses/reading-houses.html"*/,
     }),
     __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]) === "function" && _b || Object])

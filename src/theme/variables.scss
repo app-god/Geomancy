@@ -13,8 +13,6 @@ $font-path: "../assets/fonts";
 // http://ionicframework.com/docs/v2/theming/overriding-ionic-variables/
 
 
-
-
 // Named Color Variables
 // --------------------------------------------------
 // Named colors makes it easy to reuse colors on various components.
@@ -24,11 +22,12 @@ $font-path: "../assets/fonts";
 // The "primary" color is the only required color in the map.
 
 $colors: (
-  primary:    #80461B,
-  secondary:  #E4D00A,
-  danger:     #808000,
+  primary:    #806651,
+  secondary:  #ffffed,
+  danger:     #a52a2a,
   light:      #f4f4f4,
-  dark:       #222
+  dark:       #222,
+  inactive:   #666
 );
 
 
@@ -37,6 +36,8 @@ $colors: (
 // iOS only Sass variables can go here
 
 
+$tabs-ios-tab-icon-color: color($colors, inactive);
+$tabs-ios-tab-text-color: color($colors, inactive);
 
 
 // App Material Design Variables
@@ -44,6 +45,8 @@ $colors: (
 // Material Design only Sass variables can go here
 
 
+$tabs-md-tab-icon-color: color($colors, inactive);
+$tabs-md-tab-text-color: color($colors, inactive);
 
 
 // App Windows Variables
