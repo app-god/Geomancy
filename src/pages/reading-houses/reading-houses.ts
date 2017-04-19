@@ -18,7 +18,7 @@ export class ReadingHousesPage {
 
     for (let number of houseNumbers) {
       let house = new House(number)
-      house.tetragram = this.reading.getTetragramForHouse(number - 1)
+      house.tetragram = this.reading.getTetragramForHouse(number)
       this.houses.push(house)
     }
   }

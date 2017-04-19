@@ -118,7 +118,7 @@ export class Reading {
       this.mother0, this.daughter0, this.nephew0
     ]
 
-    return tetragrams[house]
+    return tetragrams[house - 1]
   }
 
   getSignForHouse(house: number): String {

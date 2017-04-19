@@ -514,7 +514,7 @@ var Reading = (function () {
             this.mother3, this.daughter3, this.nephew3,
             this.mother0, this.daughter0, this.nephew0
         ];
-        return tetragrams[house];
+        return tetragrams[house - 1];
     };
     Reading.prototype.getSignForHouse = function (house) {
         var signs = ['Aries', 'Taurus', 'Gemini', 'Cancer', 'Leo', 'Virgo',
