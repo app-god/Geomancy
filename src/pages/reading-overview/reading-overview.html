@@ -15,12 +15,15 @@
 
 <ion-content padding>
 
-  <p>
-    question: {{reading.question}}
-  </p>
+  <div class="reading-question">{{reading.question}}</div>
+  <div class="reading-topic">{{reading.topic}}</div>
 
-  <p>
-    topic: {{reading.topic}}
-  </p>
+  <h3>Warning</h3>
+
+  <ion-card color="danger" *ngFor="let warning of warnings">
+    <ion-card-content>
+      {{warning}}
+    </ion-card-content>
+  </ion-card>
 
 </ion-content>

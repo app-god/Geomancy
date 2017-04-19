@@ -24363,6 +24363,12 @@ page-reading-houses .house-topics {
   font-style: italic;
 }
 
-page-reading-houses .topic-house {
-  border: solid thin #E4D00A;
+page-reading-overview .reading-question,
+page-reading-overview .reading-topic {
+  text-align: center;
+  font-size: 150%;
+}
+
+page-reading-overview .reading-topic {
+  font-style: italic;
 }
