@@ -15,10 +15,10 @@
       <ion-label>Topic</ion-label>
       <ion-select [(ngModel)]="topic">
         <ion-option
-          [selected]="house.topic == topic"
-          [value]="house.description"
-          *ngFor="let house of houses">
-          {{house.description}}
+          [selected]="t == topic"
+          [value]="t"
+          *ngFor="let t of topics">
+          {{t}}
         </ion-option>
       </ion-select>
     </ion-item>

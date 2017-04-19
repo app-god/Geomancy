@@ -40,7 +40,7 @@ export class Reading {
         return new House(number)
       })
       .find(house => {
-        return house.description == this.topic
+        return house.topics.indexOf(this.topic) >= 0
       })
 
     this.date = data.date
@@ -98,7 +98,6 @@ export class Reading {
     }).reduce((a, b) => {
       return a + b
     }, 0) % 12
-    console.log(this.partOfFortune)
   }
 
   createFromRows(row0, row1, row2, row3) {

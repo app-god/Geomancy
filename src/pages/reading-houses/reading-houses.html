@@ -16,8 +16,7 @@
 <ion-content>
 
   <ion-card
-    *ngFor="let house of houses; let i = index"
-    >
+    *ngFor="let house of houses; let i = index">
 
     <ion-card-content no-padding>
       <ion-grid>
@@ -33,7 +32,7 @@
           <ion-col col-10>
             <ion-chip
               color="secondary"
-              *ngIf="house.description == reading.topic"
+              *ngIf="house.topics.indexOf(reading.topic) >= 0"
               style="clear: right; float: right">
               <ion-label>
                 Topic
@@ -69,8 +68,8 @@
               </ion-label>
             </ion-chip>
             <div class="house-title">House {{i + 1}}</div>
-            <div class="house-description">{{houses[i].description}}</div>
-            {{house.tetragram.houseMeanings[i]}}
+            <div class="house-topics">{{house.topics.join(', ')}}</div>
+            <div>{{house.tetragram.houseMeanings[i]}}</div>
           </ion-col>
         </ion-row>
       </ion-grid>

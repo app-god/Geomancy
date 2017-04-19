@@ -24356,7 +24356,11 @@ page-reading-figures ion-col[col-4] {
 }
 
 page-reading-houses .house-title {
-  font-size: 150%;
+  font-weight: bold;
+}
+
+page-reading-houses .house-topics {
+  font-style: italic;
 }
 
 page-reading-houses .topic-house {

@@ -14,14 +14,22 @@ export class NewPage {
 
   question: string = ''
   topic: string = ''
-  houses: House[]
+  topics: string[]
 
   constructor(public navCtrl: NavController, private modCtrl: ModalController,
     private loadingCtrl: LoadingController,
     private storage: Storage) {
-    this.houses = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+    let houses = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
       .map(number => { return new House(number)})
-    this.topic = this.houses[0].description
+
+    let nestedTopics = houses.map(house => { return house.topics })
+
+    this.topics = [].concat.apply([], nestedTopics)
+
+    this.topics.sort()
+
+    this.topic = this.topics[0]
   }
 
   clickStart() {

@@ -1,9 +1,9 @@
 page-reading-houses {
   .house-title {
-    font-size: 150%;
+    font-weight: bold;
   }
 
-  .topic-house {
-    border: solid thin color($colors, secondary)
+  .house-topics {
+    font-style: italic;
   }
 }

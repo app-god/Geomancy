@@ -466,7 +466,7 @@ var Reading = (function () {
             return new __WEBPACK_IMPORTED_MODULE_1__house__["a" /* House */](number);
         })
             .find(function (house) {
-            return house.description == _this.topic;
+            return house.topics.indexOf(_this.topic) >= 0;
         });
         this.date = data.date;
         this.mother0 = new __WEBPACK_IMPORTED_MODULE_0__tetragram__["a" /* Tetragram */](data.key0);
@@ -497,7 +497,6 @@ var Reading = (function () {
         }).reduce(function (a, b) {
             return a + b;
         }, 0) % 12;
-        console.log(this.partOfFortune);
     }
     Reading.prototype.createFromRows = function (row0, row1, row2, row3) {
         var r0 = row0 % 2;
