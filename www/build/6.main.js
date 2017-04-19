@@ -459,7 +459,12 @@ var tetragramInfo = [
 var Reading = (function () {
     function Reading(data) {
         var _this = this;
-        this.question = data.question;
+        if (data.question == '') {
+            this.question = 'None';
+        }
+        else {
+            this.question = data.question;
+        }
         this.topic = data.topic;
         this.house = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
             .map(function (number) {
@@ -564,7 +569,7 @@ var ReadingPage = (function () {
 ReadingPage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPage */])(),
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["L" /* Component */])({
-        selector: 'page-reading',template:/*ion-inline-start:"/Users/adam/AppGod/geomancy/src/pages/reading/reading.html"*/'<ion-tabs>\n  <ion-tab [root]="\'ReadingOverviewPage\'" [rootParams]="reading" tabTitle="Overview" tabIcon="information-circle"></ion-tab>\n  <ion-tab [root]="\'ReadingFiguresPage\'"  [rootParams]="reading" tabTitle="Figures" tabIcon="information-circle"></ion-tab>\n  <ion-tab [root]="\'ReadingHousesPage\'"   [rootParams]="reading" tabTitle="Houses" tabIcon="information-circle"></ion-tab>\n</ion-tabs>\n'/*ion-inline-end:"/Users/adam/AppGod/geomancy/src/pages/reading/reading.html"*/,
+        selector: 'page-reading',template:/*ion-inline-start:"/Users/adam/AppGod/geomancy/src/pages/reading/reading.html"*/'<ion-tabs>\n  <ion-tab [root]="\'ReadingOverviewPage\'" [rootParams]="reading" tabTitle="Overview" tabIcon="information-circle"></ion-tab>\n  <ion-tab [root]="\'ReadingHousesPage\'"   [rootParams]="reading" tabTitle="Houses" tabIcon="information-circle"></ion-tab>\n  <ion-tab [root]="\'ReadingFiguresPage\'"  [rootParams]="reading" tabTitle="Figures" tabIcon="information-circle"></ion-tab>\n</ion-tabs>\n'/*ion-inline-end:"/Users/adam/AppGod/geomancy/src/pages/reading/reading.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__ionic_storage__["b" /* Storage */],
         __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* ViewController */]])

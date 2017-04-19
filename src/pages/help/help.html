@@ -7,12 +7,18 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>Help</ion-title>
+    <ion-title text-capitalize>Help: {{topic}}</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
+
+  <div *ngIf="topic == 'new reading'">
+    <h3>What should I ask?</h3>
+
+    <h3>Which topic should I choose?</h3>
+  </div>
 
 </ion-content>

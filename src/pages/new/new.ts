@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Storage } from '@ionic/storage'
 
-import { NavController, ModalController, LoadingController } from 'ionic-angular';
+import { NavController, ModalController, LoadingController, AlertController } from 'ionic-angular';
 import { ReadingData } from '../../models/reading'
 import { House } from '../../models/house'
 
@@ -18,7 +18,8 @@ export class NewPage {
 
   constructor(public navCtrl: NavController, private modCtrl: ModalController,
     private loadingCtrl: LoadingController,
-    private storage: Storage) {
+    private storage: Storage,
+    private alertCtrl: AlertController) {
 
     let houses = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
       .map(number => { return new House(number)})
@@ -28,6 +29,7 @@ export class NewPage {
     this.topics = [].concat.apply([], nestedTopics)
 
     this.topics.sort()
+    this.topics.unshift('None')
 
     this.topic = this.topics[0]
   }
@@ -69,6 +71,10 @@ export class NewPage {
       })
     })
 
+  }
+
+  showHelp() {
+    this.navCtrl.push('HelpPage', { topic: 'new reading' })
   }
 
 }

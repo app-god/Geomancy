@@ -32,7 +32,12 @@ export class Reading {
 
   constructor(data: ReadingData) {
 
-    this.question = data.question
+    if (data.question == '') {
+      this.question = 'None'
+    } else {
+      this.question = data.question
+    }
+    
     this.topic = data.topic
 
     this.house = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
