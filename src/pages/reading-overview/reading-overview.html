@@ -17,22 +17,24 @@
 
   <ion-grid class="big">
     <ion-row>
-      <ion-col col-3>
+      <ion-col col-4>
         Question:
       </ion-col>
-      <ion-col col-9>
+      <ion-col col-8>
         {{reading.question}}
       </ion-col>
     </ion-row>
     <ion-row>
-      <ion-col col-3>
+      <ion-col col-4>
         Topic:
       </ion-col>
-      <ion-col col-9>
+      <ion-col col-8>
         {{reading.topic}}
       </ion-col>
     </ion-row>
   </ion-grid>
+
+  <br>
 
   <div *ngIf="warnings.length > 0">
     <h3>Warning</h3>

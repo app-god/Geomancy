@@ -15,6 +15,10 @@ export class LibraryTetragramsPage {
       .map(key => {
         return new Tetragram(key)
       })
+    this.tetragrams.sort((a, b) => {
+      if (a.name < b.name) { return -1 }
+      if (a.name > b.name) { return 1 }
+    })
   }
 
   showTetragram(tetragram) {

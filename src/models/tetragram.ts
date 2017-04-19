@@ -57,7 +57,7 @@ interface TetragramInfo {
   // strongTriplicity?: number[]
 }
 
-const tetragramInfo: TetragramInfo[] = [
+export const tetragramInfo: TetragramInfo[] = [
   {
     key: 0,
     name: 'Via',

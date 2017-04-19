@@ -23,8 +23,8 @@ export class ReadingHousesPage {
     }
   }
 
-  showTetragram(tetragram) {
-    this.navCtrl.push('TetragramPage', { tetragram: tetragram })
+  showHouse(house) {
+    this.navCtrl.push('HousePage', { house: house })
   }
 
 }

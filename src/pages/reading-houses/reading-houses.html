@@ -18,16 +18,12 @@
   <ion-card
     *ngFor="let house of houses; let i = index">
 
-    <ion-card-content no-padding>
+    <ion-card-content no-padding
+      (click)="showHouse(house)">
       <ion-grid>
         <ion-row>
           <ion-col col-2>
-            <button ion-button clear
-              color="light"
-              style="height: 100%; width: 100%"
-              (click)="showTetragram(house.tetragram)">
-              <tetragram [tetragram]="house.tetragram"></tetragram>
-            </button>
+            <tetragram [tetragram]="house.tetragram"></tetragram>
           </ion-col>
           <ion-col col-10>
             <ion-chip

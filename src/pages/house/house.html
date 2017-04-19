@@ -17,4 +17,11 @@
 
   <p>{{house.description}}</p>
 
+  <ion-grid>
+    <ion-row *ngFor="let nameWithMeaning of tetragramNamesWithMeanings">
+      <ion-col col-4>{{nameWithMeaning.name}}</ion-col>
+      <ion-col col-8>{{nameWithMeaning.meaning}}</ion-col>
+    </ion-row>
+  </ion-grid>
+
 </ion-content>
