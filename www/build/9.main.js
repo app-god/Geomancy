@@ -1,14 +1,14 @@
 webpackJsonp([9],{
 
-/***/ 882:
+/***/ 883:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(99);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__library_houses__ = __webpack_require__(897);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LibraryHousesPageModule", function() { return LibraryHousesPageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__library__ = __webpack_require__(899);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LibraryPageModule", function() { return LibraryPageModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,37 +18,36 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var LibraryHousesPageModule = (function () {
-    function LibraryHousesPageModule() {
+var LibraryPageModule = (function () {
+    function LibraryPageModule() {
     }
-    return LibraryHousesPageModule;
+    return LibraryPageModule;
 }());
-LibraryHousesPageModule = __decorate([
+LibraryPageModule = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["a" /* NgModule */])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_2__library_houses__["a" /* LibraryHousesPage */],
+            __WEBPACK_IMPORTED_MODULE_2__library__["a" /* LibraryPage */],
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__library_houses__["a" /* LibraryHousesPage */]),
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__library__["a" /* LibraryPage */]),
         ],
         exports: [
-            __WEBPACK_IMPORTED_MODULE_2__library_houses__["a" /* LibraryHousesPage */]
+            __WEBPACK_IMPORTED_MODULE_2__library__["a" /* LibraryPage */]
         ]
     })
-], LibraryHousesPageModule);
+], LibraryPageModule);
 
-//# sourceMappingURL=library-houses.module.js.map
+//# sourceMappingURL=library.module.js.map
 
 /***/ }),
 
-/***/ 897:
+/***/ 899:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(99);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__models_house__ = __webpack_require__(526);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LibraryHousesPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LibraryPage; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -60,30 +59,36 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-
-var LibraryHousesPage = (function () {
-    function LibraryHousesPage(navCtrl, navParams) {
+var LibraryPage = (function () {
+    function LibraryPage(navCtrl) {
         this.navCtrl = navCtrl;
-        this.navParams = navParams;
-        this.houses = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
-            .map(function (houseNumber) {
-            return new __WEBPACK_IMPORTED_MODULE_2__models_house__["a" /* House */](houseNumber);
-        });
+        this.topics = [
+            {
+                name: 'Tetragrams',
+                description: 'description',
+                page: 'LibraryTetragramsPage'
+            },
+            {
+                name: 'Houses',
+                description: 'description',
+                page: 'LibraryHousesPage'
+            }
+        ];
     }
-    LibraryHousesPage.prototype.showHouse = function (house) {
-        this.navCtrl.push('HousePage', { house: house });
+    LibraryPage.prototype.showPage = function (page) {
+        this.navCtrl.push(page);
     };
-    return LibraryHousesPage;
+    return LibraryPage;
 }());
-LibraryHousesPage = __decorate([
+LibraryPage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPage */])(),
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* Component */])({
-        selector: 'page-library-houses',template:/*ion-inline-start:"/Users/adam/AppGod/geomancy/src/pages/library-houses/library-houses.html"*/'<!--\n  Generated template for the LibraryHousesPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Houses</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content>\n\n  <ion-list>\n    <button ion-item *ngFor="let house of houses" (click)="showHouse(house)">\n      <h1>House {{house.number}}</h1>\n      <p>{{house.description}}</p>\n    </button>\n  </ion-list>\n\n</ion-content>\n'/*ion-inline-end:"/Users/adam/AppGod/geomancy/src/pages/library-houses/library-houses.html"*/,
+        selector: 'page-library',template:/*ion-inline-start:"/Users/adam/AppGod/geomancy/src/pages/library/library.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      Library\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n\n  <ion-list>\n    <button ion-item *ngFor="let topic of topics"\n      (click)="showPage(topic.page)">\n      <h1>{{topic.name}}</h1>\n      <p>{{topic.description}}</p>\n    </button>\n  </ion-list>\n\n</ion-content>\n'/*ion-inline-end:"/Users/adam/AppGod/geomancy/src/pages/library/library.html"*/
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
-], LibraryHousesPage);
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]])
+], LibraryPage);
 
-//# sourceMappingURL=library-houses.js.map
+//# sourceMappingURL=library.js.map
 
 /***/ })
 

@@ -12,20 +12,6 @@ export class House {
     this.ruler = info.ruler
     this.exaltation = info.exaltation
   }
-
-  getTetragramNamesWithMeanings(): any[] {
-    let namesWithMeanings = tetragramInfo.map(info => {
-      return {
-        name: info.name,
-        meaning: info.houseMeanings[this.number - 1]
-      }
-    })
-    namesWithMeanings.sort((a, b) => {
-      if (a.name < b.name) { return -1 }
-      if (a.name > b.name) { return 1 }
-    })
-    return namesWithMeanings
-  }
 }
 
 interface HouseInfo {

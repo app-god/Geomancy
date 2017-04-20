@@ -1,14 +1,14 @@
 webpackJsonp([8],{
 
-/***/ 884:
+/***/ 888:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(99);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__library__ = __webpack_require__(899);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LibraryPageModule", function() { return LibraryPageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__tabs__ = __webpack_require__(904);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TabsPageModule", function() { return TabsPageModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,36 +18,37 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var LibraryPageModule = (function () {
-    function LibraryPageModule() {
+var TabsPageModule = (function () {
+    function TabsPageModule() {
     }
-    return LibraryPageModule;
+    return TabsPageModule;
 }());
-LibraryPageModule = __decorate([
+TabsPageModule = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["a" /* NgModule */])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_2__library__["a" /* LibraryPage */],
+            __WEBPACK_IMPORTED_MODULE_2__tabs__["a" /* TabsPage */],
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__library__["a" /* LibraryPage */]),
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__tabs__["a" /* TabsPage */]),
         ],
         exports: [
-            __WEBPACK_IMPORTED_MODULE_2__library__["a" /* LibraryPage */]
+            __WEBPACK_IMPORTED_MODULE_2__tabs__["a" /* TabsPage */]
         ]
     })
-], LibraryPageModule);
+], TabsPageModule);
 
-//# sourceMappingURL=library.module.js.map
+//# sourceMappingURL=tabs.module.js.map
 
 /***/ }),
 
-/***/ 899:
+/***/ 904:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(99);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LibraryPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_ionic_angular__ = __webpack_require__(99);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__new_new__ = __webpack_require__(526);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TabsPage; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -59,36 +60,25 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-var LibraryPage = (function () {
-    function LibraryPage(navCtrl) {
-        this.navCtrl = navCtrl;
-        this.topics = [
-            {
-                name: 'Tetragrams',
-                description: 'description',
-                page: 'LibraryTetragramsPage'
-            },
-            {
-                name: 'Houses',
-                description: 'description',
-                page: 'LibraryHousesPage'
-            }
-        ];
-    }
-    LibraryPage.prototype.showPage = function (page) {
-        this.navCtrl.push(page);
-    };
-    return LibraryPage;
-}());
-LibraryPage = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPage */])(),
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* Component */])({
-        selector: 'page-library',template:/*ion-inline-start:"/Users/adam/AppGod/geomancy/src/pages/library/library.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      Library\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n\n  <ion-list>\n    <button ion-item *ngFor="let topic of topics"\n      (click)="showPage(topic.page)">\n      <h1>{{topic.name}}</h1>\n      <p>{{topic.description}}</p>\n    </button>\n  </ion-list>\n\n</ion-content>\n'/*ion-inline-end:"/Users/adam/AppGod/geomancy/src/pages/library/library.html"*/
-    }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]])
-], LibraryPage);
 
-//# sourceMappingURL=library.js.map
+var TabsPage = (function () {
+    function TabsPage() {
+        // this tells the tabs component which Pages
+        // should be each tab's root Page
+        this.tab1Root = __WEBPACK_IMPORTED_MODULE_2__new_new__["a" /* NewPage */];
+        this.tab2Root = 'LibraryPage';
+        this.tab3Root = 'HistoryPage';
+    }
+    return TabsPage;
+}());
+TabsPage = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0_ionic_angular__["e" /* IonicPage */])(),
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["K" /* Component */])({template:/*ion-inline-start:"/Users/adam/AppGod/geomancy/src/pages/tabs/tabs.html"*/'<ion-tabs>\n  <ion-tab [root]="tab1Root" tabTitle="New" tabIcon="home"></ion-tab>\n  <ion-tab [root]="tab2Root" tabTitle="Library" tabIcon="information-circle"></ion-tab>\n  <ion-tab [root]="tab3Root" tabTitle="History" tabIcon="contacts"></ion-tab>\n</ion-tabs>\n'/*ion-inline-end:"/Users/adam/AppGod/geomancy/src/pages/tabs/tabs.html"*/
+    }),
+    __metadata("design:paramtypes", [])
+], TabsPage);
+
+//# sourceMappingURL=tabs.js.map
 
 /***/ })
 
