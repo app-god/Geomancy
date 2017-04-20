@@ -87,6 +87,7 @@ var Reading = (function () {
         this.witness1 = this.nephew2.add(this.nephew3);
         this.witnesses = [this.witness0, this.witness1];
         this.judge = this.witness0.add(this.witness1);
+        this.reconciler = this.mother0.add(this.judge);
         this.partOfFortune = [
             this.mother0, this.mother1, this.mother2, this.mother3,
             this.daughter0, this.daughter1, this.daughter2, this.daughter3,

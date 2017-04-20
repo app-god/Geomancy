@@ -21,6 +21,7 @@ export class Reading {
   witness0: Tetragram
   witness1: Tetragram
   judge: Tetragram
+  reconciler: Tetragram
 
   mothers: Tetragram[]
   daughters: Tetragram[]
@@ -37,7 +38,7 @@ export class Reading {
     } else {
       this.question = data.question
     }
-    
+
     this.topic = data.topic
 
     this.house = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
@@ -93,6 +94,7 @@ export class Reading {
     this.witnesses = [this.witness0, this.witness1]
 
     this.judge = this.witness0.add(this.witness1)
+    this.reconciler = this.mother0.add(this.judge)
 
     this.partOfFortune = [
       this.mother0, this.mother1, this.mother2, this.mother3,

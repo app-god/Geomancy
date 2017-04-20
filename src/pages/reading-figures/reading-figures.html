@@ -10,16 +10,20 @@
 <ion-content padding>
 
   <ion-grid>
+
     <ion-row>
-      <ion-col col-4 (click)="showTetragram(reading.witness1)">
-        <tetragram [tetragram]="reading.witness1"></tetragram>
-        <p>Left Witness</p>
-      </ion-col>
-      <ion-col col-4 (click)="showTetragram(reading.judge)">
+      <ion-col col-12 (click)="showTetragram(reading.judge)">
         <tetragram [tetragram]="reading.judge"></tetragram>
         <p>Judge</p>
       </ion-col>
-      <ion-col col-4 (click)="showTetragram(reading.witness0)">
+    </ion-row>
+
+    <ion-row>
+      <ion-col col-6 (click)="showTetragram(reading.witness1)">
+        <tetragram [tetragram]="reading.witness1"></tetragram>
+        <p>Left Witness</p>
+      </ion-col>
+      <ion-col col-6 (click)="showTetragram(reading.witness0)">
         <tetragram [tetragram]="reading.witness0"></tetragram>
         <p>Right Witness</p>
       </ion-col>
@@ -81,6 +85,14 @@
         <p>Nephew 1</p>
       </ion-col>
     </ion-row>
+
+    <ion-row>
+      <ion-col col-12 (click)="showTetragram(reading.reconciler)">
+        <tetragram [tetragram]="reading.reconciler"></tetragram>
+        <p>Reconciler</p>
+      </ion-col>
+    </ion-row>
+
   </ion-grid>
 
 </ion-content>
