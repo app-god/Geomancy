@@ -149,7 +149,8 @@ var ReadingOverviewPage = (function () {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
         this.warnings = [];
-        this.reading = navParams.data;
+        this.parent = navParams.get('parent');
+        this.reading = this.parent.reading;
         var house1Tetragram = this.reading.getTetragramForHouse(1);
         if (house1Tetragram.name == 'Rubeus'
             || house1Tetragram.name == 'Cauda Draconis') {
@@ -157,16 +158,20 @@ var ReadingOverviewPage = (function () {
             this.warnings.push(message);
         }
     }
+    ReadingOverviewPage.prototype.ionViewWillEnter = function () {
+        this.parent.title = 'Overview';
+    };
     return ReadingOverviewPage;
 }());
 ReadingOverviewPage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPage */])(),
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* Component */])({
-        selector: 'page-reading-overview',template:/*ion-inline-start:"/Users/adam/AppGod/geomancy/src/pages/reading-overview/reading-overview.html"*/'<ion-header>\n\n  <ion-navbar>\n    <ion-title>Overview</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n  <ion-grid class="big">\n    <ion-row>\n      <ion-col col-4>\n        Question:\n      </ion-col>\n      <ion-col col-8>\n        {{reading.question}}\n      </ion-col>\n    </ion-row>\n    <ion-row>\n      <ion-col col-4>\n        Topic:\n      </ion-col>\n      <ion-col col-8>\n        {{reading.topic}}\n      </ion-col>\n    </ion-row>\n  </ion-grid>\n\n  <br>\n\n  <div>\n    <h3>General Interpretation</h3>\n    <ion-card no-margin>\n      <ion-card-content>\n        <div *ngIf="reading.judge.good && reading.witness0.good && reading.witness1.good">\n          Good\n        </div>\n        <div *ngIf="!reading.judge.good && !reading.witness0.good && !reading.witness1.good">\n          Bad\n        </div>\n        <div *ngIf="reading.judge.good && !reading.witness0.good && !reading.witness1.good">\n          Unfortunate in the end\n        </div>\n        <div *ngIf="reading.judge.good && reading.witness0.good && !reading.witness1.good">\n          Good beginning will take an unfortunate turn\n        </div>\n        <div *ngIf="reading.judge.good && !reading.witness0.good && reading.witness1.good">\n          Unfortunate beginning will take a good turn\n        </div>\n      </ion-card-content>\n    </ion-card>\n  </div>\n\n  <div *ngIf="warnings.length > 0">\n    <h3>Warning</h3>\n    <ion-card no-margin color="danger" *ngFor="let warning of warnings">\n      <ion-card-content>\n        {{warning}}\n      </ion-card-content>\n    </ion-card>\n  </div>\n\n</ion-content>\n'/*ion-inline-end:"/Users/adam/AppGod/geomancy/src/pages/reading-overview/reading-overview.html"*/,
+        selector: 'page-reading-overview',template:/*ion-inline-start:"/Users/adam/AppGod/geomancy/src/pages/reading-overview/reading-overview.html"*/'<ion-header><ion-navbar></ion-navbar></ion-header>\n\n<ion-content padding>\n\n  <ion-grid class="big">\n    <ion-row>\n      <ion-col col-4>\n        Question:\n      </ion-col>\n      <ion-col col-8>\n        {{reading.question}}\n      </ion-col>\n    </ion-row>\n    <ion-row>\n      <ion-col col-4>\n        Topic:\n      </ion-col>\n      <ion-col col-8>\n        {{reading.topic}}\n      </ion-col>\n    </ion-row>\n  </ion-grid>\n\n  <br>\n\n  <div>\n    <h3>General Interpretation</h3>\n    <ion-card no-margin>\n      <ion-card-content>\n        <div *ngIf="reading.judge.good && reading.witness0.good && reading.witness1.good">\n          Good\n        </div>\n        <div *ngIf="!reading.judge.good && !reading.witness0.good && !reading.witness1.good">\n          Bad\n        </div>\n        <div *ngIf="reading.judge.good && !reading.witness0.good && !reading.witness1.good">\n          Unfortunate in the end\n        </div>\n        <div *ngIf="reading.judge.good && reading.witness0.good && !reading.witness1.good">\n          Good beginning will take an unfortunate turn\n        </div>\n        <div *ngIf="reading.judge.good && !reading.witness0.good && reading.witness1.good">\n          Unfortunate beginning will take a good turn\n        </div>\n      </ion-card-content>\n    </ion-card>\n  </div>\n\n  <div *ngIf="warnings.length > 0">\n    <h3>Warning</h3>\n    <ion-card no-margin color="danger" *ngFor="let warning of warnings">\n      <ion-card-content>\n        {{warning}}\n      </ion-card-content>\n    </ion-card>\n  </div>\n\n</ion-content>\n'/*ion-inline-end:"/Users/adam/AppGod/geomancy/src/pages/reading-overview/reading-overview.html"*/,
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]) === "function" && _b || Object])
 ], ReadingOverviewPage);
 
+var _a, _b;
 //# sourceMappingURL=reading-overview.js.map
 
 /***/ })

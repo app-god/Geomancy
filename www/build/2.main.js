@@ -151,7 +151,8 @@ var ReadingHousesPage = (function () {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
         this.houses = [];
-        this.reading = navParams.data;
+        this.parent = navParams.get('parent');
+        this.reading = this.parent.reading;
         var houseNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
         for (var _i = 0, houseNumbers_1 = houseNumbers; _i < houseNumbers_1.length; _i++) {
             var number = houseNumbers_1[_i];
@@ -163,16 +164,20 @@ var ReadingHousesPage = (function () {
     ReadingHousesPage.prototype.showHouse = function (house) {
         this.navCtrl.push('HousePage', { house: house });
     };
+    ReadingHousesPage.prototype.ionViewWillEnter = function () {
+        this.parent.title = 'Houses';
+    };
     return ReadingHousesPage;
 }());
 ReadingHousesPage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPage */])(),
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* Component */])({
-        selector: 'page-reading-houses',template:/*ion-inline-start:"/Users/adam/AppGod/geomancy/src/pages/reading-houses/reading-houses.html"*/'<!--\n  Generated template for the ReadingHousesPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Houses</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content>\n\n  <ion-card\n    *ngFor="let house of houses; let i = index">\n\n    <ion-card-content no-padding\n      (click)="showHouse(house)">\n      <ion-grid>\n        <ion-row>\n          <ion-col col-2>\n            <tetragram [tetragram]="house.tetragram"></tetragram>\n          </ion-col>\n          <ion-col col-10>\n            <ion-chip\n              color="secondary"\n              *ngIf="house.topics.indexOf(reading.topic) >= 0"\n              style="clear: right; float: right">\n              <ion-label>\n                Topic\n              </ion-label>\n            </ion-chip>\n            <ion-chip\n              color="secondary"\n              *ngIf="i == reading.partOfFortune"\n              style="clear: right; float: right">\n              <ion-label>\n                Part of Fortune\n              </ion-label>\n            </ion-chip>\n            <ion-chip *ngIf="house.tetragram.key == reading.judge.key"\n              style="clear: right; float: right;"\n              color="secondary">\n              <ion-label>\n                Judge\n              </ion-label>\n            </ion-chip>\n            <ion-chip *ngIf="house.exaltation == house.tetragram.planet"\n              style="clear: right; float: right;"\n              color="secondary">\n              <ion-label>\n                ★★\n              </ion-label>\n            </ion-chip>\n            <ion-chip *ngIf="house.ruler == house.tetragram.planet"\n              style="clear: right; float: right;"\n              color="secondary">\n              <ion-label>\n                ★★★\n              </ion-label>\n            </ion-chip>\n            <div class="house-title">House {{i + 1}}</div>\n            <div class="house-topics">{{house.topics.join(\', \')}}</div>\n            <div>{{house.tetragram.houseMeanings[i]}}</div>\n          </ion-col>\n        </ion-row>\n      </ion-grid>\n    </ion-card-content>\n  </ion-card>\n\n</ion-content>\n'/*ion-inline-end:"/Users/adam/AppGod/geomancy/src/pages/reading-houses/reading-houses.html"*/,
+        selector: 'page-reading-houses',template:/*ion-inline-start:"/Users/adam/AppGod/geomancy/src/pages/reading-houses/reading-houses.html"*/'<ion-header><ion-navbar></ion-navbar></ion-header>\n\n<ion-content>\n\n  <ion-card\n    *ngFor="let house of houses; let i = index">\n\n    <ion-card-content no-padding\n      (click)="showHouse(house)">\n      <ion-grid>\n        <ion-row>\n          <ion-col col-2>\n            <tetragram [tetragram]="house.tetragram"></tetragram>\n          </ion-col>\n          <ion-col col-10>\n            <ion-chip\n              color="secondary"\n              *ngIf="house.topics.indexOf(reading.topic) >= 0"\n              style="clear: right; float: right">\n              <ion-label>\n                Topic\n              </ion-label>\n            </ion-chip>\n            <ion-chip\n              color="secondary"\n              *ngIf="i == reading.partOfFortune"\n              style="clear: right; float: right">\n              <ion-label>\n                Part of Fortune\n              </ion-label>\n            </ion-chip>\n            <ion-chip *ngIf="house.tetragram.key == reading.judge.key"\n              style="clear: right; float: right;"\n              color="secondary">\n              <ion-label>\n                Judge\n              </ion-label>\n            </ion-chip>\n            <ion-chip *ngIf="house.exaltation == house.tetragram.planet"\n              style="clear: right; float: right;"\n              color="secondary">\n              <ion-label>\n                ★★\n              </ion-label>\n            </ion-chip>\n            <ion-chip *ngIf="house.ruler == house.tetragram.planet"\n              style="clear: right; float: right;"\n              color="secondary">\n              <ion-label>\n                ★★★\n              </ion-label>\n            </ion-chip>\n            <div class="house-title">House {{i + 1}}</div>\n            <div class="house-topics">{{house.topics.join(\', \')}}</div>\n            <div>{{house.tetragram.houseMeanings[i]}}</div>\n          </ion-col>\n        </ion-row>\n      </ion-grid>\n    </ion-card-content>\n  </ion-card>\n\n</ion-content>\n'/*ion-inline-end:"/Users/adam/AppGod/geomancy/src/pages/reading-houses/reading-houses.html"*/,
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]) === "function" && _b || Object])
 ], ReadingHousesPage);
 
+var _a, _b;
 //# sourceMappingURL=reading-houses.js.map
 
 /***/ })

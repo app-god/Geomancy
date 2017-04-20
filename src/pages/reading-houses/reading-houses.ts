@@ -9,10 +9,12 @@ import { House } from '../../models/house'
 })
 export class ReadingHousesPage {
   reading
+  parent
   houses: House[] = []
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-    this.reading = navParams.data
+    this.parent = navParams.get('parent')
+    this.reading = this.parent.reading
 
     let houseNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
 
@@ -25,6 +27,10 @@ export class ReadingHousesPage {
 
   showHouse(house) {
     this.navCtrl.push('HousePage', { house: house })
+  }
+
+  ionViewWillEnter() {
+    this.parent.title = 'Houses'
   }
 
 }

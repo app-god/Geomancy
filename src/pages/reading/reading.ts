@@ -10,9 +10,19 @@ import { Reading } from '../../models/reading'
 })
 export class ReadingPage {
   reading: Reading
+  rootParams: any
+  title: string = 'Reading'
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public storage: Storage,
     public viewCtrl: ViewController) {
       this.reading = new Reading(navParams.get('readingData'))
+      this.rootParams = {
+        parent: this
+      }
   }
+
+  close() {
+    this.viewCtrl.dismiss()
+  }
+
 }

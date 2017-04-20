@@ -1,5 +1,18 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-buttons left>
+      <button ion-button icon-only (click)="close()">
+        <ion-icon name="ios-close"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>{{title}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
 <ion-tabs>
-  <ion-tab [root]="'ReadingOverviewPage'" [rootParams]="reading" tabTitle="Overview" tabIcon="information-circle"></ion-tab>
-  <ion-tab [root]="'ReadingHousesPage'"   [rootParams]="reading" tabTitle="Houses" tabIcon="information-circle"></ion-tab>
-  <ion-tab [root]="'ReadingFiguresPage'"  [rootParams]="reading" tabTitle="Figures" tabIcon="information-circle"></ion-tab>
+  <ion-tab [root]="'ReadingOverviewPage'" [rootParams]="rootParams" tabTitle="Overview" tabIcon="information-circle"></ion-tab>
+  <ion-tab [root]="'ReadingHousesPage'"   [rootParams]="rootParams" tabTitle="Houses" tabIcon="information-circle"></ion-tab>
+  <ion-tab [root]="'ReadingFiguresPage'"  [rootParams]="rootParams" tabTitle="Figures" tabIcon="information-circle"></ion-tab>
 </ion-tabs>

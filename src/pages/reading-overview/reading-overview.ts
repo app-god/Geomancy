@@ -7,11 +7,13 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'reading-overview.html',
 })
 export class ReadingOverviewPage {
+  parent
   reading
   warnings = []
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-    this.reading = navParams.data
+    this.parent = navParams.get('parent')
+    this.reading = this.parent.reading
 
     let house1Tetragram = this.reading.getTetragramForHouse(1)
     if (house1Tetragram.name == 'Rubeus'
@@ -21,4 +23,9 @@ export class ReadingOverviewPage {
       this.warnings.push(message)
     }
   }
+
+  ionViewWillEnter() {
+    this.parent.title = 'Overview'
+  }
+
 }
