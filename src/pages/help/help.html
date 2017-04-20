@@ -7,7 +7,7 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title text-capitalize>Help: {{topic}}</ion-title>
+    <ion-title>Help</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -19,6 +19,22 @@
     <h3>What should I ask?</h3>
 
     <h3>Which topic should I choose?</h3>
+  </div>
+
+  <div *ngIf="topic == 'reading houses'">
+    <h3>What does Part of Fortune mean?</h3>
+
+    <h3>What do the stars mean?</h3>
+
+    <h3>What does "Topic" mean?</h3>
+    <p>
+      Pay special attention to this one. "Topic" means that this house is
+      connected to the topic you selected.
+    </p>
+
+    <h3>What does "Judge" mean?</h3>
+    <p>Judge means that the tetragram found in this house is the same as the
+      Judge for this reading.</p>
   </div>
 
 </ion-content>
