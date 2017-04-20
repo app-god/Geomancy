@@ -3,6 +3,7 @@ export class Tetragram {
 
   name: string
   desc: string
+  good: boolean
   houseMeanings: string[]
   planet: string
   dots: number
@@ -17,6 +18,7 @@ export class Tetragram {
     let info: TetragramInfo = tetragramInfo[key]
     this.name = info.name
     this.desc = info.desc
+    this.good = info.good
     this.houseMeanings = info.houseMeanings
     this.planet = info.planet
     this.dots = info.dots
@@ -49,6 +51,7 @@ interface TetragramInfo {
   planet?: string
   houseMeanings: string[]
   rules: number[]
+  good: boolean
   dots: number
   // exalted: number[]
   // fall: number[]
@@ -66,6 +69,7 @@ export const tetragramInfo: TetragramInfo[] = [
     rules: [1, 8],
     dots: 4,
     sign: 'Cancer',
+    good: false,
     houseMeanings: [
       'Evil except for prison.',
       'Indifferent.',
@@ -89,6 +93,7 @@ export const tetragramInfo: TetragramInfo[] = [
     rules: [2, 7, 9, 12],
     dots: 5,
     sign: 'Sagittarius',
+    good: true,
     houseMeanings: [
       'Good in all things',
       'Good.',
@@ -112,6 +117,7 @@ export const tetragramInfo: TetragramInfo[] = [
     rules: [2, 7],
     dots: 5,
     sign: 'Libra',
+    good: true,
     houseMeanings: [
       'Good except in war.',
       'Very good.',
@@ -135,6 +141,7 @@ export const tetragramInfo: TetragramInfo[] = [
     rules: [5],
     dots: 6,
     sign: 'Leo',
+    good: true,
     houseMeanings: [
       'Good save in secrecy.',
       'Good except in sad things.',
@@ -158,6 +165,7 @@ export const tetragramInfo: TetragramInfo[] = [
     rules: [1, 8],
     dots: 5,
     sign: 'Aries',
+    good: false,
     houseMeanings: [
       'Indifferent. Best in war.',
       'Good, but with trouble.',
@@ -181,6 +189,7 @@ export const tetragramInfo: TetragramInfo[] = [
     rules: [9, 12],
     dots: 6,
     sign: 'Sagittarius',
+    good: true,
     houseMeanings: [
       'Happy, success in all things.',
       'Very prosperous.',
@@ -204,6 +213,7 @@ export const tetragramInfo: TetragramInfo[] = [
     rules: [10, 11],
     dots: 6,
     sign: "Capricorn",
+    good: false,
     houseMeanings: [
       'Evil except to fortify a place.',
       'Good in Saturnine questions; else evil.',
@@ -227,6 +237,7 @@ export const tetragramInfo: TetragramInfo[] = [
     rules: [10, 11],
     dots: 7,
     sign: 'Aquarius',
+    good: false,
     houseMeanings: [
       'Medium, but good for treasure and fortifying.',
       'Medium, but good to fortify.',
@@ -250,6 +261,7 @@ export const tetragramInfo: TetragramInfo[] = [
     rules: [8, 10, 11],
     dots: 5,
     sign: 'Virgo',
+    good: false,
     houseMeanings: [
       'Good in all things.',
       'Good.',
@@ -273,6 +285,7 @@ export const tetragramInfo: TetragramInfo[] = [
     rules: [3, 6],
     dots: 6,
     sign: 'Virgo',
+    good: true,
     houseMeanings: [
       'Good with good, evil with evil.',
       'Commonly good.',
@@ -296,6 +309,7 @@ export const tetragramInfo: TetragramInfo[] = [
     rules: [2, 7],
     dots: 6,
     sign: 'Taurus',
+    good: false,
     houseMeanings: [
       'Ill in all things but for prisoners.',
       'Very ill for money, but good for love.',
@@ -319,6 +333,7 @@ export const tetragramInfo: TetragramInfo[] = [
     rules: [3, 6],
     dots: 7,
     sign: 'Gemini',
+    good: true,
     houseMeanings: [
       'Good for marriage. Mercurial. Peace.',
       'Good in all.',
@@ -342,6 +357,7 @@ export const tetragramInfo: TetragramInfo[] = [
     rules: [5],
     dots: 6,
     sign: 'Leo',
+    good: true,
     houseMeanings: [
       'Speed in victory and in love, but choleric.',
       'Very good.',
@@ -365,6 +381,7 @@ export const tetragramInfo: TetragramInfo[] = [
     rules: [1, 8],
     dots: 7,
     sign: 'Scorpio',
+    good: false,
     houseMeanings: [
       'Destroy the figure if it falls here! It makes the judgement worthless.',
       'Evil in all demands.',
@@ -388,6 +405,7 @@ export const tetragramInfo: TetragramInfo[] = [
     rules: [9, 12],
     dots: 7,
     sign: 'Pisces',
+    good: true,
     houseMeanings: [
       'Good, except in war.',
       'Sickly.',
@@ -411,6 +429,7 @@ export const tetragramInfo: TetragramInfo[] = [
     rules: [4],
     dots: 8,
     sign: 'Cancer',
+    good: true,
     houseMeanings: [
       'Good in marriages.',
       'Medium good.',
