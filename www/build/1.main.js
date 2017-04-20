@@ -160,6 +160,7 @@ var ReadingOverviewPage = (function () {
     }
     ReadingOverviewPage.prototype.ionViewWillEnter = function () {
         this.parent.title = 'Overview';
+        this.parent.helpTopic = 'reading overview';
     };
     return ReadingOverviewPage;
 }());

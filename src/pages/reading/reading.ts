@@ -12,6 +12,7 @@ export class ReadingPage {
   reading: Reading
   rootParams: any
   title: string = 'Reading'
+  helpTopic: string
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public storage: Storage,
     public viewCtrl: ViewController) {
@@ -23,6 +24,12 @@ export class ReadingPage {
 
   close() {
     this.viewCtrl.dismiss()
+  }
+
+  showHelp() {
+    if (this.helpTopic) {
+      this.navCtrl.push('HelpPage', { topic: this.helpTopic })
+    }
   }
 
 }

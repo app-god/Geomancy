@@ -157,6 +157,7 @@ var ReadingFiguresPage = (function () {
     };
     ReadingFiguresPage.prototype.ionViewWillEnter = function () {
         this.parent.title = 'Figures';
+        this.parent.helpTopic = 'reading figures';
     };
     return ReadingFiguresPage;
 }());

@@ -7,6 +7,11 @@
       </button>
     </ion-buttons>
     <ion-title>{{title}}</ion-title>
+    <ion-buttons right *ngIf="helpTopic">
+      <button ion-button icon-only (click)="showHelp()">
+        <ion-icon name="ios-help-circle"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 
 </ion-header>

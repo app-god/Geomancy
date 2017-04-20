@@ -166,6 +166,7 @@ var ReadingHousesPage = (function () {
     };
     ReadingHousesPage.prototype.ionViewWillEnter = function () {
         this.parent.title = 'Houses';
+        this.parent.helpTopic = 'reading houses';
     };
     return ReadingHousesPage;
 }());
