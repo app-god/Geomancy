@@ -13,28 +13,77 @@
 </ion-header>
 
 
-<ion-content padding>
+<ion-content>
 
-  <div *ngIf="topic == 'new reading'">
+  <div padding *ngIf="topic == 'new reading'">
     <h3>What should I ask?</h3>
 
     <h3>Which topic should I choose?</h3>
   </div>
 
   <div *ngIf="topic == 'reading houses'">
-    <h3>What does Part of Fortune mean?</h3>
 
-    <h3>What do the stars mean?</h3>
-
-    <h3>What does "Topic" mean?</h3>
-    <p>
-      Pay special attention to this one. "Topic" means that this house is
-      connected to the topic you selected.
-    </p>
-
-    <h3>What does "Judge" mean?</h3>
-    <p>Judge means that the tetragram found in this house is the same as the
-      Judge for this reading.</p>
+    <ion-grid>
+      <ion-row>
+        <ion-col col-4>
+          <ion-chip color="secondary">
+            <ion-label>
+              Topic
+            </ion-label>
+          </ion-chip>
+        </ion-col>
+        <ion-col col-8>
+          This house is connected to the topic you selected.
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-4>
+          <ion-chip color="secondary">
+            <ion-label>
+              ★★★
+            </ion-label>
+          </ion-chip>
+        </ion-col>
+        <ion-col col-8>
+          The tetragram's planet is the ruler of this house.
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-4>
+          <ion-chip color="secondary">
+            <ion-label>
+              ★★
+            </ion-label>
+          </ion-chip>
+        </ion-col>
+        <ion-col col-8>
+          The tetragram's planet is exalted in this house.
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-4>
+          <ion-chip color="secondary">
+            <ion-label>
+              Judge
+            </ion-label>
+          </ion-chip>
+        </ion-col>
+        <ion-col col-8>
+          The tetragram in this house is the same as the judge of this reading.
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-4>
+          <ion-chip color="secondary">
+            <ion-label>
+              Part of Fortune
+            </ion-label>
+          </ion-chip>
+        </ion-col>
+        <ion-col col-8>
+          This house is a potential source of wealth.
+        </ion-col>
+      </ion-row>
+    </ion-grid>
   </div>
-
 </ion-content>

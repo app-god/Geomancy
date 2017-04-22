@@ -26631,7 +26631,17 @@ tetragram .tetragram-row {
   line-height: 1em;
 }
 
-page-history .topic {
+page-help h1, page-help h2, page-help h3 {
+  margin-top: 3em;
+  font-size: 1em;
+}
+
+page-help ion-col {
+  overflow: hidden;
+  line-height: 150%;
+}
+
+page-history .question {
   font-weight: bold;
 }
 
@@ -26641,11 +26651,7 @@ page-history .date {
 
 page-reading-figures ion-col {
   text-align: center;
-  cursor: pointer;
-}
-
-page-reading-figures ion-col[col-4] {
-  font-size: 133%;
+  white-space: nowrap;
 }
 
 page-reading-houses .house-title {
@@ -26654,4 +26660,9 @@ page-reading-houses .house-title {
 
 page-reading-houses .house-topics {
   font-style: italic;
+}
+
+page-reading-overview .label {
+  color: #666;
+  margin-bottom: 0.5em;
 }

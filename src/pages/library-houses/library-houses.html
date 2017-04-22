@@ -17,8 +17,7 @@
 
   <ion-list>
     <button ion-item *ngFor="let house of houses" (click)="showHouse(house)">
-      <h1>House {{house.number}}</h1>
-      <p>{{house.description}}</p>
+      <div>House {{house.number}}</div>
     </button>
   </ion-list>
 

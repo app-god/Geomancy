@@ -584,18 +584,19 @@ var ReadingOverviewPage = (function () {
     }
     ReadingOverviewPage.prototype.ionViewWillEnter = function () {
         this.parent.title = 'Overview';
-        this.parent.helpTopic = 'reading overview';
+        this.parent.helpTopic = null;
     };
     return ReadingOverviewPage;
 }());
 ReadingOverviewPage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPage */])(),
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* Component */])({
-        selector: 'page-reading-overview',template:/*ion-inline-start:"/Users/adam/AppGod/geomancy/src/pages/reading-overview/reading-overview.html"*/'<ion-header><ion-navbar></ion-navbar></ion-header>\n\n<ion-content padding>\n\n  <div>\n    Question\n  </div>\n\n  <div>{{reading.question}}</div>\n\n  <br>\n\n  <div class="label">\n    Topic\n  </div>\n\n  <div>{{reading.topic}}</div>\n\n  <br>\n\n  <div *ngIf="warnings.length > 0">\n    <h3>Warning</h3>\n    <div color="danger" *ngFor="let warning of warnings">\n      {{warning}}\n    </div>\n  </div>\n\n</ion-content>\n'/*ion-inline-end:"/Users/adam/AppGod/geomancy/src/pages/reading-overview/reading-overview.html"*/,
+        selector: 'page-reading-overview',template:/*ion-inline-start:"/Users/adam/AppGod/geomancy/src/pages/reading-overview/reading-overview.html"*/'<ion-header><ion-navbar></ion-navbar></ion-header>\n\n<ion-content padding>\n\n  <div class="label">\n    Question\n  </div>\n\n  <div>{{reading.question}}</div>\n\n  <br>\n\n  <div class="label">\n    Topic\n  </div>\n\n  <div>{{reading.topic}}</div>\n\n  <br>\n\n  <div class="label">\n    Date\n  </div>\n\n  <div>{{reading.date | date:\'medium\'}}</div>\n\n  <br>\n\n  <div *ngIf="warnings.length > 0">\n    <h3>Warning</h3>\n    <div color="danger" *ngFor="let warning of warnings">\n      {{warning}}\n    </div>\n  </div>\n\n</ion-content>\n'/*ion-inline-end:"/Users/adam/AppGod/geomancy/src/pages/reading-overview/reading-overview.html"*/,
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]) === "function" && _b || Object])
 ], ReadingOverviewPage);
 
+var _a, _b;
 //# sourceMappingURL=reading-overview.js.map
 
 /***/ })

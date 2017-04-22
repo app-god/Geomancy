@@ -11,11 +11,11 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content>
+<ion-content padding>
 
   <ion-card *ngIf="readings.length == 0">
     <ion-card-content>
-      Create a new reading and it will show up here.
+      Create a reading and it will show up here.
     </ion-card-content>
   </ion-card>
 
@@ -23,8 +23,8 @@
     <ion-item-sliding *ngFor="let reading of readings">
 
       <button ion-item (click)="showReading(reading)">
-        <div class="topic">{{reading.topic}}</div>
         <div class="question" text-wrap>{{reading.question}}</div>
+        <div class="topic">{{reading.topic}}</div>
         <div class="date">{{reading.date | date:'medium'}}</div>
       </button>
 
@@ -32,7 +32,6 @@
         <button ion-button (click)="deleteReading(reading)"
           color="danger">Delete</button>
       </ion-item-options>
-
     </ion-item-sliding>
   </ion-list>
 </ion-content>

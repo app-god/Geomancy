@@ -1,11 +1,6 @@
 <ion-header>
   <ion-navbar>
     <ion-title>New Reading</ion-title>
-    <ion-buttons end>
-      <button ion-button icon-only (click)="showHelp()" color="secondary">
-        <ion-icon name="ios-help-circle"></ion-icon>
-      </button>
-    </ion-buttons>
   </ion-navbar>
 </ion-header>
 
@@ -28,7 +23,10 @@
       </ion-select>
     </ion-item>
   </ion-list>
+
   <button ion-button block large
     (click)="clickStart()"
-    [disabled]="startDisabled">Create</button>
+    [disabled]="startDisabled">
+    Create
+  </button>
 </ion-content>

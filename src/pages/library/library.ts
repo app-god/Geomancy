@@ -11,16 +11,16 @@ export class LibraryPage {
 
   topics: any[] = [
     {
-      name: 'Instructions',
-      page: 'LibraryTetragramsPage'
+      name: 'Houses',
+      page: 'LibraryHousesPage'
     },
     {
       name: 'Tetragrams',
       page: 'LibraryTetragramsPage'
     },
     {
-      name: 'Houses',
-      page: 'LibraryHousesPage'
+      name: 'Instructions',
+      page: 'LibraryTetragramsPage'
     }
   ]
 

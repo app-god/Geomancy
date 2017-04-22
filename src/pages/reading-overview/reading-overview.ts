@@ -26,7 +26,7 @@ export class ReadingOverviewPage {
 
   ionViewWillEnter() {
     this.parent.title = 'Overview'
-    this.parent.helpTopic = 'reading overview'
+    this.parent.helpTopic = null
   }
 
 }
