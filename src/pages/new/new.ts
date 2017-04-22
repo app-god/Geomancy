@@ -5,7 +5,8 @@ import {
   NavController,
   ModalController,
   LoadingController,
-  AlertController
+  AlertController,
+  Platform
 } from 'ionic-angular';
 
 import { ReadingData } from '../../models/reading'
@@ -27,7 +28,8 @@ export class NewPage {
     private modCtrl: ModalController,
     private loadingCtrl: LoadingController,
     private storage: Storage,
-    private alertCtrl: AlertController
+    private alertCtrl: AlertController,
+    private platform: Platform,
   ) {
 
     let houses = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
