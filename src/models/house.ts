@@ -1,4 +1,3 @@
-import { tetragramInfo } from './tetragram'
 
 export class House {
   topics: string[]
