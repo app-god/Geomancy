@@ -1,2 +1,98 @@
-webpackJsonp([9],{925:function(e,l,n){"use strict";Object.defineProperty(l,"__esModule",{value:!0});var t=n(0),i=n(963),a=n(11),o=n(16),_=n(33),u=n(35),d=n(34),s=n(138),r=n(139),h=n(86),c=n(140),M=n(141),p=n(84),w=n(142),b=n(143),f=n(144),g=n(145),m=n(146),y=n(147),v=n(148),L=n(149),P=n(150),R=n(55),S=n(151),I=n(152),T=n(85),N=n(153),O=n(154),C=n(155),k=n(156),F=n(157),A=n(158),B=n(159),E=n(160),D=n(161),j=n(162),x=n(163),z=n(164),H=n(165),q=n(166),V=n(167),Z=n(168),G=n(169),K=n(170),W=n(171),Y=n(172),$=n(173),J=n(174),Q=n(175),U=n(176),X=n(177),ee=n(178),le=n(179),ne=n(83),te=n(540),ie=n(541),ae=n(542),oe=n(543),_e=n(544),ue=n(545),de=n(546),se=n(547),re=n(964),he=n(944),ce=n(56);n.d(l,"LibraryPageModuleNgFactory",function(){return we});var Me=this&&this.__extends||function(){var e=Object.setPrototypeOf||{__proto__:[]}instanceof Array&&function(e,l){e.__proto__=l}||function(e,l){for(var n in l)l.hasOwnProperty(n)&&(e[n]=l[n])};return function(l,n){function t(){this.constructor=l}e(l,n),l.prototype=null===n?Object.create(n):(t.prototype=n.prototype,new t)}}(),pe=function(e){function l(l){return e.call(this,l,[te.a,ie.a,ae.a,oe.a,_e.a,ue.a,de.a,se.a,re.a],[])||this}return Me(l,e),Object.defineProperty(l.prototype,"_NgLocalization_56",{get:function(){return null==this.__NgLocalization_56&&(this.__NgLocalization_56=new a.a(this.parent.get(t.LOCALE_ID))),this.__NgLocalization_56},enumerable:!0,configurable:!0}),Object.defineProperty(l.prototype,"_ɵi_57",{get:function(){return null==this.__ɵi_57&&(this.__ɵi_57=new o.a),this.__ɵi_57},enumerable:!0,configurable:!0}),Object.defineProperty(l.prototype,"_FormBuilder_58",{get:function(){return null==this.__FormBuilder_58&&(this.__FormBuilder_58=new o.b),this.__FormBuilder_58},enumerable:!0,configurable:!0}),l.prototype.createInternal=function(){return this._CommonModule_0=new a.d,this._ɵba_1=new o.c,this._FormsModule_2=new o.d,this._ReactiveFormsModule_3=new o.e,this._BackdropModule_4=new _.a,this._ButtonModule_5=new u.a,this._IconModule_6=new d.a,this._ActionSheetModule_7=new s.a,this._AlertModule_8=new r.a,this._NavModule_9=new h.a,this._AppModule_10=new c.a,this._AvatarModule_11=new M.a,this._BadgeModule_12=new p.a,this._CardModule_13=new w.a,this._CheckboxModule_14=new b.a,this._ChipModule_15=new f.a,this._ClickBlockModule_16=new g.a,this._ContentModule_17=new m.a,this._DateTimeModule_18=new y.a,this._FabModule_19=new v.a,this._GridModule_20=new L.a,this._ImgModule_21=new P.a,this._SpinnerModule_22=new R.a,this._InfiniteScrollModule_23=new S.a,this._InputModule_24=new I.a,this._LabelModule_25=new T.a,this._ItemModule_26=new N.a,this._ListModule_27=new O.a,this._LoadingModule_28=new C.a,this._MenuModule_29=new k.a,this._ModalModule_30=new F.a,this._NavbarModule_31=new A.a,this._NoteModule_32=new B.a,this._OptionModule_33=new E.a,this._PickerModule_34=new D.a,this._PopoverModule_35=new j.a,this._RadioModule_36=new x.a,this._RangeModule_37=new z.a,this._RefresherModule_38=new H.a,this._ScrollModule_39=new q.a,this._SearchbarModule_40=new V.a,this._SegmentModule_41=new Z.a,this._SelectModule_42=new G.a,this._ShowHideWhenModule_43=new K.a,this._SlidesModule_44=new W.a,this._SplitPaneModule_45=new Y.a,this._TabsModule_46=new $.a,this._ThumbnailModule_47=new J.a,this._ToastModule_48=new Q.a,this._ToggleModule_49=new U.a,this._ToolbarModule_50=new X.a,this._TypographyModule_51=new ee.a,this._VirtualScrollModule_52=new le.a,this._IonicModule_53=new ne.b,this._IonicPageModule_54=new ne.c,this._LibraryPageModule_55=new i.a,this._LAZY_LOADED_TOKEN_59=he.a,this._LibraryPageModule_55},l.prototype.getInternal=function(e,l){return e===a.d?this._CommonModule_0:e===o.c?this._ɵba_1:e===o.d?this._FormsModule_2:e===o.e?this._ReactiveFormsModule_3:e===_.a?this._BackdropModule_4:e===u.a?this._ButtonModule_5:e===d.a?this._IconModule_6:e===s.a?this._ActionSheetModule_7:e===r.a?this._AlertModule_8:e===h.a?this._NavModule_9:e===c.a?this._AppModule_10:e===M.a?this._AvatarModule_11:e===p.a?this._BadgeModule_12:e===w.a?this._CardModule_13:e===b.a?this._CheckboxModule_14:e===f.a?this._ChipModule_15:e===g.a?this._ClickBlockModule_16:e===m.a?this._ContentModule_17:e===y.a?this._DateTimeModule_18:e===v.a?this._FabModule_19:e===L.a?this._GridModule_20:e===P.a?this._ImgModule_21:e===R.a?this._SpinnerModule_22:e===S.a?this._InfiniteScrollModule_23:e===I.a?this._InputModule_24:e===T.a?this._LabelModule_25:e===N.a?this._ItemModule_26:e===O.a?this._ListModule_27:e===C.a?this._LoadingModule_28:e===k.a?this._MenuModule_29:e===F.a?this._ModalModule_30:e===A.a?this._NavbarModule_31:e===B.a?this._NoteModule_32:e===E.a?this._OptionModule_33:e===D.a?this._PickerModule_34:e===j.a?this._PopoverModule_35:e===x.a?this._RadioModule_36:e===z.a?this._RangeModule_37:e===H.a?this._RefresherModule_38:e===q.a?this._ScrollModule_39:e===V.a?this._SearchbarModule_40:e===Z.a?this._SegmentModule_41:e===G.a?this._SelectModule_42:e===K.a?this._ShowHideWhenModule_43:e===W.a?this._SlidesModule_44:e===Y.a?this._SplitPaneModule_45:e===$.a?this._TabsModule_46:e===J.a?this._ThumbnailModule_47:e===Q.a?this._ToastModule_48:e===U.a?this._ToggleModule_49:e===X.a?this._ToolbarModule_50:e===ee.a?this._TypographyModule_51:e===le.a?this._VirtualScrollModule_52:e===ne.b?this._IonicModule_53:e===ne.c?this._IonicPageModule_54:e===i.a?this._LibraryPageModule_55:e===a.e?this._NgLocalization_56:e===o.a?this._ɵi_57:e===o.b?this._FormBuilder_58:e===ce.d?this._LAZY_LOADED_TOKEN_59:l},l.prototype.destroyInternal=function(){},l}(t["ɵNgModuleInjector"]),we=new t.NgModuleFactory(pe,i.a)},944:function(e,l,n){"use strict";n(0),n(83);n.d(l,"a",function(){return t});var t=(this&&this.__decorate,this&&this.__metadata,function(){function e(e){this.navCtrl=e,this.topics=[{name:"Houses",page:"LibraryHousesPage"},{name:"Tetragrams",page:"LibraryTetragramsPage"},{name:"Instructions",page:"LibraryTetragramsPage"}]}return e.prototype.showPage=function(e){this.navCtrl.push(e)},e}())},963:function(e,l,n){"use strict";n(0),n(83),n(944);n.d(l,"a",function(){return t});var t=(this&&this.__decorate,function(){function e(){}return e}())},964:function(e,l,n){"use strict";function t(e){return o["ɵvid"](0,[(e()(),o["ɵeld"](0,null,null,9,"button",[["class","item item-block"],["ion-item",""]],null,[[null,"click"]],function(e,l,n){var t=!0,i=e.component;if("click"===l){t=!1!==i.showPage(e.context.$implicit.page)&&t}return t},_.a,_.b)),o["ɵdid"](548864,null,3,u.a,[d.a,s.c,o.ElementRef,o.Renderer,[2,r.a]],null,null),o["ɵqud"](167772160,1,{contentLabel:0}),o["ɵqud"](301989888,2,{_buttons:1}),o["ɵqud"](301989888,3,{_icons:1}),o["ɵdid"](8192,null,0,h.a,[],null,null),(e()(),o["ɵted"](2,["\n      "])),(e()(),o["ɵeld"](0,null,2,1,"div",[],null,null,null,null,null)),(e()(),o["ɵted"](null,["",""])),(e()(),o["ɵted"](2,["\n    "]))],null,function(e,l){e(l,8,0,l.context.$implicit.name)})}function i(e){return o["ɵvid"](0,[(e()(),o["ɵeld"](0,null,null,10,"ion-header",[],null,null,null,null,null)),o["ɵdid"](8192,null,0,c.a,[s.c,o.ElementRef,o.Renderer,[2,M.a]],null,null),(e()(),o["ɵted"](null,["\n  "])),(e()(),o["ɵeld"](0,null,null,6,"ion-navbar",[["class","toolbar"]],[[8,"hidden",0],[2,"statusbar-padding",null]],null,null,p.a,p.b)),o["ɵdid"](24576,null,0,w.a,[b.a,[2,M.a],[2,f.a],s.c,o.ElementRef,o.Renderer],null,null),(e()(),o["ɵted"](3,["\n    "])),(e()(),o["ɵeld"](0,null,3,2,"ion-title",[],null,null,null,g.a,g.b)),o["ɵdid"](24576,null,0,m.a,[s.c,o.ElementRef,o.Renderer,[2,y.a],[2,w.a]],null,null),(e()(),o["ɵted"](0,["\n      Library\n    "])),(e()(),o["ɵted"](3,["\n  "])),(e()(),o["ɵted"](null,["\n"])),(e()(),o["ɵted"](null,["\n\n"])),(e()(),o["ɵeld"](0,null,null,9,"ion-content",[],[[2,"statusbar-padding",null]],null,null,v.a,v.b)),o["ɵdid"](2187264,null,0,L.a,[s.c,P.b,R.a,o.ElementRef,o.Renderer,b.a,S.a,o.NgZone,[2,M.a],[2,f.a]],null,null),(e()(),o["ɵted"](1,["\n\n  "])),(e()(),o["ɵeld"](0,null,1,5,"ion-list",[],null,null,null,null,null)),o["ɵdid"](8192,null,0,I.a,[s.c,o.ElementRef,o.Renderer,P.b,T.a,R.a],null,null),(e()(),o["ɵted"](null,["\n    "])),(e()(),o["ɵand"](8388608,null,null,1,null,t)),o["ɵdid"](401408,null,0,N.k,[o.ViewContainerRef,o.TemplateRef,o.IterableDiffers],{ngForOf:[0,"ngForOf"]},null),(e()(),o["ɵted"](null,["\n  "])),(e()(),o["ɵted"](1,["\n\n"])),(e()(),o["ɵted"](null,["\n"]))],function(e,l){e(l,19,0,l.component.topics)},function(e,l){e(l,3,0,o["ɵnov"](l,4)._hidden,o["ɵnov"](l,4)._sbPadding),e(l,12,0,o["ɵnov"](l,13).statusbarPadding)})}function a(e){return o["ɵvid"](0,[(e()(),o["ɵeld"](0,null,null,1,"page-library",[],null,null,null,i,k)),o["ɵdid"](24576,null,0,O.a,[f.a],null,null)],null,null)}var o=n(0),_=n(551),u=n(26),d=n(21),s=n(3),r=n(66),h=n(182),c=n(180),M=n(7),p=n(548),w=n(40),b=n(12),f=n(18),g=n(550),m=n(87),y=n(57),v=n(549),L=n(30),P=n(6),R=n(14),S=n(29),I=n(88),T=n(13),N=n(11),O=n(944);n.d(l,"a",function(){return F});var C=[],k=o["ɵcrt"]({encapsulation:2,styles:C,data:{}}),F=o["ɵccf"]("page-library",O.a,a,{},{},[])}});
-//# sourceMappingURL=/Users/adam/AppGod/geomancy/www/build/9.main.js.map
+webpackJsonp([9],{
+
+/***/ 883:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(99);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__library__ = __webpack_require__(899);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LibraryPageModule", function() { return LibraryPageModule; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+var LibraryPageModule = (function () {
+    function LibraryPageModule() {
+    }
+    return LibraryPageModule;
+}());
+LibraryPageModule = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["a" /* NgModule */])({
+        declarations: [
+            __WEBPACK_IMPORTED_MODULE_2__library__["a" /* LibraryPage */],
+        ],
+        imports: [
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__library__["a" /* LibraryPage */]),
+        ],
+        exports: [
+            __WEBPACK_IMPORTED_MODULE_2__library__["a" /* LibraryPage */]
+        ]
+    })
+], LibraryPageModule);
+
+//# sourceMappingURL=library.module.js.map
+
+/***/ }),
+
+/***/ 899:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(99);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LibraryPage; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var LibraryPage = (function () {
+    function LibraryPage(navCtrl) {
+        this.navCtrl = navCtrl;
+        this.topics = [
+            {
+                name: 'Houses',
+                page: 'LibraryHousesPage'
+            },
+            {
+                name: 'Tetragrams',
+                page: 'LibraryTetragramsPage'
+            },
+            {
+                name: 'Instructions',
+                page: 'LibraryTetragramsPage'
+            }
+        ];
+    }
+    LibraryPage.prototype.showPage = function (page) {
+        this.navCtrl.push(page);
+    };
+    return LibraryPage;
+}());
+LibraryPage = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPage */])(),
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* Component */])({
+        selector: 'page-library',template:/*ion-inline-start:"/Users/adam/AppGod/geomancy/src/pages/library/library.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      Library\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n\n  <ion-list>\n    <button ion-item *ngFor="let topic of topics"\n      (click)="showPage(topic.page)">\n      <div>{{topic.name}}</div>\n    </button>\n  </ion-list>\n\n</ion-content>\n'/*ion-inline-end:"/Users/adam/AppGod/geomancy/src/pages/library/library.html"*/
+    }),
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]])
+], LibraryPage);
+
+//# sourceMappingURL=library.js.map
+
+/***/ })
+
+});
+//# sourceMappingURL=9.main.js.map

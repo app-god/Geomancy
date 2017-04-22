@@ -18,6 +18,7 @@ import { House } from '../../models/house'
 })
 export class NewPage {
   startDisabled = false
+  platformKey: string
 
   question: string = ''
   topic: string = ''
@@ -92,6 +93,23 @@ export class NewPage {
 
   showHelp() {
     this.navCtrl.push('HelpPage', { topic: 'new reading' })
+  }
+
+  ionViewWillLoad() {
+    if (this.platform.is('core')) {
+      this.platformKey = 'md'
+    }
+    if (this.platform.is('ios')) {
+      this.platformKey = 'ios'
+    }
+    if (this.platform.is('android')) {
+      this.platformKey = 'md'
+    }
+    if (this.platform.is('windows')) {
+      this.platformKey = 'wp'
+    }
+
+    console.log(this.platformKey)
   }
 
 }

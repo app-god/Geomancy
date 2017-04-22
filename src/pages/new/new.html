@@ -2,8 +2,8 @@
   <ion-navbar>
     <ion-title>New Reading</ion-title>
     <ion-buttons end>
-      <button ion-button icon-only (click)="showHelp()" color="secondary">
-        <ion-icon name="ios-help-circle"></ion-icon>
+      <button ion-button icon-only (click)="showHelp()">
+        <ion-icon name="help-circle"></ion-icon>
       </button>
     </ion-buttons>
   </ion-navbar>
@@ -28,10 +28,11 @@
       </ion-select>
     </ion-item>
   </ion-list>
+</ion-content>
 
   <button ion-button block large
-    (click)="clickStart()"
+    [ngClass]="platformKey + '-create'"
+    (tap)="clickStart()"
     [disabled]="startDisabled">
     Create
   </button>
-</ion-content>

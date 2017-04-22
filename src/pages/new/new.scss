@@ -1,3 +1,21 @@
 page-new {
-
+    button.md-create,
+    button.ios-create,
+    button.wp-create {
+        position: absolute;
+        right: 0;
+        left: 0;
+        margin: 0 auto $content-margin auto;
+        z-index: 10000;
+        width: calc(100% - #{$content-margin * 2});
+    }
+    button.md-create {
+        bottom: $tabs-md-tab-min-height;
+    }
+    button.ios-create {
+        bottom: $tabs-ios-tab-min-height;
+    }
+    button.wp-create {
+        bottom: $tabs-wp-tab-min-height;
+    }
 }
