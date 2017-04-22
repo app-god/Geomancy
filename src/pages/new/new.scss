@@ -1,7 +1,7 @@
 page-new {
-    button.md-create,
-    button.ios-create,
-    button.wp-create {
+    button.create,
+    button.create,
+    button.create {
         position: absolute;
         right: 0;
         left: 0;
@@ -9,13 +9,28 @@ page-new {
         z-index: 10000;
         width: calc(100% - #{$content-margin * 2});
     }
-    button.md-create {
+}
+.md page-new {
+    .scroll-content {
+        bottom: calc(#{$content-margin * 3} + #{$button-md-height})
+    }
+    button.create {
         bottom: $tabs-md-tab-min-height;
     }
-    button.ios-create {
+}
+.ios page-new{
+    .scroll-content {
+        bottom: calc(#{$content-margin * 3} + #{$button-ios-height})
+    }
+    button.create {
         bottom: $tabs-ios-tab-min-height;
     }
-    button.wp-create {
+}
+.wp page-new {
+    .scroll-content {
+        bottom: calc(#{$content-margin * 3} + #{$button-wp-height})
+    }
+    button.create {
         bottom: $tabs-wp-tab-min-height;
     }
 }

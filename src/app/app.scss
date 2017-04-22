@@ -15,14 +15,6 @@
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
 
-ol li {
-  line-height: 200%;
-}
-
-.center {
-  text-align: center;
-}
-
-.big {
-  font-size: 150%;
+ion-content {
+  background: url('/assets/bg.png') scroll repeat center;
 }
