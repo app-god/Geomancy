@@ -26631,8 +26631,12 @@ tetragram .tetragram-row {
   line-height: 1em;
 }
 
-page-history button:hover {
-  background-color: #806651;
+page-history .question {
+  font-weight: bold;
+}
+
+page-history .date {
+  font-style: italic;
 }
 
 page-reading-figures ion-col {

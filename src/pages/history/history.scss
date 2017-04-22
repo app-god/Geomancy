@@ -1,7 +1,13 @@
 page-history {
-  button {
-    &:hover {
-      background-color: map-get($colors, primary);
-    }
+  .question {
+    font-weight: bold;
+  }
+
+  .topic {
+
+  }
+
+  .date {
+    font-style: italic;
   }
 }

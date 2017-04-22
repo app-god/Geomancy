@@ -7,20 +7,20 @@
 </ion-header>
 
 <ion-content>
-  <ion-list no-lines>
+  <ion-list>
     <ion-item-sliding *ngFor="let reading of readings">
+
       <button ion-item (click)="showReading(reading)">
-        <!-- <ion-thumbnail item-left>
-          <tetragram [tetragram]="readingData.judge"></tetragram>
-        </ion-thumbnail> -->
-        <h1>{{reading.question}}</h1>
-        <p>{{reading.date | date:'medium'}}</p>
+        <div class="question">{{reading.question}}</div>
+        <div class="topic">{{reading.topic}}</div>
+        <div class="date">{{reading.date | date:'medium'}}</div>
       </button>
 
       <ion-item-options side="right">
         <button ion-button (click)="deleteReading(reading)"
           color="danger">Delete</button>
       </ion-item-options>
+
     </ion-item-sliding>
   </ion-list>
 </ion-content>
