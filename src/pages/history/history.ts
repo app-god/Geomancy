@@ -74,11 +74,11 @@ export class HistoryPage {
             this.storage.ready().then(() => {
               this.storage.set('history', [])
             })
+            this.loadReadings()
           }
         }
       ]
     })
     alert.present()
-    this.loadReadings()
   }
 }

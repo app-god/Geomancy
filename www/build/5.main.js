@@ -626,19 +626,19 @@ var HistoryPage = (function () {
                         _this.storage.ready().then(function () {
                             _this.storage.set('history', []);
                         });
+                        _this.loadReadings();
                     }
                 }
             ]
         });
         alert.present();
-        this.loadReadings();
     };
     return HistoryPage;
 }());
 HistoryPage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPage */])(),
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* Component */])({
-        selector: 'page-history',template:/*ion-inline-start:"/Users/adam/AppGod/geomancy/src/pages/history/history.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      History\n    </ion-title>\n    <ion-buttons end>\n      <button ion-button (click)="deleteAllReadings()">\n        Delete\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <ion-list>\n    <ion-item-sliding *ngFor="let reading of readings">\n\n      <button ion-item (click)="showReading(reading)">\n        <div class="question">{{reading.question}}</div>\n        <div class="topic">{{reading.topic}}</div>\n        <div class="date">{{reading.date | date:\'medium\'}}</div>\n      </button>\n\n      <ion-item-options side="right">\n        <button ion-button (click)="deleteReading(reading)"\n          color="danger">Delete</button>\n      </ion-item-options>\n\n    </ion-item-sliding>\n  </ion-list>\n</ion-content>\n'/*ion-inline-end:"/Users/adam/AppGod/geomancy/src/pages/history/history.html"*/
+        selector: 'page-history',template:/*ion-inline-start:"/Users/adam/AppGod/geomancy/src/pages/history/history.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      History\n    </ion-title>\n    <ion-buttons end>\n      <button ion-button icon-only (click)="deleteAllReadings()">\n        <ion-icon name="ios-trash" *ngIf="readings.length > 0"></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n\n  <ion-card *ngIf="readings.length == 0">\n    <ion-card-content>\n      Create a new reading and it will show up here.\n    </ion-card-content>\n  </ion-card>\n\n  <ion-list *ngIf="readings.length > 0">\n    <ion-item-sliding *ngFor="let reading of readings">\n\n      <button ion-item (click)="showReading(reading)">\n        <div class="topic">{{reading.topic}}</div>\n        <div class="question" text-wrap>{{reading.question}}</div>\n        <div class="date">{{reading.date | date:\'medium\'}}</div>\n      </button>\n\n      <ion-item-options side="right">\n        <button ion-button (click)="deleteReading(reading)"\n          color="danger">Delete</button>\n      </ion-item-options>\n\n    </ion-item-sliding>\n  </ion-list>\n</ion-content>\n'/*ion-inline-end:"/Users/adam/AppGod/geomancy/src/pages/history/history.html"*/
     }),
     __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__ionic_storage__["b" /* Storage */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__ionic_storage__["b" /* Storage */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* ModalController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* ModalController */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* AlertController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* AlertController */]) === "function" && _d || Object])
 ], HistoryPage);

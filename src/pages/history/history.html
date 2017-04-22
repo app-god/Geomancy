@@ -4,20 +4,27 @@
       History
     </ion-title>
     <ion-buttons end>
-      <button ion-button (click)="deleteAllReadings()">
-        Delete
+      <button ion-button icon-only (click)="deleteAllReadings()">
+        <ion-icon name="ios-trash" *ngIf="readings.length > 0"></ion-icon>
       </button>
     </ion-buttons>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
-  <ion-list>
+
+  <ion-card *ngIf="readings.length == 0">
+    <ion-card-content>
+      Create a new reading and it will show up here.
+    </ion-card-content>
+  </ion-card>
+
+  <ion-list *ngIf="readings.length > 0">
     <ion-item-sliding *ngFor="let reading of readings">
 
       <button ion-item (click)="showReading(reading)">
-        <div class="question">{{reading.question}}</div>
         <div class="topic">{{reading.topic}}</div>
+        <div class="question" text-wrap>{{reading.question}}</div>
         <div class="date">{{reading.date | date:'medium'}}</div>
       </button>
 
