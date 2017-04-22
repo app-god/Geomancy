@@ -1,7 +1,13 @@
 import { Component } from '@angular/core';
 import { Storage } from '@ionic/storage'
 
-import { NavController, ModalController, LoadingController, AlertController } from 'ionic-angular';
+import {
+  NavController,
+  ModalController,
+  LoadingController,
+  AlertController
+} from 'ionic-angular';
+
 import { ReadingData } from '../../models/reading'
 import { House } from '../../models/house'
 
@@ -16,10 +22,13 @@ export class NewPage {
   topic: string = ''
   topics: string[]
 
-  constructor(public navCtrl: NavController, private modCtrl: ModalController,
+  constructor(
+    public navCtrl: NavController,
+    private modCtrl: ModalController,
     private loadingCtrl: LoadingController,
     private storage: Storage,
-    private alertCtrl: AlertController) {
+    private alertCtrl: AlertController
+  ) {
 
     let houses = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
       .map(number => { return new House(number)})
@@ -32,15 +41,16 @@ export class NewPage {
     this.topics.unshift('None')
 
     this.topic = this.topics[0]
+
   }
 
   clickStart() {
 
+    this.startDisabled = true
+
     if (this.question == '') {
       this.question = 'None'
     }
-
-    this.startDisabled = true
 
     let loading = this.loadingCtrl.create({
       content: 'Generating reading'
