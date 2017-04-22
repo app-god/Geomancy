@@ -512,15 +512,7 @@ var Reading = (function () {
         this.witnesses = [this.witness0, this.witness1];
         this.judge = this.witness0.add(this.witness1);
         this.reconciler = this.mother0.add(this.judge);
-        this.partOfFortune = [
-            this.mother0, this.mother1, this.mother2, this.mother3,
-            this.daughter0, this.daughter1, this.daughter2, this.daughter3,
-            this.nephew0, this.nephew1, this.nephew2, this.nephew3
-        ].map(function (tetragram) {
-            return tetragram.dots;
-        }).reduce(function (a, b) {
-            return a + b;
-        }, 0) % 12;
+        this.partOfFortune = this.getPartOfFortune();
     }
     Reading.prototype.createFromRows = function (row0, row1, row2, row3) {
         var r0 = row0 % 2;
@@ -545,6 +537,24 @@ var Reading = (function () {
         var firstSign = this.getTetragramForHouse(0).sign;
         var houseSignIndex = (signs.indexOf(firstSign) + house) % 12;
         return signs[houseSignIndex];
+    };
+    Reading.prototype.getPartOfFortune = function () {
+        /*
+          return house number where Part of Fortune resides
+        */
+        var partOfFortune = [
+            this.mother0, this.mother1, this.mother2, this.mother3,
+            this.daughter0, this.daughter1, this.daughter2, this.daughter3,
+            this.nephew0, this.nephew1, this.nephew2, this.nephew3
+        ].map(function (tetragram) {
+            return tetragram.dots;
+        }).reduce(function (a, b) {
+            return a + b;
+        }, 0) % 12;
+        if (partOfFortune == 0) {
+            partOfFortune = 12;
+        }
+        return partOfFortune;
     };
     return Reading;
 }());

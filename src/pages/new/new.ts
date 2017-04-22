@@ -36,6 +36,10 @@ export class NewPage {
 
   clickStart() {
 
+    if (this.question == '') {
+      this.question = 'None'
+    }
+
     this.startDisabled = true
 
     let loading = this.loadingCtrl.create({
