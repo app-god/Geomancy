@@ -3,9 +3,9 @@
     <ion-title>
       History
     </ion-title>
-    <ion-buttons end>
+    <ion-buttons end *ngIf="readings.length > 0">
       <button ion-button icon-only (click)="deleteAllReadings()">
-        <ion-icon name="ios-trash" *ngIf="readings.length > 0"></ion-icon>
+        <ion-icon name="ios-trash" color="danger"></ion-icon>
       </button>
     </ion-buttons>
   </ion-navbar>

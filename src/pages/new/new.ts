@@ -81,6 +81,7 @@ export class NewPage {
         readingModal.present()
 
         this.question = ''
+        this.topic = 'None'
         this.startDisabled = false
       })
     })
