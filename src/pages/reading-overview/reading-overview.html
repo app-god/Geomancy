@@ -1,46 +1,36 @@
-<!--
-  Generated template for the ReadingOverviewPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
-<ion-header>
-
-  <ion-navbar>
-    <ion-title>Overview</ion-title>
-  </ion-navbar>
-
-</ion-header>
-
+<ion-header><ion-navbar></ion-navbar></ion-header>
 
 <ion-content padding>
 
-  <ion-grid class="big">
-    <ion-row>
-      <ion-col col-3>
-        Question:
-      </ion-col>
-      <ion-col col-9>
-        {{reading.question}}
-      </ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col col-3>
-        Topic:
-      </ion-col>
-      <ion-col col-9>
-        {{reading.topic}}
-      </ion-col>
-    </ion-row>
-  </ion-grid>
+  <div class="label">
+    Question
+  </div>
+
+  <div>{{reading.question}}</div>
+
+  <br>
+
+  <div class="label">
+    Topic
+  </div>
+
+  <div>{{reading.topic}}</div>
+
+  <br>
+
+  <div class="label">
+    Date
+  </div>
+
+  <div>{{reading.date | date:'medium'}}</div>
+
+  <br>
 
   <div *ngIf="warnings.length > 0">
     <h3>Warning</h3>
-    <ion-card no-margin color="danger" *ngFor="let warning of warnings">
-      <ion-card-content>
-        {{warning}}
-      </ion-card-content>
-    </ion-card>
+    <div color="danger" *ngFor="let warning of warnings">
+      {{warning}}
+    </div>
   </div>
 
 </ion-content>

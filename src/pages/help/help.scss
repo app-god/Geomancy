@@ -1,3 +1,10 @@
 page-help {
-
+    h1, h2, h3 {
+        margin-top: 3em;
+        font-size: 1em;
+    }
+    ion-col {
+        overflow: hidden;
+        line-height: 150%;
+    }
 }

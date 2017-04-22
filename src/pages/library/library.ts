@@ -9,16 +9,18 @@ import { NavController, IonicPage } from 'ionic-angular';
 })
 export class LibraryPage {
 
-  topics = [
+  topics: any[] = [
+    {
+      name: 'Houses',
+      page: 'LibraryHousesPage'
+    },
     {
       name: 'Tetragrams',
-      description: 'description',
       page: 'LibraryTetragramsPage'
     },
     {
-      name: 'Houses',
-      description: 'description',
-      page: 'LibraryHousesPage'
+      name: 'Instructions',
+      page: 'LibraryTetragramsPage'
     }
   ]
 

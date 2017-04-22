@@ -1,9 +1,6 @@
 page-reading-figures {
   ion-col {
     text-align: center;
-    cursor: pointer;
-    &[col-4] {
-      font-size: 133%;
-    }
+    white-space: nowrap;
   }
 }

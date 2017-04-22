@@ -21,6 +21,7 @@ export class Reading {
   witness0: Tetragram
   witness1: Tetragram
   judge: Tetragram
+  reconciler: Tetragram
 
   mothers: Tetragram[]
   daughters: Tetragram[]
@@ -37,7 +38,7 @@ export class Reading {
     } else {
       this.question = data.question
     }
-    
+
     this.topic = data.topic
 
     this.house = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
@@ -93,16 +94,9 @@ export class Reading {
     this.witnesses = [this.witness0, this.witness1]
 
     this.judge = this.witness0.add(this.witness1)
+    this.reconciler = this.mother0.add(this.judge)
 
-    this.partOfFortune = [
-      this.mother0, this.mother1, this.mother2, this.mother3,
-      this.daughter0, this.daughter1, this.daughter2, this.daughter3,
-      this.nephew0, this.nephew1, this.nephew2, this.nephew3
-    ].map((tetragram) => {
-      return tetragram.dots
-    }).reduce((a, b) => {
-      return a + b
-    }, 0) % 12
+    this.partOfFortune = this.getPartOfFortune()
   }
 
   createFromRows(row0, row1, row2, row3) {
@@ -131,6 +125,27 @@ export class Reading {
     let firstSign = this.getTetragramForHouse(0).sign
     let houseSignIndex = (signs.indexOf(firstSign) + house) % 12
     return signs[houseSignIndex]
+  }
+
+  getPartOfFortune(): number {
+    /*
+      return house number where Part of Fortune resides
+    */
+    let partOfFortune = [
+      this.mother0, this.mother1, this.mother2, this.mother3,
+      this.daughter0, this.daughter1, this.daughter2, this.daughter3,
+      this.nephew0, this.nephew1, this.nephew2, this.nephew3
+    ].map((tetragram) => {
+      return tetragram.dots
+    }).reduce((a, b) => {
+      return a + b
+    }, 0) % 12
+
+    if (partOfFortune == 0) {
+      partOfFortune = 12
+    }
+
+    return partOfFortune
   }
 }
 

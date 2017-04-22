@@ -3,18 +3,29 @@
     <ion-title>
       History
     </ion-title>
+    <ion-buttons end *ngIf="readings.length > 0">
+      <button ion-button icon-only (click)="deleteAllReadings()">
+        <ion-icon name="ios-trash" color="danger"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
 
-<ion-content>
-  <ion-list no-lines>
+<ion-content padding>
+
+  <ion-card *ngIf="readings.length == 0">
+    <ion-card-content>
+      Create a reading and it will show up here.
+    </ion-card-content>
+  </ion-card>
+
+  <ion-list *ngIf="readings.length > 0">
     <ion-item-sliding *ngFor="let reading of readings">
+
       <button ion-item (click)="showReading(reading)">
-        <!-- <ion-thumbnail item-left>
-          <tetragram [tetragram]="readingData.judge"></tetragram>
-        </ion-thumbnail> -->
-        <h1>{{reading.question}}</h1>
-        <p>{{reading.date | date:'medium'}}</p>
+        <div class="question" text-wrap>{{reading.question}}</div>
+        <div class="topic">{{reading.topic}}</div>
+        <div class="date">{{reading.date | date:'medium'}}</div>
       </button>
 
       <ion-item-options side="right">

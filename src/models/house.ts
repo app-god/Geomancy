@@ -1,3 +1,4 @@
+
 export class House {
   topics: string[]
   tetragram?
@@ -5,7 +6,7 @@ export class House {
   exaltation?: string
 
   constructor(public number: number) {
-    let info = houseInfo[number - 1]
+    let info: HouseInfo = houseInfo[number - 1]
     this.topics = info.topics
     this.ruler = info.ruler
     this.exaltation = info.exaltation

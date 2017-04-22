@@ -8,7 +8,7 @@
 importScripts('./build/sw-toolbox.js');
 
 self.toolbox.options.cache = {
-  name: 'ionic-cache'
+  name: 'ag-geomancy-cache'
 };
 
 // pre-cache our key assets

@@ -1,6 +1,11 @@
 import { Component } from '@angular/core';
 
-import { IonicPage, NavController, ModalController } from 'ionic-angular';
+import {
+  IonicPage,
+  NavController,
+  ModalController,
+  AlertController
+} from 'ionic-angular';
 import { Storage } from '@ionic/storage'
 
 @IonicPage()
@@ -11,8 +16,19 @@ import { Storage } from '@ionic/storage'
 export class HistoryPage {
   readings = []
 
-  constructor(public navCtrl: NavController, public storage: Storage,
-    public modCtrl: ModalController) {
+  constructor(
+    public navCtrl: NavController,
+    public storage: Storage,
+    public modCtrl: ModalController,
+    private alertCtrl: AlertController
+  ) {
+  }
+
+  ionViewWillEnter() {
+    this.loadReadings()
+  }
+
+  loadReadings(): void {
     this.storage.ready().then(() => {
       this.storage.get('history').then(history => {
         this.readings = history.sort(this.sortReadings)
@@ -43,4 +59,26 @@ export class HistoryPage {
     })
   }
 
+  deleteAllReadings() {
+    let alert = this.alertCtrl.create({
+      title: 'Confirm Deletion',
+      message: 'Do you want to delete all of your readings?',
+      buttons: [
+        {
+          text: 'Cancel',
+          role: 'cancel'
+        },
+        {
+          text: 'Delete',
+          handler: () => {
+            this.storage.ready().then(() => {
+              this.storage.set('history', [])
+            })
+            this.loadReadings()
+          }
+        }
+      ]
+    })
+    alert.present()
+  }
 }

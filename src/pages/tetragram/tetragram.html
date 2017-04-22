@@ -15,18 +15,18 @@
 
   <ion-grid>
     <ion-row>
-      <ion-col col-3>
+      <ion-col col-4>
         Planet
       </ion-col>
-      <ion-col col-9>
+      <ion-col col-8>
         {{tetragram.planet}}
       </ion-col>
     </ion-row>
     <ion-row *ngFor="let meaning of tetragram.houseMeanings; let i = index">
-      <ion-col col-3>
+      <ion-col col-4>
         In House {{i + 1}}
       </ion-col>
-      <ion-col col-9>
+      <ion-col col-8>
         {{meaning}}
       </ion-col>
     </ion-row>
