@@ -64,13 +64,15 @@ var LibraryPage = (function () {
         this.navCtrl = navCtrl;
         this.topics = [
             {
+                name: 'Instructions',
+                page: 'LibraryTetragramsPage'
+            },
+            {
                 name: 'Tetragrams',
-                description: 'description',
                 page: 'LibraryTetragramsPage'
             },
             {
                 name: 'Houses',
-                description: 'description',
                 page: 'LibraryHousesPage'
             }
         ];
@@ -85,9 +87,10 @@ LibraryPage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* Component */])({
         selector: 'page-library',template:/*ion-inline-start:"/Users/adam/AppGod/geomancy/src/pages/library/library.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      Library\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n\n  <ion-list>\n    <button ion-item *ngFor="let topic of topics"\n      (click)="showPage(topic.page)">\n      <h1>{{topic.name}}</h1>\n      <p>{{topic.description}}</p>\n    </button>\n  </ion-list>\n\n</ion-content>\n'/*ion-inline-end:"/Users/adam/AppGod/geomancy/src/pages/library/library.html"*/
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object])
 ], LibraryPage);
 
+var _a;
 //# sourceMappingURL=library.js.map
 
 /***/ })
