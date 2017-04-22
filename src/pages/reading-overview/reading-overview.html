@@ -2,7 +2,7 @@
 
 <ion-content padding>
 
-  <ion-grid class="big">
+  <ion-grid>
     <ion-row>
       <ion-col col-4>
         Question:
@@ -23,36 +23,11 @@
 
   <br>
 
-  <div>
-    <h3>General Interpretation</h3>
-    <ion-card no-margin>
-      <ion-card-content>
-        <div *ngIf="reading.judge.good && reading.witness0.good && reading.witness1.good">
-          Good
-        </div>
-        <div *ngIf="!reading.judge.good && !reading.witness0.good && !reading.witness1.good">
-          Bad
-        </div>
-        <div *ngIf="reading.judge.good && !reading.witness0.good && !reading.witness1.good">
-          Unfortunate in the end
-        </div>
-        <div *ngIf="reading.judge.good && reading.witness0.good && !reading.witness1.good">
-          Good beginning will take an unfortunate turn
-        </div>
-        <div *ngIf="reading.judge.good && !reading.witness0.good && reading.witness1.good">
-          Unfortunate beginning will take a good turn
-        </div>
-      </ion-card-content>
-    </ion-card>
-  </div>
-
   <div *ngIf="warnings.length > 0">
     <h3>Warning</h3>
-    <ion-card no-margin color="danger" *ngFor="let warning of warnings">
-      <ion-card-content>
-        {{warning}}
-      </ion-card-content>
-    </ion-card>
+    <div color="danger" *ngFor="let warning of warnings">
+      {{warning}}
+    </div>
   </div>
 
 </ion-content>
