@@ -26641,6 +26641,10 @@ page-history .date {
   font-style: italic;
 }
 
+page-house .left-column {
+  color: #666;
+}
+
 page-new button.create,
 page-new button.create,
 page-new button.create {
