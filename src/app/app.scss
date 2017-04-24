@@ -17,4 +17,17 @@
 
 ion-content {
   background: url('/assets/bg.png') scroll repeat center;
+  height: 100%;
+}
+
+.big {
+  font-size: 150%;
+}
+
+.center {
+  text-align: center;
+}
+
+.left-column {
+    color: color($colors, light)
 }

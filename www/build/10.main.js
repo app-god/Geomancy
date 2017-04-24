@@ -1,14 +1,14 @@
 webpackJsonp([10],{
 
-/***/ 881:
+/***/ 309:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(99);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__library_houses__ = __webpack_require__(897);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LibraryHousesPageModule", function() { return LibraryHousesPageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(101);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__help__ = __webpack_require__(325);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HelpPageModule", function() { return HelpPageModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,37 +18,36 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var LibraryHousesPageModule = (function () {
-    function LibraryHousesPageModule() {
+var HelpPageModule = (function () {
+    function HelpPageModule() {
     }
-    return LibraryHousesPageModule;
+    return HelpPageModule;
 }());
-LibraryHousesPageModule = __decorate([
+HelpPageModule = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["a" /* NgModule */])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_2__library_houses__["a" /* LibraryHousesPage */],
+            __WEBPACK_IMPORTED_MODULE_2__help__["a" /* HelpPage */],
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__library_houses__["a" /* LibraryHousesPage */]),
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__help__["a" /* HelpPage */]),
         ],
         exports: [
-            __WEBPACK_IMPORTED_MODULE_2__library_houses__["a" /* LibraryHousesPage */]
+            __WEBPACK_IMPORTED_MODULE_2__help__["a" /* HelpPage */]
         ]
     })
-], LibraryHousesPageModule);
+], HelpPageModule);
 
-//# sourceMappingURL=library-houses.module.js.map
+//# sourceMappingURL=help.module.js.map
 
 /***/ }),
 
-/***/ 897:
+/***/ 325:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(99);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__models_house__ = __webpack_require__(525);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LibraryHousesPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(101);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HelpPage; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -60,30 +59,23 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-
-var LibraryHousesPage = (function () {
-    function LibraryHousesPage(navCtrl, navParams) {
+var HelpPage = (function () {
+    function HelpPage(navCtrl, navParams) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
-        this.houses = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
-            .map(function (houseNumber) {
-            return new __WEBPACK_IMPORTED_MODULE_2__models_house__["a" /* House */](houseNumber);
-        });
+        this.topic = navParams.get('topic');
     }
-    LibraryHousesPage.prototype.showHouse = function (house) {
-        this.navCtrl.push('HousePage', { house: house });
-    };
-    return LibraryHousesPage;
+    return HelpPage;
 }());
-LibraryHousesPage = __decorate([
+HelpPage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPage */])(),
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* Component */])({
-        selector: 'page-library-houses',template:/*ion-inline-start:"/Users/adam/AppGod/geomancy/src/pages/library-houses/library-houses.html"*/'<!--\n  Generated template for the LibraryHousesPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Houses</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content>\n\n  <ion-list>\n    <button ion-item *ngFor="let house of houses" (click)="showHouse(house)">\n      <div>House {{house.number}}</div>\n    </button>\n  </ion-list>\n\n</ion-content>\n'/*ion-inline-end:"/Users/adam/AppGod/geomancy/src/pages/library-houses/library-houses.html"*/,
+        selector: 'page-help',template:/*ion-inline-start:"/Users/adam/AppGod/geomancy/src/pages/help/help.html"*/'<!--\n  Generated template for the HelpPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title text-capitalize>Help</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content>\n\n  <div padding *ngIf="topic == \'new reading\'">\n    <h3>What should I ask?</h3>\n\n    <h3>Which topic should I choose?</h3>\n  </div>\n\n  <div *ngIf="topic == \'reading houses\'">\n\n    <ion-grid>\n      <ion-row>\n        <ion-col col-4>\n          <ion-chip color="secondary">\n            <ion-label>\n              Topic\n            </ion-label>\n          </ion-chip>\n        </ion-col>\n        <ion-col col-8>\n          This house is connected to the topic you selected.\n        </ion-col>\n      </ion-row>\n      <ion-row>\n        <ion-col col-4>\n          <ion-chip color="secondary">\n            <ion-label>\n              ★★★\n            </ion-label>\n          </ion-chip>\n        </ion-col>\n        <ion-col col-8>\n          The tetragram\'s planet is the ruler of this house.\n        </ion-col>\n      </ion-row>\n      <ion-row>\n        <ion-col col-4>\n          <ion-chip color="secondary">\n            <ion-label>\n              ★★\n            </ion-label>\n          </ion-chip>\n        </ion-col>\n        <ion-col col-8>\n          The tetragram\'s planet is exalted in this house.\n        </ion-col>\n      </ion-row>\n      <ion-row>\n        <ion-col col-4>\n          <ion-chip color="secondary">\n            <ion-label>\n              Judge\n            </ion-label>\n          </ion-chip>\n        </ion-col>\n        <ion-col col-8>\n          The tetragram in this house is the same as the judge of this reading.\n        </ion-col>\n      </ion-row>\n      <ion-row>\n        <ion-col col-4>\n          <ion-chip color="secondary">\n            <ion-label>\n              Part of Fortune\n            </ion-label>\n          </ion-chip>\n        </ion-col>\n        <ion-col col-8>\n          This house is a potential source of wealth.\n        </ion-col>\n      </ion-row>\n    </ion-grid>\n  </div>\n</ion-content>\n'/*ion-inline-end:"/Users/adam/AppGod/geomancy/src/pages/help/help.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
-], LibraryHousesPage);
+], HelpPage);
 
-//# sourceMappingURL=library-houses.js.map
+//# sourceMappingURL=help.js.map
 
 /***/ })
 

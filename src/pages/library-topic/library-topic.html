@@ -1,5 +1,5 @@
 <!--
-  Generated template for the LibraryHousesPage page.
+  Generated template for the LibraryTopicPage page.
 
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
@@ -7,17 +7,17 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>Houses</ion-title>
+    <ion-title>{{topic.name}}</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
-<ion-content>
-
+<ion-content padding>
+  
   <ion-list>
-    <button ion-item *ngFor="let house of houses" (click)="showHouse(house)">
-      <div>House {{house.number}}</div>
+    <button ion-item *ngFor="let item of items" (click)="showItem(item)">
+      <div>{{item.name}}</div>
     </button>
   </ion-list>
 

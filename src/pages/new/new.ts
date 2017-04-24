@@ -6,12 +6,13 @@ import {
   ModalController,
   LoadingController,
   AlertController,
-  Platform
+  IonicPage
 } from 'ionic-angular';
 
 import { ReadingData } from '../../models/reading'
 import { House } from '../../models/house'
 
+@IonicPage()
 @Component({
   selector: 'page-new',
   templateUrl: 'new.html'
@@ -30,7 +31,6 @@ export class NewPage {
     private loadingCtrl: LoadingController,
     private storage: Storage,
     private alertCtrl: AlertController,
-    private platform: Platform,
   ) {
 
     let houses = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
@@ -93,23 +93,6 @@ export class NewPage {
 
   showHelp() {
     this.navCtrl.push('HelpPage', { topic: 'new reading' })
-  }
-
-  ionViewWillLoad() {
-    if (this.platform.is('core')) {
-      this.platformKey = 'md'
-    }
-    if (this.platform.is('ios')) {
-      this.platformKey = 'ios'
-    }
-    if (this.platform.is('android')) {
-      this.platformKey = 'md'
-    }
-    if (this.platform.is('windows')) {
-      this.platformKey = 'wp'
-    }
-
-    console.log(this.platformKey)
   }
 
 }

@@ -7,15 +7,15 @@
 </ion-header>
 
 
-<ion-content padding>
-  <div style="font-size: 200%;">
+<ion-content>
+  <div padding class="big center">
     <tetragram [tetragram]="tetragram"></tetragram>
+    <p>{{tetragram.desc}}</p>
   </div>
-  <p class="big center">{{tetragram.desc}}</p>
 
   <ion-grid>
     <ion-row>
-      <ion-col col-4>
+      <ion-col col-4 class="left-column">
         Planet
       </ion-col>
       <ion-col col-8>
@@ -23,7 +23,7 @@
       </ion-col>
     </ion-row>
     <ion-row *ngFor="let meaning of tetragram.houseMeanings; let i = index">
-      <ion-col col-4>
+      <ion-col col-4 class="left-column">
         In House {{i + 1}}
       </ion-col>
       <ion-col col-8>

@@ -1,15 +1,21 @@
+import { LibraryItem } from './library'
 
-export class House {
+export class House implements LibraryItem {
   topics: string[]
   tetragram?
   ruler: string
   exaltation?: string
+
+  // library item
+  name: string
+  page = 'HousePage'
 
   constructor(public number: number) {
     let info: HouseInfo = houseInfo[number - 1]
     this.topics = info.topics
     this.ruler = info.ruler
     this.exaltation = info.exaltation
+    this.name = 'House ' + number
   }
 }
 

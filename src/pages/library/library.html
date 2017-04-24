@@ -10,7 +10,7 @@
 
   <ion-list>
     <button ion-item *ngFor="let topic of topics"
-      (click)="showPage(topic.page)">
+      (click)="showTopic(topic)">
       <div>{{topic.name}}</div>
     </button>
   </ion-list>

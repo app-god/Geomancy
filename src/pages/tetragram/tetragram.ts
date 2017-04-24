@@ -11,7 +11,7 @@ export class TetragramPage {
   tetragram: Tetragram
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-    this.tetragram = navParams.get('tetragram')
+    this.tetragram = navParams.get('item')
   }
 
 }
