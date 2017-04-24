@@ -10,13 +10,14 @@
 </ion-header>
 
 <ion-content padding>
+
   <ion-list>
-    <ion-item>
+    <ion-item padding>
       <ion-label stacked>Question</ion-label>
       <ion-textarea rows="2" [(ngModel)]="question" placeholder="Enter Question Here"></ion-textarea>
     </ion-item>
 
-    <ion-item>
+    <ion-item padding>
       <ion-label stacked>Topic</ion-label>
       <ion-select [(ngModel)]="topic">
         <ion-option
@@ -28,11 +29,12 @@
       </ion-select>
     </ion-item>
   </ion-list>
+
 </ion-content>
 
-  <button ion-button block large
-    class="create"
-    (tap)="clickStart()"
-    [disabled]="startDisabled">
-    Create
-  </button>
+<button ion-button block large
+  class="create"
+  (tap)="clickStart()"
+  [disabled]="startDisabled">
+  Create
+</button>
