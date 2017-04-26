@@ -1,0 +1,30 @@
+<ion-header>
+
+  <ion-navbar>
+    <!--<ion-title>tutorial</ion-title>-->
+    <ion-buttons end *ngIf="showSkip">
+      <button ion-button (click)="startApp()" color="primary">Skip</button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-slides #slides pager (ionSlideWillChange)="onSlideChange($event)">
+    <ion-slide>
+      <h2>Welcome to <b>Geomancy</b></h2>
+      <p>
+        <b>Geomancy</b> is a divination tool to gain insight into any question or concern you have.
+      </p>
+    </ion-slide>
+    <ion-slide>
+      <button ion-button icon-right large clear (click)="startApp()">
+        Continue
+        <ion-icon name="arrow-forward"></ion-icon>
+      </button>
+    </ion-slide>
+  </ion-slides>
+
+</ion-content>
