@@ -42,11 +42,7 @@ export class Tetragram implements LibraryItem {
   }
 }
 
-interface TetragramData {
-  key: number
-}
-
-interface TetragramInfo {
+export interface TetragramInfo {
   key: number
   name: string
   desc: string
