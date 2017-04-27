@@ -6,7 +6,8 @@ import {
   ModalController,
   LoadingController,
   AlertController,
-  IonicPage
+  IonicPage,
+  ActionSheetController
 } from 'ionic-angular';
 
 import { ReadingData } from '../../models/reading'
@@ -31,6 +32,7 @@ export class NewPage {
     private loadingCtrl: LoadingController,
     private storage: Storage,
     private alertCtrl: AlertController,
+    private actionCtrl: ActionSheetController
   ) {
 
     let houses = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
@@ -58,6 +60,7 @@ export class NewPage {
     let loading = this.loadingCtrl.create({
       content: 'Generating reading'
     })
+
     loading.present()
 
     let readingData: ReadingData = {
@@ -91,8 +94,31 @@ export class NewPage {
 
   }
 
-  showHelp() {
-    this.navCtrl.push('HelpPage', { topic: 'new reading' })
+  showMore() {
+
+    let actionSheet = this.actionCtrl.create({
+      title: 'More',
+      buttons: [
+        {
+          text: 'Show Introduction',
+          handler: () => {
+            this.navCtrl.push('TutorialPage')
+          }
+        },
+        {
+          text: 'Show Help',
+          handler: () => {
+            this.navCtrl.push('HelpPage', { topic: 'new reading' })
+          }
+        },
+        {
+          text: 'Cancel',
+          role: 'cancel'
+        }
+      ]
+    })
+
+    actionSheet.present()
   }
 
 }

@@ -7,7 +7,7 @@ webpackJsonp([0],{
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(101);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__reading_houses__ = __webpack_require__(335);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__reading_houses__ = __webpack_require__(334);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_tetragram_tetragram_module__ = __webpack_require__(323);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ReadingHousesPageModule", function() { return ReadingHousesPageModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -574,75 +574,75 @@ var houseInfo = [
         number: 1,
         ruler: 'Mars',
         exaltation: '',
-        topics: ['Self', 'Beginnings']
+        topics: ['Self', 'Life', 'Health']
     },
     {
         number: 2,
         ruler: 'Venus',
         exaltation: 'Moon',
-        topics: ['Wealth']
+        topics: ['Money', 'Property', 'Personal Worth']
     },
     {
         number: 3,
         ruler: 'Mercury',
-        topics: ['Communication']
+        topics: ['Brother', 'Sister', 'News', 'Short Journeys']
     },
     {
         number: 4,
         ruler: 'Moon',
         exaltation: 'Jupiter',
-        topics: ['Home', 'Mother']
+        topics: ['Father', 'Inheritence', 'Conclusion']
     },
     {
         number: 5,
         ruler: 'Sun',
-        topics: ['Creativity']
+        topics: ['Children', 'Pleasure', 'Feasts', 'Speculation']
     },
     {
         number: 6,
         ruler: 'Mercury',
         exaltation: 'Mercury',
-        topics: ['Health', 'Service']
+        topics: ['Servants', 'Sickness', 'Uncles', 'Aunts', 'Animals']
     },
     {
         number: 7,
         ruler: 'Venus',
         exaltation: 'Saturn',
-        topics: ['Partners']
+        topics: ['Love', 'Marriage', 'Husband', 'Wife', 'Partnerships', 'Public Enemies', 'Lawsuits']
     },
     {
         number: 8,
         ruler: 'Mars',
-        topics: ['Transformation', 'Birth', 'Death', 'Mysteries']
+        topics: ['Deaths', 'Wills', 'Legacies', 'Pain', 'Anxiety']
     },
     {
         number: 9,
         ruler: 'Jupiter',
-        topics: ['Meaning', 'University', 'Luck', 'Travel', 'Gambling']
+        topics: ['Long journeys', 'Voyages', 'Science', 'Religion', 'Art', 'Visions', 'Divinations']
     },
     {
         number: 10,
         ruler: 'Saturn',
         exaltation: 'Mars',
-        topics: ['Career', 'Reputation', 'Honor', 'Discipline', 'Father']
+        topics: ['Mother', 'Rank', 'Honor', 'Profession', 'Authority', 'Employment']
     },
     {
         number: 11,
         ruler: 'Saturn',
-        topics: ['Community', 'Friendships', 'Humanity']
+        topics: ['Friends', 'Hopes', 'Wishes']
     },
     {
         number: 12,
         ruler: 'Jupiter',
         exaltation: 'Venus',
-        topics: ['Sacrifice', 'Ending', 'Imagination']
+        topics: ['Sorrows', 'Fears', 'Punishments', 'Secret Enemies', 'Institutions', 'Unseen Dangers', 'Restriction']
     }
 ];
 //# sourceMappingURL=house.js.map
 
 /***/ }),
 
-/***/ 335:
+/***/ 334:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

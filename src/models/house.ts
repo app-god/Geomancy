@@ -31,67 +31,67 @@ const houseInfo: HouseInfo[] = [
     number: 1,
     ruler: 'Mars',
     exaltation: '',
-    topics: ['Self', 'Beginnings']
+    topics: ['Self', 'Life', 'Health']
   },
   {
     number: 2,
     ruler: 'Venus',
     exaltation: 'Moon',
-    topics: ['Wealth']
+    topics: ['Money', 'Property', 'Personal Worth']
   },
   {
     number: 3,
     ruler: 'Mercury',
-    topics: ['Communication']
+    topics: ['Brother', 'Sister', 'News', 'Short Journeys']
   },
   {
     number: 4,
     ruler: 'Moon',
     exaltation: 'Jupiter',
-    topics: ['Home', 'Mother']
+    topics: ['Father', 'Inheritence', 'Conclusion']
   },
   {
     number: 5,
     ruler: 'Sun',
-    topics: ['Creativity']
+    topics: ['Children', 'Pleasure', 'Feasts', 'Speculation']
   },
   {
     number: 6,
     ruler: 'Mercury',
     exaltation: 'Mercury',
-    topics: ['Health', 'Service']
+    topics: ['Servants', 'Sickness', 'Uncles', 'Aunts', 'Animals']
   },
   {
     number: 7,
     ruler: 'Venus',
     exaltation: 'Saturn',
-    topics: ['Partners']
+    topics: ['Love', 'Marriage', 'Husband', 'Wife', 'Partnerships', 'Public Enemies', 'Lawsuits']
   },
   {
     number: 8,
     ruler: 'Mars',
-    topics: ['Transformation', 'Birth', 'Death', 'Mysteries']
+    topics: ['Deaths', 'Wills', 'Legacies', 'Pain', 'Anxiety']
   },
   {
     number: 9,
     ruler: 'Jupiter',
-    topics: ['Meaning', 'University', 'Luck', 'Travel', 'Gambling']
+    topics: ['Long journeys', 'Voyages', 'Science', 'Religion', 'Art', 'Visions', 'Divinations']
   },
   {
     number: 10,
     ruler: 'Saturn',
     exaltation: 'Mars',
-    topics: ['Career', 'Reputation', 'Honor', 'Discipline', 'Father']
+    topics: ['Mother', 'Rank', 'Honor', 'Profession', 'Authority', 'Employment']
   },
   {
     number: 11,
     ruler: 'Saturn',
-    topics: ['Community', 'Friendships', 'Humanity']
+    topics: ['Friends', 'Hopes', 'Wishes']
   },
   {
     number: 12,
     ruler: 'Jupiter',
     exaltation: 'Venus',
-    topics: ['Sacrifice', 'Ending', 'Imagination']
+    topics: ['Sorrows', 'Fears', 'Punishments', 'Secret Enemies', 'Institutions', 'Unseen Dangers', 'Restriction']
   }
 ]

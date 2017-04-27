@@ -1,14 +1,14 @@
 webpackJsonp([9],{
 
-/***/ 314:
+/***/ 321:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(101);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__new__ = __webpack_require__(333);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NewPageModule", function() { return NewPageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__tutorial__ = __webpack_require__(339);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TutorialPageModule", function() { return TutorialPageModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,129 +18,37 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var NewPageModule = (function () {
-    function NewPageModule() {
+var TutorialPageModule = (function () {
+    function TutorialPageModule() {
     }
-    return NewPageModule;
+    return TutorialPageModule;
 }());
-NewPageModule = __decorate([
+TutorialPageModule = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["a" /* NgModule */])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_2__new__["a" /* NewPage */]
+            __WEBPACK_IMPORTED_MODULE_2__tutorial__["a" /* TutorialPage */],
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__new__["a" /* NewPage */]),
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__tutorial__["a" /* TutorialPage */]),
         ],
         exports: [
-            __WEBPACK_IMPORTED_MODULE_2__new__["a" /* NewPage */]
+            __WEBPACK_IMPORTED_MODULE_2__tutorial__["a" /* TutorialPage */]
         ]
     })
-], NewPageModule);
+], TutorialPageModule);
 
-//# sourceMappingURL=new.module.js.map
-
-/***/ }),
-
-/***/ 325:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return House; });
-var House = (function () {
-    function House(number) {
-        this.number = number;
-        this.page = 'HousePage';
-        var info = houseInfo[number - 1];
-        this.topics = info.topics;
-        this.ruler = info.ruler;
-        this.exaltation = info.exaltation;
-        this.name = 'House ' + number;
-    }
-    return House;
-}());
-
-var houseInfo = [
-    {
-        number: 1,
-        ruler: 'Mars',
-        exaltation: '',
-        topics: ['Self', 'Beginnings']
-    },
-    {
-        number: 2,
-        ruler: 'Venus',
-        exaltation: 'Moon',
-        topics: ['Wealth']
-    },
-    {
-        number: 3,
-        ruler: 'Mercury',
-        topics: ['Communication']
-    },
-    {
-        number: 4,
-        ruler: 'Moon',
-        exaltation: 'Jupiter',
-        topics: ['Home', 'Mother']
-    },
-    {
-        number: 5,
-        ruler: 'Sun',
-        topics: ['Creativity']
-    },
-    {
-        number: 6,
-        ruler: 'Mercury',
-        exaltation: 'Mercury',
-        topics: ['Health', 'Service']
-    },
-    {
-        number: 7,
-        ruler: 'Venus',
-        exaltation: 'Saturn',
-        topics: ['Partners']
-    },
-    {
-        number: 8,
-        ruler: 'Mars',
-        topics: ['Transformation', 'Birth', 'Death', 'Mysteries']
-    },
-    {
-        number: 9,
-        ruler: 'Jupiter',
-        topics: ['Meaning', 'University', 'Luck', 'Travel', 'Gambling']
-    },
-    {
-        number: 10,
-        ruler: 'Saturn',
-        exaltation: 'Mars',
-        topics: ['Career', 'Reputation', 'Honor', 'Discipline', 'Father']
-    },
-    {
-        number: 11,
-        ruler: 'Saturn',
-        topics: ['Community', 'Friendships', 'Humanity']
-    },
-    {
-        number: 12,
-        ruler: 'Jupiter',
-        exaltation: 'Venus',
-        topics: ['Sacrifice', 'Ending', 'Imagination']
-    }
-];
-//# sourceMappingURL=house.js.map
+//# sourceMappingURL=tutorial.module.js.map
 
 /***/ }),
 
-/***/ 333:
+/***/ 339:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ionic_storage__ = __webpack_require__(241);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(101);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__models_house__ = __webpack_require__(325);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return NewPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(101);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_storage__ = __webpack_require__(241);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TutorialPage; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -153,78 +61,36 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-
-var NewPage = (function () {
-    function NewPage(navCtrl, modCtrl, loadingCtrl, storage, alertCtrl) {
+var TutorialPage = (function () {
+    function TutorialPage(navCtrl, navParams, storage) {
         this.navCtrl = navCtrl;
-        this.modCtrl = modCtrl;
-        this.loadingCtrl = loadingCtrl;
+        this.navParams = navParams;
         this.storage = storage;
-        this.alertCtrl = alertCtrl;
-        this.startDisabled = false;
-        this.question = '';
-        this.topic = '';
-        var houses = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-            .map(function (number) { return new __WEBPACK_IMPORTED_MODULE_3__models_house__["a" /* House */](number); });
-        var nestedTopics = houses.map(function (house) { return house.topics; });
-        this.topics = [].concat.apply([], nestedTopics);
-        this.topics.sort();
-        this.topics.unshift('None');
-        this.topic = this.topics[0];
+        this.showSkip = true;
     }
-    NewPage.prototype.clickStart = function () {
-        var _this = this;
-        this.startDisabled = true;
-        if (this.question == '') {
-            this.question = 'None';
-        }
-        var loading = this.loadingCtrl.create({
-            content: 'Generating reading'
-        });
-        loading.present();
-        var readingData = {
-            question: this.question,
-            topic: this.topic,
-            date: Date.now(),
-            key0: Math.floor(Math.random() * 15),
-            key1: Math.floor(Math.random() * 15),
-            key2: Math.floor(Math.random() * 15),
-            key3: Math.floor(Math.random() * 15)
-        };
-        this.storage.ready().then(function () {
-            _this.storage.get('history').then(function (history) {
-                history = history || [];
-                history.push(readingData);
-                _this.storage.set('history', history);
-                loading.dismiss();
-                var readingModal = _this.modCtrl.create('ReadingPage', {
-                    readingData: readingData
-                });
-                readingModal.present();
-                _this.question = '';
-                _this.topic = 'None';
-                _this.startDisabled = false;
-            });
-        });
+    TutorialPage.prototype.startApp = function () {
+        this.storage.set('hasSeenTutorial', true);
+        this.navCtrl.push('TabsPage');
     };
-    NewPage.prototype.showHelp = function () {
-        this.navCtrl.push('HelpPage', { topic: 'new reading' });
+    TutorialPage.prototype.onSlideChange = function (slides) {
+        this.showSkip = !slides.isEnd();
     };
-    return NewPage;
+    return TutorialPage;
 }());
-NewPage = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["f" /* IonicPage */])(),
+__decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["N" /* ViewChild */])('slides'),
+    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* Slides */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* Slides */]) === "function" && _a || Object)
+], TutorialPage.prototype, "slides", void 0);
+TutorialPage = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPage */])(),
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* Component */])({
-        selector: 'page-new',template:/*ion-inline-start:"/Users/adam/AppGod/geomancy/src/pages/new/new.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>New Reading</ion-title>\n    <ion-buttons end>\n      <button ion-button icon-only (click)="showHelp()">\n        <ion-icon name="help-circle"></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n\n  <ion-list>\n    <ion-item padding>\n      <ion-label stacked>Question</ion-label>\n      <ion-textarea [(ngModel)]="question" rows="3"></ion-textarea>\n    </ion-item>\n\n    <ion-item padding>\n      <ion-label stacked>Topic</ion-label>\n      <ion-select [(ngModel)]="topic">\n        <ion-option\n          [selected]="t == topic"\n          [value]="t"\n          *ngFor="let t of topics">\n          {{t}}\n        </ion-option>\n      </ion-select>\n    </ion-item>\n  </ion-list>\n\n</ion-content>\n\n<button ion-button block large\n  class="create"\n  (tap)="clickStart()"\n  [disabled]="startDisabled">\n  Create\n</button>\n'/*ion-inline-end:"/Users/adam/AppGod/geomancy/src/pages/new/new.html"*/
+        selector: 'page-tutorial',template:/*ion-inline-start:"/Users/adam/AppGod/geomancy/src/pages/tutorial/tutorial.html"*/'<ion-header>\n\n  <ion-navbar>\n    <!--<ion-title>tutorial</ion-title>-->\n    <ion-buttons end *ngIf="showSkip">\n      <button ion-button (click)="startApp()" color="primary">Skip</button>\n    </ion-buttons>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n  <ion-slides #slides pager (ionSlideWillChange)="onSlideChange($event)">\n    <ion-slide>\n      <h2>Welcome to <b>Geomancy</b></h2>\n      <p>\n        <b>Geomancy</b> is a divination tool to gain insight into any question or concern you have.\n      </p>\n    </ion-slide>\n    <ion-slide>\n      <button ion-button icon-right large clear (click)="startApp()">\n        Continue\n        <ion-icon name="arrow-forward"></ion-icon>\n      </button>\n    </ion-slide>\n  </ion-slides>\n\n</ion-content>\n'/*ion-inline-end:"/Users/adam/AppGod/geomancy/src/pages/tutorial/tutorial.html"*/,
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["g" /* NavController */],
-        __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["j" /* ModalController */],
-        __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["k" /* LoadingController */],
-        __WEBPACK_IMPORTED_MODULE_1__ionic_storage__["b" /* Storage */],
-        __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["l" /* AlertController */]])
-], NewPage);
+    __metadata("design:paramtypes", [typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_2__ionic_storage__["b" /* Storage */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__ionic_storage__["b" /* Storage */]) === "function" && _d || Object])
+], TutorialPage);
 
-//# sourceMappingURL=new.js.map
+var _a, _b, _c, _d;
+//# sourceMappingURL=tutorial.js.map
 
 /***/ })
 
