@@ -31,15 +31,32 @@ export class Reading {
   date: number
   partOfFortune: number
 
-  constructor(data: ReadingData) {
 
-    if (data.question == '') {
+  constructor(data?: ReadingData, question?: string, topic?: string) {
+
+    if (!data) { // randomly generate data
+      data = {
+        question: question ? question : 'None',
+        topic: topic ? topic : 'None',
+        date: Date.now(),
+        key0: Math.floor(Math.random() * 15),
+        key1: Math.floor(Math.random() * 15),
+        key2: Math.floor(Math.random() * 15),
+        key3: Math.floor(Math.random() * 15)
+      }
+    }
+
+    if (!data.question || data.question == '') {
       this.question = 'None'
     } else {
       this.question = data.question
     }
 
-    this.topic = data.topic
+    if (!data.topic || data.topic == '') {
+      this.topic = 'None'
+    } else {
+      this.topic = data.topic
+    }
 
     this.house = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
       .map(number => {
