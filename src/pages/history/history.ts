@@ -31,7 +31,9 @@ export class HistoryPage {
   loadReadings(): void {
     this.storage.ready().then(() => {
       this.storage.get('history').then(history => {
-        this.readings = history.sort(this.sortReadings)
+        if (history) {
+          this.readings = history.sort(this.sortReadings)
+        }
       })
     })
   }
