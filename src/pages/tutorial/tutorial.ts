@@ -12,7 +12,6 @@ export class TutorialPage {
   @ViewChild('slides') slides: Slides
 
   showSkip = true
-  closable = false
 
   constructor(
     public navCtrl: NavController,
@@ -20,22 +19,14 @@ export class TutorialPage {
     public storage: Storage,
     public viewCtrl: ViewController
   ) {
-    let closableParam = this.navParams.get('closable')
-    this.closable = closableParam ? closableParam : false
   }
 
   startApp() {
     this.storage.set('hasSeenTutorial', true)
-
     this.navCtrl.push('TabsPage')
-  }
-
-  close() {
-    this.viewCtrl.dismiss()
   }
 
   onSlideChange(slides: Slides) {
     this.showSkip = !slides.isEnd()
   }
-
 }

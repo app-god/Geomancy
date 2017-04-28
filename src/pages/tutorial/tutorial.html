@@ -2,12 +2,6 @@
 
   <ion-navbar>
     <!--<ion-title>tutorial</ion-title>-->
-    <ion-buttons left *ngIf="closable">
-      <button ion-button icon-only (click)="close()">
-        <ion-icon name="close"></ion-icon>
-      </button>
-    </ion-buttons>
-
     <ion-buttons end *ngIf="showSkip">
       <button ion-button (click)="startApp()" color="primary">Skip</button>
     </ion-buttons>

@@ -102,7 +102,7 @@ export class NewPage {
         {
           text: 'Show Introduction',
           handler: () => {
-            let introMod = this.modCtrl.create('TutorialPage', { closable: true })
+            let introMod = this.modCtrl.create('TutorialPage')
             introMod.present()
           }
         },
