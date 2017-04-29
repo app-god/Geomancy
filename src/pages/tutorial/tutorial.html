@@ -1,7 +1,6 @@
 <ion-header>
 
   <ion-navbar>
-    <!--<ion-title>tutorial</ion-title>-->
     <ion-buttons end *ngIf="showSkip">
       <button ion-button (click)="startApp()" color="primary">Skip</button>
     </ion-buttons>
@@ -12,19 +11,35 @@
 
 <ion-content padding>
 
-  <ion-slides #slides pager (ionSlideWillChange)="onSlideChange($event)">
+  <ion-slides #slides pager (ionSlideWillChange)="onSlideChange($event)" color="primary">
+
     <ion-slide>
       <h2>Welcome to <b>Geomancy</b></h2>
       <p>
-        <b>Geomancy</b> is a divination tool to gain insight into any question or concern you have.
+        <b>Geomancy</b> ("earth divination") is a method of divination that interprets markings on the ground or the patterns formed by tossed handfuls of soil, rocks, or sand.
+      </p>
+      <p>
+        The most prevalent form of <b>geomancy</b> involves interpreting a series of 16 figures formed by a randomized process that involves recursion followed by analyzing them, often augmented with astrological interpretations.
       </p>
     </ion-slide>
+
+    <ion-slide>
+      <h2>A little bit of history</h2>
+      <p>
+        <b>Geomancy</b> was one of the most popular forms of divination throughout Africa and Europe, particularly during the Middle Ages and the Renaissance.  It was practiced by people from all social classes.
+      </p>
+      <p>
+        In Renaissance magic, <b>geomancy</b> was classified as one of the seven "forbidden arts", along with necromancy, hydromancy, aeromancy, pyromancy, chiromancy (palmistry), and spatulamancy (scapulimancy).
+      </p>
+    </ion-slide>
+
     <ion-slide>
       <button ion-button icon-right large clear (click)="startApp()">
         Continue
         <ion-icon name="arrow-forward"></ion-icon>
       </button>
     </ion-slide>
+    
   </ion-slides>
 
 </ion-content>
