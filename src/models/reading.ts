@@ -30,6 +30,7 @@ export class Reading {
 
   date: number
   partOfFortune: number
+  readingData: ReadingData
 
 
   constructor(data?: ReadingData, question?: string, topic?: string) {
@@ -45,6 +46,8 @@ export class Reading {
         key3: Math.floor(Math.random() * 15)
       }
     }
+
+    this.readingData = data
 
     if (!data.question || data.question == '') {
       this.question = 'None'
@@ -163,6 +166,10 @@ export class Reading {
     }
 
     return partOfFortune
+  }
+
+  getReadingData() {
+    return this.readingData
   }
 }
 

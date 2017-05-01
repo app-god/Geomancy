@@ -580,6 +580,7 @@ var Reading = (function () {
                 key3: Math.floor(Math.random() * 15)
             };
         }
+        this.readingData = data;
         if (!data.question || data.question == '') {
             this.question = 'None';
         }
@@ -663,6 +664,9 @@ var Reading = (function () {
             partOfFortune = 12;
         }
         return partOfFortune;
+    };
+    Reading.prototype.getReadingData = function () {
+        return this.readingData;
     };
     return Reading;
 }());

@@ -50,4 +50,15 @@ describe('Reading', () => {
         expect(testReading.partOfFortune).toEqual(4)
     })
 
+    it('converts to ReadingData', () => {
+        let readingData = testReading.getReadingData()
+        expect(readingData.question).toBeDefined()
+        expect(readingData.topic).toBeDefined()
+        expect(readingData.date).toBeDefined()
+        expect(readingData.key0).toBeDefined()
+        expect(readingData.key1).toBeDefined()
+        expect(readingData.key2).toBeDefined()
+        expect(readingData.key3).toBeDefined()
+    })
+
 })

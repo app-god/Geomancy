@@ -14,7 +14,8 @@
   <ion-list>
     <ion-item padding>
       <ion-label stacked>Question</ion-label>
-      <ion-textarea [(ngModel)]="question" rows="3"></ion-textarea>
+      <ion-textarea [(ngModel)]="question" rows="3"
+        placeholder="Enter question here"></ion-textarea>
     </ion-item>
 
     <ion-item padding>
@@ -31,10 +32,19 @@
   </ion-list>
 
   <button ion-button block large
-    class="create"
+    color="primary"
     (tap)="clickStart()"
     [disabled]="startDisabled">
-    Create
+    Create Automatically
+  </button>
+
+  <br>
+
+  <button ion-button block large
+    color="secondary"
+    (tap)="clickStart()"
+    [disabled]="startDisabled">
+    Create Manually
   </button>
 
   <p class="instructions">
