@@ -30,11 +30,15 @@
     </ion-item>
   </ion-list>
 
-</ion-content>
+  <button ion-button block large
+    class="create"
+    (tap)="clickStart()"
+    [disabled]="startDisabled">
+    Create
+  </button>
 
-<button ion-button block large
-  class="create"
-  (tap)="clickStart()"
-  [disabled]="startDisabled">
-  Create
-</button>
+  <p class="instructions">
+    Although this procedure can be done automatically, manually generating the numbers by etching dots in the earth is a more powerful way of forming the divination.
+  </p>
+
+</ion-content>

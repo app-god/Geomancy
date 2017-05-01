@@ -26654,39 +26654,51 @@ page-history .date {
   font-style: italic;
 }
 
-page-new button.create,
-page-new button.create,
-page-new button.create {
-  position: absolute;
-  right: 0;
-  left: 0;
-  margin: 0 auto 16px auto;
-  z-index: 10000;
-  width: calc(100% - 32px);
+/*
+
+page-new {
+    button.create,
+    button.create,
+    button.create {
+        position: absolute;
+        right: 0;
+        left: 0;
+        margin: 0 auto $content-margin auto;
+        z-index: 10000;
+        width: calc(100% - 32px);
+    }
+}
+.md page-new {
+    .scroll-content {
+        bottom: calc(48px + 3.6rem)
+    }
+    button.create {
+        bottom: $tabs-md-tab-min-height;
+    }
+}
+.ios page-new{
+    .scroll-content {
+        bottom: calc(48px + 2.8em)
+    }
+    button.create {
+        bottom: $tabs-ios-tab-min-height;
+    }
+}
+.wp page-new {
+    .scroll-content {
+        bottom: calc(48px + 3.6rem)
+    }
+    button.create {
+        bottom: $tabs-wp-tab-min-height;
+    }
 }
 
-.md page-new .scroll-content {
-  bottom: calc(48px + 3.6rem);
-}
-
-.md page-new button.create {
-  bottom: 5.6rem;
-}
-
-.ios page-new .scroll-content {
-  bottom: calc(48px + 2.8em);
-}
-
-.ios page-new button.create {
-  bottom: 49px;
-}
-
-.wp page-new .scroll-content {
-  bottom: calc(48px + 3.6rem);
-}
-
-.wp page-new button.create {
-  bottom: 4.8rem;
+*/
+.instructions {
+  margin: 2em 0;
+  color: #666;
+  text-align: center;
+  font-style: italic;
 }
 
 page-reading-figures ion-col {

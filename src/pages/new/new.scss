@@ -1,3 +1,5 @@
+/*
+
 page-new {
     button.create,
     button.create,
@@ -33,4 +35,13 @@ page-new {
     button.create {
         bottom: $tabs-wp-tab-min-height;
     }
+}
+
+*/
+
+.instructions {
+    margin: 2em 0;
+    color: color($colors, light);
+    text-align: center;
+    font-style: italic;
 }
