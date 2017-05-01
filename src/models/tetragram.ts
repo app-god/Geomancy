@@ -6,6 +6,7 @@ export class Tetragram implements LibraryItem {
   name: string
   desc: string
   good: boolean
+  rules: number[]
   houseMeanings: string[]
   planet: string
   dots: number
@@ -21,6 +22,7 @@ export class Tetragram implements LibraryItem {
     this.name = info.name
     this.desc = info.desc
     this.good = info.good
+    this.rules = info.rules
     this.houseMeanings = info.houseMeanings
     this.planet = info.planet
     this.dots = info.dots

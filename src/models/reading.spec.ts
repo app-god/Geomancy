@@ -76,4 +76,20 @@ describe('Reading', () => {
         expect(testReading.getWarnings().length).toBe(0)
     })
 
+    it('gets rulerships', () => {
+        let rulershipReading = new Reading({
+            question: '',
+            topic: '',
+            date: 0,
+            key0: 6,
+            key1: 13,
+            key2: 15,
+            key3: 10
+        })
+
+        expect(rulershipReading.getRulerships().length).toBeGreaterThanOrEqual(4)
+        expect(testReading.getRulerships().length).toBe(2)
+
+    })
+
 })

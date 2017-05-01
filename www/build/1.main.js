@@ -56,6 +56,7 @@ var Tetragram = (function () {
         this.name = info.name;
         this.desc = info.desc;
         this.good = info.good;
+        this.rules = info.rules;
         this.houseMeanings = info.houseMeanings;
         this.planet = info.planet;
         this.dots = info.dots;
@@ -677,6 +678,20 @@ var Reading = (function () {
             warnings.push(message);
         }
         return warnings;
+    };
+    Reading.prototype.getRulerships = function () {
+        var _this = this;
+        var rulerships = [];
+        var houseNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+        houseNumbers.forEach(function (houseNumber) {
+            var tetragram = _this.getTetragramForHouse(houseNumber);
+            if (tetragram.rules.indexOf(houseNumber) >= 0) {
+                var house = new __WEBPACK_IMPORTED_MODULE_1__house__["a" /* House */](houseNumber);
+                var message = tetragram.name + ' is in ' + house.name;
+                rulerships.push(message);
+            }
+        });
+        return rulerships;
     };
     return Reading;
 }());

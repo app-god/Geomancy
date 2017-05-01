@@ -56,6 +56,7 @@ var Tetragram = (function () {
         this.name = info.name;
         this.desc = info.desc;
         this.good = info.good;
+        this.rules = info.rules;
         this.houseMeanings = info.houseMeanings;
         this.planet = info.planet;
         this.dots = info.dots;

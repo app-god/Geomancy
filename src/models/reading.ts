@@ -183,6 +183,20 @@ export class Reading {
     }
     return warnings
   }
+
+  getRulerships() {
+    let rulerships = []
+    let houseNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+    houseNumbers.forEach((houseNumber) => {
+      let tetragram = this.getTetragramForHouse(houseNumber)
+      if (tetragram.rules.indexOf(houseNumber) >= 0) {
+        let house = new House(houseNumber)
+        let message = tetragram.name + ' is in ' + house.name
+        rulerships.push(message)
+      }
+    })
+    return rulerships
+  }
 }
 
 export interface ReadingData {
