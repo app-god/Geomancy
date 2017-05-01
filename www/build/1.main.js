@@ -1,13 +1,13 @@
 webpackJsonp([1],{
 
-/***/ 318:
+/***/ 319:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(101);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__reading__ = __webpack_require__(336);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__reading__ = __webpack_require__(338);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ReadingPageModule", function() { return ReadingPageModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -41,7 +41,7 @@ ReadingPageModule = __decorate([
 
 /***/ }),
 
-/***/ 322:
+/***/ 323:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -484,7 +484,7 @@ var tetragramInfo = [
 
 /***/ }),
 
-/***/ 325:
+/***/ 326:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -575,12 +575,12 @@ var houseInfo = [
 
 /***/ }),
 
-/***/ 326:
+/***/ 327:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__tetragram__ = __webpack_require__(322);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__house__ = __webpack_require__(325);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__tetragram__ = __webpack_require__(323);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__house__ = __webpack_require__(326);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Reading; });
 
 
@@ -731,14 +731,14 @@ var Reading = (function () {
 
 /***/ }),
 
-/***/ 336:
+/***/ 338:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(101);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_storage__ = __webpack_require__(102);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__models_reading__ = __webpack_require__(326);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__models_reading__ = __webpack_require__(327);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ReadingPage; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -754,10 +754,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 var ReadingPage = (function () {
-    function ReadingPage(navCtrl, navParams, storage, viewCtrl) {
+    function ReadingPage(navCtrl, navParams, storage, actionCtrl, viewCtrl) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
         this.storage = storage;
+        this.actionCtrl = actionCtrl;
         this.viewCtrl = viewCtrl;
         this.title = 'Reading';
         this.reading = new __WEBPACK_IMPORTED_MODULE_3__models_reading__["a" /* Reading */](navParams.get('readingData'));
@@ -768,22 +769,58 @@ var ReadingPage = (function () {
     ReadingPage.prototype.close = function () {
         this.viewCtrl.dismiss();
     };
-    ReadingPage.prototype.showHelp = function () {
-        if (this.helpTopic) {
-            this.navCtrl.push('HelpPage', { topic: this.helpTopic });
-        }
+    ReadingPage.prototype.showMore = function () {
+        var _this = this;
+        var actionSheet = this.actionCtrl.create({
+            title: 'More',
+            buttons: [
+                {
+                    text: 'Save',
+                    handler: function () {
+                        _this.saveReading();
+                    }
+                },
+                {
+                    text: 'Show Info',
+                    handler: function () {
+                        _this.navCtrl.push('ReadingInfoPage', { reading: _this.reading });
+                    }
+                },
+                {
+                    text: 'Show Help',
+                    handler: function () {
+                        _this.navCtrl.push('HelpPage', { topic: 'reading' });
+                    }
+                },
+                {
+                    text: 'Cancel',
+                    role: 'cancel'
+                }
+            ]
+        });
+        actionSheet.present();
+    };
+    ReadingPage.prototype.saveReading = function () {
+        var _this = this;
+        this.storage.ready().then(function () {
+            _this.storage.get('history').then(function (history) {
+                history = history || [];
+                history.push(_this.reading.readingData);
+                _this.storage.set('history', history);
+            });
+        });
     };
     return ReadingPage;
 }());
 ReadingPage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPage */])(),
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* Component */])({
-        selector: 'page-reading',template:/*ion-inline-start:"/Users/adam/AppGod/geomancy/src/pages/reading/reading.html"*/'<ion-header>\n\n  <ion-navbar>\n    <ion-buttons left>\n      <button ion-button icon-only (click)="close()">\n        <ion-icon name="close"></ion-icon>\n      </button>\n    </ion-buttons>\n    <ion-title>{{title}}</ion-title>\n    <ion-buttons right *ngIf="helpTopic">\n      <button ion-button icon-only (click)="showHelp()">\n        <ion-icon name="help-circle"></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n\n</ion-header>\n\n<ion-tabs>\n  <ion-tab [root]="\'ReadingOverviewPage\'" [rootParams]="rootParams" tabTitle="Overview" tabIcon="eye"></ion-tab>\n  <ion-tab [root]="\'ReadingHousesPage\'"   [rootParams]="rootParams" tabTitle="Houses" tabIcon="home"></ion-tab>\n  <ion-tab [root]="\'ReadingFiguresPage\'"  [rootParams]="rootParams" tabTitle="Figures" tabIcon="grid"></ion-tab>\n</ion-tabs>\n'/*ion-inline-end:"/Users/adam/AppGod/geomancy/src/pages/reading/reading.html"*/,
+        selector: 'page-reading',template:/*ion-inline-start:"/Users/adam/AppGod/geomancy/src/pages/reading/reading.html"*/'<ion-header>\n\n  <ion-navbar>\n    <ion-buttons left>\n      <button ion-button icon-only (click)="close()">\n        <ion-icon name="close"></ion-icon>\n      </button>\n    </ion-buttons>\n    <ion-title>{{title}}</ion-title>\n    <ion-buttons right>\n      <button ion-button icon-only (click)="showMore()">\n        <ion-icon name="more"></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n\n</ion-header>\n\n<ion-tabs>\n  <ion-tab [root]="\'ReadingOverviewPage\'" [rootParams]="rootParams" tabTitle="Overview" tabIcon="eye"></ion-tab>\n  <ion-tab [root]="\'ReadingHousesPage\'"   [rootParams]="rootParams" tabTitle="Houses" tabIcon="home"></ion-tab>\n  <ion-tab [root]="\'ReadingFiguresPage\'"  [rootParams]="rootParams" tabTitle="Figures" tabIcon="grid"></ion-tab>\n</ion-tabs>\n'/*ion-inline-end:"/Users/adam/AppGod/geomancy/src/pages/reading/reading.html"*/,
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__ionic_storage__["b" /* Storage */],
-        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* ViewController */]])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__ionic_storage__["b" /* Storage */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__ionic_storage__["b" /* Storage */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* ActionSheetController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* ActionSheetController */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* ViewController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* ViewController */]) === "function" && _e || Object])
 ], ReadingPage);
 
+var _a, _b, _c, _d, _e;
 //# sourceMappingURL=reading.js.map
 
 /***/ })

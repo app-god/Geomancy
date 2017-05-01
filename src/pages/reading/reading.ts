@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, ViewController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ViewController, ActionSheetController } from 'ionic-angular';
 import { Storage } from '@ionic/storage'
 import { Reading } from '../../models/reading'
 
@@ -12,9 +12,12 @@ export class ReadingPage {
   reading: Reading
   rootParams: any
   title: string = 'Reading'
-  helpTopic: string
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public storage: Storage,
+  constructor(
+    public navCtrl: NavController,
+    public navParams: NavParams,
+    public storage: Storage,
+    public actionCtrl: ActionSheetController,
     public viewCtrl: ViewController) {
       this.reading = new Reading(navParams.get('readingData'))
       this.rootParams = {
@@ -26,10 +29,49 @@ export class ReadingPage {
     this.viewCtrl.dismiss()
   }
 
-  showHelp() {
-    if (this.helpTopic) {
-      this.navCtrl.push('HelpPage', { topic: this.helpTopic })
-    }
+  showMore() {
+
+    let actionSheet = this.actionCtrl.create({
+      title: 'More',
+      buttons: [
+        {
+          text: 'Save',
+          handler: () => {
+            this.saveReading()
+          }
+        },
+        {
+          text: 'Show Info',
+          handler: () => {
+            this.navCtrl.push('ReadingInfoPage', { reading: this.reading })
+          }
+        },
+        {
+          text: 'Show Help',
+          handler: () => {
+            this.navCtrl.push('HelpPage', { topic: 'reading' })
+          }
+        },
+        {
+          text: 'Cancel',
+          role: 'cancel'
+        }
+      ]
+    })
+
+    actionSheet.present()
   }
 
+
+  saveReading() {
+
+    this.storage.ready().then(() => {
+      this.storage.get('history').then(history => {
+        history = history || []
+        history.push(this.reading.readingData)
+        this.storage.set('history', history)
+      })
+    })
+
+  }
 }

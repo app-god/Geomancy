@@ -57,12 +57,6 @@ export class NewPage {
       this.question = 'None'
     }
 
-    let loading = this.loadingCtrl.create({
-      content: 'Generating reading'
-    })
-
-    loading.present()
-
     let readingData: ReadingData = {
       question: this.question,
       topic: this.topic,
@@ -73,25 +67,15 @@ export class NewPage {
       key3: Math.floor(Math.random() * 15)
     }
 
-    this.storage.ready().then(() => {
-      this.storage.get('history').then(history => {
-        history = history || []
-        history.push(readingData)
-        this.storage.set('history', history)
+    this.question = ''
+    this.topic = 'None'
+    this.startDisabled = false
 
-        loading.dismiss()
-
-        let readingModal = this.modCtrl.create('ReadingPage', {
-          readingData: readingData
-        })
-        readingModal.present()
-
-        this.question = ''
-        this.topic = 'None'
-        this.startDisabled = false
-      })
+    let readingModal = this.modCtrl.create('ReadingPage', {
+      readingData: readingData
     })
 
+    readingModal.present()
   }
 
   showMore() {

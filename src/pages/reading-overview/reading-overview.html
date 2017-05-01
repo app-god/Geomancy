@@ -2,29 +2,7 @@
 
 <ion-content padding>
 
-  <div class="label">
-    Question
-  </div>
-
-  <div>{{reading.question}}</div>
-
-  <br>
-
-  <div class="label">
-    Topic
-  </div>
-
-  <div>{{reading.topic}}</div>
-
-  <br>
-
-  <div class="label">
-    Date
-  </div>
-
-  <div>{{reading.date | date:'medium'}}</div>
-
-  <br>
+  <p>{{reading.question}}</p>
 
   <div *ngIf="warnings.length > 0">
     <h3>Warning</h3>

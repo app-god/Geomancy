@@ -1,14 +1,14 @@
 webpackJsonp([3],{
 
-/***/ 317:
+/***/ 318:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(101);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__reading_overview__ = __webpack_require__(335);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_tetragram_tetragram_module__ = __webpack_require__(323);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__reading_overview__ = __webpack_require__(337);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_tetragram_tetragram_module__ = __webpack_require__(324);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ReadingOverviewPageModule", function() { return ReadingOverviewPageModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -44,7 +44,7 @@ ReadingOverviewPageModule = __decorate([
 
 /***/ }),
 
-/***/ 322:
+/***/ 323:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -487,12 +487,12 @@ var tetragramInfo = [
 
 /***/ }),
 
-/***/ 323:
+/***/ 324:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__tetragram__ = __webpack_require__(324);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__tetragram__ = __webpack_require__(325);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TetragramComponentModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -523,12 +523,12 @@ TetragramComponentModule = __decorate([
 
 /***/ }),
 
-/***/ 324:
+/***/ 325:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__models_tetragram__ = __webpack_require__(322);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__models_tetragram__ = __webpack_require__(323);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TetragramComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -569,7 +569,7 @@ TetragramComponent = __decorate([
 
 /***/ }),
 
-/***/ 335:
+/***/ 337:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -609,12 +609,11 @@ var ReadingOverviewPage = (function () {
 ReadingOverviewPage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPage */])(),
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* Component */])({
-        selector: 'page-reading-overview',template:/*ion-inline-start:"/Users/adam/AppGod/geomancy/src/pages/reading-overview/reading-overview.html"*/'<ion-header><ion-navbar></ion-navbar></ion-header>\n\n<ion-content padding>\n\n  <div class="label">\n    Question\n  </div>\n\n  <div>{{reading.question}}</div>\n\n  <br>\n\n  <div class="label">\n    Topic\n  </div>\n\n  <div>{{reading.topic}}</div>\n\n  <br>\n\n  <div class="label">\n    Date\n  </div>\n\n  <div>{{reading.date | date:\'medium\'}}</div>\n\n  <br>\n\n  <div *ngIf="warnings.length > 0">\n    <h3>Warning</h3>\n    <div color="danger" *ngFor="let warning of warnings">\n      {{warning}}\n    </div>\n  </div>\n\n  <div *ngIf="rulerships.length > 0">\n    <h3>Rulerships</h3>\n    <div color="primary" *ngFor="let rulership of rulerships">\n      {{rulership}}\n    </div>\n  </div>\n\n  <div *ngIf="exaltations.length > 0">\n    <h3>Exaltations</h3>\n    <div color="primary" *ngFor="let exaltation of exaltations">\n      {{exaltation}}\n    </div>\n  </div>\n\n</ion-content>\n'/*ion-inline-end:"/Users/adam/AppGod/geomancy/src/pages/reading-overview/reading-overview.html"*/,
+        selector: 'page-reading-overview',template:/*ion-inline-start:"/Users/adam/AppGod/geomancy/src/pages/reading-overview/reading-overview.html"*/'<ion-header><ion-navbar></ion-navbar></ion-header>\n\n<ion-content padding>\n\n  <p>{{reading.question}}</p>\n\n  <div *ngIf="warnings.length > 0">\n    <h3>Warning</h3>\n    <div color="danger" *ngFor="let warning of warnings">\n      {{warning}}\n    </div>\n  </div>\n\n  <div *ngIf="rulerships.length > 0">\n    <h3>Rulerships</h3>\n    <div color="primary" *ngFor="let rulership of rulerships">\n      {{rulership}}\n    </div>\n  </div>\n\n  <div *ngIf="exaltations.length > 0">\n    <h3>Exaltations</h3>\n    <div color="primary" *ngFor="let exaltation of exaltations">\n      {{exaltation}}\n    </div>\n  </div>\n\n</ion-content>\n'/*ion-inline-end:"/Users/adam/AppGod/geomancy/src/pages/reading-overview/reading-overview.html"*/,
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]) === "function" && _b || Object])
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]])
 ], ReadingOverviewPage);
 
-var _a, _b;
 //# sourceMappingURL=reading-overview.js.map
 
 /***/ })
