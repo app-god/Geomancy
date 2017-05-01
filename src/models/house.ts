@@ -3,8 +3,7 @@ import { LibraryItem } from './library'
 export class House implements LibraryItem {
   topics: string[]
   tetragram?
-  ruler: string
-  exaltation?: string
+  phrase: string
 
   // library item
   name: string
@@ -13,85 +12,76 @@ export class House implements LibraryItem {
   constructor(public number: number) {
     let info: HouseInfo = houseInfo[number - 1]
     this.topics = info.topics
-    this.ruler = info.ruler
-    this.exaltation = info.exaltation
+    this.phrase = info.phrase
     this.name = 'House ' + number
   }
 }
 
 interface HouseInfo {
   number: number
+  phrase: string
   topics: string[]
-  ruler: string
-  exaltation?: string
 }
 
 const houseInfo: HouseInfo[] = [
   {
     number: 1,
-    ruler: 'Mars',
-    exaltation: '',
+    phrase: 'yourself',
     topics: ['Self', 'Life', 'Health']
   },
   {
     number: 2,
-    ruler: 'Venus',
-    exaltation: 'Moon',
+    phrase: 'concrete worth',
     topics: ['Money', 'Property', 'Personal Worth']
   },
   {
     number: 3,
-    ruler: 'Mercury',
+    phrase: 'friendships',
     topics: ['Brother', 'Sister', 'News', 'Short Journeys']
   },
   {
     number: 4,
-    ruler: 'Moon',
-    exaltation: 'Jupiter',
+    phrase: 'family',
     topics: ['Father', 'Inheritence', 'Conclusion']
   },
   {
     number: 5,
-    ruler: 'Sun',
+    phrase: 'creativity',
     topics: ['Children', 'Pleasure', 'Feasts', 'Speculation']
   },
   {
     number: 6,
-    ruler: 'Mercury',
-    exaltation: 'Mercury',
+    phrase: 'cleverness',
     topics: ['Servants', 'Sickness', 'Uncles', 'Aunts', 'Animals']
   },
   {
     number: 7,
-    ruler: 'Venus',
-    exaltation: 'Saturn',
+    phrase: 'love',
     topics: ['Love', 'Marriage', 'Husband', 'Wife', 'Partnerships', 'Public Enemies', 'Lawsuits']
   },
   {
     number: 8,
-    ruler: 'Mars',
+    phrase: 'suffering',
     topics: ['Deaths', 'Wills', 'Legacies', 'Pain', 'Anxiety']
   },
   {
     number: 9,
-    ruler: 'Jupiter',
+    phrase: 'philosophy',
     topics: ['Long journeys', 'Voyages', 'Science', 'Religion', 'Art', 'Visions', 'Divinations']
   },
   {
     number: 10,
-    ruler: 'Saturn',
-    exaltation: 'Mars',
+    phrase: 'reputation',
     topics: ['Mother', 'Rank', 'Honor', 'Profession', 'Authority', 'Employment']
   },
   {
     number: 11,
-    ruler: 'Saturn',
+    phrase: 'understanding',
     topics: ['Friends', 'Hopes', 'Wishes']
   },
   {
     number: 12,
-    ruler: 'Jupiter',
-    exaltation: 'Venus',
+    phrase: 'the subconscious',
     topics: ['Sorrows', 'Fears', 'Punishments', 'Secret Enemies', 'Institutions', 'Unseen Dangers', 'Restriction']
   }
 ]

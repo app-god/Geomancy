@@ -61,6 +61,7 @@ var Tetragram = (function () {
         this.good = info.good;
         this.rules = info.rules;
         this.exalted = info.exalted;
+        this.phrase = info.phrase;
         this.houseMeanings = info.houseMeanings;
         this.planet = info.planet;
         this.dots = info.dots;
@@ -95,6 +96,7 @@ var tetragramInfo = [
         dots: 4,
         sign: 'Cancer',
         good: false,
+        phrase: 'Clearing a path',
         houseMeanings: [
             'Evil except for prison.',
             'Indifferent.',
@@ -120,6 +122,7 @@ var tetragramInfo = [
         dots: 5,
         sign: 'Sagittarius',
         good: true,
+        phrase: 'A new beginning',
         houseMeanings: [
             'Good in all things',
             'Good.',
@@ -145,6 +148,7 @@ var tetragramInfo = [
         dots: 5,
         sign: 'Libra',
         good: true,
+        phrase: 'Making beautiful',
         houseMeanings: [
             'Good except in war.',
             'Very good.',
@@ -170,6 +174,7 @@ var tetragramInfo = [
         dots: 6,
         sign: 'Leo',
         good: true,
+        phrase: 'Success',
         houseMeanings: [
             'Good save in secrecy.',
             'Good except in sad things.',
@@ -195,6 +200,7 @@ var tetragramInfo = [
         dots: 5,
         sign: 'Aries',
         good: false,
+        phrase: 'Asserting your will',
         houseMeanings: [
             'Indifferent. Best in war.',
             'Good, but with trouble.',
@@ -220,6 +226,7 @@ var tetragramInfo = [
         dots: 6,
         sign: 'Sagittarius',
         good: true,
+        phrase: 'Expansion',
         houseMeanings: [
             'Happy, success in all things.',
             'Very prosperous.',
@@ -245,6 +252,7 @@ var tetragramInfo = [
         dots: 6,
         sign: "Capricorn",
         good: false,
+        phrase: 'Restriction',
         houseMeanings: [
             'Evil except to fortify a place.',
             'Good in Saturnine questions; else evil.',
@@ -270,6 +278,7 @@ var tetragramInfo = [
         dots: 7,
         sign: 'Aquarius',
         good: false,
+        phrase: 'Sadness',
         houseMeanings: [
             'Medium, but good for treasure and fortifying.',
             'Medium, but good to fortify.',
@@ -295,19 +304,20 @@ var tetragramInfo = [
         dots: 5,
         sign: 'Virgo',
         good: false,
+        phrase: 'Bringing an end',
         houseMeanings: [
-            'Good in all things.',
-            'Good.',
-            'Very good.',
-            'Good save in war.',
-            'Very good.',
-            'Good for immorality only.',
-            'Good especially for peace.',
-            'Good.',
-            'Very good.',
-            'Good in all.',
-            'Good for the church and ecclesiastical gain.',
-            'Not very good.'
+            'Destroy figure if it falls here! Makes judgment worthless.',
+            'Very evil.',
+            'Evil in all.',
+            'Good especially for conclusion of the matter.',
+            'Very evil.',
+            'Rather good.',
+            'Evil, war, and fire.',
+            'No good, except for magic.',
+            'Good for science only. Bad for journeys. Robbery.',
+            'Evil save in works of fire.',
+            'Evil save for favors.',
+            'Rather good.',
         ]
     },
     {
@@ -320,6 +330,7 @@ var tetragramInfo = [
         dots: 6,
         sign: 'Virgo',
         good: true,
+        phrase: 'Reconciliation',
         houseMeanings: [
             'Good with good, evil with evil.',
             'Commonly good.',
@@ -345,6 +356,7 @@ var tetragramInfo = [
         dots: 6,
         sign: 'Taurus',
         good: false,
+        phrase: 'Sacrifice',
         houseMeanings: [
             'Ill in all things but for prisoners.',
             'Very ill for money, but good for love.',
@@ -370,6 +382,7 @@ var tetragramInfo = [
         dots: 7,
         sign: 'Gemini',
         good: true,
+        phrase: 'Intelligence',
         houseMeanings: [
             'Good for marriage. Mercurial. Peace.',
             'Good in all.',
@@ -395,6 +408,7 @@ var tetragramInfo = [
         dots: 6,
         sign: 'Leo',
         good: true,
+        phrase: 'Progress',
         houseMeanings: [
             'Speed in victory and in love, but choleric.',
             'Very good.',
@@ -420,6 +434,7 @@ var tetragramInfo = [
         dots: 7,
         sign: 'Scorpio',
         good: false,
+        phrase: 'Destruction',
         houseMeanings: [
             'Destroy the figure if it falls here! It makes the judgement worthless.',
             'Evil in all demands.',
@@ -445,6 +460,7 @@ var tetragramInfo = [
         dots: 7,
         sign: 'Pisces',
         good: true,
+        phrase: 'Joy',
         houseMeanings: [
             'Good, except in war.',
             'Sickly.',
@@ -470,6 +486,7 @@ var tetragramInfo = [
         dots: 8,
         sign: 'Cancer',
         good: true,
+        phrase: 'Agreement',
         houseMeanings: [
             'Good in marriages.',
             'Medium good.',
@@ -583,8 +600,7 @@ var House = (function () {
         this.page = 'HousePage';
         var info = houseInfo[number - 1];
         this.topics = info.topics;
-        this.ruler = info.ruler;
-        this.exaltation = info.exaltation;
+        this.phrase = info.phrase;
         this.name = 'House ' + number;
     }
     return House;
@@ -593,69 +609,62 @@ var House = (function () {
 var houseInfo = [
     {
         number: 1,
-        ruler: 'Mars',
-        exaltation: '',
+        phrase: 'yourself',
         topics: ['Self', 'Life', 'Health']
     },
     {
         number: 2,
-        ruler: 'Venus',
-        exaltation: 'Moon',
+        phrase: 'concrete worth',
         topics: ['Money', 'Property', 'Personal Worth']
     },
     {
         number: 3,
-        ruler: 'Mercury',
+        phrase: 'friendships',
         topics: ['Brother', 'Sister', 'News', 'Short Journeys']
     },
     {
         number: 4,
-        ruler: 'Moon',
-        exaltation: 'Jupiter',
+        phrase: 'family',
         topics: ['Father', 'Inheritence', 'Conclusion']
     },
     {
         number: 5,
-        ruler: 'Sun',
+        phrase: 'creativity',
         topics: ['Children', 'Pleasure', 'Feasts', 'Speculation']
     },
     {
         number: 6,
-        ruler: 'Mercury',
-        exaltation: 'Mercury',
+        phrase: 'cleverness',
         topics: ['Servants', 'Sickness', 'Uncles', 'Aunts', 'Animals']
     },
     {
         number: 7,
-        ruler: 'Venus',
-        exaltation: 'Saturn',
+        phrase: 'love',
         topics: ['Love', 'Marriage', 'Husband', 'Wife', 'Partnerships', 'Public Enemies', 'Lawsuits']
     },
     {
         number: 8,
-        ruler: 'Mars',
+        phrase: 'suffering',
         topics: ['Deaths', 'Wills', 'Legacies', 'Pain', 'Anxiety']
     },
     {
         number: 9,
-        ruler: 'Jupiter',
+        phrase: 'philosophy',
         topics: ['Long journeys', 'Voyages', 'Science', 'Religion', 'Art', 'Visions', 'Divinations']
     },
     {
         number: 10,
-        ruler: 'Saturn',
-        exaltation: 'Mars',
+        phrase: 'reputation',
         topics: ['Mother', 'Rank', 'Honor', 'Profession', 'Authority', 'Employment']
     },
     {
         number: 11,
-        ruler: 'Saturn',
+        phrase: 'understanding',
         topics: ['Friends', 'Hopes', 'Wishes']
     },
     {
         number: 12,
-        ruler: 'Jupiter',
-        exaltation: 'Venus',
+        phrase: 'the subconscious',
         topics: ['Sorrows', 'Fears', 'Punishments', 'Secret Enemies', 'Institutions', 'Unseen Dangers', 'Restriction']
     }
 ];
@@ -900,7 +909,7 @@ var ReadingOverviewPage = (function () {
 ReadingOverviewPage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPage */])(),
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* Component */])({
-        selector: 'page-reading-overview',template:/*ion-inline-start:"/Users/adam/AppGod/geomancy/src/pages/reading-overview/reading-overview.html"*/'<ion-header><ion-navbar></ion-navbar></ion-header>\n\n<ion-content padding>\n\n  <div *ngIf="placements.length > 0">\n    <ion-card [color]="getColor(placement.type)" *ngFor="let placement of placements">\n        <ion-card-content no-padding>\n          <ion-grid>\n            <ion-row>\n              <ion-col col-2>\n                <ion-icon [name]="getIcon(placement.type)" class="big"></ion-icon>\n              </ion-col>\n              <ion-col col-10>\n                <b *ngIf="placement.type == placementType.Warning">Warning!</b>\n                <b *ngIf="placement.type == placementType.ExtremelyStrong">Extremely strong</b>\n                <b *ngIf="placement.type == placementType.VeryStrong">Very strong</b>\n                <br>\n                {{placement.tetragram.name}} in {{placement.house.name}}\n                <br>\n                {{placement.tetragram.getHouseMeaning(placement.house.number)}}\n              </ion-col>\n            </ion-row>\n          </ion-grid>\n        </ion-card-content>\n    </ion-card>\n  </div>\n\n</ion-content>\n'/*ion-inline-end:"/Users/adam/AppGod/geomancy/src/pages/reading-overview/reading-overview.html"*/,
+        selector: 'page-reading-overview',template:/*ion-inline-start:"/Users/adam/AppGod/geomancy/src/pages/reading-overview/reading-overview.html"*/'<ion-header><ion-navbar></ion-navbar></ion-header>\n\n<ion-content padding>\n\n  <div *ngIf="placements.length > 0">\n    <ion-card [color]="getColor(placement.type)" *ngFor="let placement of placements">\n        <ion-card-content no-padding>\n          <ion-grid>\n            <ion-row>\n              <ion-col col-2>\n                <ion-icon [name]="getIcon(placement.type)" class="big"></ion-icon>\n              </ion-col>\n              <ion-col col-10>\n                <b>{{placement.tetragram.phrase}} in things related to {{placement.house.phrase}}</b>\n                <br>\n                {{placement.tetragram.getHouseMeaning(placement.house.number)}}\n              </ion-col>\n            </ion-row>\n          </ion-grid>\n        </ion-card-content>\n    </ion-card>\n  </div>\n\n</ion-content>\n'/*ion-inline-end:"/Users/adam/AppGod/geomancy/src/pages/reading-overview/reading-overview.html"*/,
     }),
     __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]) === "function" && _b || Object])
 ], ReadingOverviewPage);

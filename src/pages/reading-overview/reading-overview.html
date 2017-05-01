@@ -11,11 +11,7 @@
                 <ion-icon [name]="getIcon(placement.type)" class="big"></ion-icon>
               </ion-col>
               <ion-col col-10>
-                <b *ngIf="placement.type == placementType.Warning">Warning!</b>
-                <b *ngIf="placement.type == placementType.ExtremelyStrong">Extremely strong</b>
-                <b *ngIf="placement.type == placementType.VeryStrong">Very strong</b>
-                <br>
-                {{placement.tetragram.name}} in {{placement.house.name}}
+                <b>{{placement.tetragram.phrase}} in things related to {{placement.house.phrase}}</b>
                 <br>
                 {{placement.tetragram.getHouseMeaning(placement.house.number)}}
               </ion-col>
