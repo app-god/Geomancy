@@ -1,14 +1,14 @@
 webpackJsonp([12],{
 
-/***/ 312:
+/***/ 314:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(101);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__library_topic__ = __webpack_require__(331);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LibraryTopicPageModule", function() { return LibraryTopicPageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__new_manual__ = __webpack_require__(334);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NewManualPageModule", function() { return NewManualPageModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,36 +18,36 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var LibraryTopicPageModule = (function () {
-    function LibraryTopicPageModule() {
+var NewManualPageModule = (function () {
+    function NewManualPageModule() {
     }
-    return LibraryTopicPageModule;
+    return NewManualPageModule;
 }());
-LibraryTopicPageModule = __decorate([
+NewManualPageModule = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["a" /* NgModule */])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_2__library_topic__["a" /* LibraryTopicPage */],
+            __WEBPACK_IMPORTED_MODULE_2__new_manual__["a" /* NewManualPage */],
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__library_topic__["a" /* LibraryTopicPage */]),
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__new_manual__["a" /* NewManualPage */]),
         ],
         exports: [
-            __WEBPACK_IMPORTED_MODULE_2__library_topic__["a" /* LibraryTopicPage */]
+            __WEBPACK_IMPORTED_MODULE_2__new_manual__["a" /* NewManualPage */]
         ]
     })
-], LibraryTopicPageModule);
+], NewManualPageModule);
 
-//# sourceMappingURL=library-topic.module.js.map
+//# sourceMappingURL=new-manual.module.js.map
 
 /***/ }),
 
-/***/ 331:
+/***/ 334:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(101);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LibraryTopicPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return NewManualPage; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -59,27 +59,59 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-var LibraryTopicPage = (function () {
-    function LibraryTopicPage(navCtrl, navParams) {
+/**
+ * Generated class for the NewManualPage page.
+ *
+ * See http://ionicframework.com/docs/components/#navigation for more info
+ * on Ionic pages and navigation.
+ */
+var NewManualPage = (function () {
+    function NewManualPage(navCtrl, navParams, viewCtrl, modCtrl) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
-        this.topic = navParams.get('topic');
-        this.items = this.topic.loadItems();
+        this.viewCtrl = viewCtrl;
+        this.modCtrl = modCtrl;
+        this.row = {};
     }
-    LibraryTopicPage.prototype.showItem = function (item) {
-        this.navCtrl.push(item.page, { item: item });
+    NewManualPage.prototype.clickInterpret = function () {
+        this.modCtrl.create('ReadingPage', {
+            readingData: this.generateReadingData()
+        }).present();
+        this.viewCtrl.dismiss();
     };
-    return LibraryTopicPage;
+    NewManualPage.prototype.generateReadingData = function () {
+        var row = this.row;
+        var readingData = {
+            question: '',
+            topic: '',
+            date: 0,
+            key0: this.generateKey(row[1], row[2], row[3], row[4]),
+            key1: this.generateKey(row[5], row[6], row[7], row[8]),
+            key2: this.generateKey(row[9], row[10], row[11], row[12]),
+            key3: this.generateKey(row[13], row[14], row[15], row[16]),
+        };
+        return readingData;
+    };
+    NewManualPage.prototype.generateKey = function (num1, num2, num3, num4) {
+        var row1 = num1 ? (num1 % 2) * 1 : 0;
+        var row2 = num2 ? (num2 % 2) * 2 : 0;
+        var row3 = num3 ? (num3 % 2) * 4 : 0;
+        var row4 = num4 ? (num4 % 2) * 8 : 0;
+        var key = row1 + row2 + row3 + row4;
+        return key;
+    };
+    return NewManualPage;
 }());
-LibraryTopicPage = __decorate([
+NewManualPage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPage */])(),
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* Component */])({
-        selector: 'page-library-topic',template:/*ion-inline-start:"/Users/adam/AppGod/geomancy/src/pages/library-topic/library-topic.html"*/'<!--\n  Generated template for the LibraryTopicPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>{{topic.name}}</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  \n  <ion-list>\n    <button ion-item *ngFor="let item of items" (click)="showItem(item)">\n      <div>{{item.name}}</div>\n    </button>\n  </ion-list>\n\n</ion-content>\n'/*ion-inline-end:"/Users/adam/AppGod/geomancy/src/pages/library-topic/library-topic.html"*/,
+        selector: 'page-new-manual',template:/*ion-inline-start:"/Users/adam/AppGod/geomancy/src/pages/new-manual/new-manual.html"*/'<!--\n  Generated template for the NewManualPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Manual Reading</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n  <h3>Enter the number of dots for each of the 16 rows</h3>\n\n  <ion-list>\n    <ion-item *ngFor="let num of [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]">\n      <ion-label>Row {{num}}</ion-label>\n      <ion-input type="number" [(ngModel)]="row[num]"></ion-input>\n    </ion-item>\n  </ion-list>\n\n  <button ion-button large block full (click)="clickInterpret()">\n    Interpret Reading\n  </button>\n\n</ion-content>\n'/*ion-inline-end:"/Users/adam/AppGod/geomancy/src/pages/new-manual/new-manual.html"*/,
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]])
-], LibraryTopicPage);
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* ViewController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* ViewController */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* ModalController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* ModalController */]) === "function" && _d || Object])
+], NewManualPage);
 
-//# sourceMappingURL=library-topic.js.map
+var _a, _b, _c, _d;
+//# sourceMappingURL=new-manual.js.map
 
 /***/ })
 

@@ -49,6 +49,13 @@ export class NewPage {
 
   }
 
+  clickManual() {
+    this.navCtrl.push('NewManualPage', {
+      question: this.question,
+      topic: this.topic
+    })
+  }
+
   clickStart() {
 
     this.startDisabled = true
