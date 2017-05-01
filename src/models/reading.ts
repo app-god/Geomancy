@@ -197,6 +197,21 @@ export class Reading {
     })
     return rulerships
   }
+
+  getExaltations() {
+    let exalted = []
+    let houseNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+    houseNumbers.forEach((houseNumber) => {
+      let tetragram = this.getTetragramForHouse(houseNumber)
+      if (tetragram.exalted.indexOf(houseNumber) >= 0) {
+        let house = new House(houseNumber)
+        let message = tetragram.name + ' is in ' + house.name
+        exalted.push(message)
+      }
+    })
+    return exalted
+  }
+
 }
 
 export interface ReadingData {

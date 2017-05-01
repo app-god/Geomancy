@@ -60,6 +60,7 @@ var Tetragram = (function () {
         this.desc = info.desc;
         this.good = info.good;
         this.rules = info.rules;
+        this.exalted = info.exalted;
         this.houseMeanings = info.houseMeanings;
         this.planet = info.planet;
         this.dots = info.dots;
@@ -87,6 +88,7 @@ var tetragramInfo = [
         desc: 'Injurious to the goodness of other figures generally, but good for journeys and voyages.',
         planet: 'Moon',
         rules: [1, 8],
+        exalted: [2],
         dots: 4,
         sign: 'Cancer',
         good: false,
@@ -111,6 +113,7 @@ var tetragramInfo = [
         desc: 'Good with good, evil with evil. Gives good issue for gain.',
         planet: 'Venus',
         rules: [2, 7, 9, 12],
+        exalted: [12, 4],
         dots: 5,
         sign: 'Sagittarius',
         good: true,
@@ -135,6 +138,7 @@ var tetragramInfo = [
         desc: 'Good in all demands, especially in those things relating to women.',
         planet: 'Venus',
         rules: [2, 7],
+        exalted: [12],
         dots: 5,
         sign: 'Libra',
         good: true,
@@ -159,6 +163,7 @@ var tetragramInfo = [
         desc: 'Good for gain in all things where a person has hopes to win.',
         planet: 'Sun',
         rules: [5],
+        exalted: [1],
         dots: 6,
         sign: 'Leo',
         good: true,
@@ -183,6 +188,7 @@ var tetragramInfo = [
         desc: 'Evil in most demands, except in those things relating to war or love.',
         planet: 'Mars',
         rules: [1, 8],
+        exalted: [10],
         dots: 5,
         sign: 'Aries',
         good: false,
@@ -207,6 +213,7 @@ var tetragramInfo = [
         desc: 'Generally good for profit and gain.',
         planet: 'Jupiter',
         rules: [9, 12],
+        exalted: [4],
         dots: 6,
         sign: 'Sagittarius',
         good: true,
@@ -231,6 +238,7 @@ var tetragramInfo = [
         desc: 'Generally evil. Delay, binding, bar, restriction.',
         planet: 'Saturn',
         rules: [10, 11],
+        exalted: [7],
         dots: 6,
         sign: "Capricorn",
         good: false,
@@ -255,6 +263,7 @@ var tetragramInfo = [
         desc: 'Evil in almost all things.',
         planet: 'Saturn',
         rules: [10, 11],
+        exalted: [7],
         dots: 7,
         sign: 'Aquarius',
         good: false,
@@ -279,6 +288,7 @@ var tetragramInfo = [
         desc: 'Good with evil, and evil with good. Good for loss, and for passing out of an affair.',
         planet: 'Mars',
         rules: [8, 10, 11],
+        exalted: [10, 7],
         dots: 5,
         sign: 'Virgo',
         good: false,
@@ -303,6 +313,7 @@ var tetragramInfo = [
         desc: 'Good with good, or evil with evil. Recovery from things lost.',
         planet: 'Mercury',
         rules: [3, 6],
+        exalted: [11],
         dots: 6,
         sign: 'Virgo',
         good: true,
@@ -327,6 +338,7 @@ var tetragramInfo = [
         desc: 'Good for loss of substance and sometimes for love, but very bad for gain.',
         planet: 'Venus',
         rules: [2, 7],
+        exalted: [12],
         dots: 6,
         sign: 'Taurus',
         good: false,
@@ -351,6 +363,7 @@ var tetragramInfo = [
         desc: 'Good for profit and for entering into a place or undertaking.',
         planet: 'Mercury',
         rules: [3, 6],
+        exalted: [11],
         dots: 7,
         sign: 'Gemini',
         good: true,
@@ -375,6 +388,7 @@ var tetragramInfo = [
         desc: 'Good in any manner in which a person wishes to proceed quickly.',
         planet: 'Sun',
         rules: [5],
+        exalted: [1],
         dots: 6,
         sign: 'Leo',
         good: true,
@@ -399,6 +413,7 @@ var tetragramInfo = [
         desc: 'Evil in all that is good and good in all that is evil.',
         planet: 'Mars',
         rules: [1, 8],
+        exalted: [10],
         dots: 7,
         sign: 'Scorpio',
         good: false,
@@ -423,6 +438,7 @@ var tetragramInfo = [
         desc: 'Good for joy, present or to come.',
         planet: 'Jupiter',
         rules: [9, 12],
+        exalted: [4],
         dots: 7,
         sign: 'Pisces',
         good: true,
@@ -447,6 +463,7 @@ var tetragramInfo = [
         desc: 'Sometimes good and sometimes bad; good with good, and evil with evil.',
         planet: 'Moon',
         rules: [4],
+        exalted: [2],
         dots: 8,
         sign: 'Cancer',
         good: true,
@@ -575,9 +592,13 @@ var ReadingOverviewPage = (function () {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
         this.warnings = [];
+        this.rulerships = [];
+        this.exaltations = [];
         this.parent = navParams.get('parent');
         this.reading = this.parent.reading;
         this.warnings = this.reading.getWarnings();
+        this.rulerships = this.reading.getRulerships();
+        this.exaltations = this.reading.getExaltations();
     }
     ReadingOverviewPage.prototype.ionViewWillEnter = function () {
         this.parent.title = 'Overview';
@@ -588,7 +609,7 @@ var ReadingOverviewPage = (function () {
 ReadingOverviewPage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPage */])(),
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* Component */])({
-        selector: 'page-reading-overview',template:/*ion-inline-start:"/Users/adam/AppGod/geomancy/src/pages/reading-overview/reading-overview.html"*/'<ion-header><ion-navbar></ion-navbar></ion-header>\n\n<ion-content padding>\n\n  <div class="label">\n    Question\n  </div>\n\n  <div>{{reading.question}}</div>\n\n  <br>\n\n  <div class="label">\n    Topic\n  </div>\n\n  <div>{{reading.topic}}</div>\n\n  <br>\n\n  <div class="label">\n    Date\n  </div>\n\n  <div>{{reading.date | date:\'medium\'}}</div>\n\n  <br>\n\n  <div *ngIf="warnings.length > 0">\n    <h3>Warning</h3>\n    <div color="danger" *ngFor="let warning of warnings">\n      {{warning}}\n    </div>\n  </div>\n\n</ion-content>\n'/*ion-inline-end:"/Users/adam/AppGod/geomancy/src/pages/reading-overview/reading-overview.html"*/,
+        selector: 'page-reading-overview',template:/*ion-inline-start:"/Users/adam/AppGod/geomancy/src/pages/reading-overview/reading-overview.html"*/'<ion-header><ion-navbar></ion-navbar></ion-header>\n\n<ion-content padding>\n\n  <div class="label">\n    Question\n  </div>\n\n  <div>{{reading.question}}</div>\n\n  <br>\n\n  <div class="label">\n    Topic\n  </div>\n\n  <div>{{reading.topic}}</div>\n\n  <br>\n\n  <div class="label">\n    Date\n  </div>\n\n  <div>{{reading.date | date:\'medium\'}}</div>\n\n  <br>\n\n  <div *ngIf="warnings.length > 0">\n    <h3>Warning</h3>\n    <div color="danger" *ngFor="let warning of warnings">\n      {{warning}}\n    </div>\n  </div>\n\n  <div *ngIf="rulerships.length > 0">\n    <h3>Rulerships</h3>\n    <div color="primary" *ngFor="let rulership of rulerships">\n      {{rulership}}\n    </div>\n  </div>\n\n  <div *ngIf="exaltations.length > 0">\n    <h3>Exaltations</h3>\n    <div color="primary" *ngFor="let exaltation of exaltations">\n      {{exaltation}}\n    </div>\n  </div>\n\n</ion-content>\n'/*ion-inline-end:"/Users/adam/AppGod/geomancy/src/pages/reading-overview/reading-overview.html"*/,
     }),
     __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]) === "function" && _b || Object])
 ], ReadingOverviewPage);

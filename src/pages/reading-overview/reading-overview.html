@@ -33,4 +33,18 @@
     </div>
   </div>
 
+  <div *ngIf="rulerships.length > 0">
+    <h3>Rulerships</h3>
+    <div color="primary" *ngFor="let rulership of rulerships">
+      {{rulership}}
+    </div>
+  </div>
+
+  <div *ngIf="exaltations.length > 0">
+    <h3>Exaltations</h3>
+    <div color="primary" *ngFor="let exaltation of exaltations">
+      {{exaltation}}
+    </div>
+  </div>
+
 </ion-content>

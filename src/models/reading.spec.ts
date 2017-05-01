@@ -92,4 +92,31 @@ describe('Reading', () => {
 
     })
 
+    it('gets exaltations', () => {
+        let reading1 = new Reading({
+            question: '',
+            topic: '',
+            date: 0,
+            key0: 7,
+            key1: 3,
+            key2: 5,
+            key3: 0
+        })
+
+        expect(reading1.getExaltations().length).toBe(2)
+
+        let reading2 = new Reading({
+            question: '',
+            topic: '',
+            date: 0,
+            key0: 6,
+            key1: 11,
+            key2: 13,
+            key3: 9
+        })
+
+        expect(reading2.getExaltations().length).toBe(1)
+
+    })
+
 })
