@@ -72,6 +72,8 @@ var NewManualPage = (function () {
         this.viewCtrl = viewCtrl;
         this.modCtrl = modCtrl;
         this.row = {};
+        this.question = navParams.get('question');
+        this.topic = navParams.get('topic');
     }
     NewManualPage.prototype.clickInterpret = function () {
         this.modCtrl.create('ReadingPage', {
@@ -82,9 +84,9 @@ var NewManualPage = (function () {
     NewManualPage.prototype.generateReadingData = function () {
         var row = this.row;
         var readingData = {
-            question: '',
-            topic: '',
-            date: 0,
+            question: this.question,
+            topic: this.topic,
+            date: Date.now(),
             key0: this.generateKey(row[1], row[2], row[3], row[4]),
             key1: this.generateKey(row[5], row[6], row[7], row[8]),
             key2: this.generateKey(row[9], row[10], row[11], row[12]),
@@ -105,7 +107,7 @@ var NewManualPage = (function () {
 NewManualPage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPage */])(),
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* Component */])({
-        selector: 'page-new-manual',template:/*ion-inline-start:"/Users/adam/AppGod/geomancy/src/pages/new-manual/new-manual.html"*/'<!--\n  Generated template for the NewManualPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Manual Reading</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n  <h3>Enter the number of dots for each of the 16 rows</h3>\n\n  <ion-list>\n    <ion-item *ngFor="let num of [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]">\n      <ion-label fixed>Row {{num}}</ion-label>\n      <ion-input type="number" [(ngModel)]="row[num]"></ion-input>\n    </ion-item>\n  </ion-list>\n\n  <button ion-button large block full (click)="clickInterpret()">\n    Interpret Reading\n  </button>\n\n</ion-content>\n'/*ion-inline-end:"/Users/adam/AppGod/geomancy/src/pages/new-manual/new-manual.html"*/,
+        selector: 'page-new-manual',template:/*ion-inline-start:"/Users/adam/AppGod/geomancy/src/pages/new-manual/new-manual.html"*/'<!--\n  Generated template for the NewManualPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Manual Reading</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n  <ion-list>\n    <ion-list-header text-wrap no-margin>\n      Enter the number of dots for each of the 16 rows\n    </ion-list-header>\n    <ion-item *ngFor="let num of [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]">\n      <ion-label fixed>Row {{num}}</ion-label>\n      <ion-input type="number" [(ngModel)]="row[num]"></ion-input>\n    </ion-item>\n  </ion-list>\n\n  <button ion-button large block (click)="clickInterpret()">\n    Interpret Reading\n  </button>\n\n</ion-content>\n'/*ion-inline-end:"/Users/adam/AppGod/geomancy/src/pages/new-manual/new-manual.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */],
         __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */],

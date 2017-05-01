@@ -172,46 +172,61 @@ export class Reading {
     return this.readingData
   }
 
-  getWarnings() {
-    let warnings = []
-    let house1Tetragram = this.getTetragramForHouse(1)
-    if (house1Tetragram.name == 'Rubeus'
-      || house1Tetragram.name == 'Cauda Draconis') {
+  getPlacements(): Placement[] {
+    return [].concat(this.getWarnings(), this.getRulerships(), this.getExaltations())
+  }
 
-      let message = house1Tetragram.name + ' is in the first house.'
-      warnings.push(message)
+  getWarnings(): Placement[] {
+    let warnings: Placement[] = []
+    let tetragram = this.getTetragramForHouse(1)
+    if (tetragram.name == 'Rubeus'
+      || tetragram.name == 'Cauda Draconis') {
+
+      let message = tetragram.name + ' is in the first house.'
+      if (['Rubeus', 'Cauda Draconis'].indexOf(tetragram.name) > -1) {
+        warnings.push({
+          tetragram: tetragram,
+          house: new House(1),
+          type: PlacementType.Warning
+        })
+      }
     }
     return warnings
   }
 
-  getRulerships() {
-    let rulerships = []
+  getRulerships(): Placement[] {
+    let rulerships: Placement[] = []
     let houseNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
     houseNumbers.forEach((houseNumber) => {
       let tetragram = this.getTetragramForHouse(houseNumber)
       if (tetragram.rules.indexOf(houseNumber) >= 0) {
         let house = new House(houseNumber)
-        let message = tetragram.name + ' is in ' + house.name
-        rulerships.push(message)
+        rulerships.push({
+          tetragram: tetragram,
+          house: house,
+          type: PlacementType.ExtremelyStrong
+        })
       }
     })
     return rulerships
   }
 
-  getExaltations() {
-    let exalted = []
+  getExaltations(): Placement[] {
+    let exaltations: Placement[] = []
     let houseNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
     houseNumbers.forEach((houseNumber) => {
       let tetragram = this.getTetragramForHouse(houseNumber)
       if (tetragram.exalted.indexOf(houseNumber) >= 0) {
         let house = new House(houseNumber)
-        let message = tetragram.name + ' is in ' + house.name
-        exalted.push(message)
+        exaltations.push({
+          tetragram: tetragram,
+          house: house,
+          type: PlacementType.VeryStrong
+        })
       }
     })
-    return exalted
+    return exaltations
   }
-
 }
 
 export interface ReadingData {
@@ -226,4 +241,17 @@ export interface ReadingData {
 
 export interface ReadingSaveData extends ReadingData {
   judgeKey: number
+}
+
+export interface Placement {
+  type: PlacementType
+  tetragram: Tetragram
+  house: House
+}
+
+export enum PlacementType {
+  Warning,
+  ExtremelyStrong,
+  VeryStrong,
+  Strong
 }

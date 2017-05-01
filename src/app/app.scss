@@ -20,6 +20,12 @@ ion-content {
   height: 100%;
 }
 
+ion-list-header {
+  ion-label {
+    color: color($colors, light);
+  }
+}
+
 .big {
   font-size: 150%;
 }

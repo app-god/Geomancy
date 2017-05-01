@@ -75,6 +75,9 @@ var Tetragram = (function () {
         var key = (row3 << 3) + (row2 << 2) + (row1 << 1) + (row0 << 0);
         return new Tetragram(key);
     };
+    Tetragram.prototype.getHouseMeaning = function (houseNumber) {
+        return this.houseMeanings[houseNumber - 1];
+    };
     return Tetragram;
 }());
 

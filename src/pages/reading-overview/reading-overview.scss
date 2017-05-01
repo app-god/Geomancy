@@ -3,4 +3,16 @@ page-reading-overview {
     color: color($colors, light);
     margin-bottom: 0.5em;
   }
+
+  ion-card {
+    width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  ion-icon.big {
+    width: 100%;
+    font-size: 200%;
+    text-align: center;
+  }
 }

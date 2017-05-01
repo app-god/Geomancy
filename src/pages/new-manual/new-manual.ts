@@ -15,6 +15,9 @@ import { ReadingData } from "../../models/reading";
 })
 export class NewManualPage {
 
+  question: string
+  topic: string
+
   row = {}
 
   constructor(
@@ -22,6 +25,8 @@ export class NewManualPage {
     public navParams: NavParams,
     private viewCtrl: ViewController,
     private modCtrl: ModalController) {
+      this.question = navParams.get('question')
+      this.topic = navParams.get('topic')
   }
 
   clickInterpret() {
@@ -34,9 +39,9 @@ export class NewManualPage {
   generateReadingData() {
     let row = this.row
     let readingData: ReadingData = {
-      question: '',
-      topic: '',
-      date: 0,
+      question: this.question,
+      topic: this.topic,
+      date: Date.now(),
       key0: this.generateKey(row[1], row[2], row[3], row[4]),
       key1: this.generateKey(row[5], row[6], row[7], row[8]),
       key2: this.generateKey(row[9], row[10], row[11], row[12]),
