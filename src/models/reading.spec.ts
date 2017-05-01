@@ -61,4 +61,19 @@ describe('Reading', () => {
         expect(readingData.key3).toBeDefined()
     })
 
+    it('gets warnings', () => {
+        let warningReading = new Reading({
+            question: '',
+            topic: '',
+            date: 0,
+            key0: 0,
+            key1: 13,
+            key2: 0,
+            key3: 0
+        })
+
+        expect(warningReading.getWarnings().length).toBeGreaterThan(0)
+        expect(testReading.getWarnings().length).toBe(0)
+    })
+
 })

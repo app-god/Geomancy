@@ -23,10 +23,10 @@ export class MyApp {
       }
     })
 
-    // always show tutorial page if in development mode
-    if (process.env.IONIC_ENV == 'dev') {
-      this.rootPage = 'TutorialPage'
-    }
+    // // always show tutorial page if in development mode
+    // if (process.env.IONIC_ENV == 'dev') {
+    //   this.rootPage = 'TutorialPage'
+    // }
 
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.

@@ -45,6 +45,7 @@ export class Tetragram implements LibraryItem {
 export interface TetragramInfo {
   key: number
   name: string
+  // translation: string
   desc: string
   planet?: string
   houseMeanings: string[]
@@ -55,7 +56,7 @@ export interface TetragramInfo {
   // fall: number[]
   // detriment: number[]
   sign: string
-  // strongTriplicity?: number[]
+  // triplicity: number[]
 }
 
 export const tetragramInfo: TetragramInfo[] = [

@@ -171,6 +171,18 @@ export class Reading {
   getReadingData() {
     return this.readingData
   }
+
+  getWarnings() {
+    let warnings = []
+    let house1Tetragram = this.getTetragramForHouse(1)
+    if (house1Tetragram.name == 'Rubeus'
+      || house1Tetragram.name == 'Cauda Draconis') {
+
+      let message = house1Tetragram.name + ' is in the first house.'
+      warnings.push(message)
+    }
+    return warnings
+  }
 }
 
 export interface ReadingData {
