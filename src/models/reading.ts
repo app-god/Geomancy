@@ -47,8 +47,6 @@ export class Reading {
       }
     }
 
-    this.readingData = data
-
     if (!data.question || data.question == '') {
       this.question = 'None'
     } else {
@@ -60,6 +58,8 @@ export class Reading {
     } else {
       this.topic = data.topic
     }
+
+    this.readingData = data
 
     this.house = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
       .map(number => {

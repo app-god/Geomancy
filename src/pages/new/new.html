@@ -13,6 +13,7 @@
 
   <ion-list>
     <ion-item padding>
+      <div>test</div>
       <ion-label stacked>Question</ion-label>
       <ion-textarea [(ngModel)]="question" rows="3"
         placeholder="Enter question here"></ion-textarea>
@@ -43,7 +44,7 @@
   <button ion-button block large
     color="secondary"
     (tap)="clickStart()"
-    [disabled]="startDisabled">
+    [disabled]="true">
     Create Manually
   </button>
 

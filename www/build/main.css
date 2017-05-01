@@ -26701,6 +26701,10 @@ page-new {
   font-style: italic;
 }
 
+ion-icon.float-right {
+  float: right;
+}
+
 page-reading-figures ion-col {
   text-align: center;
   white-space: nowrap;

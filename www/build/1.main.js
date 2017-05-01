@@ -580,7 +580,6 @@ var Reading = (function () {
                 key3: Math.floor(Math.random() * 15)
             };
         }
-        this.readingData = data;
         if (!data.question || data.question == '') {
             this.question = 'None';
         }
@@ -593,6 +592,7 @@ var Reading = (function () {
         else {
             this.topic = data.topic;
         }
+        this.readingData = data;
         this.house = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
             .map(function (number) {
             return new __WEBPACK_IMPORTED_MODULE_1__house__["a" /* House */](number);
