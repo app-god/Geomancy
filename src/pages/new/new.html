@@ -11,9 +11,15 @@
 
 <ion-content padding>
 
+  <div padding-vertical>
+    <ion-segment [(ngModel)]="readingType">
+      <ion-segment-button value="automatic">Automatic</ion-segment-button>
+      <ion-segment-button value="manual">Manual</ion-segment-button>
+    </ion-segment>
+  </div>
+
   <ion-list>
     <ion-item padding>
-      <div>test</div>
       <ion-label stacked>Question</ion-label>
       <ion-textarea [(ngModel)]="question" rows="3"
         placeholder="Enter question here"></ion-textarea>
@@ -32,24 +38,25 @@
     </ion-item>
   </ion-list>
 
+  <h3 padding-vertical *ngIf="readingType == 'manual'">
+    Make 16 sets of a random number of dots, then enter their values here</h3>
+
+  <ion-list *ngIf="readingType == 'manual'">
+    <ion-item *ngFor="let num of [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]">
+      <ion-label fixed>Row {{num}}</ion-label>
+      <ion-input type="number" [(ngModel)]="row[num]"></ion-input>
+    </ion-item>
+  </ion-list>
+
   <button ion-button block large
     color="primary"
     (tap)="clickStart()"
     [disabled]="startDisabled">
-    Create Automatically
+    Create
   </button>
 
-  <br>
-
-  <button ion-button block large
-    color="secondary"
-    (tap)="clickManual()"
-    [disabled]="startDisabled">
-    Create Manually
-  </button>
-
-  <p class="instructions">
-    Although this procedure can be done automatically, manually generating the numbers by etching dots in the earth is a more powerful way of forming the divination.
+  <p class="instructions" *ngIf="readingType == 'automatic'">
+    Although this procedure can effectively be done automatically, manually generating the numbers by etching dots in the earth is a more powerful way of forming the divination.
   </p>
 
 </ion-content>

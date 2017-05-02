@@ -82,6 +82,14 @@ var Tetragram = (function () {
     Tetragram.prototype.getHouseMeaning = function (houseNumber) {
         return this.houseMeanings[houseNumber - 1];
     };
+    Tetragram.generateKey = function (num1, num2, num3, num4) {
+        var row1 = num1 ? (num1 % 2) * 1 : 0;
+        var row2 = num2 ? (num2 % 2) * 2 : 0;
+        var row3 = num3 ? (num3 % 2) * 4 : 0;
+        var row4 = num4 ? (num4 % 2) * 8 : 0;
+        var key = row1 + row2 + row3 + row4;
+        return key;
+    };
     return Tetragram;
 }());
 
@@ -911,10 +919,9 @@ ReadingOverviewPage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* Component */])({
         selector: 'page-reading-overview',template:/*ion-inline-start:"/Users/adam/AppGod/geomancy/src/pages/reading-overview/reading-overview.html"*/'<ion-header><ion-navbar></ion-navbar></ion-header>\n\n<ion-content padding>\n\n  <div *ngIf="placements.length > 0">\n    <ion-card [color]="getColor(placement.type)" *ngFor="let placement of placements">\n        <ion-card-content no-padding>\n          <ion-grid>\n            <ion-row>\n              <ion-col col-2>\n                <ion-icon [name]="getIcon(placement.type)" class="big"></ion-icon>\n              </ion-col>\n              <ion-col col-10>\n                <b>You will {{placement.tetragram.phrase}} things related to {{placement.house.phrase}}</b>\n                <br>\n                {{placement.tetragram.getHouseMeaning(placement.house.number)}}\n              </ion-col>\n            </ion-row>\n          </ion-grid>\n        </ion-card-content>\n    </ion-card>\n  </div>\n\n</ion-content>\n'/*ion-inline-end:"/Users/adam/AppGod/geomancy/src/pages/reading-overview/reading-overview.html"*/,
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]) === "function" && _b || Object])
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]])
 ], ReadingOverviewPage);
 
-var _a, _b;
 //# sourceMappingURL=reading-overview.js.map
 
 /***/ })
