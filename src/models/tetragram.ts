@@ -81,7 +81,7 @@ export const tetragramInfo: TetragramInfo[] = [
     dots: 4,
     sign: 'Cancer',
     good: false,
-    phrase: 'Clearing a path',
+    phrase: 'clear a path for',
     houseMeanings: [
       'Evil except for prison.',
       'Indifferent.',
@@ -107,7 +107,7 @@ export const tetragramInfo: TetragramInfo[] = [
     dots: 5,
     sign: 'Sagittarius',
     good: true,
-    phrase: 'A new beginning',
+    phrase: 'begin',
     houseMeanings: [
       'Good in all things',
       'Good.',
@@ -133,7 +133,7 @@ export const tetragramInfo: TetragramInfo[] = [
     dots: 5,
     sign: 'Libra',
     good: true,
-    phrase: 'Making beautiful',
+    phrase: 'beautify',
     houseMeanings: [
       'Good except in war.',
       'Very good.',
@@ -159,7 +159,7 @@ export const tetragramInfo: TetragramInfo[] = [
     dots: 6,
     sign: 'Leo',
     good: true,
-    phrase: 'Success',
+    phrase: 'succeed in',
     houseMeanings: [
       'Good save in secrecy.',
       'Good except in sad things.',
@@ -185,7 +185,7 @@ export const tetragramInfo: TetragramInfo[] = [
     dots: 5,
     sign: 'Aries',
     good: false,
-    phrase: 'Asserting your will',
+    phrase: 'command',
     houseMeanings: [
       'Indifferent. Best in war.',
       'Good, but with trouble.',
@@ -211,7 +211,7 @@ export const tetragramInfo: TetragramInfo[] = [
     dots: 6,
     sign: 'Sagittarius',
     good: true,
-    phrase: 'Expansion',
+    phrase: 'acquire',
     houseMeanings: [
       'Happy, success in all things.',
       'Very prosperous.',
@@ -237,7 +237,7 @@ export const tetragramInfo: TetragramInfo[] = [
     dots: 6,
     sign: "Capricorn",
     good: false,
-    phrase: 'Restriction',
+    phrase: 'restrict',
     houseMeanings: [
       'Evil except to fortify a place.',
       'Good in Saturnine questions; else evil.',
@@ -263,7 +263,7 @@ export const tetragramInfo: TetragramInfo[] = [
     dots: 7,
     sign: 'Aquarius',
     good: false,
-    phrase: 'Sadness',
+    phrase: 'find sadness in',
     houseMeanings: [
       'Medium, but good for treasure and fortifying.',
       'Medium, but good to fortify.',
@@ -289,7 +289,7 @@ export const tetragramInfo: TetragramInfo[] = [
     dots: 5,
     sign: 'Virgo',
     good: false,
-    phrase: 'Bringing an end',
+    phrase: 'finish',
     houseMeanings: [
       'Destroy figure if it falls here! Makes judgment worthless.',
       'Very evil.',
@@ -315,7 +315,7 @@ export const tetragramInfo: TetragramInfo[] = [
     dots: 6,
     sign: 'Virgo',
     good: true,
-    phrase: 'Reconciliation',
+    phrase: 'reconcile',
     houseMeanings: [
       'Good with good, evil with evil.',
       'Commonly good.',
@@ -341,7 +341,7 @@ export const tetragramInfo: TetragramInfo[] = [
     dots: 6,
     sign: 'Taurus',
     good: false,
-    phrase: 'Sacrifice',
+    phrase: 'sacrifice',
     houseMeanings: [
       'Ill in all things but for prisoners.',
       'Very ill for money, but good for love.',
@@ -367,7 +367,7 @@ export const tetragramInfo: TetragramInfo[] = [
     dots: 7,
     sign: 'Gemini',
     good: true,
-    phrase: 'Intelligence',
+    phrase: 'learn',
     houseMeanings: [
       'Good for marriage. Mercurial. Peace.',
       'Good in all.',
@@ -393,7 +393,7 @@ export const tetragramInfo: TetragramInfo[] = [
     dots: 6,
     sign: 'Leo',
     good: true,
-    phrase: 'Progress',
+    phrase: 'improve in',
     houseMeanings: [
       'Speed in victory and in love, but choleric.',
       'Very good.',
@@ -419,7 +419,7 @@ export const tetragramInfo: TetragramInfo[] = [
     dots: 7,
     sign: 'Scorpio',
     good: false,
-    phrase: 'Destruction',
+    phrase: 'destroy',
     houseMeanings: [
       'Destroy the figure if it falls here! It makes the judgement worthless.',
       'Evil in all demands.',
@@ -445,7 +445,7 @@ export const tetragramInfo: TetragramInfo[] = [
     dots: 7,
     sign: 'Pisces',
     good: true,
-    phrase: 'Joy',
+    phrase: 'find joy in',
     houseMeanings: [
       'Good, except in war.',
       'Sickly.',
@@ -471,7 +471,7 @@ export const tetragramInfo: TetragramInfo[] = [
     dots: 8,
     sign: 'Cancer',
     good: true,
-    phrase: 'Agreement',
+    phrase: 'agree',
     houseMeanings: [
       'Good in marriages.',
       'Medium good.',
