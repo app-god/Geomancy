@@ -1,14 +1,14 @@
 webpackJsonp([6],{
 
-/***/ 313:
+/***/ 314:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(101);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__library__ = __webpack_require__(333);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LibraryPageModule", function() { return LibraryPageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__new__ = __webpack_require__(333);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NewPageModule", function() { return NewPageModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,30 +18,30 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var LibraryPageModule = (function () {
-    function LibraryPageModule() {
+var NewPageModule = (function () {
+    function NewPageModule() {
     }
-    return LibraryPageModule;
+    return NewPageModule;
 }());
-LibraryPageModule = __decorate([
+NewPageModule = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["a" /* NgModule */])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_2__library__["a" /* LibraryPage */],
+            __WEBPACK_IMPORTED_MODULE_2__new__["a" /* NewPage */]
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__library__["a" /* LibraryPage */]),
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__new__["a" /* NewPage */]),
         ],
         exports: [
-            __WEBPACK_IMPORTED_MODULE_2__library__["a" /* LibraryPage */]
+            __WEBPACK_IMPORTED_MODULE_2__new__["a" /* NewPage */]
         ]
     })
-], LibraryPageModule);
+], NewPageModule);
 
-//# sourceMappingURL=library.module.js.map
+//# sourceMappingURL=new.module.js.map
 
 /***/ }),
 
-/***/ 324:
+/***/ 323:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -512,7 +512,7 @@ var tetragramInfo = [
 
 /***/ }),
 
-/***/ 327:
+/***/ 326:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -600,10 +600,11 @@ var houseInfo = [
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(101);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__models_house__ = __webpack_require__(327);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__models_tetragram__ = __webpack_require__(324);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LibraryPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ionic_storage__ = __webpack_require__(102);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(101);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__models_house__ = __webpack_require__(326);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__models_tetragram__ = __webpack_require__(323);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return NewPage; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -617,61 +618,109 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var LibraryPage = (function () {
-    function LibraryPage(navCtrl) {
-        this.navCtrl = navCtrl;
-        this.topics = [
-            // {
-            //   name: 'Instructions',
-            // },
-            {
-                name: 'Tetragrams',
-                loadItems: this.loadTetragrams
-            },
-            {
-                name: 'Houses',
-                loadItems: this.loadHouses
-            },
-        ];
-    }
-    LibraryPage.prototype.showTopic = function (topic) {
-        this.navCtrl.push('LibraryTopicPage', {
-            topic: topic
-        });
-    };
-    LibraryPage.prototype.loadHouses = function () {
-        var houses = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
-            .map(function (houseNumber) {
-            return new __WEBPACK_IMPORTED_MODULE_2__models_house__["a" /* House */](houseNumber);
-        });
-        return houses;
-    };
-    LibraryPage.prototype.loadTetragrams = function () {
-        var tetragrams = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
-            .map(function (key) {
-            return new __WEBPACK_IMPORTED_MODULE_3__models_tetragram__["a" /* Tetragram */](key);
-        });
-        tetragrams.sort(function (a, b) {
-            if (a.name < b.name) {
-                return -1;
-            }
-            if (a.name > b.name) {
-                return 1;
-            }
-        });
-        return tetragrams;
-    };
-    return LibraryPage;
-}());
-LibraryPage = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPage */])(),
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* Component */])({
-        selector: 'page-library',template:/*ion-inline-start:"/Users/adam/AppGod/geomancy/src/pages/library/library.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      Library\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n\n  <ion-list>\n    <button ion-item *ngFor="let topic of topics"\n      (click)="showTopic(topic)">\n      <div>{{topic.name}}</div>\n    </button>\n  </ion-list>\n\n</ion-content>\n'/*ion-inline-end:"/Users/adam/AppGod/geomancy/src/pages/library/library.html"*/
-    }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */]])
-], LibraryPage);
 
-//# sourceMappingURL=library.js.map
+var NewPage = (function () {
+    function NewPage(navCtrl, modCtrl, loadingCtrl, storage, alertCtrl, actionCtrl) {
+        this.navCtrl = navCtrl;
+        this.modCtrl = modCtrl;
+        this.loadingCtrl = loadingCtrl;
+        this.storage = storage;
+        this.alertCtrl = alertCtrl;
+        this.actionCtrl = actionCtrl;
+        this.startDisabled = false;
+        this.readingType = 'automatic';
+        this.question = '';
+        this.topic = '';
+        // for manual reading
+        this.row = {};
+        var houses = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+            .map(function (number) { return new __WEBPACK_IMPORTED_MODULE_3__models_house__["a" /* House */](number); });
+        var nestedTopics = houses.map(function (house) { return house.topics; });
+        this.topics = [].concat.apply([], nestedTopics);
+        this.topics.sort();
+        this.topics.unshift('None');
+        this.topic = this.topics[0];
+    }
+    NewPage.prototype.clickStart = function () {
+        this.startDisabled = true;
+        if (this.question == '') {
+            this.question = 'None';
+        }
+        console.log(this.readingType);
+        var readingData;
+        if (this.readingType == 'automatic') {
+            readingData = {
+                question: this.question,
+                topic: this.topic,
+                date: Date.now(),
+                key0: Math.floor(Math.random() * 15),
+                key1: Math.floor(Math.random() * 15),
+                key2: Math.floor(Math.random() * 15),
+                key3: Math.floor(Math.random() * 15)
+            };
+        }
+        if (this.readingType == 'manual') {
+            var row = this.row;
+            readingData = {
+                question: this.question,
+                topic: this.topic,
+                date: Date.now(),
+                key0: __WEBPACK_IMPORTED_MODULE_4__models_tetragram__["a" /* Tetragram */].generateKey(row[1], row[2], row[3], row[4]),
+                key1: __WEBPACK_IMPORTED_MODULE_4__models_tetragram__["a" /* Tetragram */].generateKey(row[5], row[6], row[7], row[8]),
+                key2: __WEBPACK_IMPORTED_MODULE_4__models_tetragram__["a" /* Tetragram */].generateKey(row[9], row[10], row[11], row[12]),
+                key3: __WEBPACK_IMPORTED_MODULE_4__models_tetragram__["a" /* Tetragram */].generateKey(row[13], row[14], row[15], row[16]),
+            };
+        }
+        this.question = '';
+        this.topic = 'None';
+        this.startDisabled = false;
+        var readingModal = this.modCtrl.create('ReadingPage', {
+            readingData: readingData
+        });
+        readingModal.present();
+    };
+    NewPage.prototype.showMore = function () {
+        var _this = this;
+        var actionSheet = this.actionCtrl.create({
+            title: 'More',
+            buttons: [
+                {
+                    text: 'Show Introduction',
+                    handler: function () {
+                        var introMod = _this.modCtrl.create('TutorialPage');
+                        introMod.present();
+                    }
+                },
+                {
+                    text: 'Show Help',
+                    handler: function () {
+                        _this.navCtrl.push('HelpPage', { topic: 'new reading' });
+                    }
+                },
+                {
+                    text: 'Cancel',
+                    role: 'cancel'
+                }
+            ]
+        });
+        actionSheet.present();
+    };
+    return NewPage;
+}());
+NewPage = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["f" /* IonicPage */])(),
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* Component */])({
+        selector: 'page-new',template:/*ion-inline-start:"/Users/adam/AppGod/geomancy/src/pages/new/new.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>New Reading</ion-title>\n    <ion-buttons end>\n      <button ion-button icon-only (click)="showMore()">\n        <ion-icon name="more"></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n\n  <div padding-vertical>\n    <ion-segment [(ngModel)]="readingType">\n      <ion-segment-button value="automatic">Automatic</ion-segment-button>\n      <ion-segment-button value="manual">Manual</ion-segment-button>\n    </ion-segment>\n  </div>\n\n  <ion-list>\n    <ion-item padding>\n      <ion-label stacked>Question</ion-label>\n      <ion-textarea [(ngModel)]="question" rows="3"\n        placeholder="Enter question here"></ion-textarea>\n    </ion-item>\n\n    <ion-item padding>\n      <ion-label stacked>Topic</ion-label>\n      <ion-select [(ngModel)]="topic">\n        <ion-option\n          [selected]="t == topic"\n          [value]="t"\n          *ngFor="let t of topics">\n          {{t}}\n        </ion-option>\n      </ion-select>\n    </ion-item>\n  </ion-list>\n\n  <h3 padding-vertical *ngIf="readingType == \'manual\'">\n    Make 16 sets of a random number of dots, then enter their values here</h3>\n\n  <ion-list *ngIf="readingType == \'manual\'">\n    <ion-item *ngFor="let num of [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]">\n      <ion-label fixed>Row {{num}}</ion-label>\n      <ion-input type="number" [(ngModel)]="row[num]"></ion-input>\n    </ion-item>\n  </ion-list>\n\n  <button ion-button block large\n    color="primary"\n    (tap)="clickStart()"\n    [disabled]="startDisabled">\n    Create\n  </button>\n\n  <p class="instructions" *ngIf="readingType == \'automatic\'">\n    Although this procedure can effectively be done automatically, manually generating the numbers by etching dots in the earth is a more powerful way of forming the divination.\n  </p>\n\n</ion-content>\n'/*ion-inline-end:"/Users/adam/AppGod/geomancy/src/pages/new/new.html"*/
+    }),
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["g" /* NavController */],
+        __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["k" /* ModalController */],
+        __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["l" /* LoadingController */],
+        __WEBPACK_IMPORTED_MODULE_1__ionic_storage__["b" /* Storage */],
+        __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["m" /* AlertController */],
+        __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["j" /* ActionSheetController */]])
+], NewPage);
+
+//# sourceMappingURL=new.js.map
 
 /***/ })
 
