@@ -793,7 +793,14 @@ var Reading = (function () {
         return this.readingData;
     };
     Reading.prototype.getPlacements = function () {
-        return [].concat(this.getWarnings(), this.getRulerships(), this.getExaltations());
+        var placements = [].concat(this.getWarnings(), this.getRulerships(), this.getExaltations());
+        // remove duplicates
+        var uniqePlacements = [];
+        placements.forEach(function (placement) {
+            if (uniqePlacements.indexOf(placement) == -1)
+                uniqePlacements.push(placement);
+        });
+        return uniqePlacements;
     };
     Reading.prototype.getWarnings = function () {
         var warnings = [];
