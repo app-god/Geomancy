@@ -897,27 +897,28 @@ var ReadingOverviewPage = (function () {
         if (placementType == __WEBPACK_IMPORTED_MODULE_2__models_reading__["a" /* PlacementType */].Warning)
             color = 'danger';
         if (placementType == __WEBPACK_IMPORTED_MODULE_2__models_reading__["a" /* PlacementType */].ExtremelyStrong)
-            color = 'primary';
+            color = 'battery';
         if (placementType == __WEBPACK_IMPORTED_MODULE_2__models_reading__["a" /* PlacementType */].VeryStrong)
-            color = 'secondary';
+            color = 'battery';
         return color;
     };
     ReadingOverviewPage.prototype.getIcon = function (placementType) {
         var icon;
+        var prefix = 'assets/image/';
         if (placementType == __WEBPACK_IMPORTED_MODULE_2__models_reading__["a" /* PlacementType */].Warning)
-            icon = 'warning';
+            icon = 'skull.png';
         if (placementType == __WEBPACK_IMPORTED_MODULE_2__models_reading__["a" /* PlacementType */].ExtremelyStrong)
-            icon = 'star';
+            icon = 'battery4.png';
         if (placementType == __WEBPACK_IMPORTED_MODULE_2__models_reading__["a" /* PlacementType */].VeryStrong)
-            icon = 'star-outline';
-        return icon;
+            icon = 'battery3.png';
+        return prefix + icon;
     };
     return ReadingOverviewPage;
 }());
 ReadingOverviewPage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPage */])(),
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* Component */])({
-        selector: 'page-reading-overview',template:/*ion-inline-start:"/Users/adam/AppGod/geomancy/src/pages/reading-overview/reading-overview.html"*/'<ion-header><ion-navbar></ion-navbar></ion-header>\n\n<ion-content padding>\n\n  <div *ngIf="placements.length > 0">\n    <ion-card [color]="getColor(placement.type)" *ngFor="let placement of placements">\n        <ion-card-content no-padding>\n          <ion-grid>\n            <ion-row>\n              <ion-col col-2>\n                <ion-icon [name]="getIcon(placement.type)" class="big"></ion-icon>\n              </ion-col>\n              <ion-col col-10>\n                <b>You will {{placement.tetragram.phrase}} things related to {{placement.house.phrase}}</b>\n                <br>\n                {{placement.tetragram.getHouseMeaning(placement.house.number)}}\n              </ion-col>\n            </ion-row>\n          </ion-grid>\n        </ion-card-content>\n    </ion-card>\n  </div>\n\n</ion-content>\n'/*ion-inline-end:"/Users/adam/AppGod/geomancy/src/pages/reading-overview/reading-overview.html"*/,
+        selector: 'page-reading-overview',template:/*ion-inline-start:"/Users/adam/AppGod/geomancy/src/pages/reading-overview/reading-overview.html"*/'<ion-header><ion-navbar></ion-navbar></ion-header>\n\n<ion-content padding>\n\n  <div *ngIf="placements.length > 0">\n    <ion-card [color]="getColor(placement.type)" *ngFor="let placement of placements">\n        <ion-card-content no-padding>\n          <ion-grid>\n            <ion-row>\n              <ion-col col-2>\n                <img [src]="getIcon(placement.type)" class="icon">\n              </ion-col>\n              <ion-col col-10>\n                <b>You will {{placement.tetragram.phrase}} things related to {{placement.house.phrase}}</b>\n                <br>\n                {{placement.tetragram.getHouseMeaning(placement.house.number)}}\n              </ion-col>\n            </ion-row>\n          </ion-grid>\n        </ion-card-content>\n    </ion-card>\n  </div>\n\n</ion-content>\n'/*ion-inline-end:"/Users/adam/AppGod/geomancy/src/pages/reading-overview/reading-overview.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]])
 ], ReadingOverviewPage);

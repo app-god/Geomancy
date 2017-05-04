@@ -29,20 +29,21 @@ export class ReadingOverviewPage {
     if (placementType == PlacementType.Warning)
       color = 'danger'
     if (placementType == PlacementType.ExtremelyStrong)
-      color = 'primary'
+      color = 'battery'
     if (placementType == PlacementType.VeryStrong)
-      color = 'secondary'
+      color = 'battery'
     return color
   }
 
   getIcon(placementType: PlacementType) {
     let icon: string
+    let prefix = 'assets/image/'
     if (placementType == PlacementType.Warning)
-      icon = 'warning'
+      icon = 'skull.png'
     if (placementType == PlacementType.ExtremelyStrong)
-      icon = 'star'
+      icon = 'battery4.png'
     if (placementType == PlacementType.VeryStrong)
-      icon = 'star-outline'
-    return icon
+      icon = 'battery3.png'
+    return prefix + icon
   }
 }
