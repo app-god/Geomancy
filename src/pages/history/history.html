@@ -1,7 +1,12 @@
 <ion-header>
   <ion-navbar>
+    <ion-buttons left>
+      <button ion-button icon-only (click)="close()">
+        <ion-icon name="close"></ion-icon>
+      </button>
+    </ion-buttons>
     <ion-title>
-      History
+      Load Reading
     </ion-title>
     <ion-buttons end *ngIf="readings.length > 0">
       <button ion-button icon-only (click)="deleteAllReadings()">
@@ -15,7 +20,7 @@
 
   <ion-card *ngIf="readings.length == 0">
     <ion-card-content>
-      Create a reading and it will show up here.
+      Save a reading and it will show up here.
     </ion-card-content>
   </ion-card>
 

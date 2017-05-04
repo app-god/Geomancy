@@ -173,7 +173,17 @@ export class Reading {
   }
 
   getPlacements(): Placement[] {
-    return [].concat(this.getWarnings(), this.getRulerships(), this.getExaltations())
+    let placements = [].concat(this.getWarnings(), this.getRulerships(), this.getExaltations())
+
+    // remove duplicates
+    let uniqePlacements = []
+
+    placements.forEach((placement) => {
+      if (uniqePlacements.indexOf(placement) == -1)
+        uniqePlacements.push(placement)
+    })
+
+    return uniqePlacements
   }
 
   getWarnings(): Placement[] {

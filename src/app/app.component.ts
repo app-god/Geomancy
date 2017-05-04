@@ -8,7 +8,7 @@ import { Storage } from '@ionic/storage'
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage = 'TabsPage'
+  rootPage = 'NewPage'
 
   constructor(
     platform: Platform,
@@ -22,11 +22,6 @@ export class MyApp {
         this.rootPage = 'TutorialPage'
       }
     })
-
-    // // always show tutorial page if in development mode
-    // if (process.env.IONIC_ENV == 'dev') {
-    //   this.rootPage = 'TutorialPage'
-    // }
 
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.

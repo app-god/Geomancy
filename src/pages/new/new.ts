@@ -12,6 +12,7 @@ import {
 
 import { ReadingData } from '../../models/reading'
 import { House } from '../../models/house'
+import { Tetragram } from "../../models/tetragram";
 
 @IonicPage()
 @Component({
@@ -20,11 +21,14 @@ import { House } from '../../models/house'
 })
 export class NewPage {
   startDisabled = false
-  platformKey: string
+  readingType = 'automatic'
 
   question: string = ''
   topic: string = ''
   topics: string[]
+
+  // for manual reading
+  row = {}
 
   constructor(
     public navCtrl: NavController,
@@ -49,13 +53,6 @@ export class NewPage {
 
   }
 
-  clickManual() {
-    this.navCtrl.push('NewManualPage', {
-      question: this.question,
-      topic: this.topic
-    })
-  }
-
   clickStart() {
 
     this.startDisabled = true
@@ -64,14 +61,33 @@ export class NewPage {
       this.question = 'None'
     }
 
-    let readingData: ReadingData = {
-      question: this.question,
-      topic: this.topic,
-      date: Date.now(),
-      key0: Math.floor(Math.random() * 15),
-      key1: Math.floor(Math.random() * 15),
-      key2: Math.floor(Math.random() * 15),
-      key3: Math.floor(Math.random() * 15)
+    console.log(this.readingType)
+
+    let readingData: ReadingData
+
+    if (this.readingType == 'automatic') {
+      readingData = {
+        question: this.question,
+        topic: this.topic,
+        date: Date.now(),
+        key0: Math.floor(Math.random() * 15),
+        key1: Math.floor(Math.random() * 15),
+        key2: Math.floor(Math.random() * 15),
+        key3: Math.floor(Math.random() * 15)
+      }
+    }
+
+    if (this.readingType == 'manual') {
+      let row = this.row
+      readingData = {
+        question: this.question,
+        topic: this.topic,
+        date: Date.now(),
+        key0: Tetragram.generateKey(row[1], row[2], row[3], row[4]),
+        key1: Tetragram.generateKey(row[5], row[6], row[7], row[8]),
+        key2: Tetragram.generateKey(row[9], row[10], row[11], row[12]),
+        key3: Tetragram.generateKey(row[13], row[14], row[15], row[16]),
+      }
     }
 
     this.question = ''
@@ -90,6 +106,13 @@ export class NewPage {
     let actionSheet = this.actionCtrl.create({
       title: 'More',
       buttons: [
+        {
+          text: 'Load Reading',
+          handler: () => {
+            let historyPage = this.modCtrl.create('HistoryPage')
+            historyPage.present()
+          }
+        },
         {
           text: 'Show Introduction',
           handler: () => {

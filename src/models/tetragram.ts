@@ -50,6 +50,15 @@ export class Tetragram implements LibraryItem {
   getHouseMeaning(houseNumber: number) {
     return this.houseMeanings[houseNumber - 1]
   }
+
+  static generateKey(num1, num2, num3, num4): number {
+    let row1 = num1 ? (num1 % 2) * 1 : 0
+    let row2 = num2 ? (num2 % 2) * 2 : 0
+    let row3 = num3 ? (num3 % 2) * 4 : 0
+    let row4 = num4 ? (num4 % 2) * 8 : 0
+    let key = row1 + row2 + row3 + row4
+    return key
+  }
 }
 
 export interface TetragramInfo {
