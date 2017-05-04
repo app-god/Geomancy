@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, ViewController, ActionSheetController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ViewController, ActionSheetController, ToastController } from 'ionic-angular';
 import { Storage } from '@ionic/storage'
 import { Reading } from '../../models/reading'
 
@@ -18,7 +18,8 @@ export class ReadingPage {
     public navParams: NavParams,
     public storage: Storage,
     public actionCtrl: ActionSheetController,
-    public viewCtrl: ViewController) {
+    public viewCtrl: ViewController,
+    private toastCtrl: ToastController) {
       this.reading = new Reading(navParams.get('readingData'))
       this.rootParams = {
         parent: this
@@ -35,7 +36,7 @@ export class ReadingPage {
       title: 'More',
       buttons: [
         {
-          text: 'Save',
+          text: 'Save Reading',
           handler: () => {
             this.saveReading()
           }
@@ -69,7 +70,14 @@ export class ReadingPage {
       this.storage.get('history').then(history => {
         history = history || []
         history.push(this.reading.readingData)
-        this.storage.set('history', history)
+        this.storage.set('history', history).then(() => {
+          let toast = this.toastCtrl.create({
+            message: 'Reading was saved successfully',
+            duration: 2000,
+            position: 'top'
+          })
+          toast.present()
+        })
       })
     })
 

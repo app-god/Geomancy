@@ -1,6 +1,6 @@
 webpackJsonp([6],{
 
-/***/ 314:
+/***/ 315:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -685,6 +685,13 @@ var NewPage = (function () {
             title: 'More',
             buttons: [
                 {
+                    text: 'Load Reading',
+                    handler: function () {
+                        var historyPage = _this.modCtrl.create('HistoryPage');
+                        historyPage.present();
+                    }
+                },
+                {
                     text: 'Show Introduction',
                     handler: function () {
                         var introMod = _this.modCtrl.create('TutorialPage');
@@ -710,13 +717,13 @@ var NewPage = (function () {
 NewPage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["f" /* IonicPage */])(),
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* Component */])({
-        selector: 'page-new',template:/*ion-inline-start:"/Users/adam/AppGod/geomancy/src/pages/new/new.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>New Reading</ion-title>\n    <ion-buttons end>\n      <button ion-button icon-only (click)="showMore()">\n        <ion-icon name="more"></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n\n  <div padding-vertical>\n    <ion-segment [(ngModel)]="readingType">\n      <ion-segment-button value="automatic">Automatic</ion-segment-button>\n      <ion-segment-button value="manual">Manual</ion-segment-button>\n    </ion-segment>\n  </div>\n\n  <ion-list>\n    <ion-item padding>\n      <ion-label stacked>Question</ion-label>\n      <ion-textarea [(ngModel)]="question" rows="3"\n        placeholder="Enter question here"></ion-textarea>\n    </ion-item>\n\n    <ion-item padding>\n      <ion-label stacked>Topic</ion-label>\n      <ion-select [(ngModel)]="topic">\n        <ion-option\n          [selected]="t == topic"\n          [value]="t"\n          *ngFor="let t of topics">\n          {{t}}\n        </ion-option>\n      </ion-select>\n    </ion-item>\n  </ion-list>\n\n  <h3 padding-vertical *ngIf="readingType == \'manual\'">\n    Make 16 sets of a random number of dots, then enter their values here</h3>\n\n  <ion-list *ngIf="readingType == \'manual\'">\n    <ion-item *ngFor="let num of [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]">\n      <ion-label fixed>Row {{num}}</ion-label>\n      <ion-input type="number" [(ngModel)]="row[num]"></ion-input>\n    </ion-item>\n  </ion-list>\n\n  <button ion-button block large\n    color="primary"\n    (tap)="clickStart()"\n    [disabled]="startDisabled">\n    Create\n  </button>\n\n  <p class="instructions" *ngIf="readingType == \'automatic\'">\n    Although this procedure can effectively be done automatically, manually generating the numbers by etching dots in the earth is a more powerful way of forming the divination.\n  </p>\n\n</ion-content>\n'/*ion-inline-end:"/Users/adam/AppGod/geomancy/src/pages/new/new.html"*/
+        selector: 'page-new',template:/*ion-inline-start:"/Users/adam/AppGod/geomancy/src/pages/new/new.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>New Reading</ion-title>\n    <ion-buttons end>\n      <button ion-button icon-only (click)="showMore()">\n        <ion-icon name="more"></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding-horizontal>\n\n  <div padding-vertical>\n    <ion-segment [(ngModel)]="readingType">\n      <ion-segment-button value="automatic">Automatic</ion-segment-button>\n      <ion-segment-button value="manual">Manual</ion-segment-button>\n    </ion-segment>\n  </div>\n\n  <ion-list no-lines>\n    <ion-item padding>\n      <ion-label stacked>Question</ion-label>\n      <ion-textarea [(ngModel)]="question" rows="3"\n        placeholder="Enter question here"></ion-textarea>\n    </ion-item>\n\n    <ion-item padding>\n      <ion-label stacked>Topic</ion-label>\n      <ion-select [(ngModel)]="topic">\n        <ion-option\n          [selected]="t == topic"\n          [value]="t"\n          *ngFor="let t of topics">\n          {{t}}\n        </ion-option>\n      </ion-select>\n    </ion-item>\n  </ion-list>\n\n  <p class="instructions" padding-vertical *ngIf="readingType == \'manual\'">\n    Make 16 rows of a random number of dots–either on the ground or on a piece of paper. Then, enter the number of dots in each row below.\n  </p>\n\n  <ion-list *ngIf="readingType == \'manual\'" no-lines>\n    <ion-item *ngFor="let num of [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]">\n      <ion-label fixed>Row {{num}}</ion-label>\n      <ion-input type="number" [(ngModel)]="row[num]"></ion-input>\n    </ion-item>\n  </ion-list>\n\n  <button ion-button block large\n    color="primary"\n    (tap)="clickStart()"\n    [disabled]="startDisabled">\n    Create\n  </button>\n\n  <p class="instructions" *ngIf="readingType == \'automatic\'">\n    Although this procedure can effectively be done automatically, manually generating the numbers by etching dots in the earth is a more powerful way of forming the divination.\n  </p>\n\n  <br>\n\n</ion-content>\n'/*ion-inline-end:"/Users/adam/AppGod/geomancy/src/pages/new/new.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["g" /* NavController */],
-        __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["k" /* ModalController */],
-        __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["l" /* LoadingController */],
+        __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["l" /* ModalController */],
+        __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["m" /* LoadingController */],
         __WEBPACK_IMPORTED_MODULE_1__ionic_storage__["b" /* Storage */],
-        __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["m" /* AlertController */],
+        __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["n" /* AlertController */],
         __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["j" /* ActionSheetController */]])
 ], NewPage);
 

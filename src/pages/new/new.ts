@@ -107,6 +107,13 @@ export class NewPage {
       title: 'More',
       buttons: [
         {
+          text: 'Load Reading',
+          handler: () => {
+            let historyPage = this.modCtrl.create('HistoryPage')
+            historyPage.present()
+          }
+        },
+        {
           text: 'Show Introduction',
           handler: () => {
             let introMod = this.modCtrl.create('TutorialPage')

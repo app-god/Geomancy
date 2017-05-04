@@ -4,7 +4,8 @@ import {
   IonicPage,
   NavController,
   ModalController,
-  AlertController
+  AlertController,
+  ViewController
 } from 'ionic-angular';
 import { Storage } from '@ionic/storage'
 
@@ -20,7 +21,8 @@ export class HistoryPage {
     public navCtrl: NavController,
     public storage: Storage,
     public modCtrl: ModalController,
-    private alertCtrl: AlertController
+    private alertCtrl: AlertController,
+    private viewCtrl: ViewController
   ) {
   }
 
@@ -83,4 +85,9 @@ export class HistoryPage {
     })
     alert.present()
   }
+
+  close() {
+    this.viewCtrl.dismiss()
+  }
+
 }

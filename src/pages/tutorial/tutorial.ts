@@ -23,7 +23,7 @@ export class TutorialPage {
 
   startApp() {
     this.storage.set('hasSeenTutorial', true)
-    this.navCtrl.push('TabsPage')
+    this.navCtrl.setRoot('NewPage')
   }
 
   onSlideChange(slides: Slides) {

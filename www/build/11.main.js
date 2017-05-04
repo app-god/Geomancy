@@ -1,14 +1,14 @@
 webpackJsonp([11],{
 
-/***/ 317:
+/***/ 313:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(101);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__reading_info__ = __webpack_require__(336);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ReadingInfoPageModule", function() { return ReadingInfoPageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__library_topic__ = __webpack_require__(331);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LibraryTopicPageModule", function() { return LibraryTopicPageModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,36 +18,36 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var ReadingInfoPageModule = (function () {
-    function ReadingInfoPageModule() {
+var LibraryTopicPageModule = (function () {
+    function LibraryTopicPageModule() {
     }
-    return ReadingInfoPageModule;
+    return LibraryTopicPageModule;
 }());
-ReadingInfoPageModule = __decorate([
+LibraryTopicPageModule = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["a" /* NgModule */])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_2__reading_info__["a" /* ReadingInfoPage */],
+            __WEBPACK_IMPORTED_MODULE_2__library_topic__["a" /* LibraryTopicPage */],
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__reading_info__["a" /* ReadingInfoPage */]),
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__library_topic__["a" /* LibraryTopicPage */]),
         ],
         exports: [
-            __WEBPACK_IMPORTED_MODULE_2__reading_info__["a" /* ReadingInfoPage */]
+            __WEBPACK_IMPORTED_MODULE_2__library_topic__["a" /* LibraryTopicPage */]
         ]
     })
-], ReadingInfoPageModule);
+], LibraryTopicPageModule);
 
-//# sourceMappingURL=reading-info.module.js.map
+//# sourceMappingURL=library-topic.module.js.map
 
 /***/ }),
 
-/***/ 336:
+/***/ 331:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(101);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ReadingInfoPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LibraryTopicPage; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -59,26 +59,27 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-var ReadingInfoPage = (function () {
-    function ReadingInfoPage(navCtrl, navParams) {
+var LibraryTopicPage = (function () {
+    function LibraryTopicPage(navCtrl, navParams) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
-        this.reading = navParams.get('reading');
+        this.topic = navParams.get('topic');
+        this.items = this.topic.loadItems();
     }
-    ReadingInfoPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad ReadingInfoPage');
+    LibraryTopicPage.prototype.showItem = function (item) {
+        this.navCtrl.push(item.page, { item: item });
     };
-    return ReadingInfoPage;
+    return LibraryTopicPage;
 }());
-ReadingInfoPage = __decorate([
+LibraryTopicPage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPage */])(),
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* Component */])({
-        selector: 'page-reading-info',template:/*ion-inline-start:"/Users/adam/AppGod/geomancy/src/pages/reading-info/reading-info.html"*/'<!--\n  Generated template for the ReadingInfoPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Reading Info</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n  <div class="label">\n    Question\n  </div>\n\n  <div>{{reading.question}}</div>\n\n  <br>\n\n  <div class="label">\n    Topic\n  </div>\n\n  <div>{{reading.topic}}</div>\n\n  <br>\n\n  <div class="label">\n    Date\n  </div>\n\n  <div>{{reading.date | date:\'medium\'}}</div>\n\n</ion-content>\n'/*ion-inline-end:"/Users/adam/AppGod/geomancy/src/pages/reading-info/reading-info.html"*/,
+        selector: 'page-library-topic',template:/*ion-inline-start:"/Users/adam/AppGod/geomancy/src/pages/library-topic/library-topic.html"*/'<!--\n  Generated template for the LibraryTopicPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>{{topic.name}}</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  \n  <ion-list>\n    <button ion-item *ngFor="let item of items" (click)="showItem(item)">\n      <div>{{item.name}}</div>\n    </button>\n  </ion-list>\n\n</ion-content>\n'/*ion-inline-end:"/Users/adam/AppGod/geomancy/src/pages/library-topic/library-topic.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]])
-], ReadingInfoPage);
+], LibraryTopicPage);
 
-//# sourceMappingURL=reading-info.js.map
+//# sourceMappingURL=library-topic.js.map
 
 /***/ })
 
