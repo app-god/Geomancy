@@ -689,10 +689,13 @@ HistoryPage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* Component */])({
         selector: 'page-history',template:/*ion-inline-start:"/Users/adam/AppGod/geomancy/src/pages/history/history.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      Load Reading\n    </ion-title>\n    <ion-buttons end *ngIf="readings.length > 0">\n      <button ion-button icon-only (click)="deleteAllReadings()">\n        <ion-icon name="ios-trash" color="danger"></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n\n  <ion-card *ngIf="readings.length == 0">\n    <ion-card-content>\n      Save a reading and it will show up here.\n    </ion-card-content>\n  </ion-card>\n\n  <ion-list *ngIf="readings.length > 0">\n    <ion-item-sliding *ngFor="let reading of readings">\n\n      <button ion-item (click)="showReading(reading)">\n        <div class="question" text-wrap>{{reading.question}}</div>\n        <div class="topic">{{reading.topic}}</div>\n        <div class="date">{{reading.date | date:\'medium\'}}</div>\n      </button>\n\n      <ion-item-options side="right">\n        <button ion-button (click)="deleteReading(reading)"\n          color="danger">Delete</button>\n      </ion-item-options>\n    </ion-item-sliding>\n  </ion-list>\n</ion-content>\n'/*ion-inline-end:"/Users/adam/AppGod/geomancy/src/pages/history/history.html"*/
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__ionic_storage__["b" /* Storage */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__ionic_storage__["b" /* Storage */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* ModalController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* ModalController */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["n" /* AlertController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["n" /* AlertController */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* ViewController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* ViewController */]) === "function" && _e || Object])
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */],
+        __WEBPACK_IMPORTED_MODULE_2__ionic_storage__["b" /* Storage */],
+        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* ModalController */],
+        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["n" /* AlertController */],
+        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* ViewController */]])
 ], HistoryPage);
 
-var _a, _b, _c, _d, _e;
 //# sourceMappingURL=history.js.map
 
 /***/ })
