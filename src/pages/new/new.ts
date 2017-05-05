@@ -13,6 +13,7 @@ import {
 import { ReadingData } from '../../models/reading'
 import { House } from '../../models/house'
 import { Tetragram } from "../../models/tetragram";
+import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 
 @IonicPage()
 @Component({
@@ -28,6 +29,7 @@ export class NewPage {
   topics: string[]
 
   // for manual reading
+  manualForm: FormGroup
   row = {}
 
   constructor(
@@ -36,7 +38,8 @@ export class NewPage {
     private loadingCtrl: LoadingController,
     private storage: Storage,
     private alertCtrl: AlertController,
-    private actionCtrl: ActionSheetController
+    private actionCtrl: ActionSheetController,
+    private formBuilder: FormBuilder
   ) {
 
     let houses = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
@@ -51,9 +54,30 @@ export class NewPage {
 
     this.topic = this.topics[0]
 
+    // manual
+
+    this.manualForm = formBuilder.group({
+      row_1:  ['', Validators.required],
+      row_2:  ['', Validators.required],
+      row_3:  ['', Validators.required],
+      row_4:  ['', Validators.required],
+      row_5:  ['', Validators.required],
+      row_6:  ['', Validators.required],
+      row_7:  ['', Validators.required],
+      row_8:  ['', Validators.required],
+      row_9:  ['', Validators.required],
+      row_10: ['', Validators.required],
+      row_11: ['', Validators.required],
+      row_12: ['', Validators.required],
+      row_13: ['', Validators.required],
+      row_14: ['', Validators.required],
+      row_15: ['', Validators.required],
+      row_16: ['', Validators.required]
+    })
+
   }
 
-  clickStart() {
+  createReading() {
 
     this.startDisabled = true
 
@@ -61,10 +85,9 @@ export class NewPage {
       this.question = 'None'
     }
 
-    console.log(this.readingType)
-
     let readingData: ReadingData
 
+    // generate data for automatic readings
     if (this.readingType == 'automatic') {
       readingData = {
         question: this.question,
@@ -77,6 +100,7 @@ export class NewPage {
       }
     }
 
+    // generate data for manual readings
     if (this.readingType == 'manual') {
       let row = this.row
       readingData = {
@@ -86,19 +110,21 @@ export class NewPage {
         key0: Tetragram.generateKey(row[1], row[2], row[3], row[4]),
         key1: Tetragram.generateKey(row[5], row[6], row[7], row[8]),
         key2: Tetragram.generateKey(row[9], row[10], row[11], row[12]),
-        key3: Tetragram.generateKey(row[13], row[14], row[15], row[16]),
+        key3: Tetragram.generateKey(row[13], row[14], row[15], row[16])
       }
     }
+
+    // clear manual data
+    Object.keys(this.row).forEach((r) => {
+      this.row[r] = ''
+    })
 
     this.question = ''
     this.topic = 'None'
     this.startDisabled = false
 
-    let readingModal = this.modCtrl.create('ReadingPage', {
-      readingData: readingData
-    })
+    this.navCtrl.push('ReadingPage', { readingData: readingData })
 
-    readingModal.present()
   }
 
   showMore() {

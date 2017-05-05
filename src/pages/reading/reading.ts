@@ -26,10 +26,6 @@ export class ReadingPage {
       }
   }
 
-  close() {
-    this.viewCtrl.dismiss()
-  }
-
   showMore() {
 
     let actionSheet = this.actionCtrl.create({

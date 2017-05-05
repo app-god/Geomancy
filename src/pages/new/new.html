@@ -43,21 +43,42 @@
   </p>
 
   <ion-list *ngIf="readingType == 'manual'" no-lines>
-    <ion-item *ngFor="let num of [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]">
-      <ion-label fixed>Row {{num}}</ion-label>
-      <ion-input type="number" [(ngModel)]="row[num]"></ion-input>
-    </ion-item>
+
+    <form [formGroup]="manualForm">
+
+      <ion-item *ngFor="let num of [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]">
+
+        <ion-label fixed>Row {{num}}</ion-label>
+
+        <ion-input [formControlName]="'row_' + num" type="number" [(ngModel)]="row[num]"></ion-input>
+
+      </ion-item>
+
+    </form>
   </ion-list>
 
+  <p *ngIf="readingType == 'manual' && !manualForm.valid" class="instructions">
+    You must enter a number into each row before proceeding.
+  </p>
+
   <button ion-button block large
+    *ngIf="readingType == 'manual'"
     color="primary"
-    (tap)="clickStart()"
+    (tap)="createReading()"
+    [disabled]="startDisabled || !manualForm.valid">
+    Create
+  </button>
+
+  <button ion-button block large
+    *ngIf="readingType == 'automatic'"
+    color="primary"
+    (tap)="createReading()"
     [disabled]="startDisabled">
     Create
   </button>
 
   <p class="instructions" *ngIf="readingType == 'automatic'">
-    Although this procedure can effectively be done automatically, manually generating the numbers by etching dots in the earth is a more powerful way of forming the divination.
+    Although this procedure can be done automatically, manually generating the numbers by etching dots in the earth is a more powerful way of forming the divination.
   </p>
 
   <br>
