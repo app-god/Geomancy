@@ -706,13 +706,19 @@ var Reading = (function () {
     };
     Reading.prototype.getPlacements = function () {
         var placements = [].concat(this.getWarnings(), this.getRulerships(), this.getExaltations());
-        // remove duplicates
-        var uniqePlacements = [];
+        // remove duplicates (ignoring placement type)
+        var uniquePlacements = [];
+        var tetragramsHouses = [];
         placements.forEach(function (placement) {
-            if (uniqePlacements.indexOf(placement) == -1)
-                uniqePlacements.push(placement);
+            var tetragramHouse = placement.tetragram.number + '-' + placement.house.number;
+            if (tetragramsHouses.indexOf(tetragramHouse) == -1) {
+                tetragramsHouses.push(tetragramHouse);
+                uniquePlacements.push(placement);
+            }
         });
-        return uniqePlacements;
+        console.log(tetragramsHouses);
+        console.log(uniquePlacements);
+        return uniquePlacements;
     };
     Reading.prototype.getWarnings = function () {
         var warnings = [];

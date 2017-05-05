@@ -175,15 +175,22 @@ export class Reading {
   getPlacements(): Placement[] {
     let placements = [].concat(this.getWarnings(), this.getRulerships(), this.getExaltations())
 
-    // remove duplicates
-    let uniqePlacements = []
+    // remove duplicates (ignoring placement type)
+    let uniquePlacements: Placement[] = []
+    let tetragramsHouses: any[] = []
 
     placements.forEach((placement) => {
-      if (uniqePlacements.indexOf(placement) == -1)
-        uniqePlacements.push(placement)
+      let tetragramHouse = placement.tetragram.number + '-' + placement.house.number
+      if (tetragramsHouses.indexOf(tetragramHouse) == -1) {
+        tetragramsHouses.push(tetragramHouse)
+        uniquePlacements.push(placement)
+      }
     })
 
-    return uniqePlacements
+    console.log(tetragramsHouses)
+    console.log(uniquePlacements)
+
+    return uniquePlacements
   }
 
   getWarnings(): Placement[] {
