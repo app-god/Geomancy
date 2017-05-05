@@ -26,6 +26,13 @@ export class ReadingPage {
       }
   }
 
+  ionViewDidLoad() {
+    if (this.navCtrl.length() == 1) {
+      this.navCtrl.push('NewPage')
+      this.navCtrl.setRoot('NewPage')
+    }
+  }
+
   showMore() {
 
     let actionSheet = this.actionCtrl.create({

@@ -817,6 +817,12 @@ var ReadingPage = (function () {
             parent: this
         };
     }
+    ReadingPage.prototype.ionViewDidLoad = function () {
+        if (this.navCtrl.length() == 1) {
+            this.navCtrl.push('NewPage');
+            this.navCtrl.setRoot('NewPage');
+        }
+    };
     ReadingPage.prototype.showMore = function () {
         var _this = this;
         var actionSheet = this.actionCtrl.create({
