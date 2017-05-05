@@ -29286,8 +29286,17 @@ page-reading-overview ion-card {
   margin-right: 0 !important;
 }
 
-page-reading-overview img.icon {
-  margin-left: 8px;
+page-reading-overview .overview-icon {
+  float: right;
+  width: 64px;
+  margin: 0 0 8px 8px;
+  text-align: center;
+  color: #999;
+  font-size: small;
+}
+
+page-reading-overview .overview-icon img {
+  margin: 0 auto;
   width: 32px;
   height: 32px;
 }
