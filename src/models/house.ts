@@ -31,7 +31,7 @@ const houseInfo: HouseInfo[] = [
   },
   {
     number: 2,
-    phrase: 'concrete worth',
+    phrase: 'wealth',
     topics: ['Money', 'Property', 'Personal Worth']
   },
   {
@@ -51,7 +51,7 @@ const houseInfo: HouseInfo[] = [
   },
   {
     number: 6,
-    phrase: 'cleverness',
+    phrase: 'daily work',
     topics: ['Servants', 'Sickness', 'Uncles', 'Aunts', 'Animals']
   },
   {
@@ -61,7 +61,7 @@ const houseInfo: HouseInfo[] = [
   },
   {
     number: 8,
-    phrase: 'suffering',
+    phrase: 'transformation',
     topics: ['Deaths', 'Wills', 'Legacies', 'Pain', 'Anxiety']
   },
   {
@@ -76,12 +76,12 @@ const houseInfo: HouseInfo[] = [
   },
   {
     number: 11,
-    phrase: 'understanding',
+    phrase: 'community',
     topics: ['Friends', 'Hopes', 'Wishes']
   },
   {
     number: 12,
-    phrase: 'the subconscious',
+    phrase: 'the unconscious',
     topics: ['Sorrows', 'Fears', 'Punishments', 'Secret Enemies', 'Institutions', 'Unseen Dangers', 'Restriction']
   }
 ]

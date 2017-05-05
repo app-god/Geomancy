@@ -101,7 +101,7 @@ var tetragramInfo = [
         dots: 4,
         sign: 'Cancer',
         good: false,
-        phrase: 'clear a path for',
+        phrase: 'Clearing a path',
         houseMeanings: [
             'Evil except for prison.',
             'Indifferent.',
@@ -127,7 +127,7 @@ var tetragramInfo = [
         dots: 5,
         sign: 'Sagittarius',
         good: true,
-        phrase: 'begin',
+        phrase: 'A new beginning',
         houseMeanings: [
             'Good in all things',
             'Good.',
@@ -153,7 +153,7 @@ var tetragramInfo = [
         dots: 5,
         sign: 'Libra',
         good: true,
-        phrase: 'beautify',
+        phrase: 'Beautification',
         houseMeanings: [
             'Good except in war.',
             'Very good.',
@@ -179,7 +179,7 @@ var tetragramInfo = [
         dots: 6,
         sign: 'Leo',
         good: true,
-        phrase: 'succeed in',
+        phrase: 'Success',
         houseMeanings: [
             'Good save in secrecy.',
             'Good except in sad things.',
@@ -205,7 +205,7 @@ var tetragramInfo = [
         dots: 5,
         sign: 'Aries',
         good: false,
-        phrase: 'command',
+        phrase: 'Command',
         houseMeanings: [
             'Indifferent. Best in war.',
             'Good, but with trouble.',
@@ -231,7 +231,7 @@ var tetragramInfo = [
         dots: 6,
         sign: 'Sagittarius',
         good: true,
-        phrase: 'acquire',
+        phrase: 'Acquisition',
         houseMeanings: [
             'Happy, success in all things.',
             'Very prosperous.',
@@ -257,7 +257,7 @@ var tetragramInfo = [
         dots: 6,
         sign: "Capricorn",
         good: false,
-        phrase: 'restrict',
+        phrase: 'Restriction',
         houseMeanings: [
             'Evil except to fortify a place.',
             'Good in Saturnine questions; else evil.',
@@ -283,7 +283,7 @@ var tetragramInfo = [
         dots: 7,
         sign: 'Aquarius',
         good: false,
-        phrase: 'find sadness in',
+        phrase: 'Melancholy',
         houseMeanings: [
             'Medium, but good for treasure and fortifying.',
             'Medium, but good to fortify.',
@@ -309,7 +309,7 @@ var tetragramInfo = [
         dots: 5,
         sign: 'Virgo',
         good: false,
-        phrase: 'finish',
+        phrase: 'An end',
         houseMeanings: [
             'Destroy figure if it falls here! Makes judgment worthless.',
             'Very evil.',
@@ -335,7 +335,7 @@ var tetragramInfo = [
         dots: 6,
         sign: 'Virgo',
         good: true,
-        phrase: 'reconcile',
+        phrase: 'Reconciliation',
         houseMeanings: [
             'Good with good, evil with evil.',
             'Commonly good.',
@@ -361,7 +361,7 @@ var tetragramInfo = [
         dots: 6,
         sign: 'Taurus',
         good: false,
-        phrase: 'sacrifice',
+        phrase: 'Sacrifice',
         houseMeanings: [
             'Ill in all things but for prisoners.',
             'Very ill for money, but good for love.',
@@ -387,7 +387,7 @@ var tetragramInfo = [
         dots: 7,
         sign: 'Gemini',
         good: true,
-        phrase: 'learn',
+        phrase: 'Learning',
         houseMeanings: [
             'Good for marriage. Mercurial. Peace.',
             'Good in all.',
@@ -413,7 +413,7 @@ var tetragramInfo = [
         dots: 6,
         sign: 'Leo',
         good: true,
-        phrase: 'improve in',
+        phrase: 'Improvement',
         houseMeanings: [
             'Speed in victory and in love, but choleric.',
             'Very good.',
@@ -439,7 +439,7 @@ var tetragramInfo = [
         dots: 7,
         sign: 'Scorpio',
         good: false,
-        phrase: 'destroy',
+        phrase: 'Destruction',
         houseMeanings: [
             'Destroy the figure if it falls here! It makes the judgement worthless.',
             'Evil in all demands.',
@@ -465,7 +465,7 @@ var tetragramInfo = [
         dots: 7,
         sign: 'Pisces',
         good: true,
-        phrase: 'find joy in',
+        phrase: 'Happiness',
         houseMeanings: [
             'Good, except in war.',
             'Sickly.',
@@ -491,7 +491,7 @@ var tetragramInfo = [
         dots: 8,
         sign: 'Cancer',
         good: true,
-        phrase: 'agree',
+        phrase: 'Consensus',
         houseMeanings: [
             'Good in marriages.',
             'Medium good.',
@@ -537,7 +537,7 @@ var houseInfo = [
     },
     {
         number: 2,
-        phrase: 'concrete worth',
+        phrase: 'wealth',
         topics: ['Money', 'Property', 'Personal Worth']
     },
     {
@@ -557,7 +557,7 @@ var houseInfo = [
     },
     {
         number: 6,
-        phrase: 'cleverness',
+        phrase: 'daily work',
         topics: ['Servants', 'Sickness', 'Uncles', 'Aunts', 'Animals']
     },
     {
@@ -567,7 +567,7 @@ var houseInfo = [
     },
     {
         number: 8,
-        phrase: 'suffering',
+        phrase: 'transformation',
         topics: ['Deaths', 'Wills', 'Legacies', 'Pain', 'Anxiety']
     },
     {
@@ -582,12 +582,12 @@ var houseInfo = [
     },
     {
         number: 11,
-        phrase: 'understanding',
+        phrase: 'community',
         topics: ['Friends', 'Hopes', 'Wishes']
     },
     {
         number: 12,
-        phrase: 'the subconscious',
+        phrase: 'the unconscious',
         topics: ['Sorrows', 'Fears', 'Punishments', 'Secret Enemies', 'Institutions', 'Unseen Dangers', 'Restriction']
     }
 ];
