@@ -5,20 +5,15 @@
   <ion-card
     *ngFor="let house of houses; let i = index">
 
-    <ion-card-content no-padding
-      (click)="showHouse(house)">
-      <ion-grid>
-        <ion-row>
-          <ion-col col-2>
-            <tetragram [tetragram]="house.tetragram"></tetragram>
-          </ion-col>
-          <ion-col col-10>
-            <div class="house-title">House {{i + 1}}</div>
-            <div class="house-topics">{{house.topics.join(', ')}}</div>
-            <div>{{house.tetragram.houseMeanings[i]}}</div>
-          </ion-col>
-        </ion-row>
-      </ion-grid>
+    <ion-card-content (click)="showHouse(house)">
+
+      <div style="width: 64px; float: right; text-align: center;">
+        <tetragram [tetragram]="house.tetragram"></tetragram>
+      </div>
+
+      <div class="house-title">House {{i + 1}}</div>
+      <div class="house-topics">{{house.topics.join(', ')}}</div>
+      <div>{{house.tetragram.houseMeanings[i]}}</div>
     </ion-card-content>
   </ion-card>
 

@@ -31,20 +31,14 @@
 
   <div *ngIf="placements.length > 0">
     <ion-card [color]="getColor(placement.type)" *ngFor="let placement of placements">
-        <ion-card-content no-padding>
-          <ion-grid>
-            <ion-row>
-              <ion-col col-3>
-                <img [src]="getIcon(placement.type)" class="icon">
-              </ion-col>
-              <ion-col col-9>
-                <b>{{placement.tetragram.phrase}} in {{placement.house.phrase}}.</b>
-                <br>
-                {{placement.tetragram.getHouseMeaning(placement.house.number)}}
-              </ion-col>
-            </ion-row>
-          </ion-grid>
-        </ion-card-content>
+      <ion-card-content>
+        <div style="float: right;">
+          <img [src]="getIcon(placement.type)" class="icon">
+        </div>
+        <b>{{placement.tetragram.phrase}} in {{placement.house.phrase}}.</b>
+        <br>
+        {{placement.tetragram.getHouseMeaning(placement.house.number)}}
+      </ion-card-content>
     </ion-card>
   </div>
 

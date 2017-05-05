@@ -596,7 +596,7 @@ var House = (function () {
 var houseInfo = [
     {
         number: 1,
-        phrase: 'yourself',
+        phrase: 'your self',
         topics: ['Self', 'Life', 'Health']
     },
     {
