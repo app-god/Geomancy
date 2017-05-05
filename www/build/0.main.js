@@ -60,6 +60,9 @@ var Tetragram = (function () {
         this.good = info.good;
         this.rules = info.rules;
         this.exalted = info.exalted;
+        this.fall = info.fall;
+        this.detriment = info.detriment;
+        this.triplicity = info.triplicity;
         this.phrase = info.phrase;
         this.houseMeanings = info.houseMeanings;
         this.planet = info.planet;
@@ -98,8 +101,11 @@ var tetragramInfo = [
         name: 'Via',
         desc: 'Injurious to the goodness of other figures generally, but good for journeys and voyages.',
         planet: 'Moon',
-        rules: [1, 8],
+        rules: [4],
         exalted: [2],
+        fall: [8],
+        detriment: [10],
+        triplicity: [12],
         dots: 4,
         sign: 'Cancer',
         good: false,
@@ -126,6 +132,9 @@ var tetragramInfo = [
         planet: 'Venus',
         rules: [2, 7, 9, 12],
         exalted: [12, 4],
+        fall: [6, 10],
+        detriment: [1, 8, 3, 6],
+        triplicity: [],
         dots: 5,
         sign: 'Sagittarius',
         good: true,
@@ -152,6 +161,9 @@ var tetragramInfo = [
         planet: 'Venus',
         rules: [2, 7],
         exalted: [12],
+        fall: [6],
+        detriment: [1, 8],
+        triplicity: [3, 11],
         dots: 5,
         sign: 'Libra',
         good: true,
@@ -178,6 +190,9 @@ var tetragramInfo = [
         planet: 'Sun',
         rules: [5],
         exalted: [1],
+        fall: [7],
+        detriment: [11],
+        triplicity: [1, 9],
         dots: 6,
         sign: 'Leo',
         good: true,
@@ -204,6 +219,9 @@ var tetragramInfo = [
         planet: 'Mars',
         rules: [1, 8],
         exalted: [10],
+        fall: [4],
+        detriment: [2, 7],
+        triplicity: [5, 9],
         dots: 5,
         sign: 'Aries',
         good: false,
@@ -230,6 +248,9 @@ var tetragramInfo = [
         planet: 'Jupiter',
         rules: [9, 12],
         exalted: [4],
+        fall: [10],
+        detriment: [3, 6],
+        triplicity: [1, 5],
         dots: 6,
         sign: 'Sagittarius',
         good: true,
@@ -256,6 +277,9 @@ var tetragramInfo = [
         planet: 'Saturn',
         rules: [10, 11],
         exalted: [7],
+        fall: [1],
+        detriment: [4, 5],
+        triplicity: [2, 6],
         dots: 6,
         sign: "Capricorn",
         good: false,
@@ -282,6 +306,9 @@ var tetragramInfo = [
         planet: 'Saturn',
         rules: [10, 11],
         exalted: [7],
+        fall: [1],
+        detriment: [4, 5],
+        triplicity: [3, 7],
         dots: 7,
         sign: 'Aquarius',
         good: false,
@@ -308,6 +335,9 @@ var tetragramInfo = [
         planet: 'Mars',
         rules: [8, 10, 11],
         exalted: [10, 7],
+        fall: [4, 1],
+        detriment: [2, 7, 4, 5],
+        triplicity: [],
         dots: 5,
         sign: 'Virgo',
         good: false,
@@ -334,6 +364,9 @@ var tetragramInfo = [
         planet: 'Mercury',
         rules: [3, 6],
         exalted: [11],
+        fall: [5],
+        detriment: [9, 12],
+        triplicity: [2, 10],
         dots: 6,
         sign: 'Virgo',
         good: true,
@@ -360,6 +393,9 @@ var tetragramInfo = [
         planet: 'Venus',
         rules: [2, 7],
         exalted: [12],
+        fall: [6],
+        detriment: [1, 8],
+        triplicity: [10],
         dots: 6,
         sign: 'Taurus',
         good: false,
@@ -386,6 +422,9 @@ var tetragramInfo = [
         planet: 'Mercury',
         rules: [3, 6],
         exalted: [11],
+        fall: [5],
+        detriment: [9, 12],
+        triplicity: [7, 11],
         dots: 7,
         sign: 'Gemini',
         good: true,
@@ -412,6 +451,9 @@ var tetragramInfo = [
         planet: 'Sun',
         rules: [5],
         exalted: [1],
+        fall: [7],
+        detriment: [11],
+        triplicity: [1, 9],
         dots: 6,
         sign: 'Leo',
         good: true,
@@ -438,6 +480,9 @@ var tetragramInfo = [
         planet: 'Mars',
         rules: [1, 8],
         exalted: [10],
+        fall: [4],
+        detriment: [2, 7],
+        triplicity: [12],
         dots: 7,
         sign: 'Scorpio',
         good: false,
@@ -464,6 +509,9 @@ var tetragramInfo = [
         planet: 'Jupiter',
         rules: [9, 12],
         exalted: [4],
+        fall: [10],
+        detriment: [3, 6],
+        triplicity: [4, 8],
         dots: 7,
         sign: 'Pisces',
         good: true,
@@ -490,6 +538,9 @@ var tetragramInfo = [
         planet: 'Moon',
         rules: [4],
         exalted: [2],
+        fall: [8],
+        detriment: [10],
+        triplicity: [12],
         dots: 8,
         sign: 'Cancer',
         good: true,
@@ -790,7 +841,7 @@ var Reading = (function () {
         return this.readingData;
     };
     Reading.prototype.getPlacements = function () {
-        var placements = [].concat(this.getWarnings(), this.getRulerships(), this.getExaltations());
+        var placements = [].concat(this.getWarnings(), this.getRulerships(), this.getExaltations(), this.getTriplicities(), this.getFalls(), this.getDetriments());
         // remove duplicates (ignoring placement type)
         var uniquePlacements = [];
         var tetragramsHouses = [];
@@ -801,8 +852,6 @@ var Reading = (function () {
                 uniquePlacements.push(placement);
             }
         });
-        console.log(tetragramsHouses);
-        console.log(uniquePlacements);
         return uniquePlacements;
     };
     Reading.prototype.getWarnings = function () {
@@ -832,7 +881,7 @@ var Reading = (function () {
                 rulerships.push({
                     tetragram: tetragram,
                     house: house,
-                    type: PlacementType.ExtremelyStrong
+                    type: PlacementType.Strongest
                 });
             }
         });
@@ -855,15 +904,68 @@ var Reading = (function () {
         });
         return exaltations;
     };
+    Reading.prototype.getFalls = function () {
+        var _this = this;
+        var placements = [];
+        var houseNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+        houseNumbers.forEach(function (houseNumber) {
+            var tetragram = _this.getTetragramForHouse(houseNumber);
+            if (tetragram.fall.indexOf(houseNumber) >= 0) {
+                var house = new __WEBPACK_IMPORTED_MODULE_1__house__["a" /* House */](houseNumber);
+                placements.push({
+                    tetragram: tetragram,
+                    house: house,
+                    type: PlacementType.VeryWeak
+                });
+            }
+        });
+        return placements;
+    };
+    Reading.prototype.getDetriments = function () {
+        var _this = this;
+        var placements = [];
+        var houseNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+        houseNumbers.forEach(function (houseNumber) {
+            var tetragram = _this.getTetragramForHouse(houseNumber);
+            if (tetragram.detriment.indexOf(houseNumber) >= 0) {
+                var house = new __WEBPACK_IMPORTED_MODULE_1__house__["a" /* House */](houseNumber);
+                placements.push({
+                    tetragram: tetragram,
+                    house: house,
+                    type: PlacementType.Weakest
+                });
+            }
+        });
+        return placements;
+    };
+    Reading.prototype.getTriplicities = function () {
+        var _this = this;
+        var placements = [];
+        var houseNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+        houseNumbers.forEach(function (houseNumber) {
+            var tetragram = _this.getTetragramForHouse(houseNumber);
+            if (tetragram.triplicity.indexOf(houseNumber) >= 0) {
+                var house = new __WEBPACK_IMPORTED_MODULE_1__house__["a" /* House */](houseNumber);
+                placements.push({
+                    tetragram: tetragram,
+                    house: house,
+                    type: PlacementType.Strong
+                });
+            }
+        });
+        return placements;
+    };
     return Reading;
 }());
 
 var PlacementType;
 (function (PlacementType) {
     PlacementType[PlacementType["Warning"] = 0] = "Warning";
-    PlacementType[PlacementType["ExtremelyStrong"] = 1] = "ExtremelyStrong";
+    PlacementType[PlacementType["Strongest"] = 1] = "Strongest";
     PlacementType[PlacementType["VeryStrong"] = 2] = "VeryStrong";
     PlacementType[PlacementType["Strong"] = 3] = "Strong";
+    PlacementType[PlacementType["VeryWeak"] = 4] = "VeryWeak";
+    PlacementType[PlacementType["Weakest"] = 5] = "Weakest";
 })(PlacementType || (PlacementType = {}));
 //# sourceMappingURL=reading.js.map
 
@@ -906,7 +1008,7 @@ var ReadingOverviewPage = (function () {
         var color;
         if (placementType == __WEBPACK_IMPORTED_MODULE_2__models_reading__["a" /* PlacementType */].Warning)
             color = 'danger';
-        if (placementType == __WEBPACK_IMPORTED_MODULE_2__models_reading__["a" /* PlacementType */].ExtremelyStrong)
+        if (placementType == __WEBPACK_IMPORTED_MODULE_2__models_reading__["a" /* PlacementType */].Strongest)
             color = 'dark';
         if (placementType == __WEBPACK_IMPORTED_MODULE_2__models_reading__["a" /* PlacementType */].VeryStrong)
             color = 'dark';
@@ -915,12 +1017,26 @@ var ReadingOverviewPage = (function () {
     ReadingOverviewPage.prototype.getIcon = function (placementType) {
         var icon;
         var prefix = 'assets/image/';
-        if (placementType == __WEBPACK_IMPORTED_MODULE_2__models_reading__["a" /* PlacementType */].Warning)
-            icon = 'skull.png';
-        if (placementType == __WEBPACK_IMPORTED_MODULE_2__models_reading__["a" /* PlacementType */].ExtremelyStrong)
-            icon = 'battery4.png';
-        if (placementType == __WEBPACK_IMPORTED_MODULE_2__models_reading__["a" /* PlacementType */].VeryStrong)
-            icon = 'battery3.png';
+        switch (placementType) {
+            case __WEBPACK_IMPORTED_MODULE_2__models_reading__["a" /* PlacementType */].Warning:
+                icon = 'skull.png';
+                break;
+            case __WEBPACK_IMPORTED_MODULE_2__models_reading__["a" /* PlacementType */].Strongest:
+                icon = 'battery4.png';
+                break;
+            case __WEBPACK_IMPORTED_MODULE_2__models_reading__["a" /* PlacementType */].VeryStrong:
+                icon = 'battery3.png';
+                break;
+            case __WEBPACK_IMPORTED_MODULE_2__models_reading__["a" /* PlacementType */].Strong:
+                icon = 'battery2.png';
+                break;
+            case __WEBPACK_IMPORTED_MODULE_2__models_reading__["a" /* PlacementType */].VeryWeak:
+                icon = 'battery1.png';
+                break;
+            case __WEBPACK_IMPORTED_MODULE_2__models_reading__["a" /* PlacementType */].Weakest:
+                icon = 'battery1.png';
+                break;
+        }
         return prefix + icon;
     };
     return ReadingOverviewPage;

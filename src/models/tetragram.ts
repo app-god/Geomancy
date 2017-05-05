@@ -6,6 +6,9 @@ export class Tetragram {
   good: boolean
   rules: number[]
   exalted: number[]
+  fall: number[]
+  detriment: number[]
+  triplicity: number[]
   phrase: string
   houseMeanings: string[]
   planet: string
@@ -24,6 +27,9 @@ export class Tetragram {
     this.good = info.good
     this.rules = info.rules
     this.exalted = info.exalted
+    this.fall = info.fall
+    this.detriment = info.detriment
+    this.triplicity = info.triplicity
     this.phrase = info.phrase
     this.houseMeanings = info.houseMeanings
     this.planet = info.planet
@@ -71,10 +77,10 @@ export interface TetragramInfo {
   good: boolean
   dots: number
   exalted: number[]
-  // fall: number[]
-  // detriment: number[]
+  fall: number[]
+  detriment: number[]
   sign: string
-  // triplicity: number[]
+  triplicity: number[]
 }
 
 export const tetragramInfo: TetragramInfo[] = [
@@ -83,8 +89,11 @@ export const tetragramInfo: TetragramInfo[] = [
     name: 'Via',
     desc: 'Injurious to the goodness of other figures generally, but good for journeys and voyages.',
     planet: 'Moon',
-    rules: [1, 8],
+    rules: [4],
     exalted: [2],
+    fall: [8],
+    detriment: [10],
+    triplicity: [12],
     dots: 4,
     sign: 'Cancer',
     good: false,
@@ -111,6 +120,9 @@ export const tetragramInfo: TetragramInfo[] = [
     planet: 'Venus',
     rules: [2, 7, 9, 12],
     exalted: [12, 4],
+    fall: [6, 10],
+    detriment: [1, 8, 3, 6],
+    triplicity: [],
     dots: 5,
     sign: 'Sagittarius',
     good: true,
@@ -137,6 +149,9 @@ export const tetragramInfo: TetragramInfo[] = [
     planet: 'Venus',
     rules: [2, 7],
     exalted: [12],
+    fall: [6],
+    detriment: [1, 8],
+    triplicity: [3, 11],
     dots: 5,
     sign: 'Libra',
     good: true,
@@ -163,6 +178,9 @@ export const tetragramInfo: TetragramInfo[] = [
     planet: 'Sun',
     rules: [5],
     exalted: [1],
+    fall: [7],
+    detriment: [11],
+    triplicity: [1, 9],
     dots: 6,
     sign: 'Leo',
     good: true,
@@ -189,6 +207,9 @@ export const tetragramInfo: TetragramInfo[] = [
     planet: 'Mars',
     rules: [1, 8],
     exalted: [10],
+    fall: [4],
+    detriment: [2, 7],
+    triplicity: [5, 9],
     dots: 5,
     sign: 'Aries',
     good: false,
@@ -215,6 +236,9 @@ export const tetragramInfo: TetragramInfo[] = [
     planet: 'Jupiter',
     rules: [9, 12],
     exalted: [4],
+    fall: [10],
+    detriment: [3, 6],
+    triplicity: [1, 5],
     dots: 6,
     sign: 'Sagittarius',
     good: true,
@@ -241,6 +265,9 @@ export const tetragramInfo: TetragramInfo[] = [
     planet: 'Saturn',
     rules: [10, 11],
     exalted: [7],
+    fall: [1],
+    detriment: [4, 5],
+    triplicity: [2, 6],
     dots: 6,
     sign: "Capricorn",
     good: false,
@@ -267,6 +294,9 @@ export const tetragramInfo: TetragramInfo[] = [
     planet: 'Saturn',
     rules: [10, 11],
     exalted: [7],
+    fall: [1],
+    detriment: [4, 5],
+    triplicity: [3, 7],
     dots: 7,
     sign: 'Aquarius',
     good: false,
@@ -293,6 +323,9 @@ export const tetragramInfo: TetragramInfo[] = [
     planet: 'Mars',
     rules: [8, 10, 11],
     exalted: [10, 7],
+    fall: [4, 1],
+    detriment: [2, 7, 4, 5],
+    triplicity: [],
     dots: 5,
     sign: 'Virgo',
     good: false,
@@ -319,6 +352,9 @@ export const tetragramInfo: TetragramInfo[] = [
     planet: 'Mercury',
     rules: [3, 6],
     exalted: [11],
+    fall: [5],
+    detriment: [9, 12],
+    triplicity: [2, 10],
     dots: 6,
     sign: 'Virgo',
     good: true,
@@ -345,6 +381,9 @@ export const tetragramInfo: TetragramInfo[] = [
     planet: 'Venus',
     rules: [2, 7],
     exalted: [12],
+    fall: [6],
+    detriment: [1, 8],
+    triplicity: [10],
     dots: 6,
     sign: 'Taurus',
     good: false,
@@ -371,6 +410,9 @@ export const tetragramInfo: TetragramInfo[] = [
     planet: 'Mercury',
     rules: [3, 6],
     exalted: [11],
+    fall: [5],
+    detriment: [9, 12],
+    triplicity: [7, 11],
     dots: 7,
     sign: 'Gemini',
     good: true,
@@ -397,6 +439,9 @@ export const tetragramInfo: TetragramInfo[] = [
     planet: 'Sun',
     rules: [5],
     exalted: [1],
+    fall: [7],
+    detriment: [11],
+    triplicity: [1, 9],
     dots: 6,
     sign: 'Leo',
     good: true,
@@ -423,6 +468,9 @@ export const tetragramInfo: TetragramInfo[] = [
     planet: 'Mars',
     rules: [1, 8],
     exalted: [10],
+    fall: [4],
+    detriment: [2, 7],
+    triplicity: [12],
     dots: 7,
     sign: 'Scorpio',
     good: false,
@@ -449,6 +497,9 @@ export const tetragramInfo: TetragramInfo[] = [
     planet: 'Jupiter',
     rules: [9, 12],
     exalted: [4],
+    fall: [10],
+    detriment: [3, 6],
+    triplicity: [4, 8],
     dots: 7,
     sign: 'Pisces',
     good: true,
@@ -475,6 +526,9 @@ export const tetragramInfo: TetragramInfo[] = [
     planet: 'Moon',
     rules: [4],
     exalted: [2],
+    fall: [8],
+    detriment: [10],
+    triplicity: [12],
     dots: 8,
     sign: 'Cancer',
     good: true,

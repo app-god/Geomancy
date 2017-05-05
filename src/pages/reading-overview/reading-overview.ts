@@ -28,7 +28,7 @@ export class ReadingOverviewPage {
     let color: string
     if (placementType == PlacementType.Warning)
       color = 'danger'
-    if (placementType == PlacementType.ExtremelyStrong)
+    if (placementType == PlacementType.Strongest)
       color = 'dark'
     if (placementType == PlacementType.VeryStrong)
       color = 'dark'
@@ -38,12 +38,26 @@ export class ReadingOverviewPage {
   getIcon(placementType: PlacementType) {
     let icon: string
     let prefix = 'assets/image/'
-    if (placementType == PlacementType.Warning)
-      icon = 'skull.png'
-    if (placementType == PlacementType.ExtremelyStrong)
-      icon = 'battery4.png'
-    if (placementType == PlacementType.VeryStrong)
-      icon = 'battery3.png'
+    switch (placementType) {
+      case PlacementType.Warning:
+        icon = 'skull.png'
+        break
+      case PlacementType.Strongest:
+        icon = 'battery4.png'
+        break
+      case PlacementType.VeryStrong:
+        icon = 'battery3.png'
+        break
+      case PlacementType.Strong:
+        icon = 'battery2.png'
+        break
+      case PlacementType.VeryWeak:
+        icon = 'battery1.png'
+        break
+      case PlacementType.Weakest:
+        icon = 'battery1.png'
+        break
+    }
     return prefix + icon
   }
 }
