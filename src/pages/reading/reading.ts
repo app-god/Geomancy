@@ -26,9 +26,8 @@ export class ReadingPage {
       }
   }
 
-  ionViewDidLoad() {
+  ionViewDidEnter() {
     if (this.navCtrl.length() == 1) {
-      this.navCtrl.push('NewPage')
       this.navCtrl.setRoot('NewPage')
     }
   }
@@ -42,12 +41,6 @@ export class ReadingPage {
           text: 'Save Reading',
           handler: () => {
             this.saveReading()
-          }
-        },
-        {
-          text: 'Show Help',
-          handler: () => {
-            this.navCtrl.push('HelpPage', { topic: 'reading' })
           }
         },
         {

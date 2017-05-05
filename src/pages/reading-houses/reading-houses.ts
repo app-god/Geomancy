@@ -31,7 +31,6 @@ export class ReadingHousesPage {
 
   ionViewWillEnter() {
     this.parent.title = 'Houses'
-    this.parent.helpTopic = 'reading houses'
   }
 
 }

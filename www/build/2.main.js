@@ -922,9 +922,8 @@ var ReadingPage = (function () {
             parent: this
         };
     }
-    ReadingPage.prototype.ionViewDidLoad = function () {
+    ReadingPage.prototype.ionViewDidEnter = function () {
         if (this.navCtrl.length() == 1) {
-            this.navCtrl.push('NewPage');
             this.navCtrl.setRoot('NewPage');
         }
     };
@@ -937,12 +936,6 @@ var ReadingPage = (function () {
                     text: 'Save Reading',
                     handler: function () {
                         _this.saveReading();
-                    }
-                },
-                {
-                    text: 'Show Help',
-                    handler: function () {
-                        _this.navCtrl.push('HelpPage', { topic: 'reading' });
                     }
                 },
                 {

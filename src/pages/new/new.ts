@@ -146,12 +146,6 @@ export class NewPage {
           }
         },
         {
-          text: 'Show Help',
-          handler: () => {
-            this.navCtrl.push('HelpPage', { topic: 'new reading' })
-          }
-        },
-        {
           text: 'Cancel',
           role: 'cancel'
         }

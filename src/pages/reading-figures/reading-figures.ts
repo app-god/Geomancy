@@ -23,7 +23,6 @@ export class ReadingFiguresPage {
 
   ionViewWillEnter() {
     this.parent.title = 'Figures'
-    this.parent.helpTopic = 'reading figures'
   }
 
 }

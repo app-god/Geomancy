@@ -13,43 +13,6 @@
             <tetragram [tetragram]="house.tetragram"></tetragram>
           </ion-col>
           <ion-col col-10>
-            <ion-chip
-              color="secondary"
-              *ngIf="house.topics.indexOf(reading.topic) >= 0"
-              style="clear: right; float: right">
-              <ion-label>
-                Topic
-              </ion-label>
-            </ion-chip>
-            <ion-chip
-              color="secondary"
-              *ngIf="i == reading.partOfFortune"
-              style="clear: right; float: right">
-              <ion-label>
-                Part of Fortune
-              </ion-label>
-            </ion-chip>
-            <ion-chip *ngIf="house.tetragram.key == reading.judge.key"
-              style="clear: right; float: right;"
-              color="secondary">
-              <ion-label>
-                Judge
-              </ion-label>
-            </ion-chip>
-            <ion-chip *ngIf="house.exaltation == house.tetragram.planet"
-              style="clear: right; float: right;"
-              color="secondary">
-              <ion-label>
-                ★★
-              </ion-label>
-            </ion-chip>
-            <ion-chip *ngIf="house.ruler == house.tetragram.planet"
-              style="clear: right; float: right;"
-              color="secondary">
-              <ion-label>
-                ★★★
-              </ion-label>
-            </ion-chip>
             <div class="house-title">House {{i + 1}}</div>
             <div class="house-topics">{{house.topics.join(', ')}}</div>
             <div>{{house.tetragram.houseMeanings[i]}}</div>

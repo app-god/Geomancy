@@ -999,7 +999,6 @@ var ReadingOverviewPage = (function () {
         this.parent = navParams.get('parent');
         this.reading = this.parent.reading;
         this.placements = this.reading.getPlacements();
-        console.log(this.reading.getPlacements());
     }
     ReadingOverviewPage.prototype.ionViewWillEnter = function () {
         this.parent.title = 'Overview';
@@ -1034,7 +1033,7 @@ var ReadingOverviewPage = (function () {
                 icon = 'battery1.png';
                 break;
             case __WEBPACK_IMPORTED_MODULE_2__models_reading__["a" /* PlacementType */].Weakest:
-                icon = 'battery1.png';
+                icon = 'battery0.png';
                 break;
         }
         return prefix + icon;

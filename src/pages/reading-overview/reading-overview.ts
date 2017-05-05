@@ -17,7 +17,6 @@ export class ReadingOverviewPage {
     this.parent = navParams.get('parent')
     this.reading = this.parent.reading
     this.placements = this.reading.getPlacements()
-    console.log(this.reading.getPlacements())
   }
 
   ionViewWillEnter() {
@@ -55,7 +54,7 @@ export class ReadingOverviewPage {
         icon = 'battery1.png'
         break
       case PlacementType.Weakest:
-        icon = 'battery1.png'
+        icon = 'battery0.png'
         break
     }
     return prefix + icon
