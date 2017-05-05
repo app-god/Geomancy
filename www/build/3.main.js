@@ -1,2 +1,705 @@
-webpackJsonp([3],{327:function(e,n,t){"use strict";Object.defineProperty(n,"__esModule",{value:!0});var l=t(0),o=t(370),i=t(7),a=t(12),r=t(20),s=t(25),u=t(22),d=t(72),h=t(73),c=t(52),_=t(74),g=t(75),p=t(50),f=t(76),m=t(77),y=t(78),v=t(79),w=t(80),M=t(81),b=t(82),k=t(83),G=t(84),x=t(36),E=t(85),S=t(86),C=t(51),I=t(87),V=t(88),F=t(89),P=t(90),R=t(91),T=t(92),L=t(93),O=t(94),H=t(95),A=t(96),D=t(97),B=t(98),W=t(99),N=t(100),j=t(101),q=t(102),$=t(103),z=t(104),J=t(105),K=t(106),U=t(107),Y=t(108),Z=t(109),Q=t(110),X=t(111),ee=t(112),ne=t(113),te=t(71),le=t(335),oe=t(245),ie=t(246),ae=t(247),re=t(248),se=t(249),ue=t(250),de=t(251),he=t(252),ce=t(371),_e=t(347),ge=t(37);t.d(n,"ReadingOverviewPageModuleNgFactory",function(){return me});var pe=this&&this.__extends||function(){var e=Object.setPrototypeOf||{__proto__:[]}instanceof Array&&function(e,n){e.__proto__=n}||function(e,n){for(var t in n)n.hasOwnProperty(t)&&(e[t]=n[t])};return function(n,t){function l(){this.constructor=n}e(n,t),n.prototype=null===t?Object.create(t):(l.prototype=t.prototype,new l)}}(),fe=function(e){function n(n){return e.call(this,n,[oe.a,ie.a,ae.a,re.a,se.a,ue.a,de.a,he.a,ce.a],[])||this}return pe(n,e),Object.defineProperty(n.prototype,"_NgLocalization_57",{get:function(){return null==this.__NgLocalization_57&&(this.__NgLocalization_57=new i.a(this.parent.get(l.c))),this.__NgLocalization_57},enumerable:!0,configurable:!0}),Object.defineProperty(n.prototype,"_ɵi_58",{get:function(){return null==this.__ɵi_58&&(this.__ɵi_58=new a.a),this.__ɵi_58},enumerable:!0,configurable:!0}),Object.defineProperty(n.prototype,"_FormBuilder_59",{get:function(){return null==this.__FormBuilder_59&&(this.__FormBuilder_59=new a.b),this.__FormBuilder_59},enumerable:!0,configurable:!0}),n.prototype.createInternal=function(){return this._CommonModule_0=new i.d,this._ɵba_1=new a.c,this._FormsModule_2=new a.d,this._ReactiveFormsModule_3=new a.e,this._BackdropModule_4=new r.a,this._ButtonModule_5=new s.a,this._IconModule_6=new u.a,this._ActionSheetModule_7=new d.a,this._AlertModule_8=new h.a,this._NavModule_9=new c.a,this._AppModule_10=new _.a,this._AvatarModule_11=new g.a,this._BadgeModule_12=new p.a,this._CardModule_13=new f.a,this._CheckboxModule_14=new m.a,this._ChipModule_15=new y.a,this._ClickBlockModule_16=new v.a,this._ContentModule_17=new w.a,this._DateTimeModule_18=new M.a,this._FabModule_19=new b.a,this._GridModule_20=new k.a,this._ImgModule_21=new G.a,this._SpinnerModule_22=new x.a,this._InfiniteScrollModule_23=new E.a,this._InputModule_24=new S.a,this._LabelModule_25=new C.a,this._ItemModule_26=new I.a,this._ListModule_27=new V.a,this._LoadingModule_28=new F.a,this._MenuModule_29=new P.a,this._ModalModule_30=new R.a,this._NavbarModule_31=new T.a,this._NoteModule_32=new L.a,this._OptionModule_33=new O.a,this._PickerModule_34=new H.a,this._PopoverModule_35=new A.a,this._RadioModule_36=new D.a,this._RangeModule_37=new B.a,this._RefresherModule_38=new W.a,this._ScrollModule_39=new N.a,this._SearchbarModule_40=new j.a,this._SegmentModule_41=new q.a,this._SelectModule_42=new $.a,this._ShowHideWhenModule_43=new z.a,this._SlidesModule_44=new J.a,this._SplitPaneModule_45=new K.a,this._TabsModule_46=new U.a,this._ThumbnailModule_47=new Y.a,this._ToastModule_48=new Z.a,this._ToggleModule_49=new Q.a,this._ToolbarModule_50=new X.a,this._TypographyModule_51=new ee.a,this._VirtualScrollModule_52=new ne.a,this._IonicModule_53=new te.b,this._IonicPageModule_54=new te.c,this._TetragramComponentModule_55=new le.a,this._ReadingOverviewPageModule_56=new o.a,this._LAZY_LOADED_TOKEN_60=_e.a,this._ReadingOverviewPageModule_56},n.prototype.getInternal=function(e,n){return e===i.d?this._CommonModule_0:e===a.c?this._ɵba_1:e===a.d?this._FormsModule_2:e===a.e?this._ReactiveFormsModule_3:e===r.a?this._BackdropModule_4:e===s.a?this._ButtonModule_5:e===u.a?this._IconModule_6:e===d.a?this._ActionSheetModule_7:e===h.a?this._AlertModule_8:e===c.a?this._NavModule_9:e===_.a?this._AppModule_10:e===g.a?this._AvatarModule_11:e===p.a?this._BadgeModule_12:e===f.a?this._CardModule_13:e===m.a?this._CheckboxModule_14:e===y.a?this._ChipModule_15:e===v.a?this._ClickBlockModule_16:e===w.a?this._ContentModule_17:e===M.a?this._DateTimeModule_18:e===b.a?this._FabModule_19:e===k.a?this._GridModule_20:e===G.a?this._ImgModule_21:e===x.a?this._SpinnerModule_22:e===E.a?this._InfiniteScrollModule_23:e===S.a?this._InputModule_24:e===C.a?this._LabelModule_25:e===I.a?this._ItemModule_26:e===V.a?this._ListModule_27:e===F.a?this._LoadingModule_28:e===P.a?this._MenuModule_29:e===R.a?this._ModalModule_30:e===T.a?this._NavbarModule_31:e===L.a?this._NoteModule_32:e===O.a?this._OptionModule_33:e===H.a?this._PickerModule_34:e===A.a?this._PopoverModule_35:e===D.a?this._RadioModule_36:e===B.a?this._RangeModule_37:e===W.a?this._RefresherModule_38:e===N.a?this._ScrollModule_39:e===j.a?this._SearchbarModule_40:e===q.a?this._SegmentModule_41:e===$.a?this._SelectModule_42:e===z.a?this._ShowHideWhenModule_43:e===J.a?this._SlidesModule_44:e===K.a?this._SplitPaneModule_45:e===U.a?this._TabsModule_46:e===Y.a?this._ThumbnailModule_47:e===Z.a?this._ToastModule_48:e===Q.a?this._ToggleModule_49:e===X.a?this._ToolbarModule_50:e===ee.a?this._TypographyModule_51:e===ne.a?this._VirtualScrollModule_52:e===te.b?this._IonicModule_53:e===te.c?this._IonicPageModule_54:e===le.a?this._TetragramComponentModule_55:e===o.a?this._ReadingOverviewPageModule_56:e===i.e?this._NgLocalization_57:e===a.a?this._ɵi_58:e===a.b?this._FormBuilder_59:e===ge.d?this._LAZY_LOADED_TOKEN_60:n},n.prototype.destroyInternal=function(){},n}(l.x),me=new l.y(fe,o.a)},331:function(e,n,t){"use strict";function l(e){return i._14(0,[(e()(),i._15(0,null,null,1,"div",[["class","toolbar-background"]],null,null,null,null,null)),i._16(139264,null,0,a.l,[i.t,i.u,i.H,i.I],{klass:[0,"klass"],ngClass:[1,"ngClass"]},null),(e()(),i._15(0,null,null,8,"button",[["class","back-button"],["ion-button","bar-button"]],[[8,"hidden",0]],[[null,"click"]],function(e,n,t){var l=!0,o=e.component;if("click"===n){l=!1!==o.backButtonClick(t)&&l}return l},s.a,s.b)),i._16(548864,null,0,u.a,[[8,"bar-button"],d.c,i.H,i.I],null,null),i._16(139264,null,0,a.l,[i.t,i.u,i.H,i.I],{klass:[0,"klass"],ngClass:[1,"ngClass"]},null),(e()(),i._15(0,null,0,2,"ion-icon",[["class","back-button-icon"],["role","img"]],[[2,"hide",null]],null,null,null,null)),i._16(139264,null,0,a.l,[i.t,i.u,i.H,i.I],{klass:[0,"klass"],ngClass:[1,"ngClass"]},null),i._16(73728,null,0,h.a,[d.c,i.H,i.I],{name:[0,"name"]},null),(e()(),i._15(0,null,0,2,"span",[["class","back-button-text"]],null,null,null,null,null)),i._16(139264,null,0,a.l,[i.t,i.u,i.H,i.I],{klass:[0,"klass"],ngClass:[1,"ngClass"]},null),(e()(),i._18(null,["",""])),i._22(null,0),i._22(null,1),i._22(null,2),(e()(),i._15(0,null,null,2,"div",[["class","toolbar-content"]],null,null,null,null,null)),i._16(139264,null,0,a.l,[i.t,i.u,i.H,i.I],{klass:[0,"klass"],ngClass:[1,"ngClass"]},null),i._22(null,3)],function(e,n){var t=n.component;e(n,1,0,"toolbar-background","toolbar-background-"+t._mode);e(n,4,0,"back-button","back-button-"+t._mode);e(n,6,0,"back-button-icon","back-button-icon-"+t._mode),e(n,7,0,t._bbIcon);e(n,9,0,"back-button-text","back-button-text-"+t._mode);e(n,15,0,"toolbar-content","toolbar-content-"+t._mode)},function(e,n){var t=n.component;e(n,2,0,t._hideBb),e(n,5,0,i._20(n,7)._hidden),e(n,10,0,t._backText)})}function o(e){return i._14(0,[(e()(),i._15(0,null,null,1,"ion-navbar",[["class","toolbar"]],[[8,"hidden",0],[2,"statusbar-padding",null]],null,null,l,f)),i._16(24576,null,0,r.a,[c.a,[2,_.a],[2,g.a],d.c,i.H,i.I],null,null)],null,function(e,n){e(n,0,0,i._20(n,1)._hidden,i._20(n,1)._sbPadding)})}var i=t(0),a=t(7),r=t(41),s=t(48),u=t(21),d=t(1),h=t(47),c=t(8),_=t(5),g=t(16);t.d(n,"b",function(){return f}),n.a=l;var p=[],f=i._13({encapsulation:2,styles:p,data:{}});i._21("ion-navbar",r.a,o,{color:"color",mode:"mode",hideBackButton:"hideBackButton"},{},["[menuToggle],ion-buttons[left]","ion-buttons[start]","ion-buttons[end],ion-buttons[right]","*"])},332:function(e,n,t){"use strict";t.d(n,"a",function(){return l}),t.d(n,"b",function(){return o});var l=function(){function e(e){void 0===e&&(e=Math.floor(15*Math.random())),this.key=e;var n=o[e];this.name=n.name,this.desc=n.desc,this.good=n.good,this.rules=n.rules,this.exalted=n.exalted,this.fall=n.fall,this.detriment=n.detriment,this.triplicity=n.triplicity,this.phrase=n.phrase,this.houseMeanings=n.houseMeanings,this.planet=n.planet,this.dots=n.dots,this.sign=n.sign,this.row0=(e>>0)%2,this.row1=(e>>1)%2,this.row2=(e>>2)%2,this.row3=(e>>3)%2}return e.prototype.add=function(n){var t=(this.row0+n.row0+1)%2,l=(this.row1+n.row1+1)%2,o=(this.row2+n.row2+1)%2;return new e(((this.row3+n.row3+1)%2<<3)+(o<<2)+(l<<1)+(t<<0))},e.prototype.getHouseMeaning=function(e){return this.houseMeanings[e-1]},e.generateKey=function(e,n,t,l){return(e?e%2*1:0)+(n?n%2*2:0)+(t?t%2*4:0)+(l?l%2*8:0)},e}(),o=[{key:0,name:"Via",translation:"Way",desc:"Injurious to the goodness of other figures generally, but good for journeys and voyages.",planet:"Moon",rules:[4],exalted:[2],fall:[8],detriment:[10],triplicity:[12],dots:4,sign:"Cancer",good:!1,phrase:"Clearing a path",houseMeanings:["Evil except for prison.","Indifferent.","Very good in all.","Good in all save love.","Voyages good.","Evil.","Rather good, especially for voyages.","Evil.","Indifferent. Good for journeys.","Good.","Very good.","Excellent"]},{key:1,name:"Caput Draconis",translation:"Dragon's Head",desc:"Good with good, evil with evil. Gives good issue for gain.",planet:"Venus",rules:[2,7,9,12],exalted:[12,4],fall:[6,10],detriment:[1,8,3,6],triplicity:[],dots:5,sign:"Sagittarius",good:!0,phrase:"A new beginning",houseMeanings:["Good in all things","Good.","Very good.","Good save in war.","Very good.","Good for immorality only.","Good especially for peace.","Good.","Very good.","Good in all.","Good for the church and ecclesiastical gain.","Not very good."]},{key:2,name:"Puella",translation:"Maid",desc:"Good in all demands, especially in those things relating to women.",planet:"Venus",rules:[2,7],exalted:[12],fall:[6],detriment:[1,8],triplicity:[3,11],dots:5,sign:"Libra",good:!0,phrase:"Beautification",houseMeanings:["Good except in war.","Very good.","Good.","Indifferent.","Very good, but notice the aspects.","Good, but especially for debauchery.","Good except for war.","Good.","Good for music. Otherwise only medium.","Good for peace.","Good, and love of ladies.","Good in all."]},{key:3,name:"Fortuna Major",translation:"Greater Fortune",desc:"Good for gain in all things where a person has hopes to win.",planet:"Sun",rules:[5],exalted:[1],fall:[7],detriment:[11],triplicity:[1,9],dots:6,sign:"Leo",good:!0,phrase:"Success",houseMeanings:["Good save in secrecy.","Good except in sad things.","Good in all.","Good in all, but melancholy.","Very good in all things.","Very good except for debauchery.","Good in all.","Moderately good.","Very good.","Exceedingly good. Go to superiors.","Very good.","Good in all."]},{key:4,name:"Puer",translation:"Child",desc:"Evil in most demands, except in those things relating to war or love.",planet:"Mars",rules:[1,8],exalted:[10],fall:[4],detriment:[2,7],triplicity:[5,9],dots:5,sign:"Aries",good:!1,phrase:"Command",houseMeanings:["Indifferent. Best in war.","Good, but with trouble.","Good fortune.","Evil, except in war and love.","Medium good.","Medium.","Evil, save in war.","Evil, save for love.","Evil except for war.","Rather evil. But good for love and war. Most other things medium.","Medium; good favor.","Very good in all."]},{key:5,name:"Acquisitio",translation:"Gain",desc:"Generally good for profit and gain.",planet:"Jupiter",rules:[9,12],exalted:[4],fall:[10],detriment:[3,6],triplicity:[1,5],dots:6,sign:"Sagittarius",good:!0,phrase:"Acquisition",houseMeanings:["Happy, success in all things.","Very prosperous.","Favor and riches.","Good fortune and success.","Good success.","Good–especially if it agrees with the fifth.","Reasonably good.","Rather good, but not very. The sick shall die.","Good in all demands.","Good in suits.","Good in all.","Evil, pain and loss."]},{key:6,name:"Carcer",translation:"Prison",desc:"Generally evil. Delay, binding, bar, restriction.",planet:"Saturn",rules:[10,11],exalted:[7],fall:[1],detriment:[4,5],triplicity:[2,6],dots:6,sign:"Capricorn",good:!1,phrase:"Limitation",houseMeanings:["Evil except to fortify a place.","Good in Saturnine questions; else evil.","Evil.","Good only for melancholy.","Receive a letter within three days. Evil.","Very evil.","Evil.","Very evil.","Evil in all.","Evil save in hidden treasure.","Much anxiety.","Rather good."]},{key:7,name:"Tristitia",translation:"Sorrow",desc:"Evil in almost all things.",planet:"Saturn",rules:[10,11],exalted:[7],fall:[1],detriment:[4,5],triplicity:[3,7],dots:7,sign:"Aquarius",good:!1,phrase:"Melancholy",houseMeanings:["Medium, but good for treasure and fortifying.","Medium, but good to fortify.","Evil in all.","Evil in all.","Very evil.","Evil, except for debauchery.","Evil for inheritance and magic only.","Evil, but in secrecy good.","Evil except for magic.","Evil except for fortifications.","Evil in all.","Evil, but good for magic and treasure."]},{key:8,name:"Cauda Draconis",translation:"Dragon's Tail",desc:"Good with evil, and evil with good. Good for loss, and for passing out of an affair.",planet:"Mars",rules:[8,10,11],exalted:[10,7],fall:[4,1],detriment:[2,7,4,5],triplicity:[],dots:5,sign:"Virgo",good:!1,phrase:"An end",houseMeanings:["Destroy figure if it falls here! Makes judgment worthless.","Very evil.","Evil in all.","Good especially for conclusion of the matter.","Very evil.","Rather good.","Evil, war, and fire.","No good, except for magic.","Good for science only. Bad for journeys. Robbery.","Evil save in works of fire.","Evil save for favors.","Rather good."]},{key:9,name:"Conjunctio",translation:"Conjunction",desc:"Good with good, or evil with evil. Recovery from things lost.",planet:"Mercury",rules:[3,6],exalted:[11],fall:[5],detriment:[9,12],triplicity:[2,10],dots:6,sign:"Virgo",good:!0,phrase:"Reconciliation",houseMeanings:["Good with good, evil with evil.","Commonly good.","Good fortune.","Good save for health; see the eighth.","Medium","Good for immorality only.","Rather good.","Evil, death.","Medium good.","For love, good. For sickness, evil.","Good in all.","Medium. Bad for prisoners."]},{key:10,name:"Amissio",translation:"Loss",desc:"Good for loss of substance and sometimes for love, but very bad for gain.",planet:"Venus",rules:[2,7],exalted:[12],fall:[6],detriment:[1,8],triplicity:[10],dots:6,sign:"Taurus",good:!1,phrase:"Sacrifice",houseMeanings:["Ill in all things but for prisoners.","Very ill for money, but good for love.","Ill end–except for quarrels.","Ill in all.","Evil except for agriculture.","Rather evil for love.","Very good for love, otherwise evil.","Excellent in all questions.","Evil in all things.","Evil except for favor with women.","Good for love, otherwise bad.","Evil in all things."]},{key:11,name:"Albus",translation:"White",desc:"Good for profit and for entering into a place or undertaking.",planet:"Mercury",rules:[3,6],exalted:[11],fall:[5],detriment:[9,12],triplicity:[7,11],dots:7,sign:"Gemini",good:!0,phrase:"Learning",houseMeanings:["Good for marriage. Mercurial. Peace.","Good in all.","Very good.","Very good except in war.","Good.","Good in all things.","Good except in all things.","Good.","A messenger brings a letter.","Excellent in all.","Very good.","Marvelously good."]},{key:12,name:"Fortuna Minor",translation:"Lesser Fortune",desc:"Good in any manner in which a person wishes to proceed quickly.",planet:"Sun",rules:[5],exalted:[1],fall:[7],detriment:[11],triplicity:[1,9],dots:6,sign:"Leo",good:!0,phrase:"Improvement",houseMeanings:["Speed in victory and in love, but choleric.","Very good.","Good–but wrathful.","Haste; rather evil except for peace.","Good in all things.","Medium in all.","Evil except for war or love.","Evil generally.","Good, but choleric.","Good, except for peace.","Good, especially for love.","Good, except for alternation, or for serving another."]},{key:13,name:"Rubeus",translation:"Red",desc:"Evil in all that is good and good in all that is evil.",planet:"Mars",rules:[1,8],exalted:[10],fall:[4],detriment:[2,7],triplicity:[12],dots:7,sign:"Scorpio",good:!1,phrase:"Destruction",houseMeanings:["Destroy the figure if it falls here! It makes the judgement worthless.","Evil in all demands.","Evil except to let blood.","Evil except in war and Fire.","Evil save for love, and sowing seed.","Evil except for bloodletting.","Evil except for war and fire.","Evil.","Very evil.","Dissolute. Love, fire.","Evil, except to let blood.","Evil in all things."]},{key:14,name:"Laetitia",translation:"Joy",desc:"Good for joy, present or to come.",planet:"Jupiter",rules:[9,12],exalted:[4],fall:[10],detriment:[3,6],triplicity:[4,8],dots:7,sign:"Pisces",good:!0,phrase:"Happiness",houseMeanings:["Good, except in war.","Sickly.","Ill.","Mainly good.","Excellently good.","Evil generally.","Indifferent.","Evil generally.","Very good.","Good, rather in war than in peace.","Good in all.","Evil generally."]},{key:15,name:"Populus",translation:"People",desc:"Sometimes good and sometimes bad; good with good, and evil with evil.",planet:"Moon",rules:[4],exalted:[2],fall:[8],detriment:[10],triplicity:[12],dots:8,sign:"Cancer",good:!0,phrase:"Consensus",houseMeanings:["Good in marriages.","Medium good.","Rather good than bad.","Good in all but love.","Good in most things.","Good.","In war good; else medium.","Evil.","Look for letters.","Good.","Good in all.","Very evil."]}]},333:function(e,n,t){"use strict";function l(e){return i._14(2,[i._17(201326592,1,{_fixedContent:0}),i._17(201326592,2,{_scrollContent:0}),(e()(),i._15(0,[[1,0],["fixedContent",1]],null,1,"div",[["class","fixed-content"]],null,null,null,null,null)),i._22(null,0),(e()(),i._15(0,[[2,0],["scrollContent",1]],null,1,"div",[["class","scroll-content"]],null,null,null,null,null)),i._22(null,1),i._22(null,2)],null,null)}function o(e){return i._14(0,[(e()(),i._15(0,null,null,1,"ion-content",[],[[2,"statusbar-padding",null]],null,null,l,p)),i._16(2187264,null,0,a.a,[r.c,s.b,u.a,i.H,i.I,d.a,h.a,i.g,[2,c.a],[2,_.a]],null,null)],null,function(e,n){e(n,0,0,i._20(n,1).statusbarPadding)})}var i=t(0),a=t(24),r=t(1),s=t(3),u=t(9),d=t(8),h=t(19),c=t(5),_=t(16);t.d(n,"b",function(){return p}),n.a=l;var g=[],p=i._13({encapsulation:2,styles:g,data:{}});i._21("ion-content",a.a,o,{color:"color",mode:"mode",fullscreen:"fullscreen",scrollDownOnLoad:"scrollDownOnLoad"},{ionScrollStart:"ionScrollStart",ionScroll:"ionScroll",ionScrollEnd:"ionScrollEnd"},["[ion-fixed],ion-fab","*","ion-refresher"])},334:function(e,n,t){"use strict";t(0),t(332);t.d(n,"a",function(){return l});var l=(this&&this.__decorate,this&&this.__metadata,function(){function e(){}return e.prototype.renderRow=function(e){return 0==e?"●":1==e?"●    ●":void 0},e}())},335:function(e,n,t){"use strict";t(0),t(334);t.d(n,"a",function(){return l});var l=(this&&this.__decorate,function(){function e(){}return e}())},337:function(e,n,t){"use strict";t.d(n,"a",function(){return l});var l=function(){function e(e){this.number=e;var n=o[e-1];this.topics=n.topics,this.phrase=n.phrase}return e}(),o=[{number:1,phrase:"your self",topics:["Self","Life","Health"]},{number:2,phrase:"wealth",topics:["Money","Property","Personal Worth"]},{number:3,phrase:"friendships",topics:["Brother","Sister","News","Short Journeys"]},{number:4,phrase:"family",topics:["Father","Inheritence","Conclusion"]},{number:5,phrase:"creativity",topics:["Children","Pleasure","Feasts","Speculation"]},{number:6,phrase:"daily work",topics:["Servants","Sickness","Uncles","Aunts","Animals"]},{number:7,phrase:"love",topics:["Love","Marriage","Husband","Wife","Partnerships","Public Enemies","Lawsuits"]},{number:8,phrase:"transformation",topics:["Deaths","Wills","Legacies","Pain","Anxiety"]},{number:9,phrase:"philosophy",topics:["Long journeys","Voyages","Science","Religion","Art","Visions","Divinations"]},{number:10,phrase:"reputation",topics:["Mother","Rank","Honor","Profession","Authority","Employment"]},{number:11,phrase:"community",topics:["Friends","Hopes","Wishes"]},{number:12,phrase:"the unconscious",topics:["Sorrows","Fears","Punishments","Secret Enemies","Institutions","Unseen Dangers","Restriction"]}]},341:function(e,n,t){"use strict";var l=t(332),o=t(337);t.d(n,"b",function(){return a}),t.d(n,"a",function(){return i});var i,a=function(){function e(e,n,t){var i=this;e||(e={question:n||"None",topic:t||"None",date:Date.now(),key0:Math.floor(15*Math.random()),key1:Math.floor(15*Math.random()),key2:Math.floor(15*Math.random()),key3:Math.floor(15*Math.random())}),e.question&&""!=e.question?this.question=e.question:this.question="None",e.topic&&""!=e.topic?this.topic=e.topic:this.topic="None",this.readingData=e,this.house=[1,2,3,4,5,6,7,8,9,10,11,12].map(function(e){return new o.a(e)}).find(function(e){return e.topics.indexOf(i.topic)>=0}),this.date=e.date,this.mother0=new l.a(e.key0),this.mother1=new l.a(e.key1),this.mother2=new l.a(e.key2),this.mother3=new l.a(e.key3),this.mothers=[this.mother0,this.mother1,this.mother2,this.mother3],this.daughter0=this.createFromRows(this.mother0.row0,this.mother1.row0,this.mother2.row0,this.mother3.row0),this.daughter1=this.createFromRows(this.mother0.row1,this.mother1.row1,this.mother2.row1,this.mother3.row1),this.daughter2=this.createFromRows(this.mother0.row2,this.mother1.row2,this.mother2.row2,this.mother3.row2),this.daughter3=this.createFromRows(this.mother0.row3,this.mother1.row3,this.mother2.row3,this.mother3.row3),this.daughters=[this.daughter0,this.daughter1,this.daughter2,this.daughter3],this.nephew0=this.mother0.add(this.mother1),this.nephew1=this.mother2.add(this.mother3),this.nephew2=this.daughter0.add(this.daughter1),this.nephew3=this.daughter2.add(this.daughter3),this.nephews=[this.nephew0,this.nephew1,this.nephew2,this.nephew3],this.witness0=this.nephew0.add(this.nephew1),this.witness1=this.nephew2.add(this.nephew3),this.witnesses=[this.witness0,this.witness1],this.judge=this.witness0.add(this.witness1),this.reconciler=this.mother0.add(this.judge),this.partOfFortune=this.getPartOfFortune()}return e.prototype.createFromRows=function(e,n,t,o){var i=e%2,a=n%2,r=t%2,s=o%2,u=(s<<3)+(r<<2)+(a<<1)+(i<<0);return new l.a(u)},e.prototype.getTetragramForHouse=function(e){return[this.mother1,this.daughter1,this.nephew1,this.mother2,this.daughter2,this.nephew2,this.mother3,this.daughter3,this.nephew3,this.mother0,this.daughter0,this.nephew0][e-1]},e.prototype.getSignForHouse=function(e){var n=["Aries","Taurus","Gemini","Cancer","Leo","Virgo","Libra","Scorpio","Sagittarius","Capricorn","Aquarius","Pisces"],t=this.getTetragramForHouse(0).sign;return n[(n.indexOf(t)+e)%12]},e.prototype.getPartOfFortune=function(){var e=[this.mother0,this.mother1,this.mother2,this.mother3,this.daughter0,this.daughter1,this.daughter2,this.daughter3,this.nephew0,this.nephew1,this.nephew2,this.nephew3].map(function(e){return e.dots}).reduce(function(e,n){return e+n},0)%12;return 0==e&&(e=12),e},e.prototype.getReadingData=function(){return this.readingData},e.prototype.getPlacements=function(){var e=[].concat(this.getWarnings(),this.getRulerships(),this.getExaltations(),this.getTriplicities(),this.getFalls(),this.getDetriments()),n=[],t=[];return e.forEach(function(e){var l=e.tetragram.number+"-"+e.house.number;-1==t.indexOf(l)&&(t.push(l),n.push(e))}),n},e.prototype.getWarnings=function(){var e=[],n=this.getTetragramForHouse(1);if("Rubeus"==n.name||"Cauda Draconis"==n.name){n.name;["Rubeus","Cauda Draconis"].indexOf(n.name)>-1&&e.push({tetragram:n,house:new o.a(1),type:i.Warning})}return e},e.prototype.getRulerships=function(){var e=this,n=[];return[1,2,3,4,5,6,7,8,9,10,11,12].forEach(function(t){var l=e.getTetragramForHouse(t);if(l.rules.indexOf(t)>=0){var a=new o.a(t);n.push({tetragram:l,house:a,type:i.Strongest})}}),n},e.prototype.getExaltations=function(){var e=this,n=[];return[1,2,3,4,5,6,7,8,9,10,11,12].forEach(function(t){var l=e.getTetragramForHouse(t);if(l.exalted.indexOf(t)>=0){var a=new o.a(t);n.push({tetragram:l,house:a,type:i.VeryStrong})}}),n},e.prototype.getFalls=function(){var e=this,n=[];return[1,2,3,4,5,6,7,8,9,10,11,12].forEach(function(t){var l=e.getTetragramForHouse(t);if(l.fall.indexOf(t)>=0){var a=new o.a(t);n.push({tetragram:l,house:a,type:i.VeryWeak})}}),n},e.prototype.getDetriments=function(){var e=this,n=[];return[1,2,3,4,5,6,7,8,9,10,11,12].forEach(function(t){var l=e.getTetragramForHouse(t);if(l.detriment.indexOf(t)>=0){var a=new o.a(t);n.push({tetragram:l,house:a,type:i.Weakest})}}),n},e.prototype.getTriplicities=function(){var e=this,n=[];return[1,2,3,4,5,6,7,8,9,10,11,12].forEach(function(t){var l=e.getTetragramForHouse(t);if(l.triplicity.indexOf(t)>=0){var a=new o.a(t);n.push({tetragram:l,house:a,type:i.Strong})}}),n},e}();!function(e){e[e.Warning=0]="Warning",e[e.Strongest=1]="Strongest",e[e.VeryStrong=2]="VeryStrong",e[e.Strong=3]="Strong",e[e.VeryWeak=4]="VeryWeak",e[e.Weakest=5]="Weakest"}(i||(i={}))},347:function(e,n,t){"use strict";var l=(t(0),t(71),t(341));t.d(n,"a",function(){return o});var o=(this&&this.__decorate,this&&this.__metadata,function(){function e(e,n){this.navCtrl=e,this.navParams=n,this.placementType=l.a,this.parent=n.get("parent"),this.reading=this.parent.reading,this.placements=this.reading.getPlacements()}return e.prototype.ionViewWillEnter=function(){this.parent.title="Overview"},e.prototype.getColor=function(e){var n;return e==l.a.Warning&&(n="danger"),e==l.a.Strongest&&(n="dark"),e==l.a.VeryStrong&&(n="dark"),n},e.prototype.getIcon=function(e){var n;switch(e){case l.a.Warning:n="skull.png";break;case l.a.Strongest:n="battery4.png";break;case l.a.VeryStrong:n="battery3.png";break;case l.a.Strong:n="battery2.png";break;case l.a.VeryWeak:n="battery1.png";break;case l.a.Weakest:n="battery0.png"}return"assets/image/"+n},e}())},370:function(e,n,t){"use strict";t(0),t(71),t(347),t(335);t.d(n,"a",function(){return l});var l=(this&&this.__decorate,function(){function e(){}return e}())},371:function(e,n,t){"use strict";function l(e){return r._14(0,[(e()(),r._15(0,null,null,16,"ion-card",[],null,null,null,null,null)),r._16(8192,null,0,s.a,[u.c,r.H,r.I],{color:[0,"color"]},null),(e()(),r._18(null,["\n      "])),(e()(),r._15(0,null,null,12,"ion-card-content",[],null,null,null,null,null)),r._16(8192,null,0,d.a,[u.c,r.H,r.I],null,null),(e()(),r._18(null,["\n        "])),(e()(),r._15(0,null,null,3,"div",[["style","float: right;"]],null,null,null,null,null)),(e()(),r._18(null,["\n          "])),(e()(),r._15(0,null,null,0,"img",[["class","icon"]],[[8,"src",4]],null,null,null,null)),(e()(),r._18(null,["\n        "])),(e()(),r._18(null,["\n        "])),(e()(),r._15(0,null,null,1,"b",[],null,null,null,null,null)),(e()(),r._18(null,[""," in ","."])),(e()(),r._18(null,["\n        "])),(e()(),r._15(0,null,null,0,"br",[],null,null,null,null,null)),(e()(),r._18(null,["\n        ","\n      "])),(e()(),r._18(null,["\n    "]))],function(e,n){e(n,1,0,n.component.getColor(n.context.$implicit.type))},function(e,n){e(n,8,0,n.component.getIcon(n.context.$implicit.type)),e(n,12,0,n.context.$implicit.tetragram.phrase,n.context.$implicit.house.phrase),e(n,15,0,n.context.$implicit.tetragram.getHouseMeaning(n.context.$implicit.house.number))})}function o(e){return r._14(0,[(e()(),r._15(0,null,null,4,"div",[],null,null,null,null,null)),(e()(),r._18(null,["\n    "])),(e()(),r._19(8388608,null,null,1,null,l)),r._16(401408,null,0,h.m,[r.L,r.N,r.t],{ngForOf:[0,"ngForOf"]},null),(e()(),r._18(null,["\n  "]))],function(e,n){e(n,3,0,n.component.placements)},null)}function i(e){return r._14(0,[r._23(0,h.n,[r.c]),(e()(),r._15(0,null,null,3,"ion-header",[],null,null,null,null,null)),r._16(8192,null,0,c.a,[u.c,r.H,r.I,[2,_.a]],null,null),(e()(),r._15(0,null,null,1,"ion-navbar",[["class","toolbar"]],[[8,"hidden",0],[2,"statusbar-padding",null]],null,null,g.a,g.b)),r._16(24576,null,0,p.a,[f.a,[2,_.a],[2,m.a],u.c,r.H,r.I],null,null),(e()(),r._18(null,["\n\n"])),(e()(),r._15(0,null,null,46,"ion-content",[["padding",""]],[[2,"statusbar-padding",null]],null,null,y.a,y.b)),r._16(2187264,null,0,v.a,[u.c,w.b,M.a,r.H,r.I,f.a,b.a,r.g,[2,_.a],[2,m.a]],null,null),(e()(),r._18(1,["\n\n  "])),(e()(),r._15(0,null,1,39,"ion-grid",[["class","grid"]],null,null,null,null,null)),r._16(8192,null,0,k.a,[],null,null),(e()(),r._18(null,["\n    "])),(e()(),r._15(0,null,null,10,"ion-row",[["class","row"]],null,null,null,null,null)),r._16(8192,null,0,G.a,[],null,null),(e()(),r._18(null,["\n      "])),(e()(),r._15(0,null,null,2,"ion-col",[["class","col"],["col-3",""]],null,null,null,null,null)),r._16(8192,null,0,x.a,[],null,null),(e()(),r._18(null,["\n        Question:\n      "])),(e()(),r._18(null,["\n      "])),(e()(),r._15(0,null,null,2,"ion-col",[["class","col"],["col-9",""]],null,null,null,null,null)),r._16(8192,null,0,x.a,[],null,null),(e()(),r._18(null,["\n        ","\n      "])),(e()(),r._18(null,["\n    "])),(e()(),r._18(null,["\n    "])),(e()(),r._15(0,null,null,10,"ion-row",[["class","row"]],null,null,null,null,null)),r._16(8192,null,0,G.a,[],null,null),(e()(),r._18(null,["\n      "])),(e()(),r._15(0,null,null,2,"ion-col",[["class","col"],["col-3",""]],null,null,null,null,null)),r._16(8192,null,0,x.a,[],null,null),(e()(),r._18(null,["\n        Topic:\n      "])),(e()(),r._18(null,["\n      "])),(e()(),r._15(0,null,null,2,"ion-col",[["class","col"],["col-9",""]],null,null,null,null,null)),r._16(8192,null,0,x.a,[],null,null),(e()(),r._18(null,["\n        ","\n      "])),(e()(),r._18(null,["\n    "])),(e()(),r._18(null,["\n    "])),(e()(),r._15(0,null,null,11,"ion-row",[["class","row"]],null,null,null,null,null)),r._16(8192,null,0,G.a,[],null,null),(e()(),r._18(null,["\n      "])),(e()(),r._15(0,null,null,2,"ion-col",[["class","col"],["col-3",""]],null,null,null,null,null)),r._16(8192,null,0,x.a,[],null,null),(e()(),r._18(null,["\n        Date:\n      "])),(e()(),r._18(null,["\n      "])),(e()(),r._15(0,null,null,3,"ion-col",[["class","col"],["col-9",""]],null,null,null,null,null)),r._16(8192,null,0,x.a,[],null,null),(e()(),r._18(null,["\n        ","\n      "])),r._24(1),(e()(),r._18(null,["\n    "])),(e()(),r._18(null,["\n  "])),(e()(),r._18(1,["\n\n  "])),(e()(),r._19(8388608,null,1,1,null,o)),r._16(8192,null,0,h.k,[r.L,r.N],{ngIf:[0,"ngIf"]},null),(e()(),r._18(1,["\n\n"])),(e()(),r._18(null,["\n"]))],function(e,n){e(n,51,0,n.component.placements.length>0)},function(e,n){var t=n.component;e(n,3,0,r._20(n,4)._hidden,r._20(n,4)._sbPadding),e(n,6,0,r._20(n,7).statusbarPadding),e(n,21,0,t.reading.question),e(n,33,0,t.reading.topic),e(n,45,0,r._25(n,45,0,e(n,46,0,r._20(n,0),t.reading.date)))})}function a(e){return r._14(0,[(e()(),r._15(0,null,null,1,"page-reading-overview",[],null,null,null,i,I)),r._16(24576,null,0,E.a,[m.a,S.a],null,null)],null,null)}var r=t(0),s=t(171),u=t(1),d=t(170),h=t(7),c=t(164),_=t(5),g=t(331),p=t(41),f=t(8),m=t(16),y=t(333),v=t(24),w=t(3),M=t(9),b=t(19),k=t(166),G=t(167),x=t(165),E=t(347),S=t(10);t.d(n,"a",function(){return V});var C=[],I=r._13({encapsulation:2,styles:C,data:{}}),V=r._21("page-reading-overview",E.a,a,{},{},[])}});
-//# sourceMappingURL=/Users/adam/AppGod/geomancy/www/build/3.main.js.map
+webpackJsonp([3],{
+
+/***/ 317:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(101);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__tetragram__ = __webpack_require__(331);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_tetragram_tetragram_module__ = __webpack_require__(320);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TetragramPageModule", function() { return TetragramPageModule; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+
+var TetragramPageModule = (function () {
+    function TetragramPageModule() {
+    }
+    return TetragramPageModule;
+}());
+TetragramPageModule = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["a" /* NgModule */])({
+        declarations: [
+            __WEBPACK_IMPORTED_MODULE_2__tetragram__["a" /* TetragramPage */],
+        ],
+        imports: [
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__tetragram__["a" /* TetragramPage */]),
+            __WEBPACK_IMPORTED_MODULE_3__components_tetragram_tetragram_module__["a" /* TetragramComponentModule */]
+        ],
+        exports: [
+            __WEBPACK_IMPORTED_MODULE_2__tetragram__["a" /* TetragramPage */]
+        ]
+    })
+], TetragramPageModule);
+
+//# sourceMappingURL=tetragram.module.js.map
+
+/***/ }),
+
+/***/ 319:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Tetragram; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return tetragramInfo; });
+var Tetragram = (function () {
+    function Tetragram(key) {
+        if (key === void 0) { key = Math.floor(Math.random() * 15); }
+        this.key = key;
+        var info = tetragramInfo[key];
+        this.name = info.name;
+        this.desc = info.desc;
+        this.good = info.good;
+        this.rules = info.rules;
+        this.exalted = info.exalted;
+        this.fall = info.fall;
+        this.detriment = info.detriment;
+        this.triplicity = info.triplicity;
+        this.phrase = info.phrase;
+        this.houseMeanings = info.houseMeanings;
+        this.planet = info.planet;
+        this.dots = info.dots;
+        this.sign = info.sign;
+        this.row0 = (key >> 0) % 2;
+        this.row1 = (key >> 1) % 2;
+        this.row2 = (key >> 2) % 2;
+        this.row3 = (key >> 3) % 2;
+    }
+    Tetragram.prototype.add = function (tetragram) {
+        var row0 = (this.row0 + tetragram.row0 + 1) % 2;
+        var row1 = (this.row1 + tetragram.row1 + 1) % 2;
+        var row2 = (this.row2 + tetragram.row2 + 1) % 2;
+        var row3 = (this.row3 + tetragram.row3 + 1) % 2;
+        var key = (row3 << 3) + (row2 << 2) + (row1 << 1) + (row0 << 0);
+        return new Tetragram(key);
+    };
+    Tetragram.prototype.getHouseMeaning = function (houseNumber) {
+        return this.houseMeanings[houseNumber - 1];
+    };
+    Tetragram.generateKey = function (num1, num2, num3, num4) {
+        var row1 = num1 ? (num1 % 2) * 1 : 0;
+        var row2 = num2 ? (num2 % 2) * 2 : 0;
+        var row3 = num3 ? (num3 % 2) * 4 : 0;
+        var row4 = num4 ? (num4 % 2) * 8 : 0;
+        var key = row1 + row2 + row3 + row4;
+        return key;
+    };
+    return Tetragram;
+}());
+
+var tetragramInfo = [
+    {
+        key: 0,
+        name: 'Via',
+        translation: 'Way',
+        desc: 'Injurious to the goodness of other figures generally, but good for journeys and voyages.',
+        planet: 'Moon',
+        rules: [4],
+        exalted: [2],
+        fall: [8],
+        detriment: [10],
+        triplicity: [12],
+        dots: 4,
+        sign: 'Cancer',
+        good: false,
+        phrase: 'Clearing a path',
+        houseMeanings: [
+            'Evil except for prison.',
+            'Indifferent.',
+            'Very good in all.',
+            'Good in all save love.',
+            'Voyages good.',
+            'Evil.',
+            'Rather good, especially for voyages.',
+            'Evil.',
+            'Indifferent. Good for journeys.',
+            'Good.',
+            'Very good.',
+            'Excellent'
+        ]
+    },
+    {
+        key: 1,
+        name: 'Caput Draconis',
+        translation: "Dragon's Head",
+        desc: 'Good with good, evil with evil. Gives good issue for gain.',
+        planet: 'Venus',
+        rules: [2, 7, 9, 12],
+        exalted: [12, 4],
+        fall: [6, 10],
+        detriment: [1, 8, 3, 6],
+        triplicity: [],
+        dots: 5,
+        sign: 'Sagittarius',
+        good: true,
+        phrase: 'A new beginning',
+        houseMeanings: [
+            'Good in all things',
+            'Good.',
+            'Very good.',
+            'Good save in war.',
+            'Very good.',
+            'Good for immorality only.',
+            'Good especially for peace.',
+            'Good.',
+            'Very good.',
+            'Good in all.',
+            'Good for the church and ecclesiastical gain.',
+            'Not very good.'
+        ]
+    },
+    {
+        key: 2,
+        name: 'Puella',
+        translation: 'Maid',
+        desc: 'Good in all demands, especially in those things relating to women.',
+        planet: 'Venus',
+        rules: [2, 7],
+        exalted: [12],
+        fall: [6],
+        detriment: [1, 8],
+        triplicity: [3, 11],
+        dots: 5,
+        sign: 'Libra',
+        good: true,
+        phrase: 'Beautification',
+        houseMeanings: [
+            'Good except in war.',
+            'Very good.',
+            'Good.',
+            'Indifferent.',
+            'Very good, but notice the aspects.',
+            'Good, but especially for debauchery.',
+            'Good except for war.',
+            'Good.',
+            'Good for music. Otherwise only medium.',
+            'Good for peace.',
+            'Good, and love of ladies.',
+            'Good in all.'
+        ]
+    },
+    {
+        key: 3,
+        name: 'Fortuna Major',
+        translation: 'Greater Fortune',
+        desc: 'Good for gain in all things where a person has hopes to win.',
+        planet: 'Sun',
+        rules: [5],
+        exalted: [1],
+        fall: [7],
+        detriment: [11],
+        triplicity: [1, 9],
+        dots: 6,
+        sign: 'Leo',
+        good: true,
+        phrase: 'Success',
+        houseMeanings: [
+            'Good save in secrecy.',
+            'Good except in sad things.',
+            'Good in all.',
+            'Good in all, but melancholy.',
+            'Very good in all things.',
+            'Very good except for debauchery.',
+            'Good in all.',
+            'Moderately good.',
+            'Very good.',
+            'Exceedingly good. Go to superiors.',
+            'Very good.',
+            'Good in all.'
+        ]
+    },
+    {
+        key: 4,
+        name: 'Puer',
+        translation: 'Child',
+        desc: 'Evil in most demands, except in those things relating to war or love.',
+        planet: 'Mars',
+        rules: [1, 8],
+        exalted: [10],
+        fall: [4],
+        detriment: [2, 7],
+        triplicity: [5, 9],
+        dots: 5,
+        sign: 'Aries',
+        good: false,
+        phrase: 'Command',
+        houseMeanings: [
+            'Indifferent. Best in war.',
+            'Good, but with trouble.',
+            'Good fortune.',
+            'Evil, except in war and love.',
+            'Medium good.',
+            'Medium.',
+            'Evil, save in war.',
+            'Evil, save for love.',
+            'Evil except for war.',
+            'Rather evil. But good for love and war. Most other things medium.',
+            'Medium; good favor.',
+            'Very good in all.'
+        ]
+    },
+    {
+        key: 5,
+        name: 'Acquisitio',
+        translation: 'Gain',
+        desc: 'Generally good for profit and gain.',
+        planet: 'Jupiter',
+        rules: [9, 12],
+        exalted: [4],
+        fall: [10],
+        detriment: [3, 6],
+        triplicity: [1, 5],
+        dots: 6,
+        sign: 'Sagittarius',
+        good: true,
+        phrase: 'Acquisition',
+        houseMeanings: [
+            'Happy, success in all things.',
+            'Very prosperous.',
+            'Favor and riches.',
+            'Good fortune and success.',
+            'Good success.',
+            'Good–especially if it agrees with the fifth.',
+            'Reasonably good.',
+            'Rather good, but not very. The sick shall die.',
+            'Good in all demands.',
+            'Good in suits.',
+            'Good in all.',
+            'Evil, pain and loss.'
+        ]
+    },
+    {
+        key: 6,
+        name: 'Carcer',
+        translation: 'Prison',
+        desc: 'Generally evil. Delay, binding, bar, restriction.',
+        planet: 'Saturn',
+        rules: [10, 11],
+        exalted: [7],
+        fall: [1],
+        detriment: [4, 5],
+        triplicity: [2, 6],
+        dots: 6,
+        sign: "Capricorn",
+        good: false,
+        phrase: 'Limitation',
+        houseMeanings: [
+            'Evil except to fortify a place.',
+            'Good in Saturnine questions; else evil.',
+            'Evil.',
+            'Good only for melancholy.',
+            'Receive a letter within three days. Evil.',
+            'Very evil.',
+            'Evil.',
+            'Very evil.',
+            'Evil in all.',
+            'Evil save in hidden treasure.',
+            'Much anxiety.',
+            'Rather good.'
+        ]
+    },
+    {
+        key: 7,
+        name: 'Tristitia',
+        translation: 'Sorrow',
+        desc: 'Evil in almost all things.',
+        planet: 'Saturn',
+        rules: [10, 11],
+        exalted: [7],
+        fall: [1],
+        detriment: [4, 5],
+        triplicity: [3, 7],
+        dots: 7,
+        sign: 'Aquarius',
+        good: false,
+        phrase: 'Melancholy',
+        houseMeanings: [
+            'Medium, but good for treasure and fortifying.',
+            'Medium, but good to fortify.',
+            'Evil in all.',
+            'Evil in all.',
+            'Very evil.',
+            'Evil, except for debauchery.',
+            'Evil for inheritance and magic only.',
+            'Evil, but in secrecy good.',
+            'Evil except for magic.',
+            'Evil except for fortifications.',
+            'Evil in all.',
+            'Evil, but good for magic and treasure.'
+        ]
+    },
+    {
+        key: 8,
+        name: 'Cauda Draconis',
+        translation: "Dragon's Tail",
+        desc: 'Good with evil, and evil with good. Good for loss, and for passing out of an affair.',
+        planet: 'Mars',
+        rules: [8, 10, 11],
+        exalted: [10, 7],
+        fall: [4, 1],
+        detriment: [2, 7, 4, 5],
+        triplicity: [],
+        dots: 5,
+        sign: 'Virgo',
+        good: false,
+        phrase: 'An end',
+        houseMeanings: [
+            'Destroy figure if it falls here! Makes judgment worthless.',
+            'Very evil.',
+            'Evil in all.',
+            'Good especially for conclusion of the matter.',
+            'Very evil.',
+            'Rather good.',
+            'Evil, war, and fire.',
+            'No good, except for magic.',
+            'Good for science only. Bad for journeys. Robbery.',
+            'Evil save in works of fire.',
+            'Evil save for favors.',
+            'Rather good.',
+        ]
+    },
+    {
+        key: 9,
+        name: 'Conjunctio',
+        translation: 'Conjunction',
+        desc: 'Good with good, or evil with evil. Recovery from things lost.',
+        planet: 'Mercury',
+        rules: [3, 6],
+        exalted: [11],
+        fall: [5],
+        detriment: [9, 12],
+        triplicity: [2, 10],
+        dots: 6,
+        sign: 'Virgo',
+        good: true,
+        phrase: 'Reconciliation',
+        houseMeanings: [
+            'Good with good, evil with evil.',
+            'Commonly good.',
+            'Good fortune.',
+            'Good save for health; see the eighth.',
+            'Medium',
+            'Good for immorality only.',
+            'Rather good.',
+            'Evil, death.',
+            'Medium good.',
+            'For love, good. For sickness, evil.',
+            'Good in all.',
+            'Medium. Bad for prisoners.'
+        ]
+    },
+    {
+        key: 10,
+        name: 'Amissio',
+        translation: 'Loss',
+        desc: 'Good for loss of substance and sometimes for love, but very bad for gain.',
+        planet: 'Venus',
+        rules: [2, 7],
+        exalted: [12],
+        fall: [6],
+        detriment: [1, 8],
+        triplicity: [10],
+        dots: 6,
+        sign: 'Taurus',
+        good: false,
+        phrase: 'Sacrifice',
+        houseMeanings: [
+            'Ill in all things but for prisoners.',
+            'Very ill for money, but good for love.',
+            'Ill end–except for quarrels.',
+            'Ill in all.',
+            'Evil except for agriculture.',
+            'Rather evil for love.',
+            'Very good for love, otherwise evil.',
+            'Excellent in all questions.',
+            'Evil in all things.',
+            'Evil except for favor with women.',
+            'Good for love, otherwise bad.',
+            'Evil in all things.'
+        ]
+    },
+    {
+        key: 11,
+        name: 'Albus',
+        translation: 'White',
+        desc: 'Good for profit and for entering into a place or undertaking.',
+        planet: 'Mercury',
+        rules: [3, 6],
+        exalted: [11],
+        fall: [5],
+        detriment: [9, 12],
+        triplicity: [7, 11],
+        dots: 7,
+        sign: 'Gemini',
+        good: true,
+        phrase: 'Learning',
+        houseMeanings: [
+            'Good for marriage. Mercurial. Peace.',
+            'Good in all.',
+            'Very good.',
+            'Very good except in war.',
+            'Good.',
+            'Good in all things.',
+            'Good except in all things.',
+            'Good.',
+            'A messenger brings a letter.',
+            'Excellent in all.',
+            'Very good.',
+            'Marvelously good.'
+        ]
+    },
+    {
+        key: 12,
+        name: 'Fortuna Minor',
+        translation: 'Lesser Fortune',
+        desc: 'Good in any manner in which a person wishes to proceed quickly.',
+        planet: 'Sun',
+        rules: [5],
+        exalted: [1],
+        fall: [7],
+        detriment: [11],
+        triplicity: [1, 9],
+        dots: 6,
+        sign: 'Leo',
+        good: true,
+        phrase: 'Improvement',
+        houseMeanings: [
+            'Speed in victory and in love, but choleric.',
+            'Very good.',
+            'Good–but wrathful.',
+            'Haste; rather evil except for peace.',
+            'Good in all things.',
+            'Medium in all.',
+            'Evil except for war or love.',
+            'Evil generally.',
+            'Good, but choleric.',
+            'Good, except for peace.',
+            'Good, especially for love.',
+            'Good, except for alternation, or for serving another.'
+        ]
+    },
+    {
+        key: 13,
+        name: 'Rubeus',
+        translation: 'Red',
+        desc: 'Evil in all that is good and good in all that is evil.',
+        planet: 'Mars',
+        rules: [1, 8],
+        exalted: [10],
+        fall: [4],
+        detriment: [2, 7],
+        triplicity: [12],
+        dots: 7,
+        sign: 'Scorpio',
+        good: false,
+        phrase: 'Destruction',
+        houseMeanings: [
+            'Destroy the figure if it falls here! It makes the judgement worthless.',
+            'Evil in all demands.',
+            'Evil except to let blood.',
+            'Evil except in war and Fire.',
+            'Evil save for love, and sowing seed.',
+            'Evil except for bloodletting.',
+            'Evil except for war and fire.',
+            'Evil.',
+            'Very evil.',
+            'Dissolute. Love, fire.',
+            'Evil, except to let blood.',
+            'Evil in all things.'
+        ]
+    },
+    {
+        key: 14,
+        name: 'Laetitia',
+        translation: 'Joy',
+        desc: 'Good for joy, present or to come.',
+        planet: 'Jupiter',
+        rules: [9, 12],
+        exalted: [4],
+        fall: [10],
+        detriment: [3, 6],
+        triplicity: [4, 8],
+        dots: 7,
+        sign: 'Pisces',
+        good: true,
+        phrase: 'Happiness',
+        houseMeanings: [
+            'Good, except in war.',
+            'Sickly.',
+            'Ill.',
+            'Mainly good.',
+            'Excellently good.',
+            'Evil generally.',
+            'Indifferent.',
+            'Evil generally.',
+            'Very good.',
+            'Good, rather in war than in peace.',
+            'Good in all.',
+            'Evil generally.'
+        ]
+    },
+    {
+        key: 15,
+        name: 'Populus',
+        translation: 'People',
+        desc: 'Sometimes good and sometimes bad; good with good, and evil with evil.',
+        planet: 'Moon',
+        rules: [4],
+        exalted: [2],
+        fall: [8],
+        detriment: [10],
+        triplicity: [12],
+        dots: 8,
+        sign: 'Cancer',
+        good: true,
+        phrase: 'Consensus',
+        houseMeanings: [
+            'Good in marriages.',
+            'Medium good.',
+            'Rather good than bad.',
+            'Good in all but love.',
+            'Good in most things.',
+            'Good.',
+            'In war good; else medium.',
+            'Evil.',
+            'Look for letters.',
+            'Good.',
+            'Good in all.',
+            'Very evil.'
+        ]
+    }
+];
+//# sourceMappingURL=tetragram.js.map
+
+/***/ }),
+
+/***/ 320:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__tetragram__ = __webpack_require__(321);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TetragramComponentModule; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+var TetragramComponentModule = (function () {
+    function TetragramComponentModule() {
+    }
+    return TetragramComponentModule;
+}());
+TetragramComponentModule = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["a" /* NgModule */])({
+        declarations: [
+            __WEBPACK_IMPORTED_MODULE_1__tetragram__["a" /* TetragramComponent */],
+        ],
+        imports: [],
+        exports: [
+            __WEBPACK_IMPORTED_MODULE_1__tetragram__["a" /* TetragramComponent */]
+        ]
+    })
+], TetragramComponentModule);
+
+//# sourceMappingURL=tetragram.module.js.map
+
+/***/ }),
+
+/***/ 321:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__models_tetragram__ = __webpack_require__(319);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TetragramComponent; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var TetragramComponent = (function () {
+    function TetragramComponent() {
+    }
+    TetragramComponent.prototype.renderRow = function (key) {
+        if (key == 0) {
+            return '●';
+        }
+        else if (key == 1) {
+            return '●    ●';
+        }
+    };
+    return TetragramComponent;
+}());
+__decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* Input */])(),
+    __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1__models_tetragram__["a" /* Tetragram */])
+], TetragramComponent.prototype, "tetragram", void 0);
+TetragramComponent = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* Component */])({
+        selector: 'tetragram',template:/*ion-inline-start:"/Users/adam/AppGod/geomancy/src/components/tetragram/tetragram.html"*/'<div class="tetragram">\n  <div class="tetragram-row">\n    {{renderRow(tetragram.row0)}}\n  </div>\n  <div class="tetragram-row">\n    {{renderRow(tetragram.row1)}}\n  </div>\n  <div class="tetragram-row">\n    {{renderRow(tetragram.row2)}}\n  </div>\n  <div class="tetragram-row">\n    {{renderRow(tetragram.row3)}}\n  </div>\n</div>\n'/*ion-inline-end:"/Users/adam/AppGod/geomancy/src/components/tetragram/tetragram.html"*/
+    }),
+    __metadata("design:paramtypes", [])
+], TetragramComponent);
+
+//# sourceMappingURL=tetragram.js.map
+
+/***/ }),
+
+/***/ 331:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(101);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TetragramPage; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var TetragramPage = (function () {
+    function TetragramPage(navCtrl, navParams) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.tetragram = navParams.get('item');
+    }
+    return TetragramPage;
+}());
+TetragramPage = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPage */])(),
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* Component */])({
+        selector: 'page-tetragram',template:/*ion-inline-start:"/Users/adam/AppGod/geomancy/src/pages/tetragram/tetragram.html"*/'<ion-header>\n\n  <ion-navbar>\n    <ion-title>{{tetragram.name}}</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content>\n  <div padding class="big center">\n    <tetragram [tetragram]="tetragram"></tetragram>\n    <p>{{tetragram.desc}}</p>\n  </div>\n\n  <ion-grid>\n    <ion-row>\n      <ion-col col-4 class="left-column">\n        Planet\n      </ion-col>\n      <ion-col col-8>\n        {{tetragram.planet}}\n      </ion-col>\n    </ion-row>\n    <ion-row *ngFor="let meaning of tetragram.houseMeanings; let i = index">\n      <ion-col col-4 class="left-column">\n        In House {{i + 1}}\n      </ion-col>\n      <ion-col col-8>\n        {{meaning}}\n      </ion-col>\n    </ion-row>\n  </ion-grid>\n\n</ion-content>\n'/*ion-inline-end:"/Users/adam/AppGod/geomancy/src/pages/tetragram/tetragram.html"*/,
+    }),
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]])
+], TetragramPage);
+
+//# sourceMappingURL=tetragram.js.map
+
+/***/ })
+
+});
+//# sourceMappingURL=3.main.js.map
