@@ -86,8 +86,4 @@ export class HistoryPage {
     alert.present()
   }
 
-  close() {
-    this.viewCtrl.dismiss()
-  }
-
 }

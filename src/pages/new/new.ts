@@ -135,8 +135,7 @@ export class NewPage {
         {
           text: 'Load Reading',
           handler: () => {
-            let historyPage = this.modCtrl.create('HistoryPage')
-            historyPage.present()
+            this.navCtrl.push('HistoryPage')
           }
         },
         {
