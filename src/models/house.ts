@@ -1,19 +1,13 @@
-import { LibraryItem } from './library'
 
-export class House implements LibraryItem {
+export class House {
   topics: string[]
   tetragram?
   phrase: string
-
-  // library item
-  name: string
-  page = 'HousePage'
 
   constructor(public number: number) {
     let info: HouseInfo = houseInfo[number - 1]
     this.topics = info.topics
     this.phrase = info.phrase
-    this.name = 'House ' + number
   }
 }
 

@@ -1,14 +1,14 @@
 webpackJsonp([7],{
 
-/***/ 314:
+/***/ 312:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(101);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__library__ = __webpack_require__(332);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LibraryPageModule", function() { return LibraryPageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__house__ = __webpack_require__(328);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HousePageModule", function() { return HousePageModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,30 +18,30 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var LibraryPageModule = (function () {
-    function LibraryPageModule() {
+var HousePageModule = (function () {
+    function HousePageModule() {
     }
-    return LibraryPageModule;
+    return HousePageModule;
 }());
-LibraryPageModule = __decorate([
+HousePageModule = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["a" /* NgModule */])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_2__library__["a" /* LibraryPage */],
+            __WEBPACK_IMPORTED_MODULE_2__house__["a" /* HousePage */],
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__library__["a" /* LibraryPage */]),
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__house__["a" /* HousePage */]),
         ],
         exports: [
-            __WEBPACK_IMPORTED_MODULE_2__library__["a" /* LibraryPage */]
+            __WEBPACK_IMPORTED_MODULE_2__house__["a" /* HousePage */]
         ]
     })
-], LibraryPageModule);
+], HousePageModule);
 
-//# sourceMappingURL=library.module.js.map
+//# sourceMappingURL=house.module.js.map
 
 /***/ }),
 
-/***/ 323:
+/***/ 321:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -51,7 +51,6 @@ var Tetragram = (function () {
     function Tetragram(key) {
         if (key === void 0) { key = Math.floor(Math.random() * 15); }
         this.key = key;
-        this.page = 'TetragramPage';
         var info = tetragramInfo[key];
         this.name = info.name;
         this.desc = info.desc;
@@ -512,98 +511,14 @@ var tetragramInfo = [
 
 /***/ }),
 
-/***/ 326:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return House; });
-var House = (function () {
-    function House(number) {
-        this.number = number;
-        this.page = 'HousePage';
-        var info = houseInfo[number - 1];
-        this.topics = info.topics;
-        this.phrase = info.phrase;
-        this.name = 'House ' + number;
-    }
-    return House;
-}());
-
-var houseInfo = [
-    {
-        number: 1,
-        phrase: 'yourself',
-        topics: ['Self', 'Life', 'Health']
-    },
-    {
-        number: 2,
-        phrase: 'wealth',
-        topics: ['Money', 'Property', 'Personal Worth']
-    },
-    {
-        number: 3,
-        phrase: 'friendships',
-        topics: ['Brother', 'Sister', 'News', 'Short Journeys']
-    },
-    {
-        number: 4,
-        phrase: 'family',
-        topics: ['Father', 'Inheritence', 'Conclusion']
-    },
-    {
-        number: 5,
-        phrase: 'creativity',
-        topics: ['Children', 'Pleasure', 'Feasts', 'Speculation']
-    },
-    {
-        number: 6,
-        phrase: 'daily work',
-        topics: ['Servants', 'Sickness', 'Uncles', 'Aunts', 'Animals']
-    },
-    {
-        number: 7,
-        phrase: 'love',
-        topics: ['Love', 'Marriage', 'Husband', 'Wife', 'Partnerships', 'Public Enemies', 'Lawsuits']
-    },
-    {
-        number: 8,
-        phrase: 'transformation',
-        topics: ['Deaths', 'Wills', 'Legacies', 'Pain', 'Anxiety']
-    },
-    {
-        number: 9,
-        phrase: 'philosophy',
-        topics: ['Long journeys', 'Voyages', 'Science', 'Religion', 'Art', 'Visions', 'Divinations']
-    },
-    {
-        number: 10,
-        phrase: 'reputation',
-        topics: ['Mother', 'Rank', 'Honor', 'Profession', 'Authority', 'Employment']
-    },
-    {
-        number: 11,
-        phrase: 'community',
-        topics: ['Friends', 'Hopes', 'Wishes']
-    },
-    {
-        number: 12,
-        phrase: 'the unconscious',
-        topics: ['Sorrows', 'Fears', 'Punishments', 'Secret Enemies', 'Institutions', 'Unseen Dangers', 'Restriction']
-    }
-];
-//# sourceMappingURL=house.js.map
-
-/***/ }),
-
-/***/ 332:
+/***/ 328:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(101);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__models_house__ = __webpack_require__(326);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__models_tetragram__ = __webpack_require__(323);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LibraryPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__models_tetragram__ = __webpack_require__(321);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HousePage; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -616,42 +531,23 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-
-var LibraryPage = (function () {
-    function LibraryPage(navCtrl) {
+var HousePage = (function () {
+    function HousePage(navCtrl, navParams) {
         this.navCtrl = navCtrl;
-        this.topics = [
-            // {
-            //   name: 'Instructions',
-            // },
-            {
-                name: 'Tetragrams',
-                loadItems: this.loadTetragrams
-            },
-            {
-                name: 'Houses',
-                loadItems: this.loadHouses
-            },
-        ];
+        this.navParams = navParams;
+        this.house = this.navParams.get('item');
+        console.log('house', this.house);
+        this.tetragramNamesWithMeanings = this.getTetragramNamesWithMeanings();
     }
-    LibraryPage.prototype.showTopic = function (topic) {
-        this.navCtrl.push('LibraryTopicPage', {
-            topic: topic
+    HousePage.prototype.getTetragramNamesWithMeanings = function () {
+        var _this = this;
+        var namesWithMeanings = __WEBPACK_IMPORTED_MODULE_2__models_tetragram__["b" /* tetragramInfo */].map(function (info) {
+            return {
+                name: info.name,
+                meaning: info.houseMeanings[_this.house.number - 1]
+            };
         });
-    };
-    LibraryPage.prototype.loadHouses = function () {
-        var houses = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
-            .map(function (houseNumber) {
-            return new __WEBPACK_IMPORTED_MODULE_2__models_house__["a" /* House */](houseNumber);
-        });
-        return houses;
-    };
-    LibraryPage.prototype.loadTetragrams = function () {
-        var tetragrams = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
-            .map(function (key) {
-            return new __WEBPACK_IMPORTED_MODULE_3__models_tetragram__["a" /* Tetragram */](key);
-        });
-        tetragrams.sort(function (a, b) {
+        namesWithMeanings.sort(function (a, b) {
             if (a.name < b.name) {
                 return -1;
             }
@@ -659,19 +555,19 @@ var LibraryPage = (function () {
                 return 1;
             }
         });
-        return tetragrams;
+        return namesWithMeanings;
     };
-    return LibraryPage;
+    return HousePage;
 }());
-LibraryPage = __decorate([
+HousePage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPage */])(),
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* Component */])({
-        selector: 'page-library',template:/*ion-inline-start:"/Users/adam/AppGod/geomancy/src/pages/library/library.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      Library\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n\n  <ion-list>\n    <button ion-item *ngFor="let topic of topics"\n      (click)="showTopic(topic)">\n      <div>{{topic.name}}</div>\n    </button>\n  </ion-list>\n\n</ion-content>\n'/*ion-inline-end:"/Users/adam/AppGod/geomancy/src/pages/library/library.html"*/
+        selector: 'page-house',template:/*ion-inline-start:"/Users/adam/AppGod/geomancy/src/pages/house/house.html"*/'<!--\n  Generated template for the HousePage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>House {{house.number}}</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content>\n\n  <p>{{house.description}}</p>\n\n  <ion-grid>\n    <ion-row *ngFor="let nameWithMeaning of tetragramNamesWithMeanings">\n      <ion-col col-4 class="left-column">{{nameWithMeaning.name}}</ion-col>\n      <ion-col col-8 class="right-column">{{nameWithMeaning.meaning}}</ion-col>\n    </ion-row>\n  </ion-grid>\n\n</ion-content>\n'/*ion-inline-end:"/Users/adam/AppGod/geomancy/src/pages/house/house.html"*/,
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */]])
-], LibraryPage);
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]])
+], HousePage);
 
-//# sourceMappingURL=library.js.map
+//# sourceMappingURL=house.js.map
 
 /***/ })
 

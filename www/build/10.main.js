@@ -1,14 +1,14 @@
 webpackJsonp([10],{
 
-/***/ 318:
+/***/ 310:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(101);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__reading_info__ = __webpack_require__(336);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ReadingInfoPageModule", function() { return ReadingInfoPageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__help__ = __webpack_require__(326);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HelpPageModule", function() { return HelpPageModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,36 +18,36 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var ReadingInfoPageModule = (function () {
-    function ReadingInfoPageModule() {
+var HelpPageModule = (function () {
+    function HelpPageModule() {
     }
-    return ReadingInfoPageModule;
+    return HelpPageModule;
 }());
-ReadingInfoPageModule = __decorate([
+HelpPageModule = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["a" /* NgModule */])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_2__reading_info__["a" /* ReadingInfoPage */],
+            __WEBPACK_IMPORTED_MODULE_2__help__["a" /* HelpPage */],
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__reading_info__["a" /* ReadingInfoPage */]),
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__help__["a" /* HelpPage */]),
         ],
         exports: [
-            __WEBPACK_IMPORTED_MODULE_2__reading_info__["a" /* ReadingInfoPage */]
+            __WEBPACK_IMPORTED_MODULE_2__help__["a" /* HelpPage */]
         ]
     })
-], ReadingInfoPageModule);
+], HelpPageModule);
 
-//# sourceMappingURL=reading-info.module.js.map
+//# sourceMappingURL=help.module.js.map
 
 /***/ }),
 
-/***/ 336:
+/***/ 326:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(101);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ReadingInfoPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HelpPage; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -59,26 +59,23 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-var ReadingInfoPage = (function () {
-    function ReadingInfoPage(navCtrl, navParams) {
+var HelpPage = (function () {
+    function HelpPage(navCtrl, navParams) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
-        this.reading = navParams.get('reading');
+        this.topic = navParams.get('topic');
     }
-    ReadingInfoPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad ReadingInfoPage');
-    };
-    return ReadingInfoPage;
+    return HelpPage;
 }());
-ReadingInfoPage = __decorate([
+HelpPage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPage */])(),
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* Component */])({
-        selector: 'page-reading-info',template:/*ion-inline-start:"/Users/adam/AppGod/geomancy/src/pages/reading-info/reading-info.html"*/'<!--\n  Generated template for the ReadingInfoPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>Reading Info</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n  <div class="label">\n    Question\n  </div>\n\n  <div>{{reading.question}}</div>\n\n  <br>\n\n  <div class="label">\n    Topic\n  </div>\n\n  <div>{{reading.topic}}</div>\n\n  <br>\n\n  <div class="label">\n    Date\n  </div>\n\n  <div>{{reading.date | date:\'medium\'}}</div>\n\n</ion-content>\n'/*ion-inline-end:"/Users/adam/AppGod/geomancy/src/pages/reading-info/reading-info.html"*/,
+        selector: 'page-help',template:/*ion-inline-start:"/Users/adam/AppGod/geomancy/src/pages/help/help.html"*/'<!--\n  Generated template for the HelpPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title text-capitalize>Help</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content>\n\n  <div padding *ngIf="topic == \'new reading\'">\n    <h3>What should I ask?</h3>\n\n    <h3>Which topic should I choose?</h3>\n  </div>\n\n  <div *ngIf="topic == \'reading houses\'">\n\n    <ion-grid>\n      <ion-row>\n        <ion-col col-4>\n          <ion-chip color="secondary">\n            <ion-label>\n              Topic\n            </ion-label>\n          </ion-chip>\n        </ion-col>\n        <ion-col col-8>\n          This house is connected to the topic you selected.\n        </ion-col>\n      </ion-row>\n      <ion-row>\n        <ion-col col-4>\n          <ion-chip color="secondary">\n            <ion-label>\n              ★★★\n            </ion-label>\n          </ion-chip>\n        </ion-col>\n        <ion-col col-8>\n          The tetragram\'s planet is the ruler of this house.\n        </ion-col>\n      </ion-row>\n      <ion-row>\n        <ion-col col-4>\n          <ion-chip color="secondary">\n            <ion-label>\n              ★★\n            </ion-label>\n          </ion-chip>\n        </ion-col>\n        <ion-col col-8>\n          The tetragram\'s planet is exalted in this house.\n        </ion-col>\n      </ion-row>\n      <ion-row>\n        <ion-col col-4>\n          <ion-chip color="secondary">\n            <ion-label>\n              Judge\n            </ion-label>\n          </ion-chip>\n        </ion-col>\n        <ion-col col-8>\n          The tetragram in this house is the same as the judge of this reading.\n        </ion-col>\n      </ion-row>\n      <ion-row>\n        <ion-col col-4>\n          <ion-chip color="secondary">\n            <ion-label>\n              Part of Fortune\n            </ion-label>\n          </ion-chip>\n        </ion-col>\n        <ion-col col-8>\n          This house is a potential source of wealth.\n        </ion-col>\n      </ion-row>\n    </ion-grid>\n  </div>\n</ion-content>\n'/*ion-inline-end:"/Users/adam/AppGod/geomancy/src/pages/help/help.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]])
-], ReadingInfoPage);
+], HelpPage);
 
-//# sourceMappingURL=reading-info.js.map
+//# sourceMappingURL=help.js.map
 
 /***/ })
 

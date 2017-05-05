@@ -1,7 +1,5 @@
-import { LibraryItem } from './library'
 
-export class Tetragram implements LibraryItem {
-  page = 'TetragramPage'
+export class Tetragram {
 
   name: string
   desc: string
