@@ -34,10 +34,10 @@
         <ion-card-content no-padding>
           <ion-grid>
             <ion-row>
-              <ion-col col-2>
+              <ion-col col-3>
                 <img [src]="getIcon(placement.type)" class="icon">
               </ion-col>
-              <ion-col col-10>
+              <ion-col col-9>
                 <b>{{placement.tetragram.phrase}} in {{placement.house.phrase}}.</b>
                 <br>
                 {{placement.tetragram.getHouseMeaning(placement.house.number)}}
