@@ -687,57 +687,57 @@ var houseInfo = [
     {
         number: 2,
         phrase: 'wealth',
-        topics: ['Money', 'Property', 'Personal Worth']
+        topics: ['Wealth', 'Property', 'Self-esteem']
     },
     {
         number: 3,
         phrase: 'friendships',
-        topics: ['Brother', 'Sister', 'News', 'Short Journeys']
+        topics: ['Siblings', 'Neighbors', 'Short Journeys']
     },
     {
         number: 4,
         phrase: 'family',
-        topics: ['Father', 'Inheritence', 'Conclusion']
+        topics: ['Family', 'Inheritence', 'Home']
     },
     {
         number: 5,
         phrase: 'creativity',
-        topics: ['Children', 'Pleasure', 'Feasts', 'Speculation']
+        topics: ['Children', 'Pleasure', 'Gambling']
     },
     {
         number: 6,
         phrase: 'daily work',
-        topics: ['Servants', 'Sickness', 'Uncles', 'Aunts', 'Animals']
+        topics: ['Work', 'Habits', 'Service']
     },
     {
         number: 7,
         phrase: 'love',
-        topics: ['Love', 'Marriage', 'Husband', 'Wife', 'Partnerships', 'Public Enemies', 'Lawsuits']
+        topics: ['Marriage', 'Partnerships', 'Public Enemies']
     },
     {
         number: 8,
         phrase: 'transformation',
-        topics: ['Deaths', 'Wills', 'Legacies', 'Pain', 'Anxiety']
+        topics: ['Deaths', 'Occult Abilities', 'Sex']
     },
     {
         number: 9,
         phrase: 'philosophy',
-        topics: ['Long journeys', 'Voyages', 'Science', 'Religion', 'Art', 'Visions', 'Divinations']
+        topics: ['Long Journeys', 'Religion', 'Visions']
     },
     {
         number: 10,
         phrase: 'reputation',
-        topics: ['Mother', 'Rank', 'Honor', 'Profession', 'Authority', 'Employment']
+        topics: ['Honor', 'Career', 'Reputation']
     },
     {
         number: 11,
         phrase: 'community',
-        topics: ['Friends', 'Hopes', 'Wishes']
+        topics: ['Society', 'Hopes', 'Humanity']
     },
     {
         number: 12,
-        phrase: 'the unconscious',
-        topics: ['Sorrows', 'Fears', 'Punishments', 'Secret Enemies', 'Institutions', 'Unseen Dangers', 'Restriction']
+        phrase: 'the unknown',
+        topics: ['Spirituality', 'Sacrifice', 'Hidden Enemies']
     }
 ];
 //# sourceMappingURL=house.js.map
