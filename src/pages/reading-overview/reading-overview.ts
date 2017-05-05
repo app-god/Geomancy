@@ -29,9 +29,9 @@ export class ReadingOverviewPage {
     if (placementType == PlacementType.Warning)
       color = 'danger'
     if (placementType == PlacementType.ExtremelyStrong)
-      color = 'battery'
+      color = 'dark'
     if (placementType == PlacementType.VeryStrong)
-      color = 'battery'
+      color = 'dark'
     return color
   }
 
