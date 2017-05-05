@@ -45,12 +45,6 @@ export class ReadingPage {
           }
         },
         {
-          text: 'Show Info',
-          handler: () => {
-            this.navCtrl.push('ReadingInfoPage', { reading: this.reading })
-          }
-        },
-        {
           text: 'Show Help',
           handler: () => {
             this.navCtrl.push('HelpPage', { topic: 'reading' })

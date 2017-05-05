@@ -2,6 +2,33 @@
 
 <ion-content padding>
 
+  <ion-grid>
+    <ion-row>
+      <ion-col col-3>
+        Question:
+      </ion-col>
+      <ion-col col-9>
+        {{reading.question}}
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-3>
+        Topic:
+      </ion-col>
+      <ion-col col-9>
+        {{reading.topic}}
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-3>
+        Date:
+      </ion-col>
+      <ion-col col-9>
+        {{reading.date | date}}
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
   <div *ngIf="placements.length > 0">
     <ion-card [color]="getColor(placement.type)" *ngFor="let placement of placements">
         <ion-card-content no-padding>
