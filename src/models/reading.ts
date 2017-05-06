@@ -179,6 +179,7 @@ export class Reading {
   }
 
   getPlacements(): Placement[] {
+
     let placements: Placement[] = [].concat(
       this.getWarnings(),
       this.getPlacementsFor('rules'),
@@ -187,8 +188,6 @@ export class Reading {
       this.getPlacementsFor('fall'),
       this.getPlacementsFor('detriment')
     )
-
-    console.log('getPlacements()', placements)
 
     // remove duplicates (ignoring placement type)
     let uniquePlacements: Placement[] = []
@@ -201,6 +200,8 @@ export class Reading {
         uniquePlacements.push(placement)
       }
     })
+
+    console.log('getPlacements()', uniquePlacements)
 
     return uniquePlacements
   }
@@ -235,6 +236,14 @@ export class Reading {
     })
     console.log('getPlacementsFor(' + key + ')', placements)
     return placements
+  }
+
+  getTopicHouse() {
+    if (!this.topic) return null
+
+    return this.houses.find(house => {
+      return house.topics.indexOf(this.topic) >= 0
+    })
   }
 }
 

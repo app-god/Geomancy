@@ -664,7 +664,7 @@ var houseInfo = [
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Placement; });
-/* unused harmony export PlacementType */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return PlacementType; });
 var Placement = (function () {
     function Placement(house, key) {
         this.house = house;
@@ -879,7 +879,6 @@ var Reading = (function () {
     };
     Reading.prototype.getPlacements = function () {
         var placements = [].concat(this.getWarnings(), this.getPlacementsFor('rules'), this.getPlacementsFor('exalted'), this.getPlacementsFor('triplicity'), this.getPlacementsFor('fall'), this.getPlacementsFor('detriment'));
-        console.log('getPlacements()', placements);
         // remove duplicates (ignoring placement type)
         var uniquePlacements = [];
         var tetragramsHouses = [];
@@ -890,6 +889,7 @@ var Reading = (function () {
                 uniquePlacements.push(placement);
             }
         });
+        console.log('getPlacements()', uniquePlacements);
         return uniquePlacements;
     };
     Reading.prototype.getHouse = function (number) {
@@ -917,6 +917,14 @@ var Reading = (function () {
         });
         console.log('getPlacementsFor(' + key + ')', placements);
         return placements;
+    };
+    Reading.prototype.getTopicHouse = function () {
+        var _this = this;
+        if (!this.topic)
+            return null;
+        return this.houses.find(function (house) {
+            return house.topics.indexOf(_this.topic) >= 0;
+        });
     };
     return Reading;
 }());

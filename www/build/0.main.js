@@ -671,7 +671,7 @@ TetragramComponent = __decorate([
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Placement; });
-/* unused harmony export PlacementType */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return PlacementType; });
 var Placement = (function () {
     function Placement(house, key) {
         this.house = house;
@@ -798,7 +798,7 @@ __decorate([
 ], PlacementComponent.prototype, "placement", void 0);
 PlacementComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* Component */])({
-        selector: 'placement',template:/*ion-inline-start:"/Users/adam/AppGod/geomancy/src/components/placement/placement.html"*/'<button ion-item>\n  <div>\n    <b>{{placement.tetragram.phrase}} in regards to {{placement.house.phrase}}.</b>\n  </div>\n  <div>\n    {{placement.tetragram.getHouseMeaning(placement.house.number)}}\n  </div>\n</button>\n'/*ion-inline-end:"/Users/adam/AppGod/geomancy/src/components/placement/placement.html"*/
+        selector: 'placement',template:/*ion-inline-start:"/Users/adam/AppGod/geomancy/src/components/placement/placement.html"*/'<button ion-item [color]="placement.getColor()">\n\n  <tetragram [tetragram]="placement.tetragram" item-left></tetragram>\n\n  <div>\n    {{placement.tetragram.phrase}} in regards to {{placement.house.phrase}}.\n  </div>\n</button>\n'/*ion-inline-end:"/Users/adam/AppGod/geomancy/src/components/placement/placement.html"*/
     }),
     __metadata("design:paramtypes", [])
 ], PlacementComponent);
@@ -813,6 +813,7 @@ PlacementComponent = __decorate([
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(101);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__models_placement__ = __webpack_require__(323);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ReadingOverviewPage; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -825,20 +826,23 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
+
 var ReadingOverviewPage = (function () {
     function ReadingOverviewPage(navCtrl, navParams) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
         this.parent = navParams.get('parent');
         this.reading = this.parent.reading;
+        var placements = this.reading.getPlacements();
         this.placements = {
-            warnings: this.reading.getWarnings(),
-            strongest: this.reading.getPlacementsFor('rules'),
-            veryStrong: this.reading.getPlacementsFor('exalted'),
-            strong: this.reading.getPlacementsFor('triplicity'),
-            veryWeak: this.reading.getPlacementsFor('detriment'),
-            weakest: this.reading.getPlacementsFor('fall')
+            warnings: placements.filter(function (p) { return p.type === __WEBPACK_IMPORTED_MODULE_2__models_placement__["b" /* PlacementType */].Warning; }),
+            strongest: placements.filter(function (p) { return p.type === __WEBPACK_IMPORTED_MODULE_2__models_placement__["b" /* PlacementType */].Strongest; }),
+            veryStrong: placements.filter(function (p) { return p.type === __WEBPACK_IMPORTED_MODULE_2__models_placement__["b" /* PlacementType */].VeryStrong; }),
+            strong: placements.filter(function (p) { return p.type === __WEBPACK_IMPORTED_MODULE_2__models_placement__["b" /* PlacementType */].Strong; }),
+            veryWeak: placements.filter(function (p) { return p.type === __WEBPACK_IMPORTED_MODULE_2__models_placement__["b" /* PlacementType */].VeryWeak; }),
+            weakest: placements.filter(function (p) { return p.type === __WEBPACK_IMPORTED_MODULE_2__models_placement__["b" /* PlacementType */].Weakest; })
         };
+        this.topicHouse = this.reading.getTopicHouse();
     }
     ReadingOverviewPage.prototype.ionViewWillEnter = function () {
         this.parent.title = 'Overview';
@@ -848,11 +852,12 @@ var ReadingOverviewPage = (function () {
 ReadingOverviewPage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPage */])(),
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* Component */])({
-        selector: 'page-reading-overview',template:/*ion-inline-start:"/Users/adam/AppGod/geomancy/src/pages/reading-overview/reading-overview.html"*/'<ion-header><ion-navbar></ion-navbar></ion-header>\n\n<ion-content padding>\n\n  <ion-list>\n\n    <ion-item-group *ngIf="placements.warnings.length > 0">\n      <ion-item-divider>Warnings</ion-item-divider>\n      <placement [placement]="placement" *ngFor="let placement of placements.warnings"></placement>\n    </ion-item-group>\n\n    <ion-item-group *ngIf="placements.strongest.length > 0">\n      <ion-item-divider>Strongest</ion-item-divider>\n      <placement [placement]="placement" *ngFor="let placement of placements.strongest"></placement>\n    </ion-item-group>\n\n    <ion-item-group *ngIf="placements.veryStrong.length > 0">\n      <ion-item-divider>Very Strong</ion-item-divider>\n      <placement [placement]="placement" *ngFor="let placement of placements.veryStrong"></placement>\n    </ion-item-group>\n\n    <ion-item-group *ngIf="placements.strong.length > 0">\n      <ion-item-divider>Strong</ion-item-divider>\n      <placement [placement]="placement" *ngFor="let placement of placements.strong"></placement>\n    </ion-item-group>\n\n    <ion-item-group *ngIf="placements.veryWeak.length > 0">\n      <ion-item-divider>Very Weak</ion-item-divider>\n      <placement [placement]="placement" *ngFor="let placement of placements.veryWeak"></placement>\n    </ion-item-group>\n\n    <ion-item-group *ngIf="placements.weakest.length > 0">\n      <ion-item-divider>Weakest</ion-item-divider>\n      <placement [placement]="placement" *ngFor="let placement of placements.weakest"></placement>\n    </ion-item-group>\n\n  </ion-list>\n\n</ion-content>\n'/*ion-inline-end:"/Users/adam/AppGod/geomancy/src/pages/reading-overview/reading-overview.html"*/,
+        selector: 'page-reading-overview',template:/*ion-inline-start:"/Users/adam/AppGod/geomancy/src/pages/reading-overview/reading-overview.html"*/'<ion-header><ion-navbar></ion-navbar></ion-header>\n\n<ion-content padding>\n\n  <ion-list>\n\n    <ion-item-group *ngIf="topicHouse">\n      <ion-item-divider>{{reading.topic}}</ion-item-divider>\n      <!--<placement [placement]="placement"></placement>-->\n    </ion-item-group>\n\n    <ion-item-group *ngIf="placements.warnings.length > 0">\n      <ion-item-divider>Warnings</ion-item-divider>\n      <placement [placement]="placement" *ngFor="let placement of placements.warnings"></placement>\n    </ion-item-group>\n\n    <ion-item-group *ngIf="placements.strongest.length > 0">\n      <ion-item-divider>Strongest</ion-item-divider>\n      <placement [placement]="placement" *ngFor="let placement of placements.strongest"></placement>\n    </ion-item-group>\n\n    <ion-item-group *ngIf="placements.veryStrong.length > 0">\n      <ion-item-divider>Very Strong</ion-item-divider>\n      <placement [placement]="placement" *ngFor="let placement of placements.veryStrong"></placement>\n    </ion-item-group>\n\n    <ion-item-group *ngIf="placements.strong.length > 0">\n      <ion-item-divider>Strong</ion-item-divider>\n      <placement [placement]="placement" *ngFor="let placement of placements.strong"></placement>\n    </ion-item-group>\n\n    <ion-item-group *ngIf="placements.veryWeak.length > 0">\n      <ion-item-divider>Very Weak</ion-item-divider>\n      <placement [placement]="placement" *ngFor="let placement of placements.veryWeak"></placement>\n    </ion-item-group>\n\n    <ion-item-group *ngIf="placements.weakest.length > 0">\n      <ion-item-divider>Weakest</ion-item-divider>\n      <placement [placement]="placement" *ngFor="let placement of placements.weakest"></placement>\n    </ion-item-group>\n\n  </ion-list>\n\n</ion-content>\n'/*ion-inline-end:"/Users/adam/AppGod/geomancy/src/pages/reading-overview/reading-overview.html"*/,
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]) === "function" && _b || Object])
 ], ReadingOverviewPage);
 
+var _a, _b;
 //# sourceMappingURL=reading-overview.js.map
 
 /***/ })

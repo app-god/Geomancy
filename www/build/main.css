@@ -32018,12 +32018,17 @@ button[ion-item] {
   color: #999;
 }
 
+placement tetragram {
+  font-size: 50%;
+}
+
 tetragram {
   text-align: center;
 }
 
 tetragram .tetragram {
   height: 4em;
+  width: 2em;
 }
 
 tetragram .tetragram-row {

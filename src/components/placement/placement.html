@@ -1,8 +1,8 @@
-<button ion-item>
+<button ion-item [color]="placement.getColor()">
+
+  <tetragram [tetragram]="placement.tetragram" item-left></tetragram>
+
   <div>
-    <b>{{placement.tetragram.phrase}} in regards to {{placement.house.phrase}}.</b>
-  </div>
-  <div>
-    {{placement.tetragram.getHouseMeaning(placement.house.number)}}
+    {{placement.tetragram.phrase}} in regards to {{placement.house.phrase}}.
   </div>
 </button>

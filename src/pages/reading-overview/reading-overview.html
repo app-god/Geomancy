@@ -4,6 +4,11 @@
 
   <ion-list>
 
+    <ion-item-group *ngIf="topicHouse">
+      <ion-item-divider>{{reading.topic}}</ion-item-divider>
+      <!--<placement [placement]="placement"></placement>-->
+    </ion-item-group>
+
     <ion-item-group *ngIf="placements.warnings.length > 0">
       <ion-item-divider>Warnings</ion-item-divider>
       <placement [placement]="placement" *ngFor="let placement of placements.warnings"></placement>
