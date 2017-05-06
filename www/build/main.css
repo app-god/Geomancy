@@ -32030,6 +32030,7 @@ tetragram {
 tetragram .tetragram {
   height: 4em;
   width: 2em;
+  margin: 0 auto;
 }
 
 tetragram .tetragram-row {
