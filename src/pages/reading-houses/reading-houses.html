@@ -9,7 +9,7 @@
         {{house.topics.join(', ')}}
       </ion-item-divider>
 
-      <house [house]="house"></house>
+      <house [house]="house" (onTap)="showHouse(house)"></house>
 
     </ion-item-group>
   </ion-list>

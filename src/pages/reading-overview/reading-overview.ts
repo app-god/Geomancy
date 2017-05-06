@@ -39,4 +39,8 @@ export class ReadingOverviewPage {
   ionViewWillEnter() {
     this.parent.title = 'Overview'
   }
+
+  showHouse(house) {
+    this.navCtrl.push('HousePage', { house: house })
+  }
 }

@@ -14,7 +14,7 @@
 
         <ion-item-divider>{{keyToString(key)}}</ion-item-divider>
 
-        <house [house]="house" *ngFor="let house of houses[key]"></house>
+        <house [house]="house" *ngFor="let house of houses[key]" (onTap)="showHouse($event)"></house>
 
       </div>
 

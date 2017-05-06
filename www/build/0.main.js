@@ -653,7 +653,7 @@ var TetragramComponent = (function () {
 }());
 __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* Input */])(),
-    __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1__models_tetragram__["a" /* Tetragram */])
+    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__models_tetragram__["a" /* Tetragram */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__models_tetragram__["a" /* Tetragram */]) === "function" && _a || Object)
 ], TetragramComponent.prototype, "tetragram", void 0);
 TetragramComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* Component */])({
@@ -662,6 +662,7 @@ TetragramComponent = __decorate([
     __metadata("design:paramtypes", [])
 ], TetragramComponent);
 
+var _a;
 //# sourceMappingURL=tetragram.js.map
 
 /***/ }),
@@ -946,20 +947,26 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 var HouseComponent = (function () {
     function HouseComponent() {
+        this.onTap = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["k" /* EventEmitter */]();
     }
     return HouseComponent;
 }());
 __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["u" /* Input */])(),
-    __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__models_house__["a" /* House */])
+    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__models_house__["a" /* House */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__models_house__["a" /* House */]) === "function" && _a || Object)
 ], HouseComponent.prototype, "house", void 0);
+__decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["J" /* Output */])(),
+    __metadata("design:type", typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_core__["k" /* EventEmitter */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_core__["k" /* EventEmitter */]) === "function" && _b || Object)
+], HouseComponent.prototype, "onTap", void 0);
 HouseComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["K" /* Component */])({
-        selector: 'house',template:/*ion-inline-start:"/Users/adam/AppGod/geomancy/src/components/house/house.html"*/'<button ion-item [color]="house.placement.getColor()" text-wrap>\n\n  <tetragram [tetragram]="house.tetragram" item-left></tetragram>\n\n  <div>\n    {{house.tetragram.phrase}} in regards to {{house.phrase}}.\n  </div>\n</button>\n'/*ion-inline-end:"/Users/adam/AppGod/geomancy/src/components/house/house.html"*/
+        selector: 'house',template:/*ion-inline-start:"/Users/adam/AppGod/geomancy/src/components/house/house.html"*/'<button ion-item [color]="house.placement.getColor()" text-wrap\n  (tap)="onTap.emit(house)">\n\n  <tetragram [tetragram]="house.tetragram" item-left></tetragram>\n\n  <div>\n    {{house.tetragram.phrase}} in regards to {{house.phrase}}.\n  </div>\n</button>\n'/*ion-inline-end:"/Users/adam/AppGod/geomancy/src/components/house/house.html"*/
     }),
     __metadata("design:paramtypes", [])
 ], HouseComponent);
 
+var _a, _b;
 //# sourceMappingURL=house.js.map
 
 /***/ }),
@@ -1006,16 +1013,20 @@ var ReadingOverviewPage = (function () {
     ReadingOverviewPage.prototype.ionViewWillEnter = function () {
         this.parent.title = 'Overview';
     };
+    ReadingOverviewPage.prototype.showHouse = function (house) {
+        this.navCtrl.push('HousePage', { house: house });
+    };
     return ReadingOverviewPage;
 }());
 ReadingOverviewPage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPage */])(),
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* Component */])({
-        selector: 'page-reading-overview',template:/*ion-inline-start:"/Users/adam/AppGod/geomancy/src/pages/reading-overview/reading-overview.html"*/'<ion-header><ion-navbar></ion-navbar></ion-header>\n\n<ion-content padding>\n\n  <ion-list>\n\n    <ion-item-group *ngIf="topicHouse">\n      <ion-item-divider>{{reading.topic}}</ion-item-divider>\n    </ion-item-group>\n\n    <ion-item-group *ngFor="let key of keys">\n\n      <div *ngIf="houses[key].length > 0">\n\n        <ion-item-divider>{{keyToString(key)}}</ion-item-divider>\n\n        <house [house]="house" *ngFor="let house of houses[key]"></house>\n\n      </div>\n\n    </ion-item-group>\n\n  </ion-list>\n\n</ion-content>\n'/*ion-inline-end:"/Users/adam/AppGod/geomancy/src/pages/reading-overview/reading-overview.html"*/,
+        selector: 'page-reading-overview',template:/*ion-inline-start:"/Users/adam/AppGod/geomancy/src/pages/reading-overview/reading-overview.html"*/'<ion-header><ion-navbar></ion-navbar></ion-header>\n\n<ion-content padding>\n\n  <ion-list>\n\n    <ion-item-group *ngIf="topicHouse">\n      <ion-item-divider>{{reading.topic}}</ion-item-divider>\n    </ion-item-group>\n\n    <ion-item-group *ngFor="let key of keys">\n\n      <div *ngIf="houses[key].length > 0">\n\n        <ion-item-divider>{{keyToString(key)}}</ion-item-divider>\n\n        <house [house]="house" *ngFor="let house of houses[key]" (onTap)="showHouse($event)"></house>\n\n      </div>\n\n    </ion-item-group>\n\n  </ion-list>\n\n</ion-content>\n'/*ion-inline-end:"/Users/adam/AppGod/geomancy/src/pages/reading-overview/reading-overview.html"*/,
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]) === "function" && _b || Object])
 ], ReadingOverviewPage);
 
+var _a, _b;
 //# sourceMappingURL=reading-overview.js.map
 
 /***/ })

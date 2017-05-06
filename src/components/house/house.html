@@ -1,4 +1,5 @@
-<button ion-item [color]="house.placement.getColor()" text-wrap>
+<button ion-item [color]="house.placement.getColor()" text-wrap
+  (tap)="onTap.emit(house)">
 
   <tetragram [tetragram]="house.tetragram" item-left></tetragram>
 
