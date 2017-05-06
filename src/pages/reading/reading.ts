@@ -11,7 +11,7 @@ import { Reading } from '../../models/reading'
 export class ReadingPage {
   reading: Reading
   rootParams: any
-  title: string = 'Reading'
+  title: string
 
   constructor(
     public navCtrl: NavController,

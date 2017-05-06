@@ -1,0 +1,8 @@
+<button ion-item [color]="house.placement.getColor()" text-wrap>
+
+  <tetragram [tetragram]="house.tetragram" item-left></tetragram>
+
+  <div>
+    {{house.tetragram.phrase}} in regards to {{house.phrase}}.
+  </div>
+</button>

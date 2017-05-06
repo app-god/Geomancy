@@ -11,30 +11,32 @@ import { Placement, PlacementType } from '../../models/placement'
 export class ReadingOverviewPage {
   parent
   reading
-  placements: any
+  houses: any
+  keys
   topicHouse
+  keyToString = Placement.keyToString
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.parent = navParams.get('parent')
     this.reading = this.parent.reading
 
-    let placements = this.reading.getPlacements()
+    let houses = this.reading.houses
 
-    this.placements = {
-      warnings:   placements.filter(p => { return p.type === PlacementType.Warning }),
-      strongest:  placements.filter(p => { return p.type === PlacementType.Strongest }),
-      veryStrong: placements.filter(p => { return p.type === PlacementType.VeryStrong }),
-      strong:     placements.filter(p => { return p.type === PlacementType.Strong }),
-      veryWeak:   placements.filter(p => { return p.type === PlacementType.VeryWeak }),
-      weakest:    placements.filter(p => { return p.type === PlacementType.Weakest })
+    this.houses = {
+      warning:    houses.filter(house => { return house.placement.type === PlacementType.Warning }),
+      rules:      houses.filter(house => { return house.placement.type === PlacementType.Strongest }),
+      exalted:    houses.filter(house => { return house.placement.type === PlacementType.VeryStrong }),
+      triplicity: houses.filter(house => { return house.placement.type === PlacementType.Strong }),
+      detriment:  houses.filter(house => { return house.placement.type === PlacementType.VeryWeak }),
+      fall:       houses.filter(house => { return house.placement.type === PlacementType.Weakest })
     }
 
-    this.topicHouse = this.reading.getTopicHouse()
+    this.keys = Object.keys(this.houses)
 
+    this.topicHouse = this.reading.getTopicHouse()
   }
 
   ionViewWillEnter() {
     this.parent.title = 'Overview'
   }
-
 }

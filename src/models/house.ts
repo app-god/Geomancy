@@ -1,14 +1,38 @@
+import { Tetragram } from './tetragram';
+
+import { Placement } from "./placement";
 
 export class House {
   topics: string[]
-  tetragram?
   phrase: string
+  placement: Placement
 
-  constructor(public number: number) {
+  constructor(public number: number, public tetragram: Tetragram) {
     let info: HouseInfo = houseInfo[number - 1]
-    this.topics = info.topics
+    this.topics = info.topics.sort()
     this.phrase = info.phrase
+    this.getPlacement()
   }
+
+  getPlacement() {
+
+    if (this.number == 1) {
+      if (['Rubeus', 'Cauda Draconis'].indexOf(this.tetragram.name) >= 0) {
+        this.placement = new Placement('warning')
+      }
+    }
+
+    let keys = ['rules', 'exalted', 'triplicity', 'detriment', 'fall']
+    
+    keys.forEach(key => {
+      if (this.tetragram[key].indexOf(this.number) >= 0) {
+        this.placement = this.placement || new Placement(key)
+      }
+    })
+
+    this.placement = this.placement || new Placement('normal')
+  }
+
 }
 
 interface HouseInfo {
@@ -17,7 +41,7 @@ interface HouseInfo {
   topics: string[]
 }
 
-const houseInfo: HouseInfo[] = [
+export const houseInfo: HouseInfo[] = [
   {
     number: 1,
     phrase: 'your self',

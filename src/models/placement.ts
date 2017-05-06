@@ -6,12 +6,27 @@ export class Placement {
   house: House
   tetragram: Tetragram
 
-  constructor (house: House, key: string) {
-      this.house = house
-      this.tetragram = house.tetragram
+  constructor (key: string) {
       this.type = Placement.getTypeFromKey(key)
-      console.log('key:', key)
-      console.log('type:', this.type)
+  }
+
+  static keyToString(key: string): string {
+      switch (key) {
+          case 'warning':
+          return 'Warning!'
+          case 'rules':
+          return 'Strongest'
+          case 'exalted':
+          return 'Very Strong'
+          case 'triplicity':
+          return 'Strong'
+          case 'detriment':
+          return 'Very Weak'
+          case 'fall':
+          return 'Weakest'
+          default:
+          return ''
+      }
   }
 
   static getTypeFromKey(key: string) {
@@ -29,12 +44,8 @@ export class Placement {
           case 'fall':
           return PlacementType.Weakest
           default:
-          return null
+          return PlacementType.Normal
       }
-  }
-
-  getKey() {
-      return this.house.number + '-' + this.tetragram.key
   }
 
   getColor(): string {
@@ -60,8 +71,9 @@ export class Placement {
         return 'Very Weak'
       case PlacementType.Weakest:
         return 'Weakest'
+      default:
+        return 'Normal'
     }
-    return 'Normal'
   }
 
   getIcon() {
@@ -99,5 +111,6 @@ export enum PlacementType {
   VeryStrong,
   Strong,
   VeryWeak,
-  Weakest
+  Weakest,
+  Normal
 }

@@ -1,14 +1,16 @@
 webpackJsonp([1],{
 
-/***/ 316:
+/***/ 314:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(101);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__reading__ = __webpack_require__(332);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ReadingPageModule", function() { return ReadingPageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_house_house_module__ = __webpack_require__(324);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(101);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__reading_houses__ = __webpack_require__(331);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_tetragram_tetragram_module__ = __webpack_require__(320);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ReadingHousesPageModule", function() { return ReadingHousesPageModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,26 +20,30 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var ReadingPageModule = (function () {
-    function ReadingPageModule() {
+
+
+var ReadingHousesPageModule = (function () {
+    function ReadingHousesPageModule() {
     }
-    return ReadingPageModule;
+    return ReadingHousesPageModule;
 }());
-ReadingPageModule = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["a" /* NgModule */])({
+ReadingHousesPageModule = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["a" /* NgModule */])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_2__reading__["a" /* ReadingPage */]
+            __WEBPACK_IMPORTED_MODULE_3__reading_houses__["a" /* ReadingHousesPage */],
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__reading__["a" /* ReadingPage */]),
+            __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_3__reading_houses__["a" /* ReadingHousesPage */]),
+            __WEBPACK_IMPORTED_MODULE_4__components_tetragram_tetragram_module__["a" /* TetragramComponentModule */],
+            __WEBPACK_IMPORTED_MODULE_0__components_house_house_module__["a" /* HouseComponentModule */]
         ],
         exports: [
-            __WEBPACK_IMPORTED_MODULE_2__reading__["a" /* ReadingPage */]
+            __WEBPACK_IMPORTED_MODULE_3__reading_houses__["a" /* ReadingHousesPage */]
         ]
     })
-], ReadingPageModule);
+], ReadingHousesPageModule);
 
-//# sourceMappingURL=reading.module.js.map
+//# sourceMappingURL=reading-houses.module.js.map
 
 /***/ }),
 
@@ -578,18 +584,236 @@ var tetragramInfo = [
 
 /***/ }),
 
+/***/ 320:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__tetragram__ = __webpack_require__(321);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TetragramComponentModule; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+var TetragramComponentModule = (function () {
+    function TetragramComponentModule() {
+    }
+    return TetragramComponentModule;
+}());
+TetragramComponentModule = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["a" /* NgModule */])({
+        declarations: [
+            __WEBPACK_IMPORTED_MODULE_1__tetragram__["a" /* TetragramComponent */],
+        ],
+        imports: [],
+        exports: [
+            __WEBPACK_IMPORTED_MODULE_1__tetragram__["a" /* TetragramComponent */]
+        ]
+    })
+], TetragramComponentModule);
+
+//# sourceMappingURL=tetragram.module.js.map
+
+/***/ }),
+
+/***/ 321:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__models_tetragram__ = __webpack_require__(319);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TetragramComponent; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var TetragramComponent = (function () {
+    function TetragramComponent() {
+    }
+    TetragramComponent.prototype.renderRow = function (key) {
+        if (key == 0) {
+            return '●';
+        }
+        else if (key == 1) {
+            return '●    ●';
+        }
+    };
+    return TetragramComponent;
+}());
+__decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* Input */])(),
+    __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1__models_tetragram__["a" /* Tetragram */])
+], TetragramComponent.prototype, "tetragram", void 0);
+TetragramComponent = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* Component */])({
+        selector: 'tetragram',template:/*ion-inline-start:"/Users/adam/AppGod/geomancy/src/components/tetragram/tetragram.html"*/'<div class="tetragram">\n  <div class="tetragram-row">\n    {{renderRow(tetragram.row0)}}\n  </div>\n  <div class="tetragram-row">\n    {{renderRow(tetragram.row1)}}\n  </div>\n  <div class="tetragram-row">\n    {{renderRow(tetragram.row2)}}\n  </div>\n  <div class="tetragram-row">\n    {{renderRow(tetragram.row3)}}\n  </div>\n</div>\n'/*ion-inline-end:"/Users/adam/AppGod/geomancy/src/components/tetragram/tetragram.html"*/
+    }),
+    __metadata("design:paramtypes", [])
+], TetragramComponent);
+
+//# sourceMappingURL=tetragram.js.map
+
+/***/ }),
+
 /***/ 322:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return House; });
-var House = (function () {
-    function House(number) {
-        this.number = number;
-        var info = houseInfo[number - 1];
-        this.topics = info.topics;
-        this.phrase = info.phrase;
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Placement; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return PlacementType; });
+var Placement = (function () {
+    function Placement(key) {
+        this.type = Placement.getTypeFromKey(key);
     }
+    Placement.keyToString = function (key) {
+        switch (key) {
+            case 'warning':
+                return 'Warning!';
+            case 'rules':
+                return 'Strongest';
+            case 'exalted':
+                return 'Very Strong';
+            case 'triplicity':
+                return 'Strong';
+            case 'detriment':
+                return 'Very Weak';
+            case 'fall':
+                return 'Weakest';
+            default:
+                return '';
+        }
+    };
+    Placement.getTypeFromKey = function (key) {
+        switch (key) {
+            case 'warning':
+                return PlacementType.Warning;
+            case 'rules':
+                return PlacementType.Strongest;
+            case 'exalted':
+                return PlacementType.VeryStrong;
+            case 'triplicity':
+                return PlacementType.Strong;
+            case 'detriment':
+                return PlacementType.VeryWeak;
+            case 'fall':
+                return PlacementType.Weakest;
+            default:
+                return PlacementType.Normal;
+        }
+    };
+    Placement.prototype.getColor = function () {
+        switch (this.type) {
+            case PlacementType.Warning:
+                return 'danger';
+            default:
+                return 'dark';
+        }
+    };
+    Placement.prototype.getTypeString = function () {
+        switch (this.type) {
+            case PlacementType.Warning:
+                return 'Warning!';
+            case PlacementType.Strongest:
+                return 'Strongest';
+            case PlacementType.VeryStrong:
+                return 'Very Strong';
+            case PlacementType.Strong:
+                return 'Strong';
+            case PlacementType.VeryWeak:
+                return 'Very Weak';
+            case PlacementType.Weakest:
+                return 'Weakest';
+            default:
+                return 'Normal';
+        }
+    };
+    Placement.prototype.getIcon = function () {
+        var icon;
+        var prefix = '/assets/image/';
+        switch (this.type) {
+            case PlacementType.Warning:
+                icon = 'skull.png';
+                break;
+            case PlacementType.Strongest:
+                icon = 'battery4.png';
+                break;
+            case PlacementType.VeryStrong:
+                icon = 'battery3.png';
+                break;
+            case PlacementType.Strong:
+                icon = 'battery2.png';
+                break;
+            case PlacementType.VeryWeak:
+                icon = 'battery1.png';
+                break;
+            case PlacementType.Weakest:
+                icon = 'battery0.png';
+                break;
+            default:
+                return null;
+        }
+        return prefix + icon;
+    };
+    return Placement;
+}());
+
+var PlacementType;
+(function (PlacementType) {
+    PlacementType[PlacementType["Warning"] = 0] = "Warning";
+    PlacementType[PlacementType["Strongest"] = 1] = "Strongest";
+    PlacementType[PlacementType["VeryStrong"] = 2] = "VeryStrong";
+    PlacementType[PlacementType["Strong"] = 3] = "Strong";
+    PlacementType[PlacementType["VeryWeak"] = 4] = "VeryWeak";
+    PlacementType[PlacementType["Weakest"] = 5] = "Weakest";
+    PlacementType[PlacementType["Normal"] = 6] = "Normal";
+})(PlacementType || (PlacementType = {}));
+//# sourceMappingURL=placement.js.map
+
+/***/ }),
+
+/***/ 323:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__placement__ = __webpack_require__(322);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return House; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return houseInfo; });
+
+var House = (function () {
+    function House(number, tetragram) {
+        this.number = number;
+        this.tetragram = tetragram;
+        var info = houseInfo[number - 1];
+        this.topics = info.topics.sort();
+        this.phrase = info.phrase;
+        this.getPlacement();
+    }
+    House.prototype.getPlacement = function () {
+        var _this = this;
+        if (this.number == 1) {
+            if (['Rubeus', 'Cauda Draconis'].indexOf(this.tetragram.name) >= 0) {
+                this.placement = new __WEBPACK_IMPORTED_MODULE_0__placement__["a" /* Placement */]('warning');
+            }
+        }
+        var keys = ['rules', 'exalted', 'triplicity', 'detriment', 'fall'];
+        keys.forEach(function (key) {
+            if (_this.tetragram[key].indexOf(_this.number) >= 0) {
+                _this.placement = _this.placement || new __WEBPACK_IMPORTED_MODULE_0__placement__["a" /* Placement */](key);
+            }
+        });
+        this.placement = this.placement || new __WEBPACK_IMPORTED_MODULE_0__placement__["a" /* Placement */]('normal');
+    };
     return House;
 }());
 
@@ -659,106 +883,46 @@ var houseInfo = [
 
 /***/ }),
 
-/***/ 323:
+/***/ 324:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Placement; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return PlacementType; });
-var Placement = (function () {
-    function Placement(house, key) {
-        this.house = house;
-        this.tetragram = house.tetragram;
-        this.type = Placement.getTypeFromKey(key);
-        console.log('key:', key);
-        console.log('type:', this.type);
-    }
-    Placement.getTypeFromKey = function (key) {
-        switch (key) {
-            case 'warning':
-                return PlacementType.Warning;
-            case 'rules':
-                return PlacementType.Strongest;
-            case 'exalted':
-                return PlacementType.VeryStrong;
-            case 'triplicity':
-                return PlacementType.Strong;
-            case 'detriment':
-                return PlacementType.VeryWeak;
-            case 'fall':
-                return PlacementType.Weakest;
-            default:
-                return null;
-        }
-    };
-    Placement.prototype.getKey = function () {
-        return this.house.number + '-' + this.tetragram.key;
-    };
-    Placement.prototype.getColor = function () {
-        switch (this.type) {
-            case PlacementType.Warning:
-                return 'danger';
-            default:
-                return 'dark';
-        }
-    };
-    Placement.prototype.getTypeString = function () {
-        switch (this.type) {
-            case PlacementType.Warning:
-                return 'Warning!';
-            case PlacementType.Strongest:
-                return 'Strongest';
-            case PlacementType.VeryStrong:
-                return 'Very Strong';
-            case PlacementType.Strong:
-                return 'Strong';
-            case PlacementType.VeryWeak:
-                return 'Very Weak';
-            case PlacementType.Weakest:
-                return 'Weakest';
-        }
-        return 'Normal';
-    };
-    Placement.prototype.getIcon = function () {
-        var icon;
-        var prefix = '/assets/image/';
-        switch (this.type) {
-            case PlacementType.Warning:
-                icon = 'skull.png';
-                break;
-            case PlacementType.Strongest:
-                icon = 'battery4.png';
-                break;
-            case PlacementType.VeryStrong:
-                icon = 'battery3.png';
-                break;
-            case PlacementType.Strong:
-                icon = 'battery2.png';
-                break;
-            case PlacementType.VeryWeak:
-                icon = 'battery1.png';
-                break;
-            case PlacementType.Weakest:
-                icon = 'battery0.png';
-                break;
-            default:
-                return null;
-        }
-        return prefix + icon;
-    };
-    return Placement;
-}());
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(101);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__house__ = __webpack_require__(325);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__tetragram_tetragram_module__ = __webpack_require__(320);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HouseComponentModule; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
 
-var PlacementType;
-(function (PlacementType) {
-    PlacementType[PlacementType["Warning"] = 0] = "Warning";
-    PlacementType[PlacementType["Strongest"] = 1] = "Strongest";
-    PlacementType[PlacementType["VeryStrong"] = 2] = "VeryStrong";
-    PlacementType[PlacementType["Strong"] = 3] = "Strong";
-    PlacementType[PlacementType["VeryWeak"] = 4] = "VeryWeak";
-    PlacementType[PlacementType["Weakest"] = 5] = "Weakest";
-})(PlacementType || (PlacementType = {}));
-//# sourceMappingURL=placement.js.map
+
+
+
+var HouseComponentModule = (function () {
+    function HouseComponentModule() {
+    }
+    return HouseComponentModule;
+}());
+HouseComponentModule = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["a" /* NgModule */])({
+        declarations: [
+            __WEBPACK_IMPORTED_MODULE_2__house__["a" /* HouseComponent */]
+        ],
+        imports: [
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* IonicModule */],
+            __WEBPACK_IMPORTED_MODULE_3__tetragram_tetragram_module__["a" /* TetragramComponentModule */]
+        ],
+        exports: [
+            __WEBPACK_IMPORTED_MODULE_2__house__["a" /* HouseComponent */]
+        ]
+    })
+], HouseComponentModule);
+
+//# sourceMappingURL=house.module.js.map
 
 /***/ }),
 
@@ -766,182 +930,9 @@ var PlacementType;
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__placement__ = __webpack_require__(323);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__tetragram__ = __webpack_require__(319);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__house__ = __webpack_require__(322);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Reading; });
-
-
-
-var Reading = (function () {
-    function Reading(data, question, topic) {
-        var _this = this;
-        if (!data) {
-            data = {
-                question: question ? question : 'None',
-                topic: topic ? topic : 'None',
-                date: Date.now(),
-                key0: Math.floor(Math.random() * 15),
-                key1: Math.floor(Math.random() * 15),
-                key2: Math.floor(Math.random() * 15),
-                key3: Math.floor(Math.random() * 15)
-            };
-        }
-        if (!data.question || data.question == '') {
-            this.question = 'None';
-        }
-        else {
-            this.question = data.question;
-        }
-        if (!data.topic || data.topic == '') {
-            this.topic = 'None';
-        }
-        else {
-            this.topic = data.topic;
-        }
-        this.readingData = data;
-        this.date = data.date;
-        this.mother0 = new __WEBPACK_IMPORTED_MODULE_1__tetragram__["a" /* Tetragram */](data.key0);
-        this.mother1 = new __WEBPACK_IMPORTED_MODULE_1__tetragram__["a" /* Tetragram */](data.key1);
-        this.mother2 = new __WEBPACK_IMPORTED_MODULE_1__tetragram__["a" /* Tetragram */](data.key2);
-        this.mother3 = new __WEBPACK_IMPORTED_MODULE_1__tetragram__["a" /* Tetragram */](data.key3);
-        this.mothers = [this.mother0, this.mother1, this.mother2, this.mother3];
-        this.daughter0 = this.createFromRows(this.mother0.row0, this.mother1.row0, this.mother2.row0, this.mother3.row0);
-        this.daughter1 = this.createFromRows(this.mother0.row1, this.mother1.row1, this.mother2.row1, this.mother3.row1);
-        this.daughter2 = this.createFromRows(this.mother0.row2, this.mother1.row2, this.mother2.row2, this.mother3.row2);
-        this.daughter3 = this.createFromRows(this.mother0.row3, this.mother1.row3, this.mother2.row3, this.mother3.row3);
-        this.daughters = [this.daughter0, this.daughter1, this.daughter2, this.daughter3];
-        this.nephew0 = this.mother0.add(this.mother1);
-        this.nephew1 = this.mother2.add(this.mother3);
-        this.nephew2 = this.daughter0.add(this.daughter1);
-        this.nephew3 = this.daughter2.add(this.daughter3);
-        this.nephews = [this.nephew0, this.nephew1, this.nephew2, this.nephew3];
-        this.witness0 = this.nephew0.add(this.nephew1);
-        this.witness1 = this.nephew2.add(this.nephew3);
-        this.witnesses = [this.witness0, this.witness1];
-        this.judge = this.witness0.add(this.witness1);
-        this.reconciler = this.mother0.add(this.judge);
-        this.partOfFortune = this.getPartOfFortune();
-        this.houses = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
-            .map(function (number) { return new __WEBPACK_IMPORTED_MODULE_2__house__["a" /* House */](number); });
-        console.log('constructor houses', this.houses);
-        this.houses.forEach(function (house) {
-            house.tetragram = _this.getTetragramForHouse(house.number);
-        });
-        this.house = this.houses.find(function (house) {
-            return house.topics.indexOf(_this.topic) >= 0;
-        });
-    }
-    Reading.prototype.createFromRows = function (row0, row1, row2, row3) {
-        var r0 = row0 % 2;
-        var r1 = row1 % 2;
-        var r2 = row2 % 2;
-        var r3 = row3 % 2;
-        var key = (r3 << 3) + (r2 << 2) + (r1 << 1) + (r0 << 0);
-        return new __WEBPACK_IMPORTED_MODULE_1__tetragram__["a" /* Tetragram */](key);
-    };
-    Reading.prototype.getTetragramForHouse = function (house) {
-        var tetragrams = [
-            this.mother1, this.daughter1, this.nephew1,
-            this.mother2, this.daughter2, this.nephew2,
-            this.mother3, this.daughter3, this.nephew3,
-            this.mother0, this.daughter0, this.nephew0
-        ];
-        return tetragrams[house - 1];
-    };
-    Reading.prototype.getSignForHouse = function (house) {
-        var signs = ['Aries', 'Taurus', 'Gemini', 'Cancer', 'Leo', 'Virgo',
-            'Libra', 'Scorpio', 'Sagittarius', 'Capricorn', 'Aquarius', 'Pisces'];
-        var firstSign = this.getTetragramForHouse(0).sign;
-        var houseSignIndex = (signs.indexOf(firstSign) + house) % 12;
-        return signs[houseSignIndex];
-    };
-    Reading.prototype.getPartOfFortune = function () {
-        /*
-          return house number where Part of Fortune resides
-        */
-        var partOfFortune = [
-            this.mother0, this.mother1, this.mother2, this.mother3,
-            this.daughter0, this.daughter1, this.daughter2, this.daughter3,
-            this.nephew0, this.nephew1, this.nephew2, this.nephew3
-        ].map(function (tetragram) {
-            return tetragram.dots;
-        }).reduce(function (a, b) {
-            return a + b;
-        }, 0) % 12;
-        if (partOfFortune == 0) {
-            partOfFortune = 12;
-        }
-        return partOfFortune;
-    };
-    Reading.prototype.getReadingData = function () {
-        return this.readingData;
-    };
-    Reading.prototype.getPlacements = function () {
-        var placements = [].concat(this.getWarnings(), this.getPlacementsFor('rules'), this.getPlacementsFor('exalted'), this.getPlacementsFor('triplicity'), this.getPlacementsFor('fall'), this.getPlacementsFor('detriment'));
-        // remove duplicates (ignoring placement type)
-        var uniquePlacements = [];
-        var tetragramsHouses = [];
-        placements.forEach(function (placement) {
-            var key = placement.getKey();
-            if (tetragramsHouses.indexOf(key) == -1) {
-                tetragramsHouses.push(key);
-                uniquePlacements.push(placement);
-            }
-        });
-        console.log('getPlacements()', uniquePlacements);
-        return uniquePlacements;
-    };
-    Reading.prototype.getHouse = function (number) {
-        return this.houses[number - 1];
-    };
-    Reading.prototype.getWarnings = function () {
-        var warnings = [];
-        var tetragram = this.getTetragramForHouse(1);
-        if (tetragram.name == 'Rubeus'
-            || tetragram.name == 'Cauda Draconis') {
-            if (['Rubeus', 'Cauda Draconis'].indexOf(tetragram.name) > -1) {
-                var placement = new __WEBPACK_IMPORTED_MODULE_0__placement__["a" /* Placement */](this.getHouse(1), 'warning');
-                warnings.push(placement);
-            }
-        }
-        console.log('warnings', warnings);
-        return warnings;
-    };
-    Reading.prototype.getPlacementsFor = function (key) {
-        var placements = [];
-        this.houses.forEach(function (house) {
-            if (house.tetragram[key].indexOf(house.number) >= 0) {
-                placements.push(new __WEBPACK_IMPORTED_MODULE_0__placement__["a" /* Placement */](house, key));
-            }
-        });
-        console.log('getPlacementsFor(' + key + ')', placements);
-        return placements;
-    };
-    Reading.prototype.getTopicHouse = function () {
-        var _this = this;
-        if (!this.topic)
-            return null;
-        return this.houses.find(function (house) {
-            return house.topics.indexOf(_this.topic) >= 0;
-        });
-    };
-    return Reading;
-}());
-
-//# sourceMappingURL=reading.js.map
-
-/***/ }),
-
-/***/ 332:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(101);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_storage__ = __webpack_require__(102);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__models_reading__ = __webpack_require__(325);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ReadingPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__models_house__ = __webpack_require__(323);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HouseComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -953,79 +944,68 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
+var HouseComponent = (function () {
+    function HouseComponent() {
+    }
+    return HouseComponent;
+}());
+__decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["u" /* Input */])(),
+    __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__models_house__["a" /* House */])
+], HouseComponent.prototype, "house", void 0);
+HouseComponent = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["K" /* Component */])({
+        selector: 'house',template:/*ion-inline-start:"/Users/adam/AppGod/geomancy/src/components/house/house.html"*/'<button ion-item [color]="house.placement.getColor()" text-wrap>\n\n  <tetragram [tetragram]="house.tetragram" item-left></tetragram>\n\n  <div>\n    {{house.tetragram.phrase}} in regards to {{house.phrase}}.\n  </div>\n</button>\n'/*ion-inline-end:"/Users/adam/AppGod/geomancy/src/components/house/house.html"*/
+    }),
+    __metadata("design:paramtypes", [])
+], HouseComponent);
+
+//# sourceMappingURL=house.js.map
+
+/***/ }),
+
+/***/ 331:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(101);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ReadingHousesPage; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
 
 
-var ReadingPage = (function () {
-    function ReadingPage(navCtrl, navParams, storage, actionCtrl, viewCtrl, toastCtrl) {
+var ReadingHousesPage = (function () {
+    function ReadingHousesPage(navCtrl, navParams) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
-        this.storage = storage;
-        this.actionCtrl = actionCtrl;
-        this.viewCtrl = viewCtrl;
-        this.toastCtrl = toastCtrl;
-        this.title = 'Reading';
-        this.reading = new __WEBPACK_IMPORTED_MODULE_3__models_reading__["a" /* Reading */](navParams.get('readingData'));
-        this.rootParams = {
-            parent: this
-        };
+        this.parent = navParams.get('parent');
+        this.reading = this.parent.reading;
     }
-    ReadingPage.prototype.ionViewDidEnter = function () {
-        if (this.navCtrl.length() == 1) {
-            this.navCtrl.setRoot('NewPage');
-        }
+    ReadingHousesPage.prototype.showHouse = function (house) {
+        this.parent.navCtrl.push('HousePage', { house: house });
     };
-    ReadingPage.prototype.showMore = function () {
-        var _this = this;
-        var actionSheet = this.actionCtrl.create({
-            title: 'More',
-            buttons: [
-                {
-                    text: 'Save Reading',
-                    handler: function () {
-                        _this.saveReading();
-                    }
-                },
-                {
-                    text: 'Cancel',
-                    role: 'cancel'
-                }
-            ]
-        });
-        actionSheet.present();
+    ReadingHousesPage.prototype.ionViewWillEnter = function () {
+        this.parent.title = 'Houses';
     };
-    ReadingPage.prototype.saveReading = function () {
-        var _this = this;
-        this.storage.ready().then(function () {
-            _this.storage.get('history').then(function (history) {
-                history = history || [];
-                history.push(_this.reading.readingData);
-                _this.storage.set('history', history).then(function () {
-                    var toast = _this.toastCtrl.create({
-                        message: 'Reading was saved successfully',
-                        duration: 2000,
-                        position: 'top'
-                    });
-                    toast.present();
-                });
-            });
-        });
-    };
-    return ReadingPage;
+    return ReadingHousesPage;
 }());
-ReadingPage = __decorate([
+ReadingHousesPage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPage */])(),
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* Component */])({
-        selector: 'page-reading',template:/*ion-inline-start:"/Users/adam/AppGod/geomancy/src/pages/reading/reading.html"*/'<ion-header>\n\n  <ion-navbar>\n    <ion-title>{{title}}</ion-title>\n    <ion-buttons right>\n      <button ion-button icon-only (click)="showMore()">\n        <ion-icon name="more"></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n\n</ion-header>\n\n<ion-tabs>\n  <ion-tab [root]="\'ReadingOverviewPage\'" [rootParams]="rootParams" tabTitle="Overview" tabIcon="eye"></ion-tab>\n  <ion-tab [root]="\'ReadingHousesPage\'"   [rootParams]="rootParams" tabTitle="Houses" tabIcon="home"></ion-tab>\n  <ion-tab [root]="\'ReadingFiguresPage\'"  [rootParams]="rootParams" tabTitle="Figures" tabIcon="grid"></ion-tab>\n</ion-tabs>\n'/*ion-inline-end:"/Users/adam/AppGod/geomancy/src/pages/reading/reading.html"*/,
+        selector: 'page-reading-houses',template:/*ion-inline-start:"/Users/adam/AppGod/geomancy/src/pages/reading-houses/reading-houses.html"*/'<ion-header><ion-navbar></ion-navbar></ion-header>\n\n<ion-content padding>\n\n  <ion-list>\n    <ion-item-group *ngFor="let house of reading.houses">\n\n      <ion-item-divider>\n        {{house.topics.join(\', \')}}\n      </ion-item-divider>\n\n      <house [house]="house"></house>\n\n    </ion-item-group>\n  </ion-list>\n\n</ion-content>\n'/*ion-inline-end:"/Users/adam/AppGod/geomancy/src/pages/reading-houses/reading-houses.html"*/,
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */],
-        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */],
-        __WEBPACK_IMPORTED_MODULE_2__ionic_storage__["b" /* Storage */],
-        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* ActionSheetController */],
-        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* ViewController */],
-        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* ToastController */]])
-], ReadingPage);
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]])
+], ReadingHousesPage);
 
-//# sourceMappingURL=reading.js.map
+//# sourceMappingURL=reading-houses.js.map
 
 /***/ })
 

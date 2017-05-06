@@ -11,7 +11,7 @@ import {
 } from 'ionic-angular';
 
 import { ReadingData } from '../../models/reading'
-import { House } from '../../models/house'
+import { House, houseInfo } from '../../models/house'
 import { Tetragram } from "../../models/tetragram";
 import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 
@@ -42,10 +42,7 @@ export class NewPage {
     private formBuilder: FormBuilder
   ) {
 
-    let houses = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-      .map(number => { return new House(number)})
-
-    let nestedTopics = houses.map(house => { return house.topics })
+    let nestedTopics = houseInfo.map(house => { return house.topics })
 
     this.topics = [].concat.apply([], nestedTopics)
 

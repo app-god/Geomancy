@@ -6,37 +6,18 @@
 
     <ion-item-group *ngIf="topicHouse">
       <ion-item-divider>{{reading.topic}}</ion-item-divider>
-      <!--<placement [placement]="placement"></placement>-->
     </ion-item-group>
 
-    <ion-item-group *ngIf="placements.warnings.length > 0">
-      <ion-item-divider>Warnings</ion-item-divider>
-      <placement [placement]="placement" *ngFor="let placement of placements.warnings"></placement>
-    </ion-item-group>
+    <ion-item-group *ngFor="let key of keys">
 
-    <ion-item-group *ngIf="placements.strongest.length > 0">
-      <ion-item-divider>Strongest</ion-item-divider>
-      <placement [placement]="placement" *ngFor="let placement of placements.strongest"></placement>
-    </ion-item-group>
+      <div *ngIf="houses[key].length > 0">
 
-    <ion-item-group *ngIf="placements.veryStrong.length > 0">
-      <ion-item-divider>Very Strong</ion-item-divider>
-      <placement [placement]="placement" *ngFor="let placement of placements.veryStrong"></placement>
-    </ion-item-group>
+        <ion-item-divider>{{keyToString(key)}}</ion-item-divider>
 
-    <ion-item-group *ngIf="placements.strong.length > 0">
-      <ion-item-divider>Strong</ion-item-divider>
-      <placement [placement]="placement" *ngFor="let placement of placements.strong"></placement>
-    </ion-item-group>
+        <house [house]="house" *ngFor="let house of houses[key]"></house>
 
-    <ion-item-group *ngIf="placements.veryWeak.length > 0">
-      <ion-item-divider>Very Weak</ion-item-divider>
-      <placement [placement]="placement" *ngFor="let placement of placements.veryWeak"></placement>
-    </ion-item-group>
+      </div>
 
-    <ion-item-group *ngIf="placements.weakest.length > 0">
-      <ion-item-divider>Weakest</ion-item-divider>
-      <placement [placement]="placement" *ngFor="let placement of placements.weakest"></placement>
     </ion-item-group>
 
   </ion-list>

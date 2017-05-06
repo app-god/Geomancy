@@ -5,7 +5,6 @@ import { House } from './house'
 export class Reading {
   question: string
   topic: string
-  house: House
   houses: House[]
 
   mother0: Tetragram
@@ -113,16 +112,10 @@ export class Reading {
     this.partOfFortune = this.getPartOfFortune()
 
     this.houses = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
-      .map(number => { return new House(number) })
-    console.log('constructor houses', this.houses)
-
-    this.houses.forEach(house => {
-      house.tetragram = this.getTetragramForHouse(house.number)
-    })
-
-    this.house = this.houses.find(house => {
-      return house.topics.indexOf(this.topic) >= 0
-    })
+      .map(number => {
+        let tetragram = this.getTetragramForHouse(number)
+        return new House(number, tetragram)
+      })
   }
 
   createFromRows(row0, row1, row2, row3) {
@@ -143,14 +136,6 @@ export class Reading {
     ]
 
     return tetragrams[house - 1]
-  }
-
-  getSignForHouse(house: number): String {
-    const signs = ['Aries', 'Taurus', 'Gemini', 'Cancer', 'Leo', 'Virgo',
-      'Libra', 'Scorpio', 'Sagittarius', 'Capricorn', 'Aquarius', 'Pisces']
-    let firstSign = this.getTetragramForHouse(0).sign
-    let houseSignIndex = (signs.indexOf(firstSign) + house) % 12
-    return signs[houseSignIndex]
   }
 
   getPartOfFortune(): number {
@@ -178,64 +163,8 @@ export class Reading {
     return this.readingData
   }
 
-  getPlacements(): Placement[] {
-
-    let placements: Placement[] = [].concat(
-      this.getWarnings(),
-      this.getPlacementsFor('rules'),
-      this.getPlacementsFor('exalted'),
-      this.getPlacementsFor('triplicity'),
-      this.getPlacementsFor('fall'),
-      this.getPlacementsFor('detriment')
-    )
-
-    // remove duplicates (ignoring placement type)
-    let uniquePlacements: Placement[] = []
-    let tetragramsHouses: any[] = []
-
-    placements.forEach((placement) => {
-      let key = placement.getKey()
-      if (tetragramsHouses.indexOf(key) == -1) {
-        tetragramsHouses.push(key)
-        uniquePlacements.push(placement)
-      }
-    })
-
-    console.log('getPlacements()', uniquePlacements)
-
-    return uniquePlacements
-  }
-
   getHouse(number: number) {
     return this.houses[number - 1]
-  }
-
-  getWarnings(): Placement[] {
-    let warnings: Placement[] = []
-    let tetragram = this.getTetragramForHouse(1)
-    if (tetragram.name == 'Rubeus'
-      || tetragram.name == 'Cauda Draconis') {
-
-      if (['Rubeus', 'Cauda Draconis'].indexOf(tetragram.name) > -1) {
-        let placement = new Placement(this.getHouse(1), 'warning')
-        warnings.push(placement)
-      }
-    }
-    console.log('warnings', warnings)
-    return warnings
-  }
-
-  getPlacementsFor(key: string): Placement[] {
-    let placements: Placement[] = []
-    this.houses.forEach(house => {
-      if (house.tetragram[key].indexOf(house.number) >= 0) {
-        placements.push(
-          new Placement(house, key)
-        )
-      }
-    })
-    console.log('getPlacementsFor(' + key + ')', placements)
-    return placements
   }
 
   getTopicHouse() {

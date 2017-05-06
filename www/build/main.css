@@ -32002,7 +32002,7 @@ ion-item-divider {
 
 ion-item,
 button[ion-item] {
-  line-height: 200% !important;
+  line-height: 150% !important;
   border-bottom: solid 1px black !important;
 }
 
@@ -32018,8 +32018,9 @@ button[ion-item] {
   color: #999;
 }
 
-placement tetragram {
+house tetragram .tetragram {
   font-size: 50%;
+  margin-right: 1em;
 }
 
 tetragram {
