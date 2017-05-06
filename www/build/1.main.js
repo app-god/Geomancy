@@ -7,7 +7,7 @@ webpackJsonp([1],{
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(101);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__reading__ = __webpack_require__(333);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__reading__ = __webpack_require__(332);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ReadingPageModule", function() { return ReadingPageModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -670,6 +670,8 @@ var Placement = (function () {
         this.house = house;
         this.tetragram = house.tetragram;
         this.type = Placement.getTypeFromKey(key);
+        console.log('key:', key);
+        console.log('type:', this.type);
     }
     Placement.getTypeFromKey = function (key) {
         switch (key) {
@@ -760,7 +762,7 @@ var PlacementType;
 
 /***/ }),
 
-/***/ 326:
+/***/ 325:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -903,6 +905,7 @@ var Reading = (function () {
                 warnings.push(placement);
             }
         }
+        console.log('warnings', warnings);
         return warnings;
     };
     Reading.prototype.getPlacementsFor = function (key) {
@@ -912,6 +915,7 @@ var Reading = (function () {
                 placements.push(new __WEBPACK_IMPORTED_MODULE_0__placement__["a" /* Placement */](house, key));
             }
         });
+        console.log('getPlacementsFor(' + key + ')', placements);
         return placements;
     };
     return Reading;
@@ -921,14 +925,14 @@ var Reading = (function () {
 
 /***/ }),
 
-/***/ 333:
+/***/ 332:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(101);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_storage__ = __webpack_require__(102);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__models_reading__ = __webpack_require__(326);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__models_reading__ = __webpack_require__(325);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ReadingPage; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;

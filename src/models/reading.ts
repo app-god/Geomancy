@@ -220,6 +220,7 @@ export class Reading {
         warnings.push(placement)
       }
     }
+    console.log('warnings', warnings)
     return warnings
   }
 
@@ -232,6 +233,7 @@ export class Reading {
         )
       }
     })
+    console.log('getPlacementsFor(' + key + ')', placements)
     return placements
   }
 }

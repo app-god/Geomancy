@@ -31993,6 +31993,16 @@ ion-list-header ion-label {
   color: #999;
 }
 
+ion-item-divider {
+  background-color: #111 !important;
+  border: none !important;
+  color: #999 !important;
+}
+
+button[ion-item] {
+  line-height: 200% !important;
+}
+
 .big {
   font-size: 150%;
 }
@@ -32080,50 +32090,6 @@ ion-icon.float-right {
 page-reading-figures ion-col {
   text-align: center;
   white-space: nowrap;
-}
-
-page-reading-houses ion-item {
-  line-height: 200% !important;
-}
-
-page-reading-houses .house-tetragram {
-  float: right;
-  width: 64px;
-  margin: 0 0 8px 8px;
-}
-
-page-reading-houses .house-title {
-  font-weight: bold;
-}
-
-page-reading-houses .house-topics {
-  font-style: italic;
-}
-
-page-reading-overview .label {
-  color: #999;
-  margin-bottom: 0.5em;
-}
-
-page-reading-overview ion-card {
-  width: 100% !important;
-  margin-left: 0 !important;
-  margin-right: 0 !important;
-}
-
-page-reading-overview .placement-icon {
-  float: right;
-  width: 64px;
-  margin: 0 0 8px 8px;
-  text-align: center;
-  color: #999;
-  font-size: small;
-}
-
-page-reading-overview .placement-icon img {
-  margin: 0 auto;
-  width: 32px;
-  height: 32px;
 }
 
 page-tutorial .swiper-pagination-bullet {

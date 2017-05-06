@@ -18,7 +18,7 @@ export class ReadingHousesPage {
   }
 
   showHouse(house) {
-    this.parent.navCtrl.push('HousePage', { item: house })
+    this.parent.navCtrl.push('HousePage', { house: house })
   }
 
   ionViewWillEnter() {

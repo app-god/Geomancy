@@ -26,6 +26,16 @@ ion-list-header {
   }
 }
 
+ion-item-divider {
+  background-color: color($colors, black) !important;
+  border: none !important;
+  color: color($colors, light) !important;
+}
+
+button[ion-item] {
+  line-height: 200% !important;
+}
+
 .big {
   font-size: 150%;
 }

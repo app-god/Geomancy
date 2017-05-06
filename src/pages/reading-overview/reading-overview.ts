@@ -11,12 +11,20 @@ import { Placement } from '../../models/placement'
 export class ReadingOverviewPage {
   parent
   reading
-  placements: Placement[]
+  placements: any
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.parent = navParams.get('parent')
     this.reading = this.parent.reading
-    this.placements = this.reading.getPlacements()
+    this.placements = {
+      warnings: this.reading.getWarnings(),
+      strongest: this.reading.getPlacementsFor('rules'),
+      veryStrong: this.reading.getPlacementsFor('exalted'),
+      strong: this.reading.getPlacementsFor('triplicity'),
+      veryWeak: this.reading.getPlacementsFor('detriment'),
+      weakest: this.reading.getPlacementsFor('fall')
+    }
+
   }
 
   ionViewWillEnter() {

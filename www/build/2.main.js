@@ -1,15 +1,15 @@
 webpackJsonp([2],{
 
-/***/ 314:
+/***/ 317:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(101);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__reading_houses__ = __webpack_require__(331);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__tetragram__ = __webpack_require__(333);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_tetragram_tetragram_module__ = __webpack_require__(320);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ReadingHousesPageModule", function() { return ReadingHousesPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TetragramPageModule", function() { return TetragramPageModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -20,27 +20,27 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var ReadingHousesPageModule = (function () {
-    function ReadingHousesPageModule() {
+var TetragramPageModule = (function () {
+    function TetragramPageModule() {
     }
-    return ReadingHousesPageModule;
+    return TetragramPageModule;
 }());
-ReadingHousesPageModule = __decorate([
+TetragramPageModule = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["a" /* NgModule */])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_2__reading_houses__["a" /* ReadingHousesPage */],
+            __WEBPACK_IMPORTED_MODULE_2__tetragram__["a" /* TetragramPage */],
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__reading_houses__["a" /* ReadingHousesPage */]),
-            __WEBPACK_IMPORTED_MODULE_3__components_tetragram_tetragram_module__["a" /* TetragramComponentModule */],
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__tetragram__["a" /* TetragramPage */]),
+            __WEBPACK_IMPORTED_MODULE_3__components_tetragram_tetragram_module__["a" /* TetragramComponentModule */]
         ],
         exports: [
-            __WEBPACK_IMPORTED_MODULE_2__reading_houses__["a" /* ReadingHousesPage */]
+            __WEBPACK_IMPORTED_MODULE_2__tetragram__["a" /* TetragramPage */]
         ]
     })
-], ReadingHousesPageModule);
+], TetragramPageModule);
 
-//# sourceMappingURL=reading-houses.module.js.map
+//# sourceMappingURL=tetragram.module.js.map
 
 /***/ }),
 
@@ -663,13 +663,13 @@ TetragramComponent = __decorate([
 
 /***/ }),
 
-/***/ 331:
+/***/ 333:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(101);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ReadingHousesPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TetragramPage; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -681,31 +681,23 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-var ReadingHousesPage = (function () {
-    function ReadingHousesPage(navCtrl, navParams) {
+var TetragramPage = (function () {
+    function TetragramPage(navCtrl, navParams) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
-        this.parent = navParams.get('parent');
-        this.reading = this.parent.reading;
+        this.tetragram = navParams.get('item');
     }
-    ReadingHousesPage.prototype.showHouse = function (house) {
-        this.parent.navCtrl.push('HousePage', { item: house });
-    };
-    ReadingHousesPage.prototype.ionViewWillEnter = function () {
-        this.parent.title = 'Houses';
-    };
-    return ReadingHousesPage;
+    return TetragramPage;
 }());
-ReadingHousesPage = __decorate([
+TetragramPage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPage */])(),
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* Component */])({
-        selector: 'page-reading-houses',template:/*ion-inline-start:"/Users/adam/AppGod/geomancy/src/pages/reading-houses/reading-houses.html"*/'<ion-header><ion-navbar></ion-navbar></ion-header>\n\n<ion-content padding>\n\n  <ion-list>\n    <ion-item-group *ngFor="let house of reading.houses">\n      <ion-item-divider color="black">\n        House {{house.number}}\n      </ion-item-divider>\n      <ion-item text-wrap>\n        <div>Topics: {{house.topics.join(\', \')}}</div>\n        <div>{{house.tetragram.phrase}} in regards to {{house.phrase}}.</div>\n      </ion-item>\n    </ion-item-group>\n  </ion-list>\n\n</ion-content>\n'/*ion-inline-end:"/Users/adam/AppGod/geomancy/src/pages/reading-houses/reading-houses.html"*/,
+        selector: 'page-tetragram',template:/*ion-inline-start:"/Users/adam/AppGod/geomancy/src/pages/tetragram/tetragram.html"*/'<ion-header>\n\n  <ion-navbar>\n    <ion-title>{{tetragram.name}}</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content>\n  <div padding class="big center">\n    <tetragram [tetragram]="tetragram"></tetragram>\n    <p>{{tetragram.desc}}</p>\n  </div>\n\n  <ion-grid>\n    <ion-row>\n      <ion-col col-4 class="left-column">\n        Planet\n      </ion-col>\n      <ion-col col-8>\n        {{tetragram.planet}}\n      </ion-col>\n    </ion-row>\n    <ion-row *ngFor="let meaning of tetragram.houseMeanings; let i = index">\n      <ion-col col-4 class="left-column">\n        In House {{i + 1}}\n      </ion-col>\n      <ion-col col-8>\n        {{meaning}}\n      </ion-col>\n    </ion-row>\n  </ion-grid>\n\n</ion-content>\n'/*ion-inline-end:"/Users/adam/AppGod/geomancy/src/pages/tetragram/tetragram.html"*/,
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]) === "function" && _b || Object])
-], ReadingHousesPage);
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]])
+], TetragramPage);
 
-var _a, _b;
-//# sourceMappingURL=reading-houses.js.map
+//# sourceMappingURL=tetragram.js.map
 
 /***/ })
 

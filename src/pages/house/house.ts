@@ -13,7 +13,7 @@ export class HousePage {
   tetragramNamesWithMeanings: any[]
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-    this.house = this.navParams.get('item')
+    this.house = this.navParams.get('house')
     console.log('house', this.house)
     this.tetragramNamesWithMeanings = this.getTetragramNamesWithMeanings()
   }

@@ -4,13 +4,13 @@
 
   <ion-list>
     <ion-item-group *ngFor="let house of reading.houses">
-      <ion-item-divider color="black">
+      <ion-item-divider>
         House {{house.number}}
       </ion-item-divider>
-      <ion-item text-wrap>
+      <button ion-item (tap)="showHouse(house)">
         <div>Topics: {{house.topics.join(', ')}}</div>
         <div>{{house.tetragram.phrase}} in regards to {{house.phrase}}.</div>
-      </ion-item>
+      </button>
     </ion-item-group>
   </ion-list>
 

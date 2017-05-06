@@ -7,8 +7,9 @@ webpackJsonp([0],{
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(101);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__reading_overview__ = __webpack_require__(332);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__reading_overview__ = __webpack_require__(331);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_tetragram_tetragram_module__ = __webpack_require__(320);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_placement_placement__ = __webpack_require__(324);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ReadingOverviewPageModule", function() { return ReadingOverviewPageModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -16,6 +17,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -29,6 +31,7 @@ ReadingOverviewPageModule = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["a" /* NgModule */])({
         declarations: [
             __WEBPACK_IMPORTED_MODULE_2__reading_overview__["a" /* ReadingOverviewPage */],
+            __WEBPACK_IMPORTED_MODULE_4__components_placement_placement__["a" /* PlacementComponent */],
         ],
         imports: [
             __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__reading_overview__["a" /* ReadingOverviewPage */]),
@@ -663,7 +666,148 @@ TetragramComponent = __decorate([
 
 /***/ }),
 
-/***/ 332:
+/***/ 323:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Placement; });
+/* unused harmony export PlacementType */
+var Placement = (function () {
+    function Placement(house, key) {
+        this.house = house;
+        this.tetragram = house.tetragram;
+        this.type = Placement.getTypeFromKey(key);
+        console.log('key:', key);
+        console.log('type:', this.type);
+    }
+    Placement.getTypeFromKey = function (key) {
+        switch (key) {
+            case 'warning':
+                return PlacementType.Warning;
+            case 'rules':
+                return PlacementType.Strongest;
+            case 'exalted':
+                return PlacementType.VeryStrong;
+            case 'triplicity':
+                return PlacementType.Strong;
+            case 'detriment':
+                return PlacementType.VeryWeak;
+            case 'fall':
+                return PlacementType.Weakest;
+            default:
+                return null;
+        }
+    };
+    Placement.prototype.getKey = function () {
+        return this.house.number + '-' + this.tetragram.key;
+    };
+    Placement.prototype.getColor = function () {
+        switch (this.type) {
+            case PlacementType.Warning:
+                return 'danger';
+            default:
+                return 'dark';
+        }
+    };
+    Placement.prototype.getTypeString = function () {
+        switch (this.type) {
+            case PlacementType.Warning:
+                return 'Warning!';
+            case PlacementType.Strongest:
+                return 'Strongest';
+            case PlacementType.VeryStrong:
+                return 'Very Strong';
+            case PlacementType.Strong:
+                return 'Strong';
+            case PlacementType.VeryWeak:
+                return 'Very Weak';
+            case PlacementType.Weakest:
+                return 'Weakest';
+        }
+        return 'Normal';
+    };
+    Placement.prototype.getIcon = function () {
+        var icon;
+        var prefix = '/assets/image/';
+        switch (this.type) {
+            case PlacementType.Warning:
+                icon = 'skull.png';
+                break;
+            case PlacementType.Strongest:
+                icon = 'battery4.png';
+                break;
+            case PlacementType.VeryStrong:
+                icon = 'battery3.png';
+                break;
+            case PlacementType.Strong:
+                icon = 'battery2.png';
+                break;
+            case PlacementType.VeryWeak:
+                icon = 'battery1.png';
+                break;
+            case PlacementType.Weakest:
+                icon = 'battery0.png';
+                break;
+            default:
+                return null;
+        }
+        return prefix + icon;
+    };
+    return Placement;
+}());
+
+var PlacementType;
+(function (PlacementType) {
+    PlacementType[PlacementType["Warning"] = 0] = "Warning";
+    PlacementType[PlacementType["Strongest"] = 1] = "Strongest";
+    PlacementType[PlacementType["VeryStrong"] = 2] = "VeryStrong";
+    PlacementType[PlacementType["Strong"] = 3] = "Strong";
+    PlacementType[PlacementType["VeryWeak"] = 4] = "VeryWeak";
+    PlacementType[PlacementType["Weakest"] = 5] = "Weakest";
+})(PlacementType || (PlacementType = {}));
+//# sourceMappingURL=placement.js.map
+
+/***/ }),
+
+/***/ 324:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__models_placement__ = __webpack_require__(323);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PlacementComponent; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var PlacementComponent = (function () {
+    function PlacementComponent() {
+    }
+    return PlacementComponent;
+}());
+__decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* Input */])(),
+    __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1__models_placement__["a" /* Placement */])
+], PlacementComponent.prototype, "placement", void 0);
+PlacementComponent = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* Component */])({
+        selector: 'placement',template:/*ion-inline-start:"/Users/adam/AppGod/geomancy/src/components/placement/placement.html"*/'<button ion-item>\n  <div>\n    <b>{{placement.tetragram.phrase}} in regards to {{placement.house.phrase}}.</b>\n  </div>\n  <div>\n    {{placement.tetragram.getHouseMeaning(placement.house.number)}}\n  </div>\n</button>\n'/*ion-inline-end:"/Users/adam/AppGod/geomancy/src/components/placement/placement.html"*/
+    }),
+    __metadata("design:paramtypes", [])
+], PlacementComponent);
+
+//# sourceMappingURL=placement.js.map
+
+/***/ }),
+
+/***/ 331:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -687,7 +831,14 @@ var ReadingOverviewPage = (function () {
         this.navParams = navParams;
         this.parent = navParams.get('parent');
         this.reading = this.parent.reading;
-        this.placements = this.reading.getPlacements();
+        this.placements = {
+            warnings: this.reading.getWarnings(),
+            strongest: this.reading.getPlacementsFor('rules'),
+            veryStrong: this.reading.getPlacementsFor('exalted'),
+            strong: this.reading.getPlacementsFor('triplicity'),
+            veryWeak: this.reading.getPlacementsFor('detriment'),
+            weakest: this.reading.getPlacementsFor('fall')
+        };
     }
     ReadingOverviewPage.prototype.ionViewWillEnter = function () {
         this.parent.title = 'Overview';
@@ -697,7 +848,7 @@ var ReadingOverviewPage = (function () {
 ReadingOverviewPage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPage */])(),
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* Component */])({
-        selector: 'page-reading-overview',template:/*ion-inline-start:"/Users/adam/AppGod/geomancy/src/pages/reading-overview/reading-overview.html"*/'<ion-header><ion-navbar></ion-navbar></ion-header>\n\n<ion-content padding>\n\n  <ion-grid>\n    <ion-row>\n      <ion-col col-3>\n        Question:\n      </ion-col>\n      <ion-col col-9>\n        {{reading.question}}\n      </ion-col>\n    </ion-row>\n    <ion-row>\n      <ion-col col-3>\n        Topic:\n      </ion-col>\n      <ion-col col-9>\n        {{reading.topic}}\n      </ion-col>\n    </ion-row>\n    <ion-row>\n      <ion-col col-3>\n        Date:\n      </ion-col>\n      <ion-col col-9>\n        {{reading.date | date}}\n      </ion-col>\n    </ion-row>\n  </ion-grid>\n\n  <div *ngIf="placements.length > 0">\n\n    <ion-card [color]="placement.getColor()" *ngFor="let placement of placements">\n\n      <ion-card-content>\n        <div class="placement-icon" *ngIf="placement.type">\n          <img [src]="placement.getIcon()">\n          <div>{{placement.getTypeString()}}</div>\n        </div>\n        <b>{{placement.tetragram.phrase}} in regards to {{placement.house.phrase}}.</b>\n        <br>\n        {{placement.tetragram.getHouseMeaning(placement.house.number)}}\n      </ion-card-content>\n\n    </ion-card>\n\n  </div>\n\n</ion-content>\n'/*ion-inline-end:"/Users/adam/AppGod/geomancy/src/pages/reading-overview/reading-overview.html"*/,
+        selector: 'page-reading-overview',template:/*ion-inline-start:"/Users/adam/AppGod/geomancy/src/pages/reading-overview/reading-overview.html"*/'<ion-header><ion-navbar></ion-navbar></ion-header>\n\n<ion-content padding>\n\n  <ion-list>\n\n    <ion-item-group *ngIf="placements.warnings.length > 0">\n      <ion-item-divider>Warnings</ion-item-divider>\n      <placement [placement]="placement" *ngFor="let placement of placements.warnings"></placement>\n    </ion-item-group>\n\n    <ion-item-group *ngIf="placements.strongest.length > 0">\n      <ion-item-divider>Strongest</ion-item-divider>\n      <placement [placement]="placement" *ngFor="let placement of placements.strongest"></placement>\n    </ion-item-group>\n\n    <ion-item-group *ngIf="placements.veryStrong.length > 0">\n      <ion-item-divider>Very Strong</ion-item-divider>\n      <placement [placement]="placement" *ngFor="let placement of placements.veryStrong"></placement>\n    </ion-item-group>\n\n    <ion-item-group *ngIf="placements.strong.length > 0">\n      <ion-item-divider>Strong</ion-item-divider>\n      <placement [placement]="placement" *ngFor="let placement of placements.strong"></placement>\n    </ion-item-group>\n\n    <ion-item-group *ngIf="placements.veryWeak.length > 0">\n      <ion-item-divider>Very Weak</ion-item-divider>\n      <placement [placement]="placement" *ngFor="let placement of placements.veryWeak"></placement>\n    </ion-item-group>\n\n    <ion-item-group *ngIf="placements.weakest.length > 0">\n      <ion-item-divider>Weakest</ion-item-divider>\n      <placement [placement]="placement" *ngFor="let placement of placements.weakest"></placement>\n    </ion-item-group>\n\n  </ion-list>\n\n</ion-content>\n'/*ion-inline-end:"/Users/adam/AppGod/geomancy/src/pages/reading-overview/reading-overview.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]])
 ], ReadingOverviewPage);

@@ -2,49 +2,38 @@
 
 <ion-content padding>
 
-  <ion-grid>
-    <ion-row>
-      <ion-col col-3>
-        Question:
-      </ion-col>
-      <ion-col col-9>
-        {{reading.question}}
-      </ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col col-3>
-        Topic:
-      </ion-col>
-      <ion-col col-9>
-        {{reading.topic}}
-      </ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col col-3>
-        Date:
-      </ion-col>
-      <ion-col col-9>
-        {{reading.date | date}}
-      </ion-col>
-    </ion-row>
-  </ion-grid>
+  <ion-list>
 
-  <div *ngIf="placements.length > 0">
+    <ion-item-group *ngIf="placements.warnings.length > 0">
+      <ion-item-divider>Warnings</ion-item-divider>
+      <placement [placement]="placement" *ngFor="let placement of placements.warnings"></placement>
+    </ion-item-group>
 
-    <ion-card [color]="placement.getColor()" *ngFor="let placement of placements">
+    <ion-item-group *ngIf="placements.strongest.length > 0">
+      <ion-item-divider>Strongest</ion-item-divider>
+      <placement [placement]="placement" *ngFor="let placement of placements.strongest"></placement>
+    </ion-item-group>
 
-      <ion-card-content>
-        <div class="placement-icon" *ngIf="placement.type">
-          <img [src]="placement.getIcon()">
-          <div>{{placement.getTypeString()}}</div>
-        </div>
-        <b>{{placement.tetragram.phrase}} in regards to {{placement.house.phrase}}.</b>
-        <br>
-        {{placement.tetragram.getHouseMeaning(placement.house.number)}}
-      </ion-card-content>
+    <ion-item-group *ngIf="placements.veryStrong.length > 0">
+      <ion-item-divider>Very Strong</ion-item-divider>
+      <placement [placement]="placement" *ngFor="let placement of placements.veryStrong"></placement>
+    </ion-item-group>
 
-    </ion-card>
+    <ion-item-group *ngIf="placements.strong.length > 0">
+      <ion-item-divider>Strong</ion-item-divider>
+      <placement [placement]="placement" *ngFor="let placement of placements.strong"></placement>
+    </ion-item-group>
 
-  </div>
+    <ion-item-group *ngIf="placements.veryWeak.length > 0">
+      <ion-item-divider>Very Weak</ion-item-divider>
+      <placement [placement]="placement" *ngFor="let placement of placements.veryWeak"></placement>
+    </ion-item-group>
+
+    <ion-item-group *ngIf="placements.weakest.length > 0">
+      <ion-item-divider>Weakest</ion-item-divider>
+      <placement [placement]="placement" *ngFor="let placement of placements.weakest"></placement>
+    </ion-item-group>
+
+  </ion-list>
 
 </ion-content>

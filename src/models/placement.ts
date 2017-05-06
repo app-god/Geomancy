@@ -10,6 +10,8 @@ export class Placement {
       this.house = house
       this.tetragram = house.tetragram
       this.type = Placement.getTypeFromKey(key)
+      console.log('key:', key)
+      console.log('type:', this.type)
   }
 
   static getTypeFromKey(key: string) {
