@@ -1,20 +1,17 @@
 <ion-header><ion-navbar></ion-navbar></ion-header>
 
-<ion-content>
+<ion-content padding>
 
-  <ion-card
-    *ngFor="let house of houses; let i = index">
-
-    <ion-card-content (click)="showHouse(house)">
-
-      <div class="house-tetragram">
-        <tetragram [tetragram]="house.tetragram"></tetragram>
-      </div>
-
-      <div class="house-title">House {{i + 1}}</div>
-      <div class="house-topics">{{house.topics.join(', ')}}</div>
-      <div>{{house.tetragram.houseMeanings[i]}}</div>
-    </ion-card-content>
-  </ion-card>
+  <ion-list>
+    <ion-item-group *ngFor="let house of reading.houses">
+      <ion-item-divider color="black">
+        House {{house.number}}
+      </ion-item-divider>
+      <ion-item text-wrap>
+        <div>Topics: {{house.topics.join(', ')}}</div>
+        <div>{{house.tetragram.phrase}} in regards to {{house.phrase}}.</div>
+      </ion-item>
+    </ion-item-group>
+  </ion-list>
 
 </ion-content>

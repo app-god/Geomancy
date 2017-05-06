@@ -1,3 +1,4 @@
+import { PlacementComponentModule } from './../../components/placement/placement.module';
 import { NgModule } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
 import { ReadingHousesPage } from './reading-houses';
@@ -9,7 +10,7 @@ import { TetragramComponentModule } from '../../components/tetragram/tetragram.m
   ],
   imports: [
     IonicPageModule.forChild(ReadingHousesPage),
-    TetragramComponentModule
+    TetragramComponentModule,
   ],
   exports: [
     ReadingHousesPage

@@ -685,6 +685,8 @@ var Placement = (function () {
                 return PlacementType.VeryWeak;
             case 'fall':
                 return PlacementType.Weakest;
+            default:
+                return null;
         }
     };
     Placement.prototype.getKey = function () {
@@ -713,7 +715,7 @@ var Placement = (function () {
             case PlacementType.Weakest:
                 return 'Weakest';
         }
-        return '';
+        return 'Normal';
     };
     Placement.prototype.getIcon = function () {
         var icon;
@@ -737,6 +739,8 @@ var Placement = (function () {
             case PlacementType.Weakest:
                 icon = 'battery0.png';
                 break;
+            default:
+                return null;
         }
         return prefix + icon;
     };

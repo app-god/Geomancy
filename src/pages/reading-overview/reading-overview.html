@@ -30,7 +30,21 @@
   </ion-grid>
 
   <div *ngIf="placements.length > 0">
-    <placement [placement]="placement" *ngFor="let placement of placements"></placement>
+
+    <ion-card [color]="placement.getColor()" *ngFor="let placement of placements">
+
+      <ion-card-content>
+        <div class="placement-icon" *ngIf="placement.type">
+          <img [src]="placement.getIcon()">
+          <div>{{placement.getTypeString()}}</div>
+        </div>
+        <b>{{placement.tetragram.phrase}} in regards to {{placement.house.phrase}}.</b>
+        <br>
+        {{placement.tetragram.getHouseMeaning(placement.house.number)}}
+      </ion-card-content>
+
+    </ion-card>
+
   </div>
 
 </ion-content>

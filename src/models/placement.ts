@@ -26,6 +26,8 @@ export class Placement {
           return PlacementType.VeryWeak
           case 'fall':
           return PlacementType.Weakest
+          default:
+          return null
       }
   }
 
@@ -57,7 +59,7 @@ export class Placement {
       case PlacementType.Weakest:
         return 'Weakest'
     }
-    return ''
+    return 'Normal'
   }
 
   getIcon() {
@@ -82,6 +84,8 @@ export class Placement {
       case PlacementType.Weakest:
         icon = 'battery0.png'
         break
+      default:
+        return null
     }
     return prefix + icon
   }
