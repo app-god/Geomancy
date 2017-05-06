@@ -5,10 +5,11 @@ webpackJsonp([0],{
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(101);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__reading_overview__ = __webpack_require__(329);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_tetragram_tetragram_module__ = __webpack_require__(320);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_placement_placement_module__ = __webpack_require__(324);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(101);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__reading_overview__ = __webpack_require__(332);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_tetragram_tetragram_module__ = __webpack_require__(320);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ReadingOverviewPageModule", function() { return ReadingOverviewPageModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -20,22 +21,24 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+
 var ReadingOverviewPageModule = (function () {
     function ReadingOverviewPageModule() {
     }
     return ReadingOverviewPageModule;
 }());
 ReadingOverviewPageModule = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["a" /* NgModule */])({
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["a" /* NgModule */])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_2__reading_overview__["a" /* ReadingOverviewPage */],
+            __WEBPACK_IMPORTED_MODULE_3__reading_overview__["a" /* ReadingOverviewPage */],
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__reading_overview__["a" /* ReadingOverviewPage */]),
-            __WEBPACK_IMPORTED_MODULE_3__components_tetragram_tetragram_module__["a" /* TetragramComponentModule */]
+            __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_3__reading_overview__["a" /* ReadingOverviewPage */]),
+            __WEBPACK_IMPORTED_MODULE_4__components_tetragram_tetragram_module__["a" /* TetragramComponentModule */],
+            __WEBPACK_IMPORTED_MODULE_0__components_placement_placement_module__["a" /* PlacementComponentModule */]
         ],
         exports: [
-            __WEBPACK_IMPORTED_MODULE_2__reading_overview__["a" /* ReadingOverviewPage */]
+            __WEBPACK_IMPORTED_MODULE_3__reading_overview__["a" /* ReadingOverviewPage */]
         ]
     })
 ], ReadingOverviewPageModule);
@@ -663,315 +666,88 @@ TetragramComponent = __decorate([
 
 /***/ }),
 
-/***/ 322:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return House; });
-var House = (function () {
-    function House(number) {
-        this.number = number;
-        var info = houseInfo[number - 1];
-        this.topics = info.topics;
-        this.phrase = info.phrase;
-    }
-    return House;
-}());
-
-var houseInfo = [
-    {
-        number: 1,
-        phrase: 'your self',
-        topics: ['Self', 'Life', 'Health']
-    },
-    {
-        number: 2,
-        phrase: 'wealth',
-        topics: ['Wealth', 'Property', 'Self-esteem']
-    },
-    {
-        number: 3,
-        phrase: 'friendships',
-        topics: ['Siblings', 'Neighbors', 'Short Journeys']
-    },
-    {
-        number: 4,
-        phrase: 'family',
-        topics: ['Family', 'Inheritence', 'Home']
-    },
-    {
-        number: 5,
-        phrase: 'creativity',
-        topics: ['Children', 'Pleasure', 'Gambling']
-    },
-    {
-        number: 6,
-        phrase: 'daily work',
-        topics: ['Work', 'Habits', 'Service']
-    },
-    {
-        number: 7,
-        phrase: 'love',
-        topics: ['Marriage', 'Partnerships', 'Public Enemies']
-    },
-    {
-        number: 8,
-        phrase: 'transformation',
-        topics: ['Deaths', 'Occult Abilities', 'Sex']
-    },
-    {
-        number: 9,
-        phrase: 'philosophy',
-        topics: ['Long Journeys', 'Religion', 'Visions']
-    },
-    {
-        number: 10,
-        phrase: 'reputation',
-        topics: ['Honor', 'Career', 'Reputation']
-    },
-    {
-        number: 11,
-        phrase: 'community',
-        topics: ['Society', 'Hopes', 'Humanity']
-    },
-    {
-        number: 12,
-        phrase: 'the unknown',
-        topics: ['Spirituality', 'Sacrifice', 'Hidden Enemies']
-    }
-];
-//# sourceMappingURL=house.js.map
-
-/***/ }),
-
 /***/ 323:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__tetragram__ = __webpack_require__(319);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__house__ = __webpack_require__(322);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return Reading; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PlacementType; });
-
-
-var Reading = (function () {
-    function Reading(data, question, topic) {
-        var _this = this;
-        if (!data) {
-            data = {
-                question: question ? question : 'None',
-                topic: topic ? topic : 'None',
-                date: Date.now(),
-                key0: Math.floor(Math.random() * 15),
-                key1: Math.floor(Math.random() * 15),
-                key2: Math.floor(Math.random() * 15),
-                key3: Math.floor(Math.random() * 15)
-            };
-        }
-        if (!data.question || data.question == '') {
-            this.question = 'None';
-        }
-        else {
-            this.question = data.question;
-        }
-        if (!data.topic || data.topic == '') {
-            this.topic = 'None';
-        }
-        else {
-            this.topic = data.topic;
-        }
-        this.readingData = data;
-        this.house = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
-            .map(function (number) {
-            return new __WEBPACK_IMPORTED_MODULE_1__house__["a" /* House */](number);
-        })
-            .find(function (house) {
-            return house.topics.indexOf(_this.topic) >= 0;
-        });
-        this.date = data.date;
-        this.mother0 = new __WEBPACK_IMPORTED_MODULE_0__tetragram__["a" /* Tetragram */](data.key0);
-        this.mother1 = new __WEBPACK_IMPORTED_MODULE_0__tetragram__["a" /* Tetragram */](data.key1);
-        this.mother2 = new __WEBPACK_IMPORTED_MODULE_0__tetragram__["a" /* Tetragram */](data.key2);
-        this.mother3 = new __WEBPACK_IMPORTED_MODULE_0__tetragram__["a" /* Tetragram */](data.key3);
-        this.mothers = [this.mother0, this.mother1, this.mother2, this.mother3];
-        this.daughter0 = this.createFromRows(this.mother0.row0, this.mother1.row0, this.mother2.row0, this.mother3.row0);
-        this.daughter1 = this.createFromRows(this.mother0.row1, this.mother1.row1, this.mother2.row1, this.mother3.row1);
-        this.daughter2 = this.createFromRows(this.mother0.row2, this.mother1.row2, this.mother2.row2, this.mother3.row2);
-        this.daughter3 = this.createFromRows(this.mother0.row3, this.mother1.row3, this.mother2.row3, this.mother3.row3);
-        this.daughters = [this.daughter0, this.daughter1, this.daughter2, this.daughter3];
-        this.nephew0 = this.mother0.add(this.mother1);
-        this.nephew1 = this.mother2.add(this.mother3);
-        this.nephew2 = this.daughter0.add(this.daughter1);
-        this.nephew3 = this.daughter2.add(this.daughter3);
-        this.nephews = [this.nephew0, this.nephew1, this.nephew2, this.nephew3];
-        this.witness0 = this.nephew0.add(this.nephew1);
-        this.witness1 = this.nephew2.add(this.nephew3);
-        this.witnesses = [this.witness0, this.witness1];
-        this.judge = this.witness0.add(this.witness1);
-        this.reconciler = this.mother0.add(this.judge);
-        this.partOfFortune = this.getPartOfFortune();
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Placement; });
+/* unused harmony export PlacementType */
+var Placement = (function () {
+    function Placement(house, key) {
+        this.house = house;
+        this.tetragram = house.tetragram;
+        this.type = Placement.getTypeFromKey(key);
     }
-    Reading.prototype.createFromRows = function (row0, row1, row2, row3) {
-        var r0 = row0 % 2;
-        var r1 = row1 % 2;
-        var r2 = row2 % 2;
-        var r3 = row3 % 2;
-        var key = (r3 << 3) + (r2 << 2) + (r1 << 1) + (r0 << 0);
-        return new __WEBPACK_IMPORTED_MODULE_0__tetragram__["a" /* Tetragram */](key);
-    };
-    Reading.prototype.getTetragramForHouse = function (house) {
-        var tetragrams = [
-            this.mother1, this.daughter1, this.nephew1,
-            this.mother2, this.daughter2, this.nephew2,
-            this.mother3, this.daughter3, this.nephew3,
-            this.mother0, this.daughter0, this.nephew0
-        ];
-        return tetragrams[house - 1];
-    };
-    Reading.prototype.getSignForHouse = function (house) {
-        var signs = ['Aries', 'Taurus', 'Gemini', 'Cancer', 'Leo', 'Virgo',
-            'Libra', 'Scorpio', 'Sagittarius', 'Capricorn', 'Aquarius', 'Pisces'];
-        var firstSign = this.getTetragramForHouse(0).sign;
-        var houseSignIndex = (signs.indexOf(firstSign) + house) % 12;
-        return signs[houseSignIndex];
-    };
-    Reading.prototype.getPartOfFortune = function () {
-        /*
-          return house number where Part of Fortune resides
-        */
-        var partOfFortune = [
-            this.mother0, this.mother1, this.mother2, this.mother3,
-            this.daughter0, this.daughter1, this.daughter2, this.daughter3,
-            this.nephew0, this.nephew1, this.nephew2, this.nephew3
-        ].map(function (tetragram) {
-            return tetragram.dots;
-        }).reduce(function (a, b) {
-            return a + b;
-        }, 0) % 12;
-        if (partOfFortune == 0) {
-            partOfFortune = 12;
+    Placement.getTypeFromKey = function (key) {
+        switch (key) {
+            case 'warning':
+                return PlacementType.Warning;
+            case 'rules':
+                return PlacementType.Strongest;
+            case 'exalted':
+                return PlacementType.VeryStrong;
+            case 'triplicity':
+                return PlacementType.Strong;
+            case 'detriment':
+                return PlacementType.VeryWeak;
+            case 'fall':
+                return PlacementType.Weakest;
         }
-        return partOfFortune;
     };
-    Reading.prototype.getReadingData = function () {
-        return this.readingData;
+    Placement.prototype.getKey = function () {
+        return this.house.number + '-' + this.tetragram.key;
     };
-    Reading.prototype.getPlacements = function () {
-        var placements = [].concat(this.getWarnings(), this.getRulerships(), this.getExaltations(), this.getTriplicities(), this.getFalls(), this.getDetriments());
-        // remove duplicates (ignoring placement type)
-        var uniquePlacements = [];
-        var tetragramsHouses = [];
-        placements.forEach(function (placement) {
-            var tetragramHouse = placement.tetragram.number + '-' + placement.house.number;
-            if (tetragramsHouses.indexOf(tetragramHouse) == -1) {
-                tetragramsHouses.push(tetragramHouse);
-                uniquePlacements.push(placement);
-            }
-        });
-        return uniquePlacements;
-    };
-    Reading.prototype.getWarnings = function () {
-        var warnings = [];
-        var tetragram = this.getTetragramForHouse(1);
-        if (tetragram.name == 'Rubeus'
-            || tetragram.name == 'Cauda Draconis') {
-            var message = tetragram.name + ' is in the first house.';
-            if (['Rubeus', 'Cauda Draconis'].indexOf(tetragram.name) > -1) {
-                warnings.push({
-                    tetragram: tetragram,
-                    house: new __WEBPACK_IMPORTED_MODULE_1__house__["a" /* House */](1),
-                    type: PlacementType.Warning
-                });
-            }
+    Placement.prototype.getColor = function () {
+        switch (this.type) {
+            case PlacementType.Warning:
+                return 'danger';
+            default:
+                return 'dark';
         }
-        return warnings;
     };
-    Reading.prototype.getRulerships = function () {
-        var _this = this;
-        var rulerships = [];
-        var houseNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
-        houseNumbers.forEach(function (houseNumber) {
-            var tetragram = _this.getTetragramForHouse(houseNumber);
-            if (tetragram.rules.indexOf(houseNumber) >= 0) {
-                var house = new __WEBPACK_IMPORTED_MODULE_1__house__["a" /* House */](houseNumber);
-                rulerships.push({
-                    tetragram: tetragram,
-                    house: house,
-                    type: PlacementType.Strongest
-                });
-            }
-        });
-        return rulerships;
+    Placement.prototype.getTypeString = function () {
+        switch (this.type) {
+            case PlacementType.Warning:
+                return 'Warning!';
+            case PlacementType.Strongest:
+                return 'Strongest';
+            case PlacementType.VeryStrong:
+                return 'Very Strong';
+            case PlacementType.Strong:
+                return 'Strong';
+            case PlacementType.VeryWeak:
+                return 'Very Weak';
+            case PlacementType.Weakest:
+                return 'Weakest';
+        }
+        return '';
     };
-    Reading.prototype.getExaltations = function () {
-        var _this = this;
-        var exaltations = [];
-        var houseNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
-        houseNumbers.forEach(function (houseNumber) {
-            var tetragram = _this.getTetragramForHouse(houseNumber);
-            if (tetragram.exalted.indexOf(houseNumber) >= 0) {
-                var house = new __WEBPACK_IMPORTED_MODULE_1__house__["a" /* House */](houseNumber);
-                exaltations.push({
-                    tetragram: tetragram,
-                    house: house,
-                    type: PlacementType.VeryStrong
-                });
-            }
-        });
-        return exaltations;
+    Placement.prototype.getIcon = function () {
+        var icon;
+        var prefix = '/assets/image/';
+        switch (this.type) {
+            case PlacementType.Warning:
+                icon = 'skull.png';
+                break;
+            case PlacementType.Strongest:
+                icon = 'battery4.png';
+                break;
+            case PlacementType.VeryStrong:
+                icon = 'battery3.png';
+                break;
+            case PlacementType.Strong:
+                icon = 'battery2.png';
+                break;
+            case PlacementType.VeryWeak:
+                icon = 'battery1.png';
+                break;
+            case PlacementType.Weakest:
+                icon = 'battery0.png';
+                break;
+        }
+        return prefix + icon;
     };
-    Reading.prototype.getFalls = function () {
-        var _this = this;
-        var placements = [];
-        var houseNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
-        houseNumbers.forEach(function (houseNumber) {
-            var tetragram = _this.getTetragramForHouse(houseNumber);
-            if (tetragram.fall.indexOf(houseNumber) >= 0) {
-                var house = new __WEBPACK_IMPORTED_MODULE_1__house__["a" /* House */](houseNumber);
-                placements.push({
-                    tetragram: tetragram,
-                    house: house,
-                    type: PlacementType.VeryWeak
-                });
-            }
-        });
-        return placements;
-    };
-    Reading.prototype.getDetriments = function () {
-        var _this = this;
-        var placements = [];
-        var houseNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
-        houseNumbers.forEach(function (houseNumber) {
-            var tetragram = _this.getTetragramForHouse(houseNumber);
-            if (tetragram.detriment.indexOf(houseNumber) >= 0) {
-                var house = new __WEBPACK_IMPORTED_MODULE_1__house__["a" /* House */](houseNumber);
-                placements.push({
-                    tetragram: tetragram,
-                    house: house,
-                    type: PlacementType.Weakest
-                });
-            }
-        });
-        return placements;
-    };
-    Reading.prototype.getTriplicities = function () {
-        var _this = this;
-        var placements = [];
-        var houseNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
-        houseNumbers.forEach(function (houseNumber) {
-            var tetragram = _this.getTetragramForHouse(houseNumber);
-            if (tetragram.triplicity.indexOf(houseNumber) >= 0) {
-                var house = new __WEBPACK_IMPORTED_MODULE_1__house__["a" /* House */](houseNumber);
-                placements.push({
-                    tetragram: tetragram,
-                    house: house,
-                    type: PlacementType.Strong
-                });
-            }
-        });
-        return placements;
-    };
-    return Reading;
+    return Placement;
 }());
 
 var PlacementType;
@@ -983,17 +759,94 @@ var PlacementType;
     PlacementType[PlacementType["VeryWeak"] = 4] = "VeryWeak";
     PlacementType[PlacementType["Weakest"] = 5] = "Weakest";
 })(PlacementType || (PlacementType = {}));
-//# sourceMappingURL=reading.js.map
+//# sourceMappingURL=placement.js.map
 
 /***/ }),
 
-/***/ 329:
+/***/ 324:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(101);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__models_reading__ = __webpack_require__(323);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__placement__ = __webpack_require__(325);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PlacementComponentModule; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+var PlacementComponentModule = (function () {
+    function PlacementComponentModule() {
+    }
+    return PlacementComponentModule;
+}());
+PlacementComponentModule = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["a" /* NgModule */])({
+        declarations: [
+            __WEBPACK_IMPORTED_MODULE_2__placement__["a" /* PlacementComponent */],
+        ],
+        imports: [
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__placement__["a" /* PlacementComponent */])
+        ],
+        exports: [
+            __WEBPACK_IMPORTED_MODULE_2__placement__["a" /* PlacementComponent */]
+        ]
+    })
+], PlacementComponentModule);
+
+//# sourceMappingURL=placement.module.js.map
+
+/***/ }),
+
+/***/ 325:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__models_placement__ = __webpack_require__(323);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PlacementComponent; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var PlacementComponent = (function () {
+    function PlacementComponent() {
+    }
+    return PlacementComponent;
+}());
+__decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* Input */])(),
+    __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1__models_placement__["a" /* Placement */])
+], PlacementComponent.prototype, "placement", void 0);
+PlacementComponent = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* Component */])({
+        selector: 'placement',template:/*ion-inline-start:"/Users/adam/AppGod/geomancy/src/components/placement/placement.html"*/'<ion-card [color]="placement.getColor()">\n  <ion-card-content>\n    <div class="overview-icon">\n      <img [src]="placement.getIcon()">\n      <div>{{placement.getTypeString()}}</div>\n    </div>\n    <b>{{placement.tetragram.phrase}} in regards to {{placement.house.phrase}}.</b>\n    <br>\n    {{placement.tetragram.getHouseMeaning(placement.house.number)}}\n  </ion-card-content>\n</ion-card>\n'/*ion-inline-end:"/Users/adam/AppGod/geomancy/src/components/placement/placement.html"*/
+    }),
+    __metadata("design:paramtypes", [])
+], PlacementComponent);
+
+//# sourceMappingURL=placement.js.map
+
+/***/ }),
+
+/***/ 332:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(101);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ReadingOverviewPage; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1006,12 +859,10 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-
 var ReadingOverviewPage = (function () {
     function ReadingOverviewPage(navCtrl, navParams) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
-        this.placementType = __WEBPACK_IMPORTED_MODULE_2__models_reading__["a" /* PlacementType */];
         this.parent = navParams.get('parent');
         this.reading = this.parent.reading;
         this.placements = this.reading.getPlacements();
@@ -1019,47 +870,12 @@ var ReadingOverviewPage = (function () {
     ReadingOverviewPage.prototype.ionViewWillEnter = function () {
         this.parent.title = 'Overview';
     };
-    ReadingOverviewPage.prototype.getColor = function (placementType) {
-        var color;
-        if (placementType == __WEBPACK_IMPORTED_MODULE_2__models_reading__["a" /* PlacementType */].Warning)
-            color = 'danger';
-        if (placementType == __WEBPACK_IMPORTED_MODULE_2__models_reading__["a" /* PlacementType */].Strongest)
-            color = 'dark';
-        if (placementType == __WEBPACK_IMPORTED_MODULE_2__models_reading__["a" /* PlacementType */].VeryStrong)
-            color = 'dark';
-        return color;
-    };
-    ReadingOverviewPage.prototype.getIcon = function (placementType) {
-        var icon;
-        var prefix = 'assets/image/';
-        switch (placementType) {
-            case __WEBPACK_IMPORTED_MODULE_2__models_reading__["a" /* PlacementType */].Warning:
-                icon = 'skull.png';
-                break;
-            case __WEBPACK_IMPORTED_MODULE_2__models_reading__["a" /* PlacementType */].Strongest:
-                icon = 'battery4.png';
-                break;
-            case __WEBPACK_IMPORTED_MODULE_2__models_reading__["a" /* PlacementType */].VeryStrong:
-                icon = 'battery3.png';
-                break;
-            case __WEBPACK_IMPORTED_MODULE_2__models_reading__["a" /* PlacementType */].Strong:
-                icon = 'battery2.png';
-                break;
-            case __WEBPACK_IMPORTED_MODULE_2__models_reading__["a" /* PlacementType */].VeryWeak:
-                icon = 'battery1.png';
-                break;
-            case __WEBPACK_IMPORTED_MODULE_2__models_reading__["a" /* PlacementType */].Weakest:
-                icon = 'battery0.png';
-                break;
-        }
-        return prefix + icon;
-    };
     return ReadingOverviewPage;
 }());
 ReadingOverviewPage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPage */])(),
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* Component */])({
-        selector: 'page-reading-overview',template:/*ion-inline-start:"/Users/adam/AppGod/geomancy/src/pages/reading-overview/reading-overview.html"*/'<ion-header><ion-navbar></ion-navbar></ion-header>\n\n<ion-content padding>\n\n  <ion-grid>\n    <ion-row>\n      <ion-col col-3>\n        Question:\n      </ion-col>\n      <ion-col col-9>\n        {{reading.question}}\n      </ion-col>\n    </ion-row>\n    <ion-row>\n      <ion-col col-3>\n        Topic:\n      </ion-col>\n      <ion-col col-9>\n        {{reading.topic}}\n      </ion-col>\n    </ion-row>\n    <ion-row>\n      <ion-col col-3>\n        Date:\n      </ion-col>\n      <ion-col col-9>\n        {{reading.date | date}}\n      </ion-col>\n    </ion-row>\n  </ion-grid>\n\n  <div *ngIf="placements.length > 0">\n    <ion-card [color]="getColor(placement.type)" *ngFor="let placement of placements">\n      <ion-card-content>\n        <div class="overview-icon">\n          <img [src]="getIcon(placement.type)">\n          <div [ngSwitch]="placement.type">\n            <div *ngSwitchCase="placementType.Warning">\n              Warning!\n            </div>\n            <div *ngSwitchCase="placementType.Strongest">\n              Strongest\n            </div>\n            <div *ngSwitchCase="placementType.VeryStrong">\n              Very Strong\n            </div>\n            <div *ngSwitchCase="placementType.Strong">\n              Strong\n            </div>\n            <div *ngSwitchCase="placementType.VeryWeak">\n              Very Weak\n            </div>\n            <div *ngSwitchCase="placementType.Weakest">\n              Weakest\n            </div>\n          </div>\n        </div>\n        <b>{{placement.tetragram.phrase}} in {{placement.house.phrase}}.</b>\n        <br>\n        {{placement.tetragram.getHouseMeaning(placement.house.number)}}\n      </ion-card-content>\n    </ion-card>\n  </div>\n\n</ion-content>\n'/*ion-inline-end:"/Users/adam/AppGod/geomancy/src/pages/reading-overview/reading-overview.html"*/,
+        selector: 'page-reading-overview',template:/*ion-inline-start:"/Users/adam/AppGod/geomancy/src/pages/reading-overview/reading-overview.html"*/'<ion-header><ion-navbar></ion-navbar></ion-header>\n\n<ion-content padding>\n\n  <ion-grid>\n    <ion-row>\n      <ion-col col-3>\n        Question:\n      </ion-col>\n      <ion-col col-9>\n        {{reading.question}}\n      </ion-col>\n    </ion-row>\n    <ion-row>\n      <ion-col col-3>\n        Topic:\n      </ion-col>\n      <ion-col col-9>\n        {{reading.topic}}\n      </ion-col>\n    </ion-row>\n    <ion-row>\n      <ion-col col-3>\n        Date:\n      </ion-col>\n      <ion-col col-9>\n        {{reading.date | date}}\n      </ion-col>\n    </ion-row>\n  </ion-grid>\n\n  <div *ngIf="placements.length > 0">\n    <placement [placement]="placement" *ngFor="let placement of placements"></placement>\n  </div>\n\n</ion-content>\n'/*ion-inline-end:"/Users/adam/AppGod/geomancy/src/pages/reading-overview/reading-overview.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]])
 ], ReadingOverviewPage);

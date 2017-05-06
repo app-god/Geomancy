@@ -75,48 +75,4 @@ describe('Reading', () => {
         expect(warningReading.getWarnings().length).toBeGreaterThan(0)
         expect(testReading.getWarnings().length).toBe(0)
     })
-
-    it('gets rulerships', () => {
-        let rulershipReading = new Reading({
-            question: '',
-            topic: '',
-            date: 0,
-            key0: 6,
-            key1: 13,
-            key2: 15,
-            key3: 10
-        })
-
-        expect(rulershipReading.getRulerships().length).toBeGreaterThanOrEqual(4)
-        expect(testReading.getRulerships().length).toBe(2)
-
-    })
-
-    it('gets exaltations', () => {
-        let reading1 = new Reading({
-            question: '',
-            topic: '',
-            date: 0,
-            key0: 7,
-            key1: 3,
-            key2: 5,
-            key3: 0
-        })
-
-        expect(reading1.getExaltations().length).toBe(2)
-
-        let reading2 = new Reading({
-            question: '',
-            topic: '',
-            date: 0,
-            key0: 6,
-            key1: 11,
-            key2: 13,
-            key3: 9
-        })
-
-        expect(reading2.getExaltations().length).toBe(1)
-
-    })
-
 })

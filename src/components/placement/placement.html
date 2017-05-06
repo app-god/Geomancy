@@ -1,0 +1,11 @@
+<ion-card [color]="placement.getColor()">
+  <ion-card-content>
+    <div class="overview-icon">
+      <img [src]="placement.getIcon()">
+      <div>{{placement.getTypeString()}}</div>
+    </div>
+    <b>{{placement.tetragram.phrase}} in regards to {{placement.house.phrase}}.</b>
+    <br>
+    {{placement.tetragram.getHouseMeaning(placement.house.number)}}
+  </ion-card-content>
+</ion-card>

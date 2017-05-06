@@ -1,3 +1,4 @@
+import { Placement } from './placement';
 import { Tetragram } from './tetragram'
 import { House } from './house'
 
@@ -5,6 +6,7 @@ export class Reading {
   question: string
   topic: string
   house: House
+  houses: House[]
 
   mother0: Tetragram
   mother1: Tetragram
@@ -61,14 +63,6 @@ export class Reading {
 
     this.readingData = data
 
-    this.house = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
-      .map(number => {
-        return new House(number)
-      })
-      .find(house => {
-        return house.topics.indexOf(this.topic) >= 0
-      })
-
     this.date = data.date
 
     this.mother0 = new Tetragram(data.key0)
@@ -117,6 +111,18 @@ export class Reading {
     this.reconciler = this.mother0.add(this.judge)
 
     this.partOfFortune = this.getPartOfFortune()
+
+    this.houses = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+      .map(number => { return new House(number) })
+    console.log('constructor houses', this.houses)
+
+    this.houses.forEach(house => {
+      house.tetragram = this.getTetragramForHouse(house.number)
+    })
+
+    this.house = this.houses.find(house => {
+      return house.topics.indexOf(this.topic) >= 0
+    })
   }
 
   createFromRows(row0, row1, row2, row3) {
@@ -173,28 +179,34 @@ export class Reading {
   }
 
   getPlacements(): Placement[] {
-    let placements = [].concat(
+    let placements: Placement[] = [].concat(
       this.getWarnings(),
-      this.getRulerships(),
-      this.getExaltations(),
-      this.getTriplicities(),
-      this.getFalls(),
-      this.getDetriments()
+      this.getPlacementsFor('rules'),
+      this.getPlacementsFor('exalted'),
+      this.getPlacementsFor('triplicity'),
+      this.getPlacementsFor('fall'),
+      this.getPlacementsFor('detriment')
     )
+
+    console.log('getPlacements()', placements)
 
     // remove duplicates (ignoring placement type)
     let uniquePlacements: Placement[] = []
     let tetragramsHouses: any[] = []
 
     placements.forEach((placement) => {
-      let tetragramHouse = placement.tetragram.number + '-' + placement.house.number
-      if (tetragramsHouses.indexOf(tetragramHouse) == -1) {
-        tetragramsHouses.push(tetragramHouse)
+      let key = placement.getKey()
+      if (tetragramsHouses.indexOf(key) == -1) {
+        tetragramsHouses.push(key)
         uniquePlacements.push(placement)
       }
     })
 
     return uniquePlacements
+  }
+
+  getHouse(number: number) {
+    return this.houses[number - 1]
   }
 
   getWarnings(): Placement[] {
@@ -203,98 +215,21 @@ export class Reading {
     if (tetragram.name == 'Rubeus'
       || tetragram.name == 'Cauda Draconis') {
 
-      let message = tetragram.name + ' is in the first house.'
       if (['Rubeus', 'Cauda Draconis'].indexOf(tetragram.name) > -1) {
-        warnings.push({
-          tetragram: tetragram,
-          house: new House(1),
-          type: PlacementType.Warning
-        })
+        let placement = new Placement(this.getHouse(1), 'warning')
+        warnings.push(placement)
       }
     }
     return warnings
   }
 
-  getRulerships(): Placement[] {
-    let rulerships: Placement[] = []
-    let houseNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
-    houseNumbers.forEach((houseNumber) => {
-      let tetragram = this.getTetragramForHouse(houseNumber)
-      if (tetragram.rules.indexOf(houseNumber) >= 0) {
-        let house = new House(houseNumber)
-        rulerships.push({
-          tetragram: tetragram,
-          house: house,
-          type: PlacementType.Strongest
-        })
-      }
-    })
-    return rulerships
-  }
-
-  getExaltations(): Placement[] {
-    let exaltations: Placement[] = []
-    let houseNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
-    houseNumbers.forEach((houseNumber) => {
-      let tetragram = this.getTetragramForHouse(houseNumber)
-      if (tetragram.exalted.indexOf(houseNumber) >= 0) {
-        let house = new House(houseNumber)
-        exaltations.push({
-          tetragram: tetragram,
-          house: house,
-          type: PlacementType.VeryStrong
-        })
-      }
-    })
-    return exaltations
-  }
-
-  getFalls(): Placement[] {
+  getPlacementsFor(key: string): Placement[] {
     let placements: Placement[] = []
-    let houseNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
-    houseNumbers.forEach((houseNumber) => {
-      let tetragram = this.getTetragramForHouse(houseNumber)
-      if (tetragram.fall.indexOf(houseNumber) >= 0) {
-        let house = new House(houseNumber)
-        placements.push({
-          tetragram: tetragram,
-          house: house,
-          type: PlacementType.VeryWeak
-        })
-      }
-    })
-    return placements
-  }
-
-  getDetriments(): Placement[] {
-    let placements: Placement[] = []
-    let houseNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
-    houseNumbers.forEach((houseNumber) => {
-      let tetragram = this.getTetragramForHouse(houseNumber)
-      if (tetragram.detriment.indexOf(houseNumber) >= 0) {
-        let house = new House(houseNumber)
-        placements.push({
-          tetragram: tetragram,
-          house: house,
-          type: PlacementType.Weakest
-        })
-      }
-    })
-    return placements
-  }
-
-  getTriplicities(): Placement[] {
-    let placements: Placement[] = []
-    let houseNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
-    houseNumbers.forEach((houseNumber) => {
-      let tetragram = this.getTetragramForHouse(houseNumber)
-      if (tetragram.triplicity.indexOf(houseNumber) >= 0) {
-        let house = new House(houseNumber)
-        placements.push({
-          tetragram: tetragram,
-          house: house,
-          type: PlacementType.Strong
-        })
+    this.houses.forEach(house => {
+      if (house.tetragram[key].indexOf(house.number) >= 0) {
+        placements.push(
+          new Placement(house, key)
+        )
       }
     })
     return placements
@@ -313,19 +248,4 @@ export interface ReadingData {
 
 export interface ReadingSaveData extends ReadingData {
   judgeKey: number
-}
-
-export interface Placement {
-  type: PlacementType
-  tetragram: Tetragram
-  house: House
-}
-
-export enum PlacementType {
-  Warning,
-  Strongest,
-  VeryStrong,
-  Strong,
-  VeryWeak,
-  Weakest
 }
