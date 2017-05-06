@@ -631,10 +631,9 @@ HousePage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* Component */])({
         selector: 'page-house',template:/*ion-inline-start:"/Users/adam/AppGod/geomancy/src/pages/house/house.html"*/'<!--\n  Generated template for the HousePage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>House {{house.number}}</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content>\n\n  <p>{{house.description}}</p>\n\n  <ion-grid>\n    <ion-row *ngFor="let nameWithMeaning of tetragramNamesWithMeanings">\n      <ion-col col-4 class="left-column">{{nameWithMeaning.name}}</ion-col>\n      <ion-col col-8 class="right-column">{{nameWithMeaning.meaning}}</ion-col>\n    </ion-row>\n  </ion-grid>\n\n</ion-content>\n'/*ion-inline-end:"/Users/adam/AppGod/geomancy/src/pages/house/house.html"*/,
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]) === "function" && _b || Object])
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]])
 ], HousePage);
 
-var _a, _b;
 //# sourceMappingURL=house.js.map
 
 /***/ })

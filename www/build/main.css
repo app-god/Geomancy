@@ -31994,13 +31994,16 @@ ion-list-header ion-label {
 }
 
 ion-item-divider {
-  background-color: #111 !important;
-  border: none !important;
+  background: none !important;
+  border-bottom: solid 1px black !important;
   color: #999 !important;
+  padding: 0 !important;
 }
 
+ion-item,
 button[ion-item] {
   line-height: 200% !important;
+  border-bottom: solid 1px black !important;
 }
 
 .big {
