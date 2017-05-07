@@ -50,29 +50,39 @@ export class Placement {
 
   getColor(): string {
     switch (this.type) {
-        case PlacementType.Warning:
-        return 'danger'
-        default:
-        return 'dark'
+      case PlacementType.Warning:
+        return 'warning'
+      case PlacementType.Strongest:
+        return 'strongest'
+      case PlacementType.VeryStrong:
+        return 'very-strong'
+      case PlacementType.Strong:
+        return 'strong'
+      case PlacementType.Weak:
+        return 'weak'
+      case PlacementType.VeryWeak:
+        return 'very-weak'
+      case PlacementType.Weakest:
+        return 'weakest'
     }
   }
 
   getTypeString(): string {
     switch (this.type) {
       case PlacementType.Warning:
-        return 'Warning!'
+        return 'Warning'
       case PlacementType.Strongest:
         return 'Strongest'
       case PlacementType.VeryStrong:
         return 'Very Strong'
       case PlacementType.Strong:
         return 'Strong'
+      case PlacementType.Weak:
+        return 'Weak'
       case PlacementType.VeryWeak:
         return 'Very Weak'
       case PlacementType.Weakest:
         return 'Weakest'
-      default:
-        return 'Normal'
     }
   }
 

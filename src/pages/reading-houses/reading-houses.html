@@ -6,7 +6,7 @@
     <ion-item-group *ngFor="let house of reading.houses">
 
       <ion-item-divider>
-        <b>House {{house.number}}</b> {{house.topics.join(', ')}}
+        <b>{{house.number}})</b> {{house.topics.join(', ')}}
       </ion-item-divider>
 
       <house [house]="house" (onTap)="showHouse(house)"></house>

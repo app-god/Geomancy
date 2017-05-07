@@ -597,6 +597,7 @@ var tetragramInfo = [
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__tetragram__ = __webpack_require__(321);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common__ = __webpack_require__(7);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TetragramComponentModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -604,6 +605,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 var TetragramComponentModule = (function () {
@@ -616,7 +618,9 @@ TetragramComponentModule = __decorate([
         declarations: [
             __WEBPACK_IMPORTED_MODULE_1__tetragram__["a" /* TetragramComponent */],
         ],
-        imports: [],
+        imports: [
+            __WEBPACK_IMPORTED_MODULE_2__angular_common__["e" /* CommonModule */]
+        ],
         exports: [
             __WEBPACK_IMPORTED_MODULE_1__tetragram__["a" /* TetragramComponent */]
         ]
@@ -647,6 +651,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 var TetragramComponent = (function () {
     function TetragramComponent() {
+        this.color = '';
     }
     TetragramComponent.prototype.renderRow = function (key) {
         if (key == 0) {
@@ -660,15 +665,20 @@ var TetragramComponent = (function () {
 }());
 __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* Input */])(),
-    __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1__models_tetragram__["a" /* Tetragram */])
+    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__models_tetragram__["a" /* Tetragram */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__models_tetragram__["a" /* Tetragram */]) === "function" && _a || Object)
 ], TetragramComponent.prototype, "tetragram", void 0);
+__decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* Input */])(),
+    __metadata("design:type", String)
+], TetragramComponent.prototype, "color", void 0);
 TetragramComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* Component */])({
-        selector: 'tetragram',template:/*ion-inline-start:"/Users/adam/AppGod/geomancy/src/components/tetragram/tetragram.html"*/'<div class="tetragram">\n  <div class="tetragram-row">\n    {{renderRow(tetragram.row0)}}\n  </div>\n  <div class="tetragram-row">\n    {{renderRow(tetragram.row1)}}\n  </div>\n  <div class="tetragram-row">\n    {{renderRow(tetragram.row2)}}\n  </div>\n  <div class="tetragram-row">\n    {{renderRow(tetragram.row3)}}\n  </div>\n</div>\n'/*ion-inline-end:"/Users/adam/AppGod/geomancy/src/components/tetragram/tetragram.html"*/
+        selector: 'tetragram',template:/*ion-inline-start:"/Users/adam/AppGod/geomancy/src/components/tetragram/tetragram.html"*/'<div class="tetragram" [ngClass]="color">\n  <div class="tetragram-row">\n    {{renderRow(tetragram.row0)}}\n  </div>\n  <div class="tetragram-row">\n    {{renderRow(tetragram.row1)}}\n  </div>\n  <div class="tetragram-row">\n    {{renderRow(tetragram.row2)}}\n  </div>\n  <div class="tetragram-row">\n    {{renderRow(tetragram.row3)}}\n  </div>\n</div>\n'/*ion-inline-end:"/Users/adam/AppGod/geomancy/src/components/tetragram/tetragram.html"*/
     }),
     __metadata("design:paramtypes", [])
 ], TetragramComponent);
 
+var _a;
 //# sourceMappingURL=tetragram.js.map
 
 /***/ }),
@@ -722,27 +732,37 @@ var Placement = (function () {
     Placement.prototype.getColor = function () {
         switch (this.type) {
             case PlacementType.Warning:
-                return 'danger';
-            default:
-                return 'dark';
+                return 'warning';
+            case PlacementType.Strongest:
+                return 'strongest';
+            case PlacementType.VeryStrong:
+                return 'very-strong';
+            case PlacementType.Strong:
+                return 'strong';
+            case PlacementType.Weak:
+                return 'weak';
+            case PlacementType.VeryWeak:
+                return 'very-weak';
+            case PlacementType.Weakest:
+                return 'weakest';
         }
     };
     Placement.prototype.getTypeString = function () {
         switch (this.type) {
             case PlacementType.Warning:
-                return 'Warning!';
+                return 'Warning';
             case PlacementType.Strongest:
                 return 'Strongest';
             case PlacementType.VeryStrong:
                 return 'Very Strong';
             case PlacementType.Strong:
                 return 'Strong';
+            case PlacementType.Weak:
+                return 'Weak';
             case PlacementType.VeryWeak:
                 return 'Very Weak';
             case PlacementType.Weakest:
                 return 'Weakest';
-            default:
-                return 'Normal';
         }
     };
     Placement.prototype.getIcon = function () {
@@ -974,7 +994,7 @@ __decorate([
 ], HouseComponent.prototype, "onTap", void 0);
 HouseComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["K" /* Component */])({
-        selector: 'house',template:/*ion-inline-start:"/Users/adam/AppGod/geomancy/src/components/house/house.html"*/'<button ion-item [color]="house.placement.getColor()" text-wrap\n  (tap)="onTap.emit(house)">\n\n  <tetragram [tetragram]="house.tetragram" item-left></tetragram>\n\n  <div>\n    {{house.tetragram.phrase}} in regards to {{house.phrase}}.\n  </div>\n</button>\n'/*ion-inline-end:"/Users/adam/AppGod/geomancy/src/components/house/house.html"*/
+        selector: 'house',template:/*ion-inline-start:"/Users/adam/AppGod/geomancy/src/components/house/house.html"*/'<button ion-item text-wrap\n  (tap)="onTap.emit(house)">\n\n  <tetragram [color]="house.placement.getColor()" [tetragram]="house.tetragram" item-left></tetragram>\n\n  <div>\n    {{house.tetragram.getHouseMeaning(house.number)}}\n  </div>\n</button>\n'/*ion-inline-end:"/Users/adam/AppGod/geomancy/src/components/house/house.html"*/
     }),
     __metadata("design:paramtypes", [])
 ], HouseComponent);
@@ -1027,18 +1047,19 @@ var ReadingOverviewPage = (function () {
         this.parent.title = 'Overview';
     };
     ReadingOverviewPage.prototype.showHouse = function (house) {
-        this.navCtrl.push('HousePage', { house: house });
+        this.parent.navCtrl.push('HousePage', { house: house });
     };
     return ReadingOverviewPage;
 }());
 ReadingOverviewPage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPage */])(),
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* Component */])({
-        selector: 'page-reading-overview',template:/*ion-inline-start:"/Users/adam/AppGod/geomancy/src/pages/reading-overview/reading-overview.html"*/'<ion-header><ion-navbar></ion-navbar></ion-header>\n\n<ion-content padding>\n\n  <ion-list>\n\n    <ion-item-group *ngIf="topicHouse">\n      <ion-item-divider>{{reading.topic}}</ion-item-divider>\n    </ion-item-group>\n\n    <ion-item-group *ngFor="let key of keys">\n\n      <div *ngIf="houses[key].length > 0">\n\n        <ion-item-divider>{{keyToString(key)}}</ion-item-divider>\n\n        <house [house]="house" *ngFor="let house of houses[key]" (onTap)="showHouse($event)"></house>\n\n      </div>\n\n    </ion-item-group>\n\n  </ion-list>\n\n</ion-content>\n'/*ion-inline-end:"/Users/adam/AppGod/geomancy/src/pages/reading-overview/reading-overview.html"*/,
+        selector: 'page-reading-overview',template:/*ion-inline-start:"/Users/adam/AppGod/geomancy/src/pages/reading-overview/reading-overview.html"*/'<ion-header><ion-navbar></ion-navbar></ion-header>\n\n<ion-content padding>\n\n  <div class="question">\n    {{reading.question}}\n  </div>\n\n  <ion-list>\n\n    <ion-item-group *ngIf="topicHouse">\n      <ion-item-divider><b>Topic</b> {{reading.topic}}</ion-item-divider>\n      <house [house]="topicHouse" (onTap)="showHouse($event)"></house>\n    </ion-item-group>\n\n    <ion-item-group *ngFor="let key of keys">\n\n      <div *ngIf="houses[key].length > 0">\n\n        <ion-item-divider>{{keyToString(key)}}</ion-item-divider>\n\n        <house [house]="house" *ngFor="let house of houses[key]" (onTap)="showHouse($event)"></house>\n\n      </div>\n\n    </ion-item-group>\n\n  </ion-list>\n\n</ion-content>\n'/*ion-inline-end:"/Users/adam/AppGod/geomancy/src/pages/reading-overview/reading-overview.html"*/,
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]) === "function" && _b || Object])
 ], ReadingOverviewPage);
 
+var _a, _b;
 //# sourceMappingURL=reading-overview.js.map
 
 /***/ })

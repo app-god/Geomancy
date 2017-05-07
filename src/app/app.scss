@@ -22,14 +22,14 @@ ion-content {
 
 ion-list-header {
   ion-label {
-    color: color($colors, light);
+    color: color($colors, dark);
   }
 }
 
 ion-item-divider {
   background: none !important;
   border-bottom: solid 1px black !important;
-  color: color($colors, light) !important;
+  color: color($colors, dark) !important;
   padding: 0 !important;
 }
 

@@ -8,6 +8,7 @@ import { Tetragram } from '../../models/tetragram'
 export class TetragramComponent {
 
   @Input() tetragram: Tetragram
+  @Input() color: string = ''
 
   constructor() {
   }

@@ -42,6 +42,6 @@ export class ReadingOverviewPage {
   }
 
   showHouse(house) {
-    this.navCtrl.push('HousePage', { house: house })
+    this.parent.navCtrl.push('HousePage', { house: house })
   }
 }
