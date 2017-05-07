@@ -603,7 +603,7 @@ var Placement = (function () {
             case 'fall':
                 return 'Weakest';
             default:
-                return '';
+                return 'Weak';
         }
     };
     Placement.getTypeFromKey = function (key) {
@@ -621,7 +621,7 @@ var Placement = (function () {
             case 'fall':
                 return PlacementType.Weakest;
             default:
-                return PlacementType.Normal;
+                return PlacementType.Weak;
         }
     };
     Placement.prototype.getColor = function () {
@@ -686,9 +686,9 @@ var PlacementType;
     PlacementType[PlacementType["Strongest"] = 1] = "Strongest";
     PlacementType[PlacementType["VeryStrong"] = 2] = "VeryStrong";
     PlacementType[PlacementType["Strong"] = 3] = "Strong";
-    PlacementType[PlacementType["VeryWeak"] = 4] = "VeryWeak";
-    PlacementType[PlacementType["Weakest"] = 5] = "Weakest";
-    PlacementType[PlacementType["Normal"] = 6] = "Normal";
+    PlacementType[PlacementType["Weak"] = 4] = "Weak";
+    PlacementType[PlacementType["VeryWeak"] = 5] = "VeryWeak";
+    PlacementType[PlacementType["Weakest"] = 6] = "Weakest";
 })(PlacementType || (PlacementType = {}));
 //# sourceMappingURL=placement.js.map
 
@@ -946,6 +946,7 @@ var ReadingPage = (function () {
         this.viewCtrl = viewCtrl;
         this.toastCtrl = toastCtrl;
         this.reading = new __WEBPACK_IMPORTED_MODULE_3__models_reading__["a" /* Reading */](navParams.get('readingData'));
+        this.saved = navParams.get('saved') || false;
         this.rootParams = {
             parent: this
         };
@@ -954,25 +955,6 @@ var ReadingPage = (function () {
         if (this.navCtrl.length() == 1) {
             this.navCtrl.setRoot('NewPage');
         }
-    };
-    ReadingPage.prototype.showMore = function () {
-        var _this = this;
-        var actionSheet = this.actionCtrl.create({
-            title: 'More',
-            buttons: [
-                {
-                    text: 'Save Reading',
-                    handler: function () {
-                        _this.saveReading();
-                    }
-                },
-                {
-                    text: 'Cancel',
-                    role: 'cancel'
-                }
-            ]
-        });
-        actionSheet.present();
     };
     ReadingPage.prototype.saveReading = function () {
         var _this = this;
@@ -986,6 +968,25 @@ var ReadingPage = (function () {
                         duration: 2000,
                         position: 'top'
                     });
+                    _this.saved = true;
+                    toast.present();
+                });
+            });
+        });
+    };
+    ReadingPage.prototype.deleteReading = function () {
+        var _this = this;
+        this.storage.ready().then(function () {
+            _this.storage.get('history').then(function (history) {
+                var readingIndex = history.indexOf(_this.reading);
+                history.splice(readingIndex, 1);
+                _this.storage.set('history', history).then(function () {
+                    var toast = _this.toastCtrl.create({
+                        message: 'Reading was deleted successfully',
+                        duration: 2000,
+                        position: 'top'
+                    });
+                    _this.saved = false;
                     toast.present();
                 });
             });
@@ -996,7 +997,7 @@ var ReadingPage = (function () {
 ReadingPage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPage */])(),
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* Component */])({
-        selector: 'page-reading',template:/*ion-inline-start:"/Users/adam/AppGod/geomancy/src/pages/reading/reading.html"*/'<ion-header>\n\n  <ion-navbar>\n    <ion-title>{{title}}</ion-title>\n    <ion-buttons right>\n      <button ion-button icon-only (click)="showMore()">\n        <ion-icon name="more"></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n\n</ion-header>\n\n<ion-tabs>\n  <ion-tab [root]="\'ReadingOverviewPage\'" [rootParams]="rootParams" tabTitle="Overview" tabIcon="eye"></ion-tab>\n  <ion-tab [root]="\'ReadingHousesPage\'"   [rootParams]="rootParams" tabTitle="Houses" tabIcon="home"></ion-tab>\n  <ion-tab [root]="\'ReadingFiguresPage\'"  [rootParams]="rootParams" tabTitle="Figures" tabIcon="grid"></ion-tab>\n</ion-tabs>\n'/*ion-inline-end:"/Users/adam/AppGod/geomancy/src/pages/reading/reading.html"*/,
+        selector: 'page-reading',template:/*ion-inline-start:"/Users/adam/AppGod/geomancy/src/pages/reading/reading.html"*/'<ion-header>\n\n  <ion-navbar>\n    <ion-title>{{title}}</ion-title>\n    <ion-buttons right>\n      <button ion-button icon-only (click)="saveReading()" *ngIf="!saved">\n        <ion-icon name="bookmark" class="not-saved"></ion-icon>\n      </button>\n      <button ion-button icon-only (click)="deleteReading()" *ngIf="saved">\n        <ion-icon name="bookmark" class="saved"></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n\n</ion-header>\n\n<ion-tabs>\n  <ion-tab [root]="\'ReadingOverviewPage\'" [rootParams]="rootParams" tabTitle="Overview" tabIcon="eye"></ion-tab>\n  <ion-tab [root]="\'ReadingHousesPage\'"   [rootParams]="rootParams" tabTitle="Houses" tabIcon="home"></ion-tab>\n  <ion-tab [root]="\'ReadingFiguresPage\'"  [rootParams]="rootParams" tabTitle="Figures" tabIcon="grid"></ion-tab>\n</ion-tabs>\n'/*ion-inline-end:"/Users/adam/AppGod/geomancy/src/pages/reading/reading.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */],
         __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */],

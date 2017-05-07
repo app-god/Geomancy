@@ -653,7 +653,7 @@ var TetragramComponent = (function () {
 }());
 __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* Input */])(),
-    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__models_tetragram__["a" /* Tetragram */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__models_tetragram__["a" /* Tetragram */]) === "function" && _a || Object)
+    __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1__models_tetragram__["a" /* Tetragram */])
 ], TetragramComponent.prototype, "tetragram", void 0);
 TetragramComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* Component */])({
@@ -662,7 +662,6 @@ TetragramComponent = __decorate([
     __metadata("design:paramtypes", [])
 ], TetragramComponent);
 
-var _a;
 //# sourceMappingURL=tetragram.js.map
 
 /***/ }),
@@ -692,7 +691,7 @@ var Placement = (function () {
             case 'fall':
                 return 'Weakest';
             default:
-                return '';
+                return 'Weak';
         }
     };
     Placement.getTypeFromKey = function (key) {
@@ -710,7 +709,7 @@ var Placement = (function () {
             case 'fall':
                 return PlacementType.Weakest;
             default:
-                return PlacementType.Normal;
+                return PlacementType.Weak;
         }
     };
     Placement.prototype.getColor = function () {
@@ -775,9 +774,9 @@ var PlacementType;
     PlacementType[PlacementType["Strongest"] = 1] = "Strongest";
     PlacementType[PlacementType["VeryStrong"] = 2] = "VeryStrong";
     PlacementType[PlacementType["Strong"] = 3] = "Strong";
-    PlacementType[PlacementType["VeryWeak"] = 4] = "VeryWeak";
-    PlacementType[PlacementType["Weakest"] = 5] = "Weakest";
-    PlacementType[PlacementType["Normal"] = 6] = "Normal";
+    PlacementType[PlacementType["Weak"] = 4] = "Weak";
+    PlacementType[PlacementType["VeryWeak"] = 5] = "VeryWeak";
+    PlacementType[PlacementType["Weakest"] = 6] = "Weakest";
 })(PlacementType || (PlacementType = {}));
 //# sourceMappingURL=placement.js.map
 
@@ -953,11 +952,11 @@ var HouseComponent = (function () {
 }());
 __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["u" /* Input */])(),
-    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__models_house__["a" /* House */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__models_house__["a" /* House */]) === "function" && _a || Object)
+    __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__models_house__["a" /* House */])
 ], HouseComponent.prototype, "house", void 0);
 __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["J" /* Output */])(),
-    __metadata("design:type", typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_core__["k" /* EventEmitter */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_core__["k" /* EventEmitter */]) === "function" && _b || Object)
+    __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1__angular_core__["k" /* EventEmitter */])
 ], HouseComponent.prototype, "onTap", void 0);
 HouseComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["K" /* Component */])({
@@ -966,7 +965,6 @@ HouseComponent = __decorate([
     __metadata("design:paramtypes", [])
 ], HouseComponent);
 
-var _a, _b;
 //# sourceMappingURL=house.js.map
 
 /***/ }),

@@ -32097,6 +32097,14 @@ ion-icon.float-right {
   float: right;
 }
 
+page-reading ion-icon.not-saved {
+  color: #228422;
+}
+
+page-reading ion-icon.saved {
+  color: #222;
+}
+
 page-reading-figures ion-col {
   text-align: center;
   white-space: nowrap;

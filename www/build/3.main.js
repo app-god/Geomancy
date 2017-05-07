@@ -603,7 +603,7 @@ var Placement = (function () {
             case 'fall':
                 return 'Weakest';
             default:
-                return '';
+                return 'Weak';
         }
     };
     Placement.getTypeFromKey = function (key) {
@@ -621,7 +621,7 @@ var Placement = (function () {
             case 'fall':
                 return PlacementType.Weakest;
             default:
-                return PlacementType.Normal;
+                return PlacementType.Weak;
         }
     };
     Placement.prototype.getColor = function () {
@@ -686,9 +686,9 @@ var PlacementType;
     PlacementType[PlacementType["Strongest"] = 1] = "Strongest";
     PlacementType[PlacementType["VeryStrong"] = 2] = "VeryStrong";
     PlacementType[PlacementType["Strong"] = 3] = "Strong";
-    PlacementType[PlacementType["VeryWeak"] = 4] = "VeryWeak";
-    PlacementType[PlacementType["Weakest"] = 5] = "Weakest";
-    PlacementType[PlacementType["Normal"] = 6] = "Normal";
+    PlacementType[PlacementType["Weak"] = 4] = "Weak";
+    PlacementType[PlacementType["VeryWeak"] = 5] = "VeryWeak";
+    PlacementType[PlacementType["Weakest"] = 6] = "Weakest";
 })(PlacementType || (PlacementType = {}));
 //# sourceMappingURL=placement.js.map
 

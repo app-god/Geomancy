@@ -25,7 +25,7 @@ export class Placement {
           case 'fall':
           return 'Weakest'
           default:
-          return ''
+          return 'Weak'
       }
   }
 
@@ -44,7 +44,7 @@ export class Placement {
           case 'fall':
           return PlacementType.Weakest
           default:
-          return PlacementType.Normal
+          return PlacementType.Weak
       }
   }
 
@@ -110,7 +110,7 @@ export enum PlacementType {
   Strongest,
   VeryStrong,
   Strong,
+  Weak,
   VeryWeak,
-  Weakest,
-  Normal
+  Weakest
 }

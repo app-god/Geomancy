@@ -3,8 +3,11 @@
   <ion-navbar>
     <ion-title>{{title}}</ion-title>
     <ion-buttons right>
-      <button ion-button icon-only (click)="showMore()">
-        <ion-icon name="more"></ion-icon>
+      <button ion-button icon-only (click)="saveReading()" *ngIf="!saved">
+        <ion-icon name="bookmark" class="not-saved"></ion-icon>
+      </button>
+      <button ion-button icon-only (click)="deleteReading()" *ngIf="saved">
+        <ion-icon name="bookmark" class="saved"></ion-icon>
       </button>
     </ion-buttons>
   </ion-navbar>
