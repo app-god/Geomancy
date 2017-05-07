@@ -12,6 +12,7 @@ export class ReadingPage {
   reading: Reading
   rootParams: any
   title: string
+  saved: boolean
 
   constructor(
     public navCtrl: NavController,
@@ -20,7 +21,16 @@ export class ReadingPage {
     public actionCtrl: ActionSheetController,
     public viewCtrl: ViewController,
     private toastCtrl: ToastController) {
-      this.reading = new Reading(navParams.get('readingData'))
+
+      let readingData = navParams.get('readingData')
+
+      if (readingData) {
+        this.reading = new Reading(navParams.get('readingData'))
+      } else {
+        navCtrl.setRoot('NewPage')
+      }
+
+      this.saved = navParams.get('saved') || false
       this.rootParams = {
         parent: this
       }
@@ -31,28 +41,6 @@ export class ReadingPage {
       this.navCtrl.setRoot('NewPage')
     }
   }
-
-  showMore() {
-
-    let actionSheet = this.actionCtrl.create({
-      title: 'More',
-      buttons: [
-        {
-          text: 'Save Reading',
-          handler: () => {
-            this.saveReading()
-          }
-        },
-        {
-          text: 'Cancel',
-          role: 'cancel'
-        }
-      ]
-    })
-
-    actionSheet.present()
-  }
-
 
   saveReading() {
 
@@ -66,10 +54,28 @@ export class ReadingPage {
             duration: 2000,
             position: 'top'
           })
+          this.saved = true
           toast.present()
         })
       })
     })
+  }
 
+  deleteReading() {
+    this.storage.ready().then(() => {
+      this.storage.get('history').then(history => {
+        let readingIndex = history.indexOf(this.reading)
+        history.splice(readingIndex, 1)
+        this.storage.set('history', history).then(() => {
+          let toast = this.toastCtrl.create({
+            message: 'Reading was deleted successfully',
+            duration: 2000,
+            position: 'top'
+          })
+          this.saved = false
+          toast.present()
+        })
+      })
+    })
   }
 }

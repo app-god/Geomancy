@@ -3,8 +3,8 @@ import { Tetragram } from './tetragram'
 import { House } from './house'
 
 export class Reading {
-  question: string
-  topic: string
+  question?: string
+  topic?: string
   houses: House[]
 
   mother0: Tetragram
@@ -33,34 +33,12 @@ export class Reading {
   partOfFortune: number
   readingData: ReadingData
 
-
-  constructor(data?: ReadingData, question?: string, topic?: string) {
-
-    if (!data) { // randomly generate data
-      data = {
-        question: question ? question : 'None',
-        topic: topic ? topic : 'None',
-        date: Date.now(),
-        key0: Math.floor(Math.random() * 15),
-        key1: Math.floor(Math.random() * 15),
-        key2: Math.floor(Math.random() * 15),
-        key3: Math.floor(Math.random() * 15)
-      }
-    }
-
-    if (!data.question || data.question == '') {
-      this.question = 'None'
-    } else {
-      this.question = data.question
-    }
-
-    if (!data.topic || data.topic == '') {
-      this.topic = 'None'
-    } else {
-      this.topic = data.topic
-    }
+  constructor(data: ReadingData) {
 
     this.readingData = data
+
+    this.question = data.question
+    this.topic = data.topic
 
     this.date = data.date
 
@@ -157,6 +135,10 @@ export class Reading {
     }
 
     return partOfFortune
+  }
+
+  getQuestion() {
+    return this.question || 'Your question remains hidden.'
   }
 
   getReadingData() {

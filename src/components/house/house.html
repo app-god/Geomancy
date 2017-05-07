@@ -1,8 +1,9 @@
-<button ion-item [color]="house.placement.getColor()" text-wrap>
+<button ion-item text-wrap
+  (tap)="onTap.emit(house)">
 
-  <tetragram [tetragram]="house.tetragram" item-left></tetragram>
+  <tetragram [color]="house.placement.getColor()" [tetragram]="house.tetragram" item-left></tetragram>
 
   <div>
-    {{house.tetragram.phrase}} in regards to {{house.phrase}}.
+    {{house.tetragram.getHouseMeaning(house.number)}}
   </div>
 </button>

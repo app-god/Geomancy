@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { House } from '../../models/house'
-import { tetragramInfo } from '../../models/tetragram'
+import { Tetragram } from "../../models/tetragram";
 
 @IonicPage()
 @Component({
@@ -10,26 +10,15 @@ import { tetragramInfo } from '../../models/tetragram'
 })
 export class HousePage {
   house: House
-  tetragramNamesWithMeanings: any[]
+  tetragramsInHouse: House[] = []
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.house = this.navParams.get('house')
-    console.log('house', this.house)
-    this.tetragramNamesWithMeanings = this.getTetragramNamesWithMeanings()
-  }
-
-  getTetragramNamesWithMeanings(): any[] {
-    let namesWithMeanings = tetragramInfo.map(info => {
-      return {
-        name: info.name,
-        meaning: info.houseMeanings[this.house.number - 1]
-      }
+    let tetragrams = Tetragram.getAll()
+    tetragrams.forEach(tetragram => {
+      this.tetragramsInHouse.push(
+        new House(this.house.number, tetragram)
+      )
     })
-    namesWithMeanings.sort((a, b) => {
-      if (a.name < b.name) { return -1 }
-      if (a.name > b.name) { return 1 }
-    })
-    return namesWithMeanings
   }
-
 }

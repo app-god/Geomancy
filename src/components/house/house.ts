@@ -1,5 +1,5 @@
 import { House } from '../../models/house';
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'house',
@@ -8,6 +8,7 @@ import { Component, Input } from '@angular/core';
 export class HouseComponent {
 
   @Input() house: House
+  @Output() onTap: EventEmitter<House> = new EventEmitter()
 
   constructor() {
   }

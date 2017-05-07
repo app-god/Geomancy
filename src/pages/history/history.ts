@@ -51,8 +51,10 @@ export class HistoryPage {
   }
 
   showReading(readingData) {
-    let readingModal = this.modCtrl.create('ReadingPage', { readingData: readingData })
-    readingModal.present()
+    this.navCtrl.push('ReadingPage', {
+      readingData: readingData,
+      saved: true
+    })
   }
 
   deleteReading(reading) {

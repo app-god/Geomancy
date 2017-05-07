@@ -27,6 +27,7 @@ export class ReadingOverviewPage {
       rules:      houses.filter(house => { return house.placement.type === PlacementType.Strongest }),
       exalted:    houses.filter(house => { return house.placement.type === PlacementType.VeryStrong }),
       triplicity: houses.filter(house => { return house.placement.type === PlacementType.Strong }),
+      normal:     houses.filter(house => { return house.placement.type === PlacementType.Weak }),
       detriment:  houses.filter(house => { return house.placement.type === PlacementType.VeryWeak }),
       fall:       houses.filter(house => { return house.placement.type === PlacementType.Weakest })
     }
@@ -38,5 +39,9 @@ export class ReadingOverviewPage {
 
   ionViewWillEnter() {
     this.parent.title = 'Overview'
+  }
+
+  showHouse(house) {
+    this.parent.navCtrl.push('HousePage', { house: house })
   }
 }

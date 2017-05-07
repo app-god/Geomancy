@@ -22,14 +22,13 @@
         {{tetragram.planet}}
       </ion-col>
     </ion-row>
-    <ion-row *ngFor="let meaning of tetragram.houseMeanings; let i = index">
-      <ion-col col-4 class="left-column">
-        In House {{i + 1}}
-      </ion-col>
-      <ion-col col-8>
-        {{meaning}}
-      </ion-col>
-    </ion-row>
   </ion-grid>
+
+  <ion-list no-lines>
+    <ion-item-group *ngFor="let house of houses">
+      <ion-item-divider><b>House {{house.number}}</b> {{house.topics.join(', ')}}</ion-item-divider>
+      <house [house]="house"></house>
+    </ion-item-group>
+  </ion-list>
 
 </ion-content>

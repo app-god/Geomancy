@@ -3,9 +3,18 @@ tetragram {
   .tetragram {
     height: 4em;
     width: 2em;
+    margin: 0 auto;
   }
   .tetragram-row {
     height: 1em;
     line-height: 1em;
   }
+
+  .warning     { color: color($colors, warning); }
+  .strongest   { color: color($colors, strongest); }
+  .very-strong { color: color($colors, very-strong); }
+  .strong      { color: color($colors, strong); }
+  .weak        { color: color($colors, weak); }
+  .very-weak   { color: color($colors, very-weak); }
+  .weakest     { color: color($colors, weakest); }
 }
