@@ -1,11 +1,11 @@
 page-reading {
 
     ion-icon.not-saved {
-        color: color($colors, primary);
+        color: color($colors, dark);
     }
 
     ion-icon.saved {
-        color: color($colors, dark);
+        color: color($colors, primary);
     }
 
 }

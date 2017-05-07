@@ -59265,11 +59265,11 @@ ion-icon.float-right {
 }
 
 page-reading ion-icon.not-saved {
-  color: #228422;
+  color: #666;
 }
 
 page-reading ion-icon.saved {
-  color: #666;
+  color: #228422;
 }
 
 page-reading-figures ion-col {
@@ -59280,6 +59280,7 @@ page-reading-figures ion-col {
 page-reading-overview .question {
   font-size: 150%;
   text-align: center;
+  margin: 1em 0;
 }
 
 page-tutorial .swiper-pagination-bullet {
