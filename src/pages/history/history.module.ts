@@ -8,8 +8,7 @@ import { TetragramComponentModule } from '../../components/tetragram/tetragram.m
     HistoryPage,
   ],
   imports: [
-    IonicPageModule.forChild(HistoryPage),
-    TetragramComponentModule
+    IonicPageModule.forChild(HistoryPage)
   ],
   exports: [
     HistoryPage

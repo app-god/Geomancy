@@ -80,6 +80,10 @@ export class NewPage {
 
     let readingData: ReadingData
 
+    if (this.topic == 'None') {
+      this.topic = null
+    }
+
     // generate data for automatic readings
     if (this.readingType == 'automatic') {
       readingData = {

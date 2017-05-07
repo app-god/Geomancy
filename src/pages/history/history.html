@@ -11,7 +11,7 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content>
 
   <ion-card *ngIf="readings.length == 0">
     <ion-card-content>
@@ -19,12 +19,12 @@
     </ion-card-content>
   </ion-card>
 
-  <ion-list *ngIf="readings.length > 0">
+  <ion-list margin *ngIf="readings.length > 0">
     <ion-item-sliding *ngFor="let reading of readings">
 
       <button ion-item (click)="showReading(reading)">
-        <div class="question" text-wrap>{{reading.question}}</div>
-        <div class="topic">{{reading.topic}}</div>
+        <div class="question" text-wrap>{{reading.question || 'No question'}}</div>
+        <div class="topic">{{reading.topic || 'No topic'}}</div>
         <div class="date">{{reading.date | date:'medium'}}</div>
       </button>
 
