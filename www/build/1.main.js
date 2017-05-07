@@ -52,7 +52,7 @@ ReadingHousesPageModule = __decorate([
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Tetragram; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return tetragramInfo; });
+/* unused harmony export tetragramInfo */
 var Tetragram = (function () {
     function Tetragram(key) {
         if (key === void 0) { key = Math.floor(Math.random() * 15); }
@@ -94,6 +94,13 @@ var Tetragram = (function () {
         var row4 = num4 ? (num4 % 2) * 8 : 0;
         var key = row1 + row2 + row3 + row4;
         return key;
+    };
+    Tetragram.getAll = function () {
+        var numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
+        var tetragrams = numbers.map(function (number) {
+            return new Tetragram(number);
+        });
+        return tetragrams;
     };
     return Tetragram;
 }());
@@ -799,6 +806,12 @@ var House = (function () {
         this.phrase = info.phrase;
         this.getPlacement();
     }
+    House.getHousesWithTetragram = function (tetragram) {
+        var houses = House.numbers.map(function (number) {
+            return new House(number, tetragram);
+        });
+        return houses;
+    };
     House.prototype.getPlacement = function () {
         var _this = this;
         if (this.number == 1) {
@@ -817,6 +830,7 @@ var House = (function () {
     return House;
 }());
 
+House.numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 var houseInfo = [
     {
         number: 1,
@@ -1005,7 +1019,7 @@ var ReadingHousesPage = (function () {
 ReadingHousesPage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPage */])(),
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* Component */])({
-        selector: 'page-reading-houses',template:/*ion-inline-start:"/Users/adam/AppGod/geomancy/src/pages/reading-houses/reading-houses.html"*/'<ion-header><ion-navbar></ion-navbar></ion-header>\n\n<ion-content padding>\n\n  <ion-list>\n    <ion-item-group *ngFor="let house of reading.houses">\n\n      <ion-item-divider>\n        {{house.topics.join(\', \')}}\n      </ion-item-divider>\n\n      <house [house]="house" (onTap)="showHouse(house)"></house>\n\n    </ion-item-group>\n  </ion-list>\n\n</ion-content>\n'/*ion-inline-end:"/Users/adam/AppGod/geomancy/src/pages/reading-houses/reading-houses.html"*/,
+        selector: 'page-reading-houses',template:/*ion-inline-start:"/Users/adam/AppGod/geomancy/src/pages/reading-houses/reading-houses.html"*/'<ion-header><ion-navbar></ion-navbar></ion-header>\n\n<ion-content padding>\n\n  <ion-list>\n    <ion-item-group *ngFor="let house of reading.houses">\n\n      <ion-item-divider>\n        <b>House {{house.number}}</b> {{house.topics.join(\', \')}}\n      </ion-item-divider>\n\n      <house [house]="house" (onTap)="showHouse(house)"></house>\n\n    </ion-item-group>\n  </ion-list>\n\n</ion-content>\n'/*ion-inline-end:"/Users/adam/AppGod/geomancy/src/pages/reading-houses/reading-houses.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]])
 ], ReadingHousesPage);

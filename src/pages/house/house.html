@@ -18,10 +18,16 @@
   <p>{{house.description}}</p>
 
   <ion-grid>
-    <ion-row *ngFor="let nameWithMeaning of tetragramNamesWithMeanings">
+    <ion-row *ngFor="let h of ">
       <ion-col col-4 class="left-column">{{nameWithMeaning.name}}</ion-col>
       <ion-col col-8 class="right-column">{{nameWithMeaning.meaning}}</ion-col>
     </ion-row>
   </ion-grid>
+
+  <ion-list no-lines>
+    <ion-item-group *ngFor="let house of tetragramsInHouse">
+      <house [house]="house"></house>
+    </ion-item-group>
+  </ion-list>
 
 </ion-content>

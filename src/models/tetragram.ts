@@ -63,6 +63,14 @@ export class Tetragram {
     let key = row1 + row2 + row3 + row4
     return key
   }
+
+  static getAll(): Tetragram[] {
+    let numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+    let tetragrams = numbers.map(number => {
+      return new Tetragram(number)
+    })
+    return tetragrams
+  }
 }
 
 export interface TetragramInfo {

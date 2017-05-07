@@ -3,6 +3,7 @@ import { Tetragram } from './tetragram';
 import { Placement } from "./placement";
 
 export class House {
+  static numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
   topics: string[]
   phrase: string
   placement: Placement
@@ -12,6 +13,13 @@ export class House {
     this.topics = info.topics.sort()
     this.phrase = info.phrase
     this.getPlacement()
+  }
+
+  static getHousesWithTetragram(tetragram: Tetragram): House[] {
+    let houses = House.numbers.map(number => {
+      return new House(number, tetragram)
+    })
+    return houses
   }
 
   getPlacement() {

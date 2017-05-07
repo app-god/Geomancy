@@ -49,7 +49,7 @@ ReadingFiguresPageModule = __decorate([
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Tetragram; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return tetragramInfo; });
+/* unused harmony export tetragramInfo */
 var Tetragram = (function () {
     function Tetragram(key) {
         if (key === void 0) { key = Math.floor(Math.random() * 15); }
@@ -91,6 +91,13 @@ var Tetragram = (function () {
         var row4 = num4 ? (num4 % 2) * 8 : 0;
         var key = row1 + row2 + row3 + row4;
         return key;
+    };
+    Tetragram.getAll = function () {
+        var numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
+        var tetragrams = numbers.map(function (number) {
+            return new Tetragram(number);
+        });
+        return tetragrams;
     };
     return Tetragram;
 }());
