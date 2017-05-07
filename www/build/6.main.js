@@ -1,15 +1,15 @@
 webpackJsonp([6],{
 
-/***/ 310:
+/***/ 313:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(101);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__history__ = __webpack_require__(327);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__reading_figures__ = __webpack_require__(330);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_tetragram_tetragram_module__ = __webpack_require__(320);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HistoryPageModule", function() { return HistoryPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ReadingFiguresPageModule", function() { return ReadingFiguresPageModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -20,27 +20,27 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var HistoryPageModule = (function () {
-    function HistoryPageModule() {
+var ReadingFiguresPageModule = (function () {
+    function ReadingFiguresPageModule() {
     }
-    return HistoryPageModule;
+    return ReadingFiguresPageModule;
 }());
-HistoryPageModule = __decorate([
+ReadingFiguresPageModule = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["a" /* NgModule */])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_2__history__["a" /* HistoryPage */],
+            __WEBPACK_IMPORTED_MODULE_2__reading_figures__["a" /* ReadingFiguresPage */],
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__history__["a" /* HistoryPage */]),
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__reading_figures__["a" /* ReadingFiguresPage */]),
             __WEBPACK_IMPORTED_MODULE_3__components_tetragram_tetragram_module__["a" /* TetragramComponentModule */]
         ],
         exports: [
-            __WEBPACK_IMPORTED_MODULE_2__history__["a" /* HistoryPage */]
+            __WEBPACK_IMPORTED_MODULE_2__reading_figures__["a" /* ReadingFiguresPage */]
         ]
     })
-], HistoryPageModule);
+], ReadingFiguresPageModule);
 
-//# sourceMappingURL=history.module.js.map
+//# sourceMappingURL=reading-figures.module.js.map
 
 /***/ }),
 
@@ -593,7 +593,7 @@ var tetragramInfo = [
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__tetragram__ = __webpack_require__(321);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__tetragram__ = __webpack_require__(323);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common__ = __webpack_require__(7);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TetragramComponentModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -628,7 +628,7 @@ TetragramComponentModule = __decorate([
 
 /***/ }),
 
-/***/ 321:
+/***/ 323:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -662,7 +662,7 @@ var TetragramComponent = (function () {
 }());
 __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* Input */])(),
-    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__models_tetragram__["a" /* Tetragram */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__models_tetragram__["a" /* Tetragram */]) === "function" && _a || Object)
+    __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1__models_tetragram__["a" /* Tetragram */])
 ], TetragramComponent.prototype, "tetragram", void 0);
 __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* Input */])(),
@@ -675,19 +675,17 @@ TetragramComponent = __decorate([
     __metadata("design:paramtypes", [])
 ], TetragramComponent);
 
-var _a;
 //# sourceMappingURL=tetragram.js.map
 
 /***/ }),
 
-/***/ 327:
+/***/ 330:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(101);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_storage__ = __webpack_require__(102);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HistoryPage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ReadingFiguresPage; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -699,90 +697,32 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-
-var HistoryPage = (function () {
-    function HistoryPage(navCtrl, storage, modCtrl, alertCtrl, viewCtrl) {
+var ReadingFiguresPage = (function () {
+    function ReadingFiguresPage(navCtrl, navParams, viewCtrl) {
         this.navCtrl = navCtrl;
-        this.storage = storage;
-        this.modCtrl = modCtrl;
-        this.alertCtrl = alertCtrl;
+        this.navParams = navParams;
         this.viewCtrl = viewCtrl;
-        this.readings = [];
+        this.parent = navParams.get('parent');
+        this.reading = this.parent.reading;
     }
-    HistoryPage.prototype.ionViewWillEnter = function () {
-        this.loadReadings();
+    ReadingFiguresPage.prototype.showTetragram = function (tetragram, house) {
+        this.parent.navCtrl.push('TetragramPage', { item: tetragram });
     };
-    HistoryPage.prototype.loadReadings = function () {
-        var _this = this;
-        this.storage.ready().then(function () {
-            _this.storage.get('history').then(function (history) {
-                if (history) {
-                    _this.readings = history.sort(_this.sortReadings);
-                }
-            });
-        });
+    ReadingFiguresPage.prototype.ionViewWillEnter = function () {
+        this.parent.title = 'Figures';
     };
-    HistoryPage.prototype.sortReadings = function (a, b) {
-        if (a.date < b.date) {
-            return 1;
-        }
-        if (a.date > b.date) {
-            return -1;
-        }
-        return 0;
-    };
-    HistoryPage.prototype.showReading = function (readingData) {
-        this.navCtrl.push('ReadingPage', {
-            readingData: readingData,
-            saved: true
-        });
-    };
-    HistoryPage.prototype.deleteReading = function (reading) {
-        var _this = this;
-        var readingIndex = this.readings.indexOf(reading);
-        this.readings.splice(readingIndex, 1);
-        this.storage.ready().then(function () {
-            _this.storage.set('history', _this.readings);
-        });
-    };
-    HistoryPage.prototype.deleteAllReadings = function () {
-        var _this = this;
-        var alert = this.alertCtrl.create({
-            title: 'Confirm Deletion',
-            message: 'Do you want to delete all of your readings?',
-            buttons: [
-                {
-                    text: 'Cancel',
-                    role: 'cancel'
-                },
-                {
-                    text: 'Delete',
-                    handler: function () {
-                        _this.storage.ready().then(function () {
-                            _this.storage.set('history', []);
-                        });
-                        _this.loadReadings();
-                    }
-                }
-            ]
-        });
-        alert.present();
-    };
-    return HistoryPage;
+    return ReadingFiguresPage;
 }());
-HistoryPage = __decorate([
+ReadingFiguresPage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPage */])(),
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* Component */])({
-        selector: 'page-history',template:/*ion-inline-start:"/Users/adam/AppGod/geomancy/src/pages/history/history.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      Load Reading\n    </ion-title>\n    <ion-buttons end *ngIf="readings.length > 0">\n      <button ion-button icon-only (click)="deleteAllReadings()">\n        <ion-icon name="ios-trash" color="danger"></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n\n  <ion-card *ngIf="readings.length == 0">\n    <ion-card-content>\n      Save a reading and it will show up here.\n    </ion-card-content>\n  </ion-card>\n\n  <ion-list *ngIf="readings.length > 0">\n    <ion-item-sliding *ngFor="let reading of readings">\n\n      <button ion-item (click)="showReading(reading)">\n        <div class="question" text-wrap>{{reading.question}}</div>\n        <div class="topic">{{reading.topic}}</div>\n        <div class="date">{{reading.date | date:\'medium\'}}</div>\n      </button>\n\n      <ion-item-options side="right">\n        <button ion-button (click)="deleteReading(reading)"\n          color="danger">Delete</button>\n      </ion-item-options>\n    </ion-item-sliding>\n  </ion-list>\n</ion-content>\n'/*ion-inline-end:"/Users/adam/AppGod/geomancy/src/pages/history/history.html"*/
+        selector: 'page-reading-figures',template:/*ion-inline-start:"/Users/adam/AppGod/geomancy/src/pages/reading-figures/reading-figures.html"*/'<ion-header><ion-navbar></ion-navbar></ion-header>\n\n<ion-content>\n\n  <ion-grid>\n\n    <ion-row>\n      <ion-col col-3 (click)="showTetragram(reading.mother3)">\n        <tetragram [tetragram]="reading.mother3"></tetragram>\n        <p>Mother 4</p>\n      </ion-col>\n      <ion-col col-3 (click)="showTetragram(reading.mother2)">\n        <tetragram [tetragram]="reading.mother2"></tetragram>\n        <p>Mother 3</p>\n      </ion-col>\n      <ion-col col-3 (click)="showTetragram(reading.mother1)">\n        <tetragram [tetragram]="reading.mother1"></tetragram>\n        <p>Mother 2</p>\n      </ion-col>\n      <ion-col col-3 (click)="showTetragram(reading.mother0)">\n        <tetragram [tetragram]="reading.mother0"></tetragram>\n        <p>Mother 1</p>\n      </ion-col>\n    </ion-row>\n\n    <ion-row>\n      <ion-col col-3 (click)="showTetragram(reading.daughter3)">\n        <tetragram [tetragram]="reading.daughter3"></tetragram>\n        <p>Daughter 4</p>\n      </ion-col>\n      <ion-col col-3 (click)="showTetragram(reading.daughter2)">\n        <tetragram [tetragram]="reading.daughter2"></tetragram>\n        <p>Daughter 3</p>\n      </ion-col>\n      <ion-col col-3 (click)="showTetragram(reading.daughter1)">\n        <tetragram [tetragram]="reading.daughter1"></tetragram>\n        <p>Daughter 2</p>\n      </ion-col>\n      <ion-col col-3 (click)="showTetragram(reading.daughter0)">\n        <tetragram [tetragram]="reading.daughter0"></tetragram>\n        <p>Daughter 1</p>\n      </ion-col>\n    </ion-row>\n\n    <ion-row>\n      <ion-col col-3 (click)="showTetragram(reading.nephew3)">\n        <tetragram [tetragram]="reading.nephew3"></tetragram>\n        <p>Nephew 4</p>\n      </ion-col>\n      <ion-col col-3 (click)="showTetragram(reading.nephew2)">\n        <tetragram [tetragram]="reading.nephew2"></tetragram>\n        <p>Nephew 3</p>\n      </ion-col>\n      <ion-col col-3 (click)="showTetragram(reading.nephew1)">\n        <tetragram [tetragram]="reading.nephew1"></tetragram>\n        <p>Nephew 2</p>\n      </ion-col>\n      <ion-col col-3 (click)="showTetragram(reading.nephew0)">\n        <tetragram [tetragram]="reading.nephew0"></tetragram>\n        <p>Nephew 1</p>\n      </ion-col>\n    </ion-row>\n\n    <ion-row>\n      <ion-col col-6 (click)="showTetragram(reading.witness1)">\n        <tetragram [tetragram]="reading.witness1"></tetragram>\n        <p>Left Witness</p>\n      </ion-col>\n      <ion-col col-6 (click)="showTetragram(reading.witness0)">\n        <tetragram [tetragram]="reading.witness0"></tetragram>\n        <p>Right Witness</p>\n      </ion-col>\n    </ion-row>\n\n    <ion-row>\n      <ion-col col-12 (click)="showTetragram(reading.judge)">\n        <tetragram [tetragram]="reading.judge"></tetragram>\n        <p>Judge</p>\n      </ion-col>\n    </ion-row>\n\n    <ion-row>\n      <ion-col col-12 (click)="showTetragram(reading.reconciler)">\n        <tetragram [tetragram]="reading.reconciler"></tetragram>\n        <p>Reconciler</p>\n      </ion-col>\n    </ion-row>\n\n  </ion-grid>\n\n</ion-content>\n'/*ion-inline-end:"/Users/adam/AppGod/geomancy/src/pages/reading-figures/reading-figures.html"*/,
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */],
-        __WEBPACK_IMPORTED_MODULE_2__ionic_storage__["b" /* Storage */],
-        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* ModalController */],
-        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["n" /* AlertController */],
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */],
         __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* ViewController */]])
-], HistoryPage);
+], ReadingFiguresPage);
 
-//# sourceMappingURL=history.js.map
+//# sourceMappingURL=reading-figures.js.map
 
 /***/ })
 

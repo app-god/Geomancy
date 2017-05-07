@@ -19,14 +19,6 @@ describe('Reading', () => {
         testReading = new Reading(testReadingData)
     })
 
-    it('loads random reading', () => {
-        let reading = new Reading(null, 'question', 'none')
-
-        expect(reading.question).toEqual('question')
-        expect(reading.topic).toEqual('none')
-        expect(reading.mother0).toBeDefined()
-    })
-
     it('calculates figures correctly', () => {
         expect(testReading.daughter0.key).toEqual(0)
         expect(testReading.daughter1.key).toEqual(0)

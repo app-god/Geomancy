@@ -21,7 +21,15 @@ export class ReadingPage {
     public actionCtrl: ActionSheetController,
     public viewCtrl: ViewController,
     private toastCtrl: ToastController) {
-      this.reading = new Reading(navParams.get('readingData'))
+
+      let readingData = navParams.get('readingData')
+
+      if (readingData) {
+        this.reading = new Reading(navParams.get('readingData'))
+      } else {
+        navCtrl.setRoot('NewPage')
+      }
+
       this.saved = navParams.get('saved') || false
       this.rootParams = {
         parent: this

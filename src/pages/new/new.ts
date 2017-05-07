@@ -78,10 +78,6 @@ export class NewPage {
 
     this.startDisabled = true
 
-    if (this.question == '') {
-      this.question = 'None'
-    }
-
     let readingData: ReadingData
 
     // generate data for automatic readings
@@ -116,6 +112,7 @@ export class NewPage {
       this.row[r] = ''
     })
 
+    // reset inputs
     this.question = ''
     this.topic = 'None'
     this.startDisabled = false

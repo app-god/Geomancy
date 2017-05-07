@@ -14,7 +14,7 @@
 
 </ion-header>
 
-<ion-tabs>
+<ion-tabs *ngIf="reading">
   <ion-tab [root]="'ReadingOverviewPage'" [rootParams]="rootParams" tabTitle="Overview" tabIcon="eye"></ion-tab>
   <ion-tab [root]="'ReadingHousesPage'"   [rootParams]="rootParams" tabTitle="Houses" tabIcon="home"></ion-tab>
   <ion-tab [root]="'ReadingFiguresPage'"  [rootParams]="rootParams" tabTitle="Figures" tabIcon="grid"></ion-tab>
