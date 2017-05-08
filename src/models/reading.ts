@@ -138,7 +138,7 @@ export class Reading {
   }
 
   getQuestion() {
-    return this.question || 'Your question remains hidden.'
+    return this.question || 'Your question remains hidden'
   }
 
   getReadingData() {
