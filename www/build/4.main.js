@@ -585,7 +585,7 @@ var tetragramInfo = [
 
 /***/ }),
 
-/***/ 321:
+/***/ 320:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -824,7 +824,7 @@ var PlacementType;
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__tetragram__ = __webpack_require__(319);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__house__ = __webpack_require__(321);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__house__ = __webpack_require__(320);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Reading; });
 
 
@@ -898,7 +898,7 @@ var Reading = (function () {
         return partOfFortune;
     };
     Reading.prototype.getQuestion = function () {
-        return this.question || 'Your question remains hidden.';
+        return this.question || 'Your question remains hidden';
     };
     Reading.prototype.getReadingData = function () {
         return this.readingData;

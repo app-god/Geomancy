@@ -59157,8 +59157,12 @@ button[ion-item] {
   color: #999;
 }
 
+house .house-content {
+  font-size: 133% !important;
+}
+
 house tetragram .tetragram {
-  font-size: 50%;
+  font-size: 66%;
   margin-right: 1em;
 }
 
