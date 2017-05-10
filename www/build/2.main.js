@@ -614,6 +614,9 @@ var House = (function () {
         });
         return houses;
     };
+    House.prototype.getTetragramMeaning = function () {
+        return this.tetragram.getHouseMeaning(this.number);
+    };
     House.prototype.getPlacement = function () {
         var _this = this;
         if (this.number == 1) {
@@ -993,7 +996,7 @@ __decorate([
 ], HouseComponent.prototype, "onTap", void 0);
 HouseComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["K" /* Component */])({
-        selector: 'house',template:/*ion-inline-start:"/Users/adam/AppGod/geomancy/src/components/house/house.html"*/'<button ion-item text-wrap\n  (tap)="onTap.emit(house)">\n\n  <tetragram [color]="house.placement.getColor()" [tetragram]="house.tetragram" item-left></tetragram>\n\n  <p class="house-content">\n    {{house.tetragram.phrase}} in regards to {{house.phrase}}\n    <br> test\n  </p>\n</button>\n'/*ion-inline-end:"/Users/adam/AppGod/geomancy/src/components/house/house.html"*/
+        selector: 'house',template:/*ion-inline-start:"/Users/adam/AppGod/geomancy/src/components/house/house.html"*/'<button ion-item text-wrap (tap)="onTap.emit(house)">\n\n  <tetragram [color]="house.placement.getColor()" [tetragram]="house.tetragram" item-left></tetragram>\n\n  <div>\n    {{house.tetragram.phrase}} in regards to {{house.phrase}}\n  </div>\n\n  <div>\n    {{house.getTetragramMeaning()}}\n  </div>\n</button>\n'/*ion-inline-end:"/Users/adam/AppGod/geomancy/src/components/house/house.html"*/
     }),
     __metadata("design:paramtypes", [])
 ], HouseComponent);

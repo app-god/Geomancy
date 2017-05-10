@@ -8,6 +8,8 @@
 
   <ion-list>
 
+    <ion-list-header>Influences</ion-list-header>
+
     <ion-item-group *ngIf="topicHouse">
       <ion-item-divider><b>Topic</b> {{reading.topic}}</ion-item-divider>
       <house [house]="topicHouse" (onTap)="showHouse($event)"></house>

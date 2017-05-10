@@ -21,8 +21,15 @@ ion-content {
 }
 
 ion-list-header {
+  padding: 0 !important;
+  margin-bottom: -1em;
   ion-label {
-    color: color($colors, dark);
+    text-align: center;
+    margin: 0 !important;
+    padding: 0 0.5em;
+    line-height: 200%;
+    background-color: color($colors, light);
+    color: color($colors, black);
   }
 }
 
@@ -31,10 +38,18 @@ ion-item-divider {
   border-bottom: solid 1px black !important;
   color: color($colors, dark) !important;
   padding: 0 !important;
+
+  ion-label {
+    text-align: center;
+    margin: 1em 0 0.5em 0 !important;
+    font-size: 1em;
+    color: color($colors, light);
+  }
 }
 
 ion-item,
 button[ion-item] {
+  background-color: color($colors, dark);
   line-height: 150% !important;
   border-bottom: solid 1px black !important;
 }

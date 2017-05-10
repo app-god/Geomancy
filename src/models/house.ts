@@ -22,6 +22,10 @@ export class House {
     return houses
   }
 
+  getTetragramMeaning(): string {
+    return this.tetragram.getHouseMeaning(this.number)
+  }
+
   getPlacement() {
 
     if (this.number == 1) {
