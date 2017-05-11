@@ -2,27 +2,32 @@
 
 <ion-content padding>
 
-  <div class="question">
+  <div class="question" *ngIf="reading.question">
     {{reading.getQuestion()}}
   </div>
+
+  <ion-list *ngIf="warning">
+    <ion-list-header class="warning">Warning!</ion-list-header>
+    <house [house]="warning" (onTap)="showHouse($event)"></house>
+  </ion-list>
+
+  <ion-list *ngIf="topicHouse">
+    <ion-list-header>Topic</ion-list-header>
+    <ion-item-divider>{{reading.topic}}</ion-item-divider>
+    <house [house]="topicHouse" (onTap)="showHouse($event)"></house>
+  </ion-list>
+
+  <br>
 
   <ion-list>
 
     <ion-list-header>Influences</ion-list-header>
 
-    <ion-item-group *ngIf="topicHouse">
-      <ion-item-divider><b>Topic</b> {{reading.topic}}</ion-item-divider>
-      <house [house]="topicHouse" (onTap)="showHouse($event)"></house>
-    </ion-item-group>
+    <ion-item-group *ngFor="let key of influencesKeys">
 
-    <ion-item-group *ngFor="let key of keys">
-
-      <div *ngIf="houses[key].length > 0">
-
+      <div *ngIf="influences[key].length > 0">
         <ion-item-divider>{{keyToString(key)}}</ion-item-divider>
-
-        <house [house]="house" *ngFor="let house of houses[key]" (onTap)="showHouse($event)"></house>
-
+        <house [house]="house" *ngFor="let house of influences[key]" (onTap)="showHouse($event)"></house>
       </div>
 
     </ion-item-group>

@@ -995,7 +995,11 @@ __decorate([
     __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1__angular_core__["k" /* EventEmitter */])
 ], HouseComponent.prototype, "onTap", void 0);
 HouseComponent = __decorate([
+<<<<<<< Updated upstream
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["_5" /* Component */])({
+=======
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["K" /* Component */])({
+>>>>>>> Stashed changes
         selector: 'house',template:/*ion-inline-start:"/Users/adam/AppGod/geomancy/src/components/house/house.html"*/'<button ion-item text-wrap (tap)="onTap.emit(house)">\n\n  <tetragram [color]="house.placement.getColor()" [tetragram]="house.tetragram" item-left></tetragram>\n\n  <div>\n    {{house.tetragram.phrase}} in regards to {{house.phrase}}\n  </div>\n\n</button>\n'/*ion-inline-end:"/Users/adam/AppGod/geomancy/src/components/house/house.html"*/
     }),
     __metadata("design:paramtypes", [])
@@ -1033,14 +1037,14 @@ var ReadingOverviewPage = (function () {
         this.parent = navParams.get('parent');
         this.reading = this.parent.reading;
         var houses = this.reading.houses;
-        this.houses = {
-            warning: houses.filter(function (house) { return house.placement.type === __WEBPACK_IMPORTED_MODULE_2__models_placement__["b" /* PlacementType */].Warning; }),
+        this.warning = houses.find(function (house) { return house.placement.type === __WEBPACK_IMPORTED_MODULE_2__models_placement__["b" /* PlacementType */].Warning; });
+        this.topicHouse = this.reading.getTopicHouse();
+        this.influences = {
             rules: houses.filter(function (house) { return house.placement.type === __WEBPACK_IMPORTED_MODULE_2__models_placement__["b" /* PlacementType */].Strongest; }),
             exalted: houses.filter(function (house) { return house.placement.type === __WEBPACK_IMPORTED_MODULE_2__models_placement__["b" /* PlacementType */].VeryStrong; }),
             triplicity: houses.filter(function (house) { return house.placement.type === __WEBPACK_IMPORTED_MODULE_2__models_placement__["b" /* PlacementType */].Strong; }),
         };
-        this.keys = Object.keys(this.houses);
-        this.topicHouse = this.reading.getTopicHouse();
+        this.influencesKeys = Object.keys(this.influences);
     }
     ReadingOverviewPage.prototype.ionViewWillEnter = function () {
         this.parent.title = 'Overview';
@@ -1052,8 +1056,13 @@ var ReadingOverviewPage = (function () {
 }());
 ReadingOverviewPage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPage */])(),
+<<<<<<< Updated upstream
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({
         selector: 'page-reading-overview',template:/*ion-inline-start:"/Users/adam/AppGod/geomancy/src/pages/reading-overview/reading-overview.html"*/'<ion-header><ion-navbar></ion-navbar></ion-header>\n\n<ion-content padding>\n\n  <div class="question">\n    {{reading.getQuestion()}}\n  </div>\n\n  <ion-list>\n\n    <ion-list-header>Influences</ion-list-header>\n\n    <ion-item-group *ngIf="topicHouse">\n      <ion-item-divider><b>Topic</b> {{reading.topic}}</ion-item-divider>\n      <house [house]="topicHouse" (onTap)="showHouse($event)"></house>\n    </ion-item-group>\n\n    <ion-item-group *ngFor="let key of keys">\n\n      <div *ngIf="houses[key].length > 0">\n\n        <ion-item-divider>{{keyToString(key)}}</ion-item-divider>\n\n        <house [house]="house" *ngFor="let house of houses[key]" (onTap)="showHouse($event)"></house>\n\n      </div>\n\n    </ion-item-group>\n\n  </ion-list>\n\n</ion-content>\n'/*ion-inline-end:"/Users/adam/AppGod/geomancy/src/pages/reading-overview/reading-overview.html"*/,
+=======
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["K" /* Component */])({
+        selector: 'page-reading-overview',template:/*ion-inline-start:"/Users/adam/AppGod/geomancy/src/pages/reading-overview/reading-overview.html"*/'<ion-header><ion-navbar></ion-navbar></ion-header>\n\n<ion-content padding>\n\n  <div class="question" *ngIf="reading.question">\n    {{reading.getQuestion()}}\n  </div>\n\n  <ion-list *ngIf="warning">\n    <ion-list-header class="warning">Warning!</ion-list-header>\n    <house [house]="warning" (onTap)="showHouse($event)"></house>\n  </ion-list>\n\n  <ion-list *ngIf="topicHouse">\n    <ion-list-header>Topic</ion-list-header>\n    <ion-item-divider>{{reading.topic}}</ion-item-divider>\n    <house [house]="topicHouse" (onTap)="showHouse($event)"></house>\n  </ion-list>\n\n  <br>\n\n  <ion-list>\n\n    <ion-list-header>Influences</ion-list-header>\n\n    <ion-item-group *ngFor="let key of influencesKeys">\n\n      <div *ngIf="influences[key].length > 0">\n        <ion-item-divider>{{keyToString(key)}}</ion-item-divider>\n        <house [house]="house" *ngFor="let house of influences[key]" (onTap)="showHouse($event)"></house>\n      </div>\n\n    </ion-item-group>\n\n  </ion-list>\n\n</ion-content>\n'/*ion-inline-end:"/Users/adam/AppGod/geomancy/src/pages/reading-overview/reading-overview.html"*/,
+>>>>>>> Stashed changes
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]])
 ], ReadingOverviewPage);
