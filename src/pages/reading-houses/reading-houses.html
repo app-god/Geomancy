@@ -3,10 +3,12 @@
 <ion-content padding>
 
   <ion-list>
+    <ion-list-header>Houses</ion-list-header>
+
     <ion-item-group *ngFor="let house of reading.houses">
 
       <ion-item-divider>
-        <b>{{house.number}}.</b> {{house.topics.join(', ')}}
+        {{house.topics.join(', ')}}
       </ion-item-divider>
 
       <house [house]="house" (onTap)="showHouse(house)"></house>

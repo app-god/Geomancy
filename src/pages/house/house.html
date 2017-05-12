@@ -13,19 +13,21 @@
 </ion-header>
 
 
-<ion-content>
+<ion-content padding>
 
   <p>{{house.description}}</p>
 
-  <ion-grid>
+  <!--<ion-grid>
     <ion-row *ngFor="let h of ">
       <ion-col col-4 class="left-column">{{nameWithMeaning.name}}</ion-col>
       <ion-col col-8 class="right-column">{{nameWithMeaning.meaning}}</ion-col>
     </ion-row>
-  </ion-grid>
+  </ion-grid>-->
 
   <ion-list no-lines>
+    <ion-list-header>Tetragrams</ion-list-header>
     <ion-item-group *ngFor="let house of tetragramsInHouse">
+      <ion-item-divider>{{house.tetragram.name}}</ion-item-divider>
       <house [house]="house"></house>
     </ion-item-group>
   </ion-list>

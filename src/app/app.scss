@@ -21,6 +21,15 @@ ion-content {
 }
 
 ion-list {
+  .label {
+    margin: 0;
+  }
+}
+
+.item-inner {
+  border: 0 !important;
+  padding: 0 !important;
+  box-shadow: none !important;
 }
 
 ion-list-header {
@@ -28,17 +37,19 @@ ion-list-header {
   margin: 0 !important;
 
   ion-label {
-    text-align: center;
+    // text-align: center;
+    border: inset thin color($colors, dark);
     margin: 0 !important;
     padding: 0 0.5em;
     line-height: 200%;
-    background-color: color($colors, light);
-    color: color($colors, black);
+    background-color: color($colors, black);
+    color: color($colors, white);
   }
 }
 
-ion-list-header.warning {
-  background-color: color($colors, warning) !important;
+ion-list-header.warning ion-label {
+  color: color($colors, warning) !important;
+  border-color: color($colors, warning) !important;
 }
 
 .list-header {
@@ -53,22 +64,57 @@ ion-item-divider {
   padding: 0 !important;
 
   ion-label {
-    margin: 1em 0 0.5em 0 !important;
+    margin: 1em 0 !important;
     font-size: 1em;
     color: color($colors, light);
   }
 }
 
+ion-item ion-label {
+  color: color($colors, white) !important;
+  margin: 0 !important;
+}
+
+.button-default {
+  border: outset thin color($colors, primary);
+  border-radius: 1em;
+}
+
 ion-item,
 button[ion-item] {
-  background-color: color($colors, dark);
+  padding: 0 0 0 0.5em !important;
+  background-color: color($colors, dark) !important;
+  background-image: url("/assets/item-bg.jpg") center scroll repeat !important;
   line-height: 150% !important;
-  border-bottom: solid 1px black !important;
-
-  .item-inner {
-    border: none !important;
-  }
+  border: outset thin color($colors, light) !important;
+  // border-radius: 0.5em !important;
 }
+
+/*
+  forms
+*/
+
+ion-textarea, ion-select {
+  margin: 0 !important;
+  padding: 0.5em !important;
+  border: outset thin color($colors, dark) !important;
+  width: 100% !important;
+  color: color($colors, black);
+  background-color: color($colors, light) !important;
+  border-radius: 0.5em !important;
+}
+
+.item-input, .item-select {
+  padding: 0.5em !important;
+}
+
+.select-icon {
+  margin-right: 0.5em;
+}
+
+/*
+  misc
+*/
 
 .big {
   font-size: 150%;
@@ -80,4 +126,33 @@ button[ion-item] {
 
 .left-column {
     color: color($colors, light)
+}
+
+/*
+  alerts
+*/
+
+.alert-wrapper {
+  background-color: color($colors, black) !important;
+}
+
+.alert-radio-group {
+  border: 0 !important;
+  overflow: auto !important;
+}
+
+.alert-radio-label {
+  color: color($colors, white) !important;
+}
+
+.alert-radio[aria-checked=true] .alert-radio-label {
+  color: color($colors, primary) !important;
+}
+
+.alert-button {
+  border: 0 !important;
+}
+
+.alert-head h2 {
+    color: color($colors, white);
 }
