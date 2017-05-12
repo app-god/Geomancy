@@ -15,10 +15,40 @@
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
 
+ion-app {
+  background-color: black !important;
+}
+
+.ion-page {
+  position: relative;
+  max-width: 50em;
+  margin: 0 auto !important;
+}
+
+ion-navbar .toolbar-background {
+  background: url('/assets/toolbar-bg.jpg') scroll repeat top center !important;
+}
+
+ion-navbar {
+  border-bottom: solid thin black;
+}
+
 ion-content {
   background: url('/assets/bg.png') scroll repeat center;
-  height: 100%;
 }
+
+.tabbar {
+  border-top: solid thin black;
+  background: url('/assets/toolbar-bg.jpg') scroll repeat bottom center !important;
+}
+
+ion-content[padding] {
+  padding: 1em !important;
+}
+
+/*
+  list
+*/
 
 ion-list {
   .label {
@@ -34,14 +64,13 @@ ion-list {
 
 ion-list-header {
   padding: 0 !important;
-  margin: 0 !important;
+  margin: 0 0 1em 0 !important;
 
   ion-label {
-    // text-align: center;
     border: inset thin color($colors, dark);
     margin: 0 !important;
     padding: 0 0.5em;
-    line-height: 200%;
+    line-height: 2em;
     background-color: color($colors, black);
     color: color($colors, white);
   }
@@ -77,35 +106,50 @@ ion-item ion-label {
 
 .button-default {
   border: outset thin color($colors, primary);
-  border-radius: 1em;
+  border-radius: 0.5em;
 }
 
 ion-item,
 button[ion-item] {
-  padding: 0 0 0 0.5em !important;
+  margin-bottom: 1em !important;
+  padding: 0.5em !important;
   background-color: color($colors, dark) !important;
-  background-image: url("/assets/item-bg.jpg") center scroll repeat !important;
+  background: url('/assets/item-bg.jpg') scroll repeat center;
   line-height: 150% !important;
-  border: outset thin color($colors, light) !important;
-  // border-radius: 0.5em !important;
+  border: outset thin color($colors, dark) !important;
+  border-radius: 0.5em;
+}
+
+ion-item-sliding {
+  background: none !important;
 }
 
 /*
   forms
 */
 
-ion-textarea, ion-select {
+ion-textarea, ion-select, ion-input {
   margin: 0 !important;
   padding: 0.5em !important;
-  border: outset thin color($colors, dark) !important;
+  border: outset thin color($colors, light) !important;
   width: 100% !important;
-  color: color($colors, black);
-  background-color: color($colors, light) !important;
+  color: color($colors, white);
+  background-color: color($colors, dark) !important;
   border-radius: 0.5em !important;
 }
 
 .item-input, .item-select {
-  padding: 0.5em !important;
+  padding: 1em !important;
+  border-radius: 0.5em;
+}
+
+ion-input .text-input {
+  margin: 0 !important;
+  width: 100%;
+}
+
+.item-label-stacked ion-label {
+  padding-bottom: 1em !important;
 }
 
 .select-icon {

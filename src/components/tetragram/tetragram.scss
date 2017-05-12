@@ -1,9 +1,10 @@
 tetragram {
   text-align: center;
+
   .tetragram {
     height: 4em;
     width: 3em;
-    margin: 0 auto;
+    margin: 0 auto !important;
   }
   .tetragram-row {
     height: 1em;
