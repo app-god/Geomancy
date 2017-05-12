@@ -21,7 +21,6 @@ ion-app {
 
 .ion-page {
   position: relative;
-  max-width: 50em;
   margin: 0 auto !important;
 }
 
@@ -30,7 +29,8 @@ ion-navbar .toolbar-background {
 }
 
 ion-navbar {
-  border-bottom: solid thin black;
+  border-top: solid thin color($colors, black);
+
 }
 
 ion-content {
@@ -38,7 +38,7 @@ ion-content {
 }
 
 .tabbar {
-  border-top: solid thin black;
+  border-top: solid thin color($colors, dark);
   background: url('/assets/toolbar-bg.jpg') scroll repeat bottom center !important;
 }
 
@@ -124,6 +124,14 @@ ion-item-sliding {
   background: none !important;
 }
 
+button[ion-item]:not([detail-none]) .item-inner {
+  background-position: right 0 center;
+}
+
+button[ion-item]:not([detail-none]) .item-inner div {
+  margin-right: calc(0.5em + 14px);
+}
+
 /*
   forms
 */
@@ -132,9 +140,8 @@ ion-textarea, ion-select, ion-input {
   margin: 0 !important;
   padding: 0.5em !important;
   border: outset thin color($colors, light) !important;
-  width: 100% !important;
-  color: color($colors, white);
-  background-color: color($colors, dark) !important;
+  color: color($colors, black);
+  background-color: color($colors, white) !important;
   border-radius: 0.5em !important;
 }
 
@@ -145,7 +152,6 @@ ion-textarea, ion-select, ion-input {
 
 ion-input .text-input {
   margin: 0 !important;
-  width: 100%;
 }
 
 .item-label-stacked ion-label {
