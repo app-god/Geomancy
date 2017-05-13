@@ -64654,6 +64654,10 @@ page-history .date {
   font-style: italic;
 }
 
+page-house tetragram.big {
+  font-size: 200%;
+}
+
 /*
 
 page-new {

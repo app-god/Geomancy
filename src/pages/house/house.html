@@ -15,17 +15,26 @@
 
 <ion-content padding>
 
-  <p>{{house.description}}</p>
+  <ion-grid>
+    <ion-row>
 
-  <!--<ion-grid>
-    <ion-row *ngFor="let h of ">
-      <ion-col col-4 class="left-column">{{nameWithMeaning.name}}</ion-col>
-      <ion-col col-8 class="right-column">{{nameWithMeaning.meaning}}</ion-col>
+      <ion-col col-6>
+        <tetragram class="big" [tetragram]="house.tetragram"></tetragram>
+      </ion-col>
+
+      <ion-col col-6 class="center">
+        <h3>{{house.tetragram.name}}</h3>
+        <p>in</p>
+        <h3>House {{house.number}}</h3>
+      </ion-col>
+
     </ion-row>
-  </ion-grid>-->
+  </ion-grid>
+
+  <p>{{house.getTetragramMeaning()}}</p>
 
   <ion-list no-lines>
-    <ion-list-header>Tetragrams</ion-list-header>
+    <ion-list-header>Tetragrams in House {{house.number}}</ion-list-header>
     <ion-item-group *ngFor="let house of tetragramsInHouse">
       <ion-item-divider>{{house.tetragram.name}}</ion-item-divider>
       <house [house]="house"></house>

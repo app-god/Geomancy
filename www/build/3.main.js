@@ -5,10 +5,11 @@ webpackJsonp([3],{
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_house_house_module__ = __webpack_require__(278);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(97);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__house__ = __webpack_require__(282);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_tetragram_tetragram_module__ = __webpack_require__(275);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__components_house_house_module__ = __webpack_require__(278);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_angular__ = __webpack_require__(97);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__house__ = __webpack_require__(282);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HousePageModule", function() { return HousePageModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -20,22 +21,24 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+
 var HousePageModule = (function () {
     function HousePageModule() {
     }
     return HousePageModule;
 }());
 HousePageModule = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["a" /* NgModule */])({
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_2__angular_core__["a" /* NgModule */])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_3__house__["a" /* HousePage */],
+            __WEBPACK_IMPORTED_MODULE_4__house__["a" /* HousePage */],
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_3__house__["a" /* HousePage */]),
-            __WEBPACK_IMPORTED_MODULE_0__components_house_house_module__["a" /* HouseComponentModule */]
+            __WEBPACK_IMPORTED_MODULE_3_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_4__house__["a" /* HousePage */]),
+            __WEBPACK_IMPORTED_MODULE_1__components_house_house_module__["a" /* HouseComponentModule */],
+            __WEBPACK_IMPORTED_MODULE_0__components_tetragram_tetragram_module__["a" /* TetragramComponentModule */]
         ],
         exports: [
-            __WEBPACK_IMPORTED_MODULE_3__house__["a" /* HousePage */]
+            __WEBPACK_IMPORTED_MODULE_4__house__["a" /* HousePage */]
         ]
     })
 ], HousePageModule);
@@ -1041,7 +1044,7 @@ var HousePage = (function () {
 HousePage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPage */])(),
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({
-        selector: 'page-house',template:/*ion-inline-start:"/Users/adam/AppGod/geomancy/src/pages/house/house.html"*/'<!--\n  Generated template for the HousePage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>House {{house.number}}</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n  <p>{{house.description}}</p>\n\n  <!--<ion-grid>\n    <ion-row *ngFor="let h of ">\n      <ion-col col-4 class="left-column">{{nameWithMeaning.name}}</ion-col>\n      <ion-col col-8 class="right-column">{{nameWithMeaning.meaning}}</ion-col>\n    </ion-row>\n  </ion-grid>-->\n\n  <ion-list no-lines>\n    <ion-list-header>Tetragrams</ion-list-header>\n    <ion-item-group *ngFor="let house of tetragramsInHouse">\n      <ion-item-divider>{{house.tetragram.name}}</ion-item-divider>\n      <house [house]="house"></house>\n    </ion-item-group>\n  </ion-list>\n\n</ion-content>\n'/*ion-inline-end:"/Users/adam/AppGod/geomancy/src/pages/house/house.html"*/,
+        selector: 'page-house',template:/*ion-inline-start:"/Users/adam/AppGod/geomancy/src/pages/house/house.html"*/'<!--\n  Generated template for the HousePage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>House {{house.number}}</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n  <ion-grid>\n    <ion-row>\n\n      <ion-col col-6>\n        <tetragram class="big" [tetragram]="house.tetragram"></tetragram>\n      </ion-col>\n\n      <ion-col col-6 class="center">\n        <h3>{{house.tetragram.name}}</h3>\n        <p>in</p>\n        <h3>House {{house.number}}</h3>\n      </ion-col>\n\n    </ion-row>\n  </ion-grid>\n\n  <p>{{house.getTetragramMeaning()}}</p>\n\n  <ion-list no-lines>\n    <ion-list-header>Tetragrams in House {{house.number}}</ion-list-header>\n    <ion-item-group *ngFor="let house of tetragramsInHouse">\n      <ion-item-divider>{{house.tetragram.name}}</ion-item-divider>\n      <house [house]="house"></house>\n    </ion-item-group>\n  </ion-list>\n\n</ion-content>\n'/*ion-inline-end:"/Users/adam/AppGod/geomancy/src/pages/house/house.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]])
 ], HousePage);
