@@ -67,11 +67,8 @@ ion-list-header {
   margin: 0 0 1em 0 !important;
 
   ion-label {
-    border: inset thin color($colors, dark);
     margin: 0 !important;
-    padding: 0 0.5em;
     line-height: 2em;
-    background-color: color($colors, black);
     color: color($colors, white);
   }
 }
@@ -93,7 +90,7 @@ ion-item-divider {
   padding: 0 !important;
 
   ion-label {
-    margin: 1em 0 !important;
+    margin: 0 0 1em 0 !important;
     font-size: 1em;
     color: color($colors, light);
   }

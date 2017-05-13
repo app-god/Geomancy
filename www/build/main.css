@@ -64458,11 +64458,8 @@ ion-list-header {
 }
 
 ion-list-header ion-label {
-  border: inset thin #444;
   margin: 0 !important;
-  padding: 0 0.5em;
   line-height: 2em;
-  background-color: #222;
   color: #ddd;
 }
 
@@ -64484,7 +64481,7 @@ ion-item-divider {
 }
 
 ion-item-divider ion-label {
-  margin: 1em 0 !important;
+  margin: 0 0 1em 0 !important;
   font-size: 1em;
   color: #666;
 }
