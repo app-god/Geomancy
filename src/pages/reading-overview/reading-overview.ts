@@ -14,6 +14,7 @@ export class ReadingOverviewPage {
   houses: any
   keys
   topicHouse
+  warning
   keyToString = Placement.keyToString
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
@@ -22,8 +23,9 @@ export class ReadingOverviewPage {
 
     let houses = this.reading.houses
 
+    this.warning = houses.find(house => { return house.placement.type === PlacementType.Warning }),
+
     this.houses = {
-      warning:    houses.filter(house => { return house.placement.type === PlacementType.Warning }),
       rules:      houses.filter(house => { return house.placement.type === PlacementType.Strongest }),
       exalted:    houses.filter(house => { return house.placement.type === PlacementType.VeryStrong }),
       triplicity: houses.filter(house => { return house.placement.type === PlacementType.Strong })

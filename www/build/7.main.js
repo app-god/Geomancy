@@ -1,14 +1,14 @@
 webpackJsonp([7],{
 
-/***/ 268:
+/***/ 272:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(46);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__history__ = __webpack_require__(282);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HistoryPageModule", function() { return HistoryPageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(97);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__tutorial__ = __webpack_require__(289);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TutorialPageModule", function() { return TutorialPageModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,37 +18,37 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var HistoryPageModule = (function () {
-    function HistoryPageModule() {
+var TutorialPageModule = (function () {
+    function TutorialPageModule() {
     }
-    return HistoryPageModule;
+    return TutorialPageModule;
 }());
-HistoryPageModule = __decorate([
+TutorialPageModule = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["a" /* NgModule */])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_2__history__["a" /* HistoryPage */],
+            __WEBPACK_IMPORTED_MODULE_2__tutorial__["a" /* TutorialPage */],
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__history__["a" /* HistoryPage */])
+            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__tutorial__["a" /* TutorialPage */]),
         ],
         exports: [
-            __WEBPACK_IMPORTED_MODULE_2__history__["a" /* HistoryPage */]
+            __WEBPACK_IMPORTED_MODULE_2__tutorial__["a" /* TutorialPage */]
         ]
     })
-], HistoryPageModule);
+], TutorialPageModule);
 
-//# sourceMappingURL=history.module.js.map
+//# sourceMappingURL=tutorial.module.js.map
 
 /***/ }),
 
-/***/ 282:
+/***/ 289:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(46);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_storage__ = __webpack_require__(47);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HistoryPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(97);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_storage__ = __webpack_require__(98);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TutorialPage; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -61,89 +61,39 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var HistoryPage = (function () {
-    function HistoryPage(navCtrl, storage, modCtrl, alertCtrl, viewCtrl) {
+var TutorialPage = (function () {
+    function TutorialPage(navCtrl, navParams, storage, viewCtrl) {
         this.navCtrl = navCtrl;
+        this.navParams = navParams;
         this.storage = storage;
-        this.modCtrl = modCtrl;
-        this.alertCtrl = alertCtrl;
         this.viewCtrl = viewCtrl;
-        this.readings = [];
+        this.showSkip = true;
     }
-    HistoryPage.prototype.ionViewWillEnter = function () {
-        this.loadReadings();
+    TutorialPage.prototype.startApp = function () {
+        this.storage.set('hasSeenTutorial', true);
+        this.navCtrl.setRoot('NewPage');
     };
-    HistoryPage.prototype.loadReadings = function () {
-        var _this = this;
-        this.storage.ready().then(function () {
-            _this.storage.get('history').then(function (history) {
-                if (history) {
-                    _this.readings = history.sort(_this.sortReadings);
-                }
-            });
-        });
+    TutorialPage.prototype.onSlideChange = function (slides) {
+        this.showSkip = !slides.isEnd();
     };
-    HistoryPage.prototype.sortReadings = function (a, b) {
-        if (a.date < b.date) {
-            return 1;
-        }
-        if (a.date > b.date) {
-            return -1;
-        }
-        return 0;
-    };
-    HistoryPage.prototype.showReading = function (readingData) {
-        this.navCtrl.push('ReadingPage', {
-            readingData: readingData,
-            saved: true
-        });
-    };
-    HistoryPage.prototype.deleteReading = function (reading) {
-        var _this = this;
-        var readingIndex = this.readings.indexOf(reading);
-        this.readings.splice(readingIndex, 1);
-        this.storage.ready().then(function () {
-            _this.storage.set('history', _this.readings);
-        });
-    };
-    HistoryPage.prototype.deleteAllReadings = function () {
-        var _this = this;
-        var alert = this.alertCtrl.create({
-            title: 'Confirm Deletion',
-            message: 'Do you want to delete all of your readings?',
-            buttons: [
-                {
-                    text: 'Cancel',
-                    role: 'cancel'
-                },
-                {
-                    text: 'Delete',
-                    handler: function () {
-                        _this.storage.ready().then(function () {
-                            _this.storage.set('history', []);
-                        });
-                        _this.loadReadings();
-                    }
-                }
-            ]
-        });
-        alert.present();
-    };
-    return HistoryPage;
+    return TutorialPage;
 }());
-HistoryPage = __decorate([
+__decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])('slides'),
+    __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* Slides */])
+], TutorialPage.prototype, "slides", void 0);
+TutorialPage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPage */])(),
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({
-        selector: 'page-history',template:/*ion-inline-start:"/Users/adam/AppGod/geomancy/src/pages/history/history.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      Load Reading\n    </ion-title>\n    <ion-buttons end *ngIf="readings.length > 0">\n      <button ion-button icon-only (click)="deleteAllReadings()">\n        <ion-icon name="ios-trash" color="danger"></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n\n  <ion-card *ngIf="readings.length == 0">\n    <ion-card-content>\n      Save a reading and it will show up here.\n    </ion-card-content>\n  </ion-card>\n\n  <ion-list margin *ngIf="readings.length > 0">\n\n    <ion-item-group>\n\n      <ion-item-sliding *ngFor="let reading of readings">\n\n        <button ion-item (click)="showReading(reading)">\n          <div class="question" text-wrap>{{reading.question || \'No question\'}}</div>\n          <div class="topic">{{reading.topic || \'No topic\'}}</div>\n          <div class="date">{{reading.date | date:\'medium\'}}</div>\n        </button>\n\n        <ion-item-options side="right">\n          <button ion-button (click)="deleteReading(reading)"\n            color="danger">Delete</button>\n        </ion-item-options>\n      </ion-item-sliding>\n\n    </ion-item-group>\n\n  </ion-list>\n</ion-content>\n'/*ion-inline-end:"/Users/adam/AppGod/geomancy/src/pages/history/history.html"*/
+        selector: 'page-tutorial',template:/*ion-inline-start:"/Users/adam/AppGod/geomancy/src/pages/tutorial/tutorial.html"*/'<ion-header>\n\n  <ion-navbar>\n    <ion-buttons end *ngIf="showSkip">\n      <button ion-button (click)="startApp()" color="primary">Skip</button>\n    </ion-buttons>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n  <ion-slides #slides pager (ionSlideWillChange)="onSlideChange($event)" color="primary">\n\n    <ion-slide>\n      <h2>Welcome to <b>Geomancy</b></h2>\n      <p>\n        <b>Geomancy</b> ("earth divination") is a method of divination that interprets a series of 16 figures formed by a randomized process.\n      </p>\n    </ion-slide>\n\n    <ion-slide>\n      <h2>A little bit of history</h2>\n      <p>\n        <b>Geomancy</b> was one of the most popular forms of divination throughout Africa and Europe, particularly during the Middle Ages and the Renaissance. In Renaissance magic, <b>geomancy</b> was classified as a "forbidden art."\n      </p>\n    </ion-slide>\n\n    <ion-slide>\n      <h2>Using this app</h2>\n      <p>\n        This app makes interpreting a geomantic divination easy. All you need to do is click "Create" and the complex process of forming the divination will be done for you.\n      </p>\n      <button ion-button icon-right large clear (click)="startApp()">\n        Begin\n        <ion-icon name="arrow-forward"></ion-icon>\n      </button>\n    </ion-slide>\n    \n  </ion-slides>\n\n</ion-content>\n'/*ion-inline-end:"/Users/adam/AppGod/geomancy/src/pages/tutorial/tutorial.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */],
+        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */],
         __WEBPACK_IMPORTED_MODULE_2__ionic_storage__["b" /* Storage */],
-        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* ModalController */],
-        __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["m" /* AlertController */],
         __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* ViewController */]])
-], HistoryPage);
+], TutorialPage);
 
-//# sourceMappingURL=history.js.map
+//# sourceMappingURL=tutorial.js.map
 
 /***/ })
 

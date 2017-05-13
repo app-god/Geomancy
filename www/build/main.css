@@ -64455,9 +64455,11 @@ ion-list .label {
 ion-list-header {
   padding: 0 !important;
   margin: 0 0 1em 0 !important;
+  background: none !important;
 }
 
 ion-list-header ion-label {
+  font-weight: bold;
   margin: 0 !important;
   line-height: 2em;
   color: #ddd;
@@ -64525,7 +64527,6 @@ button[ion-item]:not([detail-none]) .item-inner div {
 ion-textarea, ion-select, ion-input {
   margin: 0 !important;
   padding: 0.5em !important;
-  border: outset thin #666 !important;
   color: #222;
   background-color: #ddd !important;
   border-radius: 0.5em !important;
@@ -64546,6 +64547,7 @@ ion-input .text-input {
 
 .select-icon {
   margin-right: 0.5em;
+  margin-top: calc(1em - 14px);
 }
 
 /*

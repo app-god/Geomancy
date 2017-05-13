@@ -21,6 +21,12 @@
   <ion-list no-lines>
 
     <ion-item padding>
+      <ion-label stacked>Question</ion-label>
+      <ion-textarea [(ngModel)]="question" rows="3"
+        placeholder="Enter question here"></ion-textarea>
+    </ion-item>
+
+    <ion-item padding>
       <ion-label stacked>Topic</ion-label>
       <ion-select [(ngModel)]="topic">
         <ion-option
@@ -30,12 +36,6 @@
           {{t}}
         </ion-option>
       </ion-select>
-    </ion-item>
-
-    <ion-item padding>
-      <ion-label stacked>Question</ion-label>
-      <ion-textarea [(ngModel)]="question" rows="3"
-        placeholder="Enter question here"></ion-textarea>
     </ion-item>
 
   </ion-list>

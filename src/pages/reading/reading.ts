@@ -34,23 +34,13 @@ export class ReadingPage {
         key3:     navParams.get('key3')
       }
 
-      if (readingData) {
-        this.reading = new Reading(readingData)
-      } else {
-        navCtrl.setRoot('NewPage')
-      }
+      this.reading = new Reading(readingData)
 
       this.saved = navParams.get('saved') || false
 
       this.rootParams = {
         parent: this
       }
-  }
-
-  ionViewDidEnter() {
-    if (this.navCtrl.length() == 1) {
-      this.navCtrl.setRoot('NewPage')
-    }
   }
 
   saveReading() {

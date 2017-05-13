@@ -81,7 +81,7 @@ export class NewPage {
     let readingData: ReadingData
 
     if (this.topic == 'None') {
-      this.topic = null
+      this.topic = ''
     }
 
     // generate data for automatic readings
