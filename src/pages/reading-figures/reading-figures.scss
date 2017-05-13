@@ -1,6 +1,27 @@
 page-reading-figures {
+
+  ion-row {
+    border-top: solid thin color($colors, black);
+  }
+
+  ion-row:first-child {
+    border-top: none;
+  }
+
   ion-col {
+
+    padding-top: 1em !important;
+
     text-align: center;
     white-space: nowrap;
+    border-left: solid thin color($colors, black);
+
+    p {
+      font-size: 80%;
+    }
+  }
+
+  ion-col:first-child {
+    border: none;
   }
 }

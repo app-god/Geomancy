@@ -64,7 +64,7 @@ ion-list {
 
 ion-list-header {
   padding: 0 !important;
-  margin: 2em 0 1em 0 !important;
+  margin: 6em 0 1em 0 !important;
   background: none !important;
   border-bottom: solid thin color($colors, white) !important;
 
@@ -174,7 +174,9 @@ ion-input .text-input {
 }
 
 .left-column {
-    color: color($colors, light)
+  float: left;
+  width: 33%;
+  color: color($colors, light)
 }
 
 /*

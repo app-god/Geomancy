@@ -18,7 +18,7 @@ export class ReadingFiguresPage {
   }
 
   showTetragram(tetragram, house?: number) {
-    this.parent.navCtrl.push('TetragramPage', { item: tetragram })
+    this.parent.navCtrl.push('TetragramPage', { key: tetragram.key })
   }
 
   ionViewWillEnter() {

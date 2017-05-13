@@ -13,23 +13,28 @@
     <p>{{tetragram.desc}}</p>
   </div>
 
-  <ion-grid>
-    <ion-row>
-      <ion-col col-4 class="left-column">
-        Planet
-      </ion-col>
-      <ion-col col-8>
-        {{tetragram.planet}}
-      </ion-col>
-    </ion-row>
-  </ion-grid>
+  <ion-list no-lines>
+
+    <ion-list-header>Attributions</ion-list-header>
+
+    <ion-item-group *ngFor="let attribution of attributions">
+      <ion-item-divider>
+        <div class="left-column">{{attribution.name}}</div>
+        <div>{{attribution.value}}</div>
+      </ion-item-divider>
+    </ion-item-group>
+
+  </ion-list>
 
   <ion-list no-lines>
-    <ion-list-header>{{tetragram.name}} in each House</ion-list-header>
+
+    <ion-list-header>Placements</ion-list-header>
+
     <ion-item-group *ngFor="let house of houses">
       <ion-item-divider>{{house.title}}</ion-item-divider>
       <house [house]="house"></house>
     </ion-item-group>
+
   </ion-list>
 
 </ion-content>

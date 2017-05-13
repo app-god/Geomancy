@@ -121,7 +121,7 @@ var tetragramInfo = [
         dots: 4,
         sign: 'Cancer',
         good: false,
-        phrase: 'Change',
+        phrase: 'Activity',
         houseMeanings: [
             'Evil except for prison.',
             'Indifferent.',
@@ -511,7 +511,7 @@ var tetragramInfo = [
         dots: 7,
         sign: 'Scorpio',
         good: false,
-        phrase: 'Destruction',
+        phrase: 'Toxicity',
         houseMeanings: [
             'Destroy the figure if it falls here! It makes the judgement worthless.',
             'Evil in all demands.',
@@ -684,7 +684,7 @@ var houseInfo = [
         number: 1,
         title: 'House of Self',
         description: '',
-        phrase: 'your self',
+        phrase: 'yourself',
         topics: ['Self', 'Life', 'Health']
     },
     {
@@ -698,7 +698,7 @@ var houseInfo = [
         number: 3,
         title: 'House of Communication',
         description: '',
-        phrase: 'friendships',
+        phrase: 'perception',
         topics: ['Siblings', 'Friends', 'Short Journeys']
     },
     {
@@ -1068,6 +1068,7 @@ var ReadingOverviewPage = (function () {
             };
         this.keys = Object.keys(this.houses);
         this.topicHouse = this.reading.getTopicHouse();
+        this.partOfFortune = this.reading.getHouse(this.reading.getPartOfFortune());
     }
     ReadingOverviewPage.prototype.ionViewWillEnter = function () {
         this.parent.title = 'Overview';
@@ -1080,7 +1081,7 @@ var ReadingOverviewPage = (function () {
 ReadingOverviewPage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPage */])(),
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({
-        selector: 'page-reading-overview',template:/*ion-inline-start:"/Users/adam/AppGod/geomancy/src/pages/reading-overview/reading-overview.html"*/'<ion-header><ion-navbar></ion-navbar></ion-header>\n\n<ion-content padding>\n\n  <div class="question" *ngIf="reading.question">\n    {{reading.getQuestion()}}\n  </div>\n\n  <ion-list *ngIf="warning">\n    <ion-list-header class="warning">Warning</ion-list-header>\n    <ion-item-group>\n      <house [house]="warning" (onTap)="showHouse($event)"></house>\n    </ion-item-group>\n  </ion-list>\n\n  <ion-list *ngIf="topicHouse">\n    <ion-list-header>Topic</ion-list-header>\n    <ion-item-divider>{{reading.topic}}</ion-item-divider>\n    <house [house]="topicHouse" (onTap)="showHouse($event)"></house>\n  </ion-list>\n\n  <br>\n\n  <ion-list *ngIf="keys.length > 0">\n\n    <ion-list-header>Influences</ion-list-header>\n\n    <ion-item-group *ngFor="let key of keys">\n\n      <div *ngIf="houses[key].length > 0">\n        <ion-item-divider>{{keyToString(key)}}</ion-item-divider>\n        <house [house]="house" *ngFor="let house of houses[key]" (onTap)="showHouse($event)"></house>\n      </div>\n\n    </ion-item-group>\n\n  </ion-list>\n\n</ion-content>\n'/*ion-inline-end:"/Users/adam/AppGod/geomancy/src/pages/reading-overview/reading-overview.html"*/,
+        selector: 'page-reading-overview',template:/*ion-inline-start:"/Users/adam/AppGod/geomancy/src/pages/reading-overview/reading-overview.html"*/'<ion-header><ion-navbar></ion-navbar></ion-header>\n\n<ion-content padding>\n\n  <div class="question" *ngIf="reading.question">\n    {{reading.getQuestion()}}\n  </div>\n\n  <ion-list *ngIf="warning">\n    <ion-list-header class="warning">Warning</ion-list-header>\n    <ion-item-group>\n      <house [house]="warning" (onTap)="showHouse($event)"></house>\n    </ion-item-group>\n  </ion-list>\n\n  <ion-list *ngIf="topicHouse">\n    <ion-list-header>Topic</ion-list-header>\n    <ion-item-divider>{{reading.topic}}</ion-item-divider>\n    <house [house]="topicHouse" (onTap)="showHouse($event)"></house>\n  </ion-list>\n\n  <ion-list *ngIf="keys.length > 0">\n\n    <ion-list-header>Strong Placements</ion-list-header>\n\n    <ion-item-group *ngFor="let key of keys">\n\n      <div *ngIf="houses[key].length > 0">\n        <ion-item-divider>{{keyToString(key)}}</ion-item-divider>\n        <house [house]="house" *ngFor="let house of houses[key]" (onTap)="showHouse($event)"></house>\n      </div>\n\n    </ion-item-group>\n\n  </ion-list>\n\n  <ion-list>\n\n    <ion-list-header>Part of Fortune</ion-list-header>\n\n    <ion-item-group>\n\n      <house [house]="partOfFortune" (onTap)="showHouse($event)"></house>\n\n    </ion-item-group>\n\n  </ion-list>\n\n</ion-content>\n'/*ion-inline-end:"/Users/adam/AppGod/geomancy/src/pages/reading-overview/reading-overview.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]])
 ], ReadingOverviewPage);

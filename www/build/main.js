@@ -74266,7 +74266,7 @@ AppModule = __decorate([
                     { loadChildren: '../pages/reading-figures/reading-figures.module#ReadingFiguresPageModule', name: 'ReadingFiguresPage', segment: 'reading-figures', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/reading-houses/reading-houses.module#ReadingHousesPageModule', name: 'ReadingHousesPage', segment: 'reading-houses', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/reading-overview/reading-overview.module#ReadingOverviewPageModule', name: 'ReadingOverviewPage', segment: 'reading-overview', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/tetragram/tetragram.module#TetragramPageModule', name: 'TetragramPage', segment: 'tetragram', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/tetragram/tetragram.module#TetragramPageModule', name: 'TetragramPage', segment: 'tetragram/:key', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/tutorial/tutorial.module#TutorialPageModule', name: 'TutorialPage', segment: 'tutorial', priority: 'low', defaultHistory: [] }
                 ]
             }),

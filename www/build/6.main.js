@@ -118,7 +118,7 @@ var tetragramInfo = [
         dots: 4,
         sign: 'Cancer',
         good: false,
-        phrase: 'Change',
+        phrase: 'Activity',
         houseMeanings: [
             'Evil except for prison.',
             'Indifferent.',
@@ -508,7 +508,7 @@ var tetragramInfo = [
         dots: 7,
         sign: 'Scorpio',
         good: false,
-        phrase: 'Destruction',
+        phrase: 'Toxicity',
         houseMeanings: [
             'Destroy the figure if it falls here! It makes the judgement worthless.',
             'Evil in all demands.',
@@ -707,7 +707,7 @@ var ReadingFiguresPage = (function () {
         this.reading = this.parent.reading;
     }
     ReadingFiguresPage.prototype.showTetragram = function (tetragram, house) {
-        this.parent.navCtrl.push('TetragramPage', { item: tetragram });
+        this.parent.navCtrl.push('TetragramPage', { key: tetragram.key });
     };
     ReadingFiguresPage.prototype.ionViewWillEnter = function () {
         this.parent.title = 'Figures';

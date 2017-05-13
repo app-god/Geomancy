@@ -64,7 +64,7 @@ export const houseInfo: HouseInfo[] = [
     number: 1,
     title: 'House of Self',
     description: '',
-    phrase: 'your self',
+    phrase: 'yourself',
     topics: ['Self', 'Life', 'Health']
   },
   {
@@ -78,7 +78,7 @@ export const houseInfo: HouseInfo[] = [
     number: 3,
     title: 'House of Communication',
     description: '',
-    phrase: 'friendships',
+    phrase: 'perception',
     topics: ['Siblings', 'Friends', 'Short Journeys']
   },
   {

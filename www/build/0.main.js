@@ -121,7 +121,7 @@ var tetragramInfo = [
         dots: 4,
         sign: 'Cancer',
         good: false,
-        phrase: 'Change',
+        phrase: 'Activity',
         houseMeanings: [
             'Evil except for prison.',
             'Indifferent.',
@@ -511,7 +511,7 @@ var tetragramInfo = [
         dots: 7,
         sign: 'Scorpio',
         good: false,
-        phrase: 'Destruction',
+        phrase: 'Toxicity',
         houseMeanings: [
             'Destroy the figure if it falls here! It makes the judgement worthless.',
             'Evil in all demands.',
@@ -684,7 +684,7 @@ var houseInfo = [
         number: 1,
         title: 'House of Self',
         description: '',
-        phrase: 'your self',
+        phrase: 'yourself',
         topics: ['Self', 'Life', 'Health']
     },
     {
@@ -698,7 +698,7 @@ var houseInfo = [
         number: 3,
         title: 'House of Communication',
         description: '',
-        phrase: 'friendships',
+        phrase: 'perception',
         topics: ['Siblings', 'Friends', 'Short Journeys']
     },
     {
@@ -1038,7 +1038,8 @@ HouseComponent = __decorate([
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(97);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__models_house__ = __webpack_require__(275);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__models_tetragram__ = __webpack_require__(273);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__models_house__ = __webpack_require__(275);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TetragramPage; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1052,19 +1053,36 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var TetragramPage = (function () {
     function TetragramPage(navCtrl, navParams) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
-        this.tetragram = navParams.get('item');
-        this.houses = __WEBPACK_IMPORTED_MODULE_2__models_house__["a" /* House */].getHousesWithTetragram(this.tetragram);
+        this.tetragram = new __WEBPACK_IMPORTED_MODULE_2__models_tetragram__["a" /* Tetragram */](navParams.get('key'));
+        this.houses = __WEBPACK_IMPORTED_MODULE_3__models_house__["a" /* House */].getHousesWithTetragram(this.tetragram);
+        this.attributions = [
+            {
+                name: 'Keyword',
+                value: this.tetragram.phrase
+            },
+            {
+                name: 'Planet',
+                value: this.tetragram.planet
+            },
+            {
+                name: 'Zodiac',
+                value: this.tetragram.sign
+            },
+        ];
     }
     return TetragramPage;
 }());
 TetragramPage = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPage */])(),
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPage */])({
+        segment: 'tetragram/:key'
+    }),
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({
-        selector: 'page-tetragram',template:/*ion-inline-start:"/Users/adam/AppGod/geomancy/src/pages/tetragram/tetragram.html"*/'<ion-header>\n\n  <ion-navbar>\n    <ion-title>{{tetragram.name}}</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <div padding class="big center">\n    <tetragram [tetragram]="tetragram"></tetragram>\n    <p>{{tetragram.desc}}</p>\n  </div>\n\n  <ion-grid>\n    <ion-row>\n      <ion-col col-4 class="left-column">\n        Planet\n      </ion-col>\n      <ion-col col-8>\n        {{tetragram.planet}}\n      </ion-col>\n    </ion-row>\n  </ion-grid>\n\n  <ion-list no-lines>\n    <ion-list-header>{{tetragram.name}} in each House</ion-list-header>\n    <ion-item-group *ngFor="let house of houses">\n      <ion-item-divider>{{house.title}}</ion-item-divider>\n      <house [house]="house"></house>\n    </ion-item-group>\n  </ion-list>\n\n</ion-content>\n'/*ion-inline-end:"/Users/adam/AppGod/geomancy/src/pages/tetragram/tetragram.html"*/,
+        selector: 'page-tetragram',template:/*ion-inline-start:"/Users/adam/AppGod/geomancy/src/pages/tetragram/tetragram.html"*/'<ion-header>\n\n  <ion-navbar>\n    <ion-title>{{tetragram.name}}</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <div padding class="big center">\n    <tetragram [tetragram]="tetragram"></tetragram>\n    <p>{{tetragram.desc}}</p>\n  </div>\n\n  <ion-list no-lines>\n\n    <ion-list-header>Attributions</ion-list-header>\n\n    <ion-item-group *ngFor="let attribution of attributions">\n      <ion-item-divider>\n        <div class="left-column">{{attribution.name}}</div>\n        <div>{{attribution.value}}</div>\n      </ion-item-divider>\n    </ion-item-group>\n\n  </ion-list>\n\n  <ion-list no-lines>\n\n    <ion-list-header>Placements</ion-list-header>\n\n    <ion-item-group *ngFor="let house of houses">\n      <ion-item-divider>{{house.title}}</ion-item-divider>\n      <house [house]="house"></house>\n    </ion-item-group>\n\n  </ion-list>\n\n</ion-content>\n'/*ion-inline-end:"/Users/adam/AppGod/geomancy/src/pages/tetragram/tetragram.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]])
 ], TetragramPage);

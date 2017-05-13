@@ -121,7 +121,7 @@ var tetragramInfo = [
         dots: 4,
         sign: 'Cancer',
         good: false,
-        phrase: 'Change',
+        phrase: 'Activity',
         houseMeanings: [
             'Evil except for prison.',
             'Indifferent.',
@@ -511,7 +511,7 @@ var tetragramInfo = [
         dots: 7,
         sign: 'Scorpio',
         good: false,
-        phrase: 'Destruction',
+        phrase: 'Toxicity',
         houseMeanings: [
             'Destroy the figure if it falls here! It makes the judgement worthless.',
             'Evil in all demands.',
@@ -684,7 +684,7 @@ var houseInfo = [
         number: 1,
         title: 'House of Self',
         description: '',
-        phrase: 'your self',
+        phrase: 'yourself',
         topics: ['Self', 'Life', 'Health']
     },
     {
@@ -698,7 +698,7 @@ var houseInfo = [
         number: 3,
         title: 'House of Communication',
         description: '',
-        phrase: 'friendships',
+        phrase: 'perception',
         topics: ['Siblings', 'Friends', 'Short Journeys']
     },
     {
@@ -1066,12 +1066,15 @@ var HousePage = (function () {
             _this.tetragramsInHouse.push(new __WEBPACK_IMPORTED_MODULE_2__models_house__["a" /* House */](_this.house.number, tetragram));
         });
     }
+    HousePage.prototype.showHouse = function (house) {
+        this.navCtrl.push('HousePage', { house: house });
+    };
     return HousePage;
 }());
 HousePage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPage */])(),
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({
-        selector: 'page-house',template:/*ion-inline-start:"/Users/adam/AppGod/geomancy/src/pages/house/house.html"*/'<!--\n  Generated template for the HousePage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>{{house.title}}</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n  <ion-grid>\n    <ion-row>\n\n      <ion-col col-6>\n        <tetragram class="big" [tetragram]="house.tetragram"></tetragram>\n      </ion-col>\n\n      <ion-col col-6 class="center">\n        <h3>{{house.tetragram.name}}</h3>\n        <p>in</p>\n        <h3>{{house.title}}</h3>\n      </ion-col>\n\n    </ion-row>\n  </ion-grid>\n\n  <p>{{house.getTetragramMeaning()}}</p>\n\n  <ion-list no-lines>\n    <ion-list-header>Tetragrams in House {{house.number}}</ion-list-header>\n    <ion-item-group *ngFor="let house of tetragramsInHouse">\n      <ion-item-divider>{{house.tetragram.name}} <i>{{house.tetragram.translation}}</i></ion-item-divider>\n      <house [house]="house"></house>\n    </ion-item-group>\n  </ion-list>\n\n</ion-content>\n'/*ion-inline-end:"/Users/adam/AppGod/geomancy/src/pages/house/house.html"*/,
+        selector: 'page-house',template:/*ion-inline-start:"/Users/adam/AppGod/geomancy/src/pages/house/house.html"*/'<ion-header>\n\n  <ion-navbar>\n    <ion-title>Placement</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n  <ion-list no-lines>\n\n    <ion-list-header>Tetragram</ion-list-header>\n\n    <ion-item-divider>\n      <div class="left-column">Name</div>\n      {{house.tetragram.name}}\n    </ion-item-divider>\n\n    <ion-item-divider>\n      <div class="left-column">Translation</div>\n      {{house.tetragram.translation}}\n    </ion-item-divider>\n\n    <ion-item-divider>\n      <div class="left-column">Name</div>\n      {{house.tetragram.name}}\n    </ion-item-divider>\n\n  </ion-list>\n\n\n  <ion-list no-lines>\n\n    <ion-list-header>House {{house.number}} Placements</ion-list-header>\n\n    <ion-item-group *ngFor="let house of tetragramsInHouse">\n      <ion-item-divider>{{house.tetragram.name}}</ion-item-divider>\n      <house [house]="house" (onTap)="showHouse($event)"></house>\n    </ion-item-group>\n\n  </ion-list>\n\n</ion-content>\n'/*ion-inline-end:"/Users/adam/AppGod/geomancy/src/pages/house/house.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]])
 ], HousePage);

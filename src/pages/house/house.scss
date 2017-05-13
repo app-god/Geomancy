@@ -1,7 +1,19 @@
 page-house {
 
+    font-size: 1em;
+    line-height: 2em;
+
     tetragram.big {
-        font-size: 200%;
+        font-size: 150%;
+
+        .tetragram {
+            margin-bottom: 0.5em !important;
+        }
+    }
+
+    ion-col.placement-details {
+        font-size: 1em;
+        line-height: 2em;
     }
 
 }

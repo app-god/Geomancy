@@ -76,21 +76,26 @@ export class Tetragram {
 }
 
 export interface TetragramInfo {
+
   key: number
+
   name: string
   translation: string
   desc: string
-  planet?: string
+  planet: string
   phrase: string
+  sign: string
   houseMeanings: string[]
+
   rules: number[]
-  good: boolean
   dots: number
   exalted: number[]
   fall: number[]
   detriment: number[]
-  sign: string
   triplicity: number[]
+
+  good: boolean
+
 }
 
 export const tetragramInfo: TetragramInfo[] = [
@@ -108,7 +113,7 @@ export const tetragramInfo: TetragramInfo[] = [
     dots: 4,
     sign: 'Cancer',
     good: false,
-    phrase: 'Change',
+    phrase: 'Activity',
     houseMeanings: [
       'Evil except for prison.',
       'Indifferent.',
@@ -498,7 +503,7 @@ export const tetragramInfo: TetragramInfo[] = [
     dots: 7,
     sign: 'Scorpio',
     good: false,
-    phrase: 'Destruction',
+    phrase: 'Toxicity',
     houseMeanings: [
       'Destroy the figure if it falls here! It makes the judgement worthless.',
       'Evil in all demands.',

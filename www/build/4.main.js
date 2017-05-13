@@ -115,7 +115,7 @@ var tetragramInfo = [
         dots: 4,
         sign: 'Cancer',
         good: false,
-        phrase: 'Change',
+        phrase: 'Activity',
         houseMeanings: [
             'Evil except for prison.',
             'Indifferent.',
@@ -505,7 +505,7 @@ var tetragramInfo = [
         dots: 7,
         sign: 'Scorpio',
         good: false,
-        phrase: 'Destruction',
+        phrase: 'Toxicity',
         houseMeanings: [
             'Destroy the figure if it falls here! It makes the judgement worthless.',
             'Evil in all demands.',
@@ -638,7 +638,7 @@ var houseInfo = [
         number: 1,
         title: 'House of Self',
         description: '',
-        phrase: 'your self',
+        phrase: 'yourself',
         topics: ['Self', 'Life', 'Health']
     },
     {
@@ -652,7 +652,7 @@ var houseInfo = [
         number: 3,
         title: 'House of Communication',
         description: '',
-        phrase: 'friendships',
+        phrase: 'perception',
         topics: ['Siblings', 'Friends', 'Short Journeys']
     },
     {
@@ -1039,7 +1039,7 @@ ReadingPage = __decorate([
         segment: 'reading/:question/:topic/:date/:key0/:key1/:key2/:key3'
     }),
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({
-        selector: 'page-reading',template:/*ion-inline-start:"/Users/adam/AppGod/geomancy/src/pages/reading/reading.html"*/'<ion-header>\n\n  <ion-navbar>\n    <ion-title>{{title}}</ion-title>\n    <ion-buttons right>\n      <button ion-button icon-only (click)="saveReading()" *ngIf="!saved">\n        <ion-icon name="bookmark" class="not-saved"></ion-icon>\n      </button>\n      <button ion-button icon-only (click)="deleteReading()" *ngIf="saved">\n        <ion-icon name="bookmark" class="saved"></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n\n</ion-header>\n\n<ion-tabs *ngIf="reading">\n  <ion-tab [root]="\'ReadingOverviewPage\'" [rootParams]="rootParams" tabTitle="Overview" tabIcon="eye"></ion-tab>\n  <ion-tab [root]="\'ReadingHousesPage\'"   [rootParams]="rootParams" tabTitle="Houses" tabIcon="home"></ion-tab>\n  <ion-tab [root]="\'ReadingFiguresPage\'"  [rootParams]="rootParams" tabTitle="Figures" tabIcon="grid"></ion-tab>\n</ion-tabs>\n'/*ion-inline-end:"/Users/adam/AppGod/geomancy/src/pages/reading/reading.html"*/,
+        selector: 'page-reading',template:/*ion-inline-start:"/Users/adam/AppGod/geomancy/src/pages/reading/reading.html"*/'<ion-header>\n\n  <ion-navbar>\n    <ion-title>{{title}}</ion-title>\n    <ion-buttons right>\n      <button ion-button icon-only (click)="saveReading()" *ngIf="!saved">\n        <ion-icon name="bookmark" class="not-saved"></ion-icon>\n      </button>\n      <button ion-button icon-only (click)="deleteReading()" *ngIf="saved">\n        <ion-icon name="bookmark" class="saved"></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n\n</ion-header>\n\n<ion-tabs *ngIf="reading">\n  <ion-tab [root]="\'ReadingOverviewPage\'" [rootParams]="rootParams" tabTitle="Overview" tabIcon="eye"></ion-tab>\n  <ion-tab [root]="\'ReadingHousesPage\'"   [rootParams]="rootParams" tabTitle="Placements" tabIcon="home"></ion-tab>\n  <ion-tab [root]="\'ReadingFiguresPage\'"  [rootParams]="rootParams" tabTitle="Figures" tabIcon="grid"></ion-tab>\n</ion-tabs>\n'/*ion-inline-end:"/Users/adam/AppGod/geomancy/src/pages/reading/reading.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */],
         __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */],

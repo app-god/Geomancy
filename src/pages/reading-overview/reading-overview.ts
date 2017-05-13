@@ -16,6 +16,7 @@ export class ReadingOverviewPage {
   topicHouse
   warning
   keyToString = Placement.keyToString
+  partOfFortune
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.parent = navParams.get('parent')
@@ -34,6 +35,8 @@ export class ReadingOverviewPage {
     this.keys = Object.keys(this.houses)
 
     this.topicHouse = this.reading.getTopicHouse()
+
+    this.partOfFortune = this.reading.getHouse(this.reading.getPartOfFortune())
   }
 
   ionViewWillEnter() {

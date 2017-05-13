@@ -19,11 +19,9 @@
     <house [house]="topicHouse" (onTap)="showHouse($event)"></house>
   </ion-list>
 
-  <br>
-
   <ion-list *ngIf="keys.length > 0">
 
-    <ion-list-header>Influences</ion-list-header>
+    <ion-list-header>Strong Placements</ion-list-header>
 
     <ion-item-group *ngFor="let key of keys">
 
@@ -31,6 +29,18 @@
         <ion-item-divider>{{keyToString(key)}}</ion-item-divider>
         <house [house]="house" *ngFor="let house of houses[key]" (onTap)="showHouse($event)"></house>
       </div>
+
+    </ion-item-group>
+
+  </ion-list>
+
+  <ion-list>
+
+    <ion-list-header>Part of Fortune</ion-list-header>
+
+    <ion-item-group>
+
+      <house [house]="partOfFortune" (onTap)="showHouse($event)"></house>
 
     </ion-item-group>
 

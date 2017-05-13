@@ -121,7 +121,7 @@ var tetragramInfo = [
         dots: 4,
         sign: 'Cancer',
         good: false,
-        phrase: 'Change',
+        phrase: 'Activity',
         houseMeanings: [
             'Evil except for prison.',
             'Indifferent.',
@@ -511,7 +511,7 @@ var tetragramInfo = [
         dots: 7,
         sign: 'Scorpio',
         good: false,
-        phrase: 'Destruction',
+        phrase: 'Toxicity',
         houseMeanings: [
             'Destroy the figure if it falls here! It makes the judgement worthless.',
             'Evil in all demands.',
@@ -684,7 +684,7 @@ var houseInfo = [
         number: 1,
         title: 'House of Self',
         description: '',
-        phrase: 'your self',
+        phrase: 'yourself',
         topics: ['Self', 'Life', 'Health']
     },
     {
@@ -698,7 +698,7 @@ var houseInfo = [
         number: 3,
         title: 'House of Communication',
         description: '',
-        phrase: 'friendships',
+        phrase: 'perception',
         topics: ['Siblings', 'Friends', 'Short Journeys']
     },
     {
@@ -1061,7 +1061,7 @@ var ReadingHousesPage = (function () {
         this.parent.navCtrl.push('HousePage', { house: house });
     };
     ReadingHousesPage.prototype.ionViewWillEnter = function () {
-        this.parent.title = 'Houses';
+        this.parent.title = 'Placements';
     };
     return ReadingHousesPage;
 }());
