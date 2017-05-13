@@ -3,7 +3,9 @@ import { IonicPage, NavController, NavParams, ViewController, ActionSheetControl
 import { Storage } from '@ionic/storage'
 import { Reading } from '../../models/reading'
 
-@IonicPage()
+@IonicPage({
+  segment: 'reading/:question/:topic/:date/:key0/:key1/:key2/:key3'
+})
 @Component({
   selector: 'page-reading',
   templateUrl: 'reading.html',
@@ -22,15 +24,24 @@ export class ReadingPage {
     public viewCtrl: ViewController,
     private toastCtrl: ToastController) {
 
-      let readingData = navParams.get('readingData')
+      let readingData = {
+        question: navParams.get('question'),
+        topic:    navParams.get('topic'),
+        date:     navParams.get('date'),
+        key0:     navParams.get('key0'),
+        key1:     navParams.get('key1'),
+        key2:     navParams.get('key2'),
+        key3:     navParams.get('key3')
+      }
 
       if (readingData) {
-        this.reading = new Reading(navParams.get('readingData'))
+        this.reading = new Reading(readingData)
       } else {
         navCtrl.setRoot('NewPage')
       }
 
       this.saved = navParams.get('saved') || false
+
       this.rootParams = {
         parent: this
       }

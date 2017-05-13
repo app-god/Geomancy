@@ -121,7 +121,15 @@ export class NewPage {
     this.topic = 'None'
     this.startDisabled = false
 
-    this.navCtrl.push('ReadingPage', { readingData: readingData })
+    this.navCtrl.push('ReadingPage', {
+      question: readingData.question,
+      topic: readingData.topic,
+      date: readingData.date,
+      key0: readingData.key0,
+      key1: readingData.key1,
+      key2: readingData.key2,
+      key3: readingData.key3
+    })
 
   }
 

@@ -6,13 +6,12 @@
     {{reading.getQuestion()}}
   </div>
 
-  <ion-list *ngIf="warning">
+  <!--<ion-list *ngIf="warning">
     <ion-list-header class="warning">Warning</ion-list-header>
     <ion-item-group>
-      <!--<ion-item-divider>Caution</ion-item-divider>-->
       <house [house]="warning" (onTap)="showHouse($event)"></house>
     </ion-item-group>
-  </ion-list>
+  </ion-list>-->
 
   <ion-list *ngIf="topicHouse">
     <ion-list-header>Topic</ion-list-header>
@@ -26,11 +25,11 @@
 
     <ion-list-header>Influences</ion-list-header>
 
-    <ion-item-group *ngFor="let key of influencesKeys">
+    <ion-item-group *ngFor="let key of keys">
 
-      <div *ngIf="influences[key].length > 0">
+      <div *ngIf="houses[key].length > 0">
         <ion-item-divider>{{keyToString(key)}}</ion-item-divider>
-        <house [house]="house" *ngFor="let house of influences[key]" (onTap)="showHouse($event)"></house>
+        <house [house]="house" *ngFor="let house of houses[key]" (onTap)="showHouse($event)"></house>
       </div>
 
     </ion-item-group>
