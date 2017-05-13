@@ -2,6 +2,7 @@
 export class Tetragram {
 
   name: string
+  translation: string
   desc: string
   good: boolean
   rules: number[]
@@ -23,6 +24,7 @@ export class Tetragram {
   constructor(public key: number = Math.floor(Math.random() * 15)) {
     let info: TetragramInfo = tetragramInfo[key]
     this.name = info.name
+    this.translation = info.translation
     this.desc = info.desc
     this.good = info.good
     this.rules = info.rules
@@ -106,7 +108,7 @@ export const tetragramInfo: TetragramInfo[] = [
     dots: 4,
     sign: 'Cancer',
     good: false,
-    phrase: 'Clearing a path',
+    phrase: 'Change',
     houseMeanings: [
       'Evil except for prison.',
       'Indifferent.',
@@ -136,7 +138,7 @@ export const tetragramInfo: TetragramInfo[] = [
     dots: 5,
     sign: 'Sagittarius',
     good: true,
-    phrase: 'A new beginning',
+    phrase: 'Preparation',
     houseMeanings: [
       'Good in all things',
       'Good.',
@@ -166,7 +168,7 @@ export const tetragramInfo: TetragramInfo[] = [
     dots: 5,
     sign: 'Libra',
     good: true,
-    phrase: 'Beautification',
+    phrase: 'Harmony',
     houseMeanings: [
       'Good except in war.',
       'Very good.',
@@ -196,7 +198,7 @@ export const tetragramInfo: TetragramInfo[] = [
     dots: 6,
     sign: 'Leo',
     good: true,
-    phrase: 'Success',
+    phrase: 'Lasting success',
     houseMeanings: [
       'Good save in secrecy.',
       'Good except in sad things.',
@@ -226,7 +228,7 @@ export const tetragramInfo: TetragramInfo[] = [
     dots: 5,
     sign: 'Aries',
     good: false,
-    phrase: 'Command',
+    phrase: 'Enthusiasm',
     houseMeanings: [
       'Indifferent. Best in war.',
       'Good, but with trouble.',
@@ -346,7 +348,7 @@ export const tetragramInfo: TetragramInfo[] = [
     dots: 5,
     sign: 'Virgo',
     good: false,
-    phrase: 'An end',
+    phrase: 'An ending',
     houseMeanings: [
       'Destroy figure if it falls here! Makes judgment worthless.',
       'Very evil.',
@@ -365,7 +367,7 @@ export const tetragramInfo: TetragramInfo[] = [
   {
     key: 9,
     name: 'Conjunctio',
-    translation: 'Conjunction',
+    translation: 'Connection',
     desc: 'Good with good, or evil with evil. Recovery from things lost.',
     planet: 'Mercury',
     rules: [3, 6],
@@ -376,7 +378,7 @@ export const tetragramInfo: TetragramInfo[] = [
     dots: 6,
     sign: 'Virgo',
     good: true,
-    phrase: 'Reconciliation',
+    phrase: 'Combination',
     houseMeanings: [
       'Good with good, evil with evil.',
       'Commonly good.',
@@ -436,7 +438,7 @@ export const tetragramInfo: TetragramInfo[] = [
     dots: 7,
     sign: 'Gemini',
     good: true,
-    phrase: 'Learning',
+    phrase: 'Wisdom',
     houseMeanings: [
       'Good for marriage. Mercurial. Peace.',
       'Good in all.',
@@ -466,7 +468,7 @@ export const tetragramInfo: TetragramInfo[] = [
     dots: 6,
     sign: 'Leo',
     good: true,
-    phrase: 'Improvement',
+    phrase: 'Temporary success',
     houseMeanings: [
       'Speed in victory and in love, but choleric.',
       'Very good.',
@@ -556,7 +558,7 @@ export const tetragramInfo: TetragramInfo[] = [
     dots: 8,
     sign: 'Cancer',
     good: true,
-    phrase: 'Consensus',
+    phrase: 'Passivity',
     houseMeanings: [
       'Good in marriages.',
       'Medium good.',

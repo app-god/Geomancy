@@ -64,8 +64,9 @@ ion-list {
 
 ion-list-header {
   padding: 0 !important;
-  margin: 0 0 1em 0 !important;
+  margin: 2em 0 1em 0 !important;
   background: none !important;
+  border-bottom: solid thin color($colors, white) !important;
 
   ion-label {
     font-weight: bold;
@@ -92,9 +93,9 @@ ion-item-divider {
   padding: 0 !important;
 
   ion-label {
-    margin: 0 0 1em 0 !important;
+    margin: 1em 0 1em 0 !important;
     font-size: 1em;
-    color: color($colors, light);
+    color: color($colors, white);
   }
 }
 
@@ -115,7 +116,6 @@ button[ion-item] {
   background-color: color($colors, dark) !important;
   background: url('/assets/item-bg.jpg') scroll repeat center;
   line-height: 150% !important;
-  border: outset thin color($colors, dark) !important;
   border-radius: 0.5em;
 }
 

@@ -7,7 +7,7 @@
 </ion-header>
 
 
-<ion-content>
+<ion-content padding>
   <div padding class="big center">
     <tetragram [tetragram]="tetragram"></tetragram>
     <p>{{tetragram.desc}}</p>
@@ -25,8 +25,9 @@
   </ion-grid>
 
   <ion-list no-lines>
+    <ion-list-header>{{tetragram.name}} in each House</ion-list-header>
     <ion-item-group *ngFor="let house of houses">
-      <ion-item-divider><b>House {{house.number}}</b> {{house.topics.join(', ')}}</ion-item-divider>
+      <ion-item-divider>{{house.title}}</ion-item-divider>
       <house [house]="house"></house>
     </ion-item-group>
   </ion-list>

@@ -53,6 +53,7 @@ var Tetragram = (function () {
         this.key = key;
         var info = tetragramInfo[key];
         this.name = info.name;
+        this.translation = info.translation;
         this.desc = info.desc;
         this.good = info.good;
         this.rules = info.rules;
@@ -114,7 +115,7 @@ var tetragramInfo = [
         dots: 4,
         sign: 'Cancer',
         good: false,
-        phrase: 'Clearing a path',
+        phrase: 'Change',
         houseMeanings: [
             'Evil except for prison.',
             'Indifferent.',
@@ -144,7 +145,7 @@ var tetragramInfo = [
         dots: 5,
         sign: 'Sagittarius',
         good: true,
-        phrase: 'A new beginning',
+        phrase: 'Preparation',
         houseMeanings: [
             'Good in all things',
             'Good.',
@@ -174,7 +175,7 @@ var tetragramInfo = [
         dots: 5,
         sign: 'Libra',
         good: true,
-        phrase: 'Beautification',
+        phrase: 'Harmony',
         houseMeanings: [
             'Good except in war.',
             'Very good.',
@@ -204,7 +205,7 @@ var tetragramInfo = [
         dots: 6,
         sign: 'Leo',
         good: true,
-        phrase: 'Success',
+        phrase: 'Lasting success',
         houseMeanings: [
             'Good save in secrecy.',
             'Good except in sad things.',
@@ -234,7 +235,7 @@ var tetragramInfo = [
         dots: 5,
         sign: 'Aries',
         good: false,
-        phrase: 'Command',
+        phrase: 'Enthusiasm',
         houseMeanings: [
             'Indifferent. Best in war.',
             'Good, but with trouble.',
@@ -354,7 +355,7 @@ var tetragramInfo = [
         dots: 5,
         sign: 'Virgo',
         good: false,
-        phrase: 'An end',
+        phrase: 'An ending',
         houseMeanings: [
             'Destroy figure if it falls here! Makes judgment worthless.',
             'Very evil.',
@@ -373,7 +374,7 @@ var tetragramInfo = [
     {
         key: 9,
         name: 'Conjunctio',
-        translation: 'Conjunction',
+        translation: 'Connection',
         desc: 'Good with good, or evil with evil. Recovery from things lost.',
         planet: 'Mercury',
         rules: [3, 6],
@@ -384,7 +385,7 @@ var tetragramInfo = [
         dots: 6,
         sign: 'Virgo',
         good: true,
-        phrase: 'Reconciliation',
+        phrase: 'Combination',
         houseMeanings: [
             'Good with good, evil with evil.',
             'Commonly good.',
@@ -444,7 +445,7 @@ var tetragramInfo = [
         dots: 7,
         sign: 'Gemini',
         good: true,
-        phrase: 'Learning',
+        phrase: 'Wisdom',
         houseMeanings: [
             'Good for marriage. Mercurial. Peace.',
             'Good in all.',
@@ -474,7 +475,7 @@ var tetragramInfo = [
         dots: 6,
         sign: 'Leo',
         good: true,
-        phrase: 'Improvement',
+        phrase: 'Temporary success',
         houseMeanings: [
             'Speed in victory and in love, but choleric.',
             'Very good.',
@@ -564,7 +565,7 @@ var tetragramInfo = [
         dots: 8,
         sign: 'Cancer',
         good: true,
-        phrase: 'Consensus',
+        phrase: 'Passivity',
         houseMeanings: [
             'Good in marriages.',
             'Medium good.',
@@ -600,6 +601,8 @@ var House = (function () {
         var info = houseInfo[number - 1];
         this.topics = info.topics.sort();
         this.phrase = info.phrase;
+        this.title = info.title;
+        this.description = info.title;
         this.getPlacement();
     }
     House.getHousesWithTetragram = function (tetragram) {
@@ -633,62 +636,86 @@ House.numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 var houseInfo = [
     {
         number: 1,
+        title: 'House of Self',
+        description: '',
         phrase: 'your self',
         topics: ['Self', 'Life', 'Health']
     },
     {
         number: 2,
+        title: 'House of Resources',
+        description: '',
         phrase: 'wealth',
-        topics: ['Wealth', 'Property', 'Self-esteem']
+        topics: ['Wealth', 'Resources', 'Self-esteem']
     },
     {
         number: 3,
+        title: 'House of Communication',
+        description: '',
         phrase: 'friendships',
-        topics: ['Siblings', 'Neighbors', 'Short Journeys']
+        topics: ['Siblings', 'Friends', 'Short Journeys']
     },
     {
         number: 4,
-        phrase: 'family',
+        title: 'House of Home and Family',
+        description: '',
+        phrase: 'your home',
         topics: ['Family', 'Inheritence', 'Home']
     },
     {
         number: 5,
+        title: 'House of Pleasure and Creativity',
+        description: '',
         phrase: 'creativity',
         topics: ['Children', 'Pleasure', 'Gambling']
     },
     {
         number: 6,
+        title: 'House of Work and Service',
+        description: '',
         phrase: 'daily work',
         topics: ['Work', 'Habits', 'Service']
     },
     {
         number: 7,
-        phrase: 'love',
+        title: 'House of Partnership',
+        description: '',
+        phrase: 'partnerships',
         topics: ['Marriage', 'Partnerships', 'Public Enemies']
     },
     {
         number: 8,
-        phrase: 'transformation',
+        title: 'House of Power and the Psyche',
+        description: '',
+        phrase: 'power',
         topics: ['Deaths', 'Occult Abilities', 'Sex']
     },
     {
         number: 9,
-        phrase: 'philosophy',
-        topics: ['Long Journeys', 'Religion', 'Visions']
+        title: 'House of Philosophy and Education',
+        description: '',
+        phrase: 'education',
+        topics: ['Long Journeys', 'Religion', 'Education']
     },
     {
         number: 10,
-        phrase: 'reputation',
+        title: 'House of Career and Public Life',
+        description: '',
+        phrase: 'career',
         topics: ['Honor', 'Career', 'Reputation']
     },
     {
         number: 11,
-        phrase: 'community',
+        title: 'House of the World',
+        description: '',
+        phrase: 'the world',
         topics: ['Society', 'Hopes', 'Humanity']
     },
     {
         number: 12,
-        phrase: 'the unknown',
+        title: 'House of Spirit',
+        description: '',
+        phrase: 'spirit',
         topics: ['Spirituality', 'Sacrifice', 'Hidden Enemies']
     }
 ];
@@ -970,10 +997,15 @@ NewPage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({
         selector: 'page-new',template:/*ion-inline-start:"/Users/adam/AppGod/geomancy/src/pages/new/new.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>New Reading</ion-title>\n    <ion-buttons end>\n      <button ion-button icon-only (click)="showMore()">\n        <ion-icon name="more"></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n\n  <div padding-vertical>\n    <ion-segment [(ngModel)]="readingType">\n      <ion-segment-button value="automatic">Automatic</ion-segment-button>\n      <ion-segment-button value="manual">Manual</ion-segment-button>\n    </ion-segment>\n  </div>\n\n  <ion-list no-lines>\n\n    <ion-item padding>\n      <ion-label stacked>Question</ion-label>\n      <ion-textarea [(ngModel)]="question" rows="3"\n        placeholder="Enter question here"></ion-textarea>\n    </ion-item>\n\n    <ion-item padding>\n      <ion-label stacked>Topic</ion-label>\n      <ion-select [(ngModel)]="topic">\n        <ion-option\n          [selected]="t == topic"\n          [value]="t"\n          *ngFor="let t of topics">\n          {{t}}\n        </ion-option>\n      </ion-select>\n    </ion-item>\n\n  </ion-list>\n\n  <p class="instructions" padding-vertical *ngIf="readingType == \'manual\'">\n    Make 16 rows of a random number of dots on the ground or on a piece of paper. Then, enter the number of dots in each row below.\n  </p>\n\n  <ion-list *ngIf="readingType == \'manual\'" no-lines>\n\n    <form [formGroup]="manualForm">\n\n      <ion-item *ngFor="let num of [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]">\n\n        <ion-label fixed>Row {{num}}</ion-label>\n\n        <ion-input [formControlName]="\'row_\' + num" type="number" [(ngModel)]="row[num]"></ion-input>\n\n      </ion-item>\n\n    </form>\n  </ion-list>\n\n  <p *ngIf="readingType == \'manual\' && !manualForm.valid" class="instructions">\n    You must enter a number into each row before proceeding.\n  </p>\n\n  <button ion-button block large\n    *ngIf="readingType == \'manual\'"\n    color="primary"\n    (tap)="createReading()"\n    [disabled]="startDisabled || !manualForm.valid">\n    Create\n  </button>\n\n  <button ion-button block large\n    *ngIf="readingType == \'automatic\'"\n    color="primary"\n    (tap)="createReading()"\n    [disabled]="startDisabled">\n    Create\n  </button>\n\n  <p class="instructions" *ngIf="readingType == \'automatic\'">\n    <ion-icon name="information-circle"></ion-icon>\n    Manually generating the numbers is a more powerful way of forming the divination.\n  </p>\n\n  <br>\n\n</ion-content>\n'/*ion-inline-end:"/Users/adam/AppGod/geomancy/src/pages/new/new.html"*/
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["g" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["g" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["l" /* ModalController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["l" /* ModalController */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["m" /* LoadingController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["m" /* LoadingController */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1__ionic_storage__["b" /* Storage */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__ionic_storage__["b" /* Storage */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["n" /* AlertController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["n" /* AlertController */]) === "function" && _e || Object, typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["j" /* ActionSheetController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["j" /* ActionSheetController */]) === "function" && _f || Object, typeof (_g = typeof __WEBPACK_IMPORTED_MODULE_5__angular_forms__["f" /* FormBuilder */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5__angular_forms__["f" /* FormBuilder */]) === "function" && _g || Object])
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["g" /* NavController */],
+        __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["l" /* ModalController */],
+        __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["m" /* LoadingController */],
+        __WEBPACK_IMPORTED_MODULE_1__ionic_storage__["b" /* Storage */],
+        __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["n" /* AlertController */],
+        __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["j" /* ActionSheetController */],
+        __WEBPACK_IMPORTED_MODULE_5__angular_forms__["f" /* FormBuilder */]])
 ], NewPage);
 
-var _a, _b, _c, _d, _e, _f, _g;
 //# sourceMappingURL=new.js.map
 
 /***/ })

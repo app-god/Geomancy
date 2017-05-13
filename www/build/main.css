@@ -64454,8 +64454,9 @@ ion-list .label {
 
 ion-list-header {
   padding: 0 !important;
-  margin: 0 0 1em 0 !important;
+  margin: 2em 0 1em 0 !important;
   background: none !important;
+  border-bottom: solid thin #ddd !important;
 }
 
 ion-list-header ion-label {
@@ -64483,9 +64484,9 @@ ion-item-divider {
 }
 
 ion-item-divider ion-label {
-  margin: 0 0 1em 0 !important;
+  margin: 1em 0 1em 0 !important;
   font-size: 1em;
-  color: #666;
+  color: #ddd;
 }
 
 ion-item ion-label {
@@ -64505,7 +64506,6 @@ button[ion-item] {
   background-color: #444 !important;
   background: url("/assets/item-bg.jpg") scroll repeat center;
   line-height: 150% !important;
-  border: outset thin #444 !important;
   border-radius: 0.5em;
 }
 

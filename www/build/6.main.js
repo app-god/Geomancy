@@ -56,6 +56,7 @@ var Tetragram = (function () {
         this.key = key;
         var info = tetragramInfo[key];
         this.name = info.name;
+        this.translation = info.translation;
         this.desc = info.desc;
         this.good = info.good;
         this.rules = info.rules;
@@ -117,7 +118,7 @@ var tetragramInfo = [
         dots: 4,
         sign: 'Cancer',
         good: false,
-        phrase: 'Clearing a path',
+        phrase: 'Change',
         houseMeanings: [
             'Evil except for prison.',
             'Indifferent.',
@@ -147,7 +148,7 @@ var tetragramInfo = [
         dots: 5,
         sign: 'Sagittarius',
         good: true,
-        phrase: 'A new beginning',
+        phrase: 'Preparation',
         houseMeanings: [
             'Good in all things',
             'Good.',
@@ -177,7 +178,7 @@ var tetragramInfo = [
         dots: 5,
         sign: 'Libra',
         good: true,
-        phrase: 'Beautification',
+        phrase: 'Harmony',
         houseMeanings: [
             'Good except in war.',
             'Very good.',
@@ -207,7 +208,7 @@ var tetragramInfo = [
         dots: 6,
         sign: 'Leo',
         good: true,
-        phrase: 'Success',
+        phrase: 'Lasting success',
         houseMeanings: [
             'Good save in secrecy.',
             'Good except in sad things.',
@@ -237,7 +238,7 @@ var tetragramInfo = [
         dots: 5,
         sign: 'Aries',
         good: false,
-        phrase: 'Command',
+        phrase: 'Enthusiasm',
         houseMeanings: [
             'Indifferent. Best in war.',
             'Good, but with trouble.',
@@ -357,7 +358,7 @@ var tetragramInfo = [
         dots: 5,
         sign: 'Virgo',
         good: false,
-        phrase: 'An end',
+        phrase: 'An ending',
         houseMeanings: [
             'Destroy figure if it falls here! Makes judgment worthless.',
             'Very evil.',
@@ -376,7 +377,7 @@ var tetragramInfo = [
     {
         key: 9,
         name: 'Conjunctio',
-        translation: 'Conjunction',
+        translation: 'Connection',
         desc: 'Good with good, or evil with evil. Recovery from things lost.',
         planet: 'Mercury',
         rules: [3, 6],
@@ -387,7 +388,7 @@ var tetragramInfo = [
         dots: 6,
         sign: 'Virgo',
         good: true,
-        phrase: 'Reconciliation',
+        phrase: 'Combination',
         houseMeanings: [
             'Good with good, evil with evil.',
             'Commonly good.',
@@ -447,7 +448,7 @@ var tetragramInfo = [
         dots: 7,
         sign: 'Gemini',
         good: true,
-        phrase: 'Learning',
+        phrase: 'Wisdom',
         houseMeanings: [
             'Good for marriage. Mercurial. Peace.',
             'Good in all.',
@@ -477,7 +478,7 @@ var tetragramInfo = [
         dots: 6,
         sign: 'Leo',
         good: true,
-        phrase: 'Improvement',
+        phrase: 'Temporary success',
         houseMeanings: [
             'Speed in victory and in love, but choleric.',
             'Very good.',
@@ -567,7 +568,7 @@ var tetragramInfo = [
         dots: 8,
         sign: 'Cancer',
         good: true,
-        phrase: 'Consensus',
+        phrase: 'Passivity',
         houseMeanings: [
             'Good in marriages.',
             'Medium good.',

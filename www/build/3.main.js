@@ -59,6 +59,7 @@ var Tetragram = (function () {
         this.key = key;
         var info = tetragramInfo[key];
         this.name = info.name;
+        this.translation = info.translation;
         this.desc = info.desc;
         this.good = info.good;
         this.rules = info.rules;
@@ -120,7 +121,7 @@ var tetragramInfo = [
         dots: 4,
         sign: 'Cancer',
         good: false,
-        phrase: 'Clearing a path',
+        phrase: 'Change',
         houseMeanings: [
             'Evil except for prison.',
             'Indifferent.',
@@ -150,7 +151,7 @@ var tetragramInfo = [
         dots: 5,
         sign: 'Sagittarius',
         good: true,
-        phrase: 'A new beginning',
+        phrase: 'Preparation',
         houseMeanings: [
             'Good in all things',
             'Good.',
@@ -180,7 +181,7 @@ var tetragramInfo = [
         dots: 5,
         sign: 'Libra',
         good: true,
-        phrase: 'Beautification',
+        phrase: 'Harmony',
         houseMeanings: [
             'Good except in war.',
             'Very good.',
@@ -210,7 +211,7 @@ var tetragramInfo = [
         dots: 6,
         sign: 'Leo',
         good: true,
-        phrase: 'Success',
+        phrase: 'Lasting success',
         houseMeanings: [
             'Good save in secrecy.',
             'Good except in sad things.',
@@ -240,7 +241,7 @@ var tetragramInfo = [
         dots: 5,
         sign: 'Aries',
         good: false,
-        phrase: 'Command',
+        phrase: 'Enthusiasm',
         houseMeanings: [
             'Indifferent. Best in war.',
             'Good, but with trouble.',
@@ -360,7 +361,7 @@ var tetragramInfo = [
         dots: 5,
         sign: 'Virgo',
         good: false,
-        phrase: 'An end',
+        phrase: 'An ending',
         houseMeanings: [
             'Destroy figure if it falls here! Makes judgment worthless.',
             'Very evil.',
@@ -379,7 +380,7 @@ var tetragramInfo = [
     {
         key: 9,
         name: 'Conjunctio',
-        translation: 'Conjunction',
+        translation: 'Connection',
         desc: 'Good with good, or evil with evil. Recovery from things lost.',
         planet: 'Mercury',
         rules: [3, 6],
@@ -390,7 +391,7 @@ var tetragramInfo = [
         dots: 6,
         sign: 'Virgo',
         good: true,
-        phrase: 'Reconciliation',
+        phrase: 'Combination',
         houseMeanings: [
             'Good with good, evil with evil.',
             'Commonly good.',
@@ -450,7 +451,7 @@ var tetragramInfo = [
         dots: 7,
         sign: 'Gemini',
         good: true,
-        phrase: 'Learning',
+        phrase: 'Wisdom',
         houseMeanings: [
             'Good for marriage. Mercurial. Peace.',
             'Good in all.',
@@ -480,7 +481,7 @@ var tetragramInfo = [
         dots: 6,
         sign: 'Leo',
         good: true,
-        phrase: 'Improvement',
+        phrase: 'Temporary success',
         houseMeanings: [
             'Speed in victory and in love, but choleric.',
             'Very good.',
@@ -570,7 +571,7 @@ var tetragramInfo = [
         dots: 8,
         sign: 'Cancer',
         good: true,
-        phrase: 'Consensus',
+        phrase: 'Passivity',
         houseMeanings: [
             'Good in marriages.',
             'Medium good.',
@@ -646,6 +647,8 @@ var House = (function () {
         var info = houseInfo[number - 1];
         this.topics = info.topics.sort();
         this.phrase = info.phrase;
+        this.title = info.title;
+        this.description = info.title;
         this.getPlacement();
     }
     House.getHousesWithTetragram = function (tetragram) {
@@ -679,62 +682,86 @@ House.numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 var houseInfo = [
     {
         number: 1,
+        title: 'House of Self',
+        description: '',
         phrase: 'your self',
         topics: ['Self', 'Life', 'Health']
     },
     {
         number: 2,
+        title: 'House of Resources',
+        description: '',
         phrase: 'wealth',
-        topics: ['Wealth', 'Property', 'Self-esteem']
+        topics: ['Wealth', 'Resources', 'Self-esteem']
     },
     {
         number: 3,
+        title: 'House of Communication',
+        description: '',
         phrase: 'friendships',
-        topics: ['Siblings', 'Neighbors', 'Short Journeys']
+        topics: ['Siblings', 'Friends', 'Short Journeys']
     },
     {
         number: 4,
-        phrase: 'family',
+        title: 'House of Home and Family',
+        description: '',
+        phrase: 'your home',
         topics: ['Family', 'Inheritence', 'Home']
     },
     {
         number: 5,
+        title: 'House of Pleasure and Creativity',
+        description: '',
         phrase: 'creativity',
         topics: ['Children', 'Pleasure', 'Gambling']
     },
     {
         number: 6,
+        title: 'House of Work and Service',
+        description: '',
         phrase: 'daily work',
         topics: ['Work', 'Habits', 'Service']
     },
     {
         number: 7,
-        phrase: 'love',
+        title: 'House of Partnership',
+        description: '',
+        phrase: 'partnerships',
         topics: ['Marriage', 'Partnerships', 'Public Enemies']
     },
     {
         number: 8,
-        phrase: 'transformation',
+        title: 'House of Power and the Psyche',
+        description: '',
+        phrase: 'power',
         topics: ['Deaths', 'Occult Abilities', 'Sex']
     },
     {
         number: 9,
-        phrase: 'philosophy',
-        topics: ['Long Journeys', 'Religion', 'Visions']
+        title: 'House of Philosophy and Education',
+        description: '',
+        phrase: 'education',
+        topics: ['Long Journeys', 'Religion', 'Education']
     },
     {
         number: 10,
-        phrase: 'reputation',
+        title: 'House of Career and Public Life',
+        description: '',
+        phrase: 'career',
         topics: ['Honor', 'Career', 'Reputation']
     },
     {
         number: 11,
-        phrase: 'community',
+        title: 'House of the World',
+        description: '',
+        phrase: 'the world',
         topics: ['Society', 'Hopes', 'Humanity']
     },
     {
         number: 12,
-        phrase: 'the unknown',
+        title: 'House of Spirit',
+        description: '',
+        phrase: 'spirit',
         topics: ['Spirituality', 'Sacrifice', 'Hidden Enemies']
     }
 ];
@@ -996,7 +1023,7 @@ __decorate([
 ], HouseComponent.prototype, "onTap", void 0);
 HouseComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["_5" /* Component */])({
-        selector: 'house',template:/*ion-inline-start:"/Users/adam/AppGod/geomancy/src/components/house/house.html"*/'<button ion-item text-wrap (tap)="onTap.emit(house)">\n\n  <tetragram [color]="house.placement.getColor()" [tetragram]="house.tetragram" item-left></tetragram>\n\n  <div>\n    {{house.tetragram.phrase}} in regards to {{house.phrase}}\n  </div>\n\n</button>\n'/*ion-inline-end:"/Users/adam/AppGod/geomancy/src/components/house/house.html"*/
+        selector: 'house',template:/*ion-inline-start:"/Users/adam/AppGod/geomancy/src/components/house/house.html"*/'<button ion-item text-wrap (tap)="onTap.emit(house)">\n\n  <tetragram [color]="house.placement.getColor()" [tetragram]="house.tetragram" item-left></tetragram>\n\n  <div>\n    {{house.tetragram.phrase}} in {{house.phrase}}\n  </div>\n\n</button>\n'/*ion-inline-end:"/Users/adam/AppGod/geomancy/src/components/house/house.html"*/
     }),
     __metadata("design:paramtypes", [])
 ], HouseComponent);
@@ -1044,7 +1071,7 @@ var HousePage = (function () {
 HousePage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPage */])(),
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({
-        selector: 'page-house',template:/*ion-inline-start:"/Users/adam/AppGod/geomancy/src/pages/house/house.html"*/'<!--\n  Generated template for the HousePage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>House {{house.number}}</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n  <ion-grid>\n    <ion-row>\n\n      <ion-col col-6>\n        <tetragram class="big" [tetragram]="house.tetragram"></tetragram>\n      </ion-col>\n\n      <ion-col col-6 class="center">\n        <h3>{{house.tetragram.name}}</h3>\n        <p>in</p>\n        <h3>House {{house.number}}</h3>\n      </ion-col>\n\n    </ion-row>\n  </ion-grid>\n\n  <p>{{house.getTetragramMeaning()}}</p>\n\n  <ion-list no-lines>\n    <ion-list-header>Tetragrams in House {{house.number}}</ion-list-header>\n    <ion-item-group *ngFor="let house of tetragramsInHouse">\n      <ion-item-divider>{{house.tetragram.name}}</ion-item-divider>\n      <house [house]="house"></house>\n    </ion-item-group>\n  </ion-list>\n\n</ion-content>\n'/*ion-inline-end:"/Users/adam/AppGod/geomancy/src/pages/house/house.html"*/,
+        selector: 'page-house',template:/*ion-inline-start:"/Users/adam/AppGod/geomancy/src/pages/house/house.html"*/'<!--\n  Generated template for the HousePage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>{{house.title}}</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n  <ion-grid>\n    <ion-row>\n\n      <ion-col col-6>\n        <tetragram class="big" [tetragram]="house.tetragram"></tetragram>\n      </ion-col>\n\n      <ion-col col-6 class="center">\n        <h3>{{house.tetragram.name}}</h3>\n        <p>in</p>\n        <h3>{{house.title}}</h3>\n      </ion-col>\n\n    </ion-row>\n  </ion-grid>\n\n  <p>{{house.getTetragramMeaning()}}</p>\n\n  <ion-list no-lines>\n    <ion-list-header>Tetragrams in House {{house.number}}</ion-list-header>\n    <ion-item-group *ngFor="let house of tetragramsInHouse">\n      <ion-item-divider>{{house.tetragram.name}} <i>{{house.tetragram.translation}}</i></ion-item-divider>\n      <house [house]="house"></house>\n    </ion-item-group>\n  </ion-list>\n\n</ion-content>\n'/*ion-inline-end:"/Users/adam/AppGod/geomancy/src/pages/house/house.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]])
 ], HousePage);
