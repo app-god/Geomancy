@@ -56,6 +56,11 @@ ion-list {
   }
 }
 
+ion-item {
+  background: none !important;
+  margin-bottom: 1em !important;
+}
+
 .item-inner {
   border: 0 !important;
   padding: 0 !important;
@@ -109,7 +114,6 @@ ion-item ion-label {
   border-radius: 0.5em;
 }
 
-ion-item,
 button[ion-item] {
   margin-bottom: 1em !important;
   padding: 0.5em !important;
@@ -144,12 +148,17 @@ ion-textarea, ion-select, ion-input {
 }
 
 .item-input, .item-select {
-  padding: 1em !important;
+  padding: 0 !important;
   border-radius: 0.5em;
 }
 
 ion-input .text-input {
+  padding: 1em !important;
   margin: 0 !important;
+}
+
+ion-label {
+  font-size: 1em !important;
 }
 
 .item-label-stacked ion-label {
