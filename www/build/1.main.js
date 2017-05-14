@@ -808,8 +808,9 @@ TetragramComponent = __decorate([
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__house__ = __webpack_require__(277);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__placement_type__ = __webpack_require__(297);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Placement; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return PlacementType; });
+
 
 var Placement = (function () {
     function Placement(house, tetragram) {
@@ -820,7 +821,7 @@ var Placement = (function () {
         // is placement a warning?
         if (this.house.number == 1) {
             if (['Rubeus', 'Cauda Draconis'].indexOf(this.tetragram.name) >= 0) {
-                this.setTypeIfUndefined(PlacementType.Warning);
+                this.setTypeIfUndefined(__WEBPACK_IMPORTED_MODULE_1__placement_type__["a" /* PlacementType */].Warning);
             }
         }
         // is placement an accidental dignitary?
@@ -831,7 +832,7 @@ var Placement = (function () {
             }
         });
         // if placement isn't any of the others, it's weak
-        this.setTypeIfUndefined(PlacementType.Weak);
+        this.setTypeIfUndefined(__WEBPACK_IMPORTED_MODULE_1__placement_type__["a" /* PlacementType */].Weak);
     }
     Placement.prototype.getMeaning = function () {
         return this.tetragram.getHouseMeaning(this.house.number);
@@ -843,37 +844,37 @@ var Placement = (function () {
     };
     Placement.prototype.getTypeString = function () {
         switch (this.type) {
-            case PlacementType.Warning:
+            case __WEBPACK_IMPORTED_MODULE_1__placement_type__["a" /* PlacementType */].Warning:
                 return 'Warning';
-            case PlacementType.Strongest:
-                return 'Strongest';
-            case PlacementType.VeryStrong:
+            case __WEBPACK_IMPORTED_MODULE_1__placement_type__["a" /* PlacementType */].Strongest:
+                return 'Extremely Strong';
+            case __WEBPACK_IMPORTED_MODULE_1__placement_type__["a" /* PlacementType */].VeryStrong:
                 return 'Very Strong';
-            case PlacementType.Strong:
+            case __WEBPACK_IMPORTED_MODULE_1__placement_type__["a" /* PlacementType */].Strong:
                 return 'Strong';
-            case PlacementType.Weak:
+            case __WEBPACK_IMPORTED_MODULE_1__placement_type__["a" /* PlacementType */].Weak:
                 return 'Weak';
-            case PlacementType.VeryWeak:
+            case __WEBPACK_IMPORTED_MODULE_1__placement_type__["a" /* PlacementType */].VeryWeak:
                 return 'Very Weak';
-            case PlacementType.Weakest:
-                return 'Weakest';
+            case __WEBPACK_IMPORTED_MODULE_1__placement_type__["a" /* PlacementType */].Weakest:
+                return 'Extremely Weak';
         }
     };
     Placement.prototype.getColor = function () {
         switch (this.type) {
-            case PlacementType.Warning:
+            case __WEBPACK_IMPORTED_MODULE_1__placement_type__["a" /* PlacementType */].Warning:
                 return 'warning';
-            case PlacementType.Strongest:
+            case __WEBPACK_IMPORTED_MODULE_1__placement_type__["a" /* PlacementType */].Strongest:
                 return 'strongest';
-            case PlacementType.VeryStrong:
+            case __WEBPACK_IMPORTED_MODULE_1__placement_type__["a" /* PlacementType */].VeryStrong:
                 return 'very-strong';
-            case PlacementType.Strong:
+            case __WEBPACK_IMPORTED_MODULE_1__placement_type__["a" /* PlacementType */].Strong:
                 return 'strong';
-            case PlacementType.Weak:
+            case __WEBPACK_IMPORTED_MODULE_1__placement_type__["a" /* PlacementType */].Weak:
                 return 'weak';
-            case PlacementType.VeryWeak:
+            case __WEBPACK_IMPORTED_MODULE_1__placement_type__["a" /* PlacementType */].VeryWeak:
                 return 'very-weak';
-            case PlacementType.Weakest:
+            case __WEBPACK_IMPORTED_MODULE_1__placement_type__["a" /* PlacementType */].Weakest:
                 return 'weakest';
         }
     };
@@ -886,34 +887,24 @@ var Placement = (function () {
     Placement.getTypeFromKey = function (key) {
         switch (key) {
             case 'warning':
-                return PlacementType.Warning;
+                return __WEBPACK_IMPORTED_MODULE_1__placement_type__["a" /* PlacementType */].Warning;
             case 'rules':
-                return PlacementType.Strongest;
+                return __WEBPACK_IMPORTED_MODULE_1__placement_type__["a" /* PlacementType */].Strongest;
             case 'exalted':
-                return PlacementType.VeryStrong;
+                return __WEBPACK_IMPORTED_MODULE_1__placement_type__["a" /* PlacementType */].VeryStrong;
             case 'triplicity':
-                return PlacementType.Strong;
+                return __WEBPACK_IMPORTED_MODULE_1__placement_type__["a" /* PlacementType */].Strong;
             case 'detriment':
-                return PlacementType.VeryWeak;
+                return __WEBPACK_IMPORTED_MODULE_1__placement_type__["a" /* PlacementType */].VeryWeak;
             case 'fall':
-                return PlacementType.Weakest;
+                return __WEBPACK_IMPORTED_MODULE_1__placement_type__["a" /* PlacementType */].Weakest;
             default:
-                return PlacementType.Weak;
+                return __WEBPACK_IMPORTED_MODULE_1__placement_type__["a" /* PlacementType */].Weak;
         }
     };
     return Placement;
 }());
 
-var PlacementType;
-(function (PlacementType) {
-    PlacementType[PlacementType["Warning"] = 0] = "Warning";
-    PlacementType[PlacementType["Strongest"] = 1] = "Strongest";
-    PlacementType[PlacementType["VeryStrong"] = 2] = "VeryStrong";
-    PlacementType[PlacementType["Strong"] = 3] = "Strong";
-    PlacementType[PlacementType["Weak"] = 4] = "Weak";
-    PlacementType[PlacementType["VeryWeak"] = 5] = "VeryWeak";
-    PlacementType[PlacementType["Weakest"] = 6] = "Weakest";
-})(PlacementType || (PlacementType = {}));
 //# sourceMappingURL=placement.js.map
 
 /***/ }),
@@ -1047,11 +1038,29 @@ TetragramPage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({
         selector: 'page-tetragram',template:/*ion-inline-start:"/Users/adam/AppGod/geomancy/src/pages/tetragram/tetragram.html"*/'<ion-header>\n\n  <ion-navbar>\n    <ion-title>{{tetragram.name}}</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <div padding class="big center">\n    <tetragram [tetragram]="tetragram"></tetragram>\n    <p>{{tetragram.desc}}</p>\n  </div>\n\n  <ion-list no-lines>\n\n    <ion-list-header>Attributions</ion-list-header>\n\n    <ion-item-group *ngFor="let attribution of attributions">\n      <ion-item-divider>\n        <div class="left-column">{{attribution.name}}</div>\n        <div>{{attribution.value}}</div>\n      </ion-item-divider>\n    </ion-item-group>\n\n  </ion-list>\n\n  <ion-list no-lines>\n\n    <ion-list-header>Placements</ion-list-header>\n\n    <ion-item-group *ngFor="let placement of placements">\n      <ion-item-divider>{{placement.house.title}}</ion-item-divider>\n      <placement-item [placement]="placement"></placement-item>\n    </ion-item-group>\n\n  </ion-list>\n\n</ion-content>\n'/*ion-inline-end:"/Users/adam/AppGod/geomancy/src/pages/tetragram/tetragram.html"*/,
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]) === "function" && _b || Object])
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]])
 ], TetragramPage);
 
-var _a, _b;
 //# sourceMappingURL=tetragram.js.map
+
+/***/ }),
+
+/***/ 297:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PlacementType; });
+var PlacementType;
+(function (PlacementType) {
+    PlacementType[PlacementType["Warning"] = 0] = "Warning";
+    PlacementType[PlacementType["Strongest"] = 1] = "Strongest";
+    PlacementType[PlacementType["VeryStrong"] = 2] = "VeryStrong";
+    PlacementType[PlacementType["Strong"] = 3] = "Strong";
+    PlacementType[PlacementType["Weak"] = 4] = "Weak";
+    PlacementType[PlacementType["VeryWeak"] = 5] = "VeryWeak";
+    PlacementType[PlacementType["Weakest"] = 6] = "Weakest";
+})(PlacementType || (PlacementType = {}));
+//# sourceMappingURL=placement.type.js.map
 
 /***/ })
 

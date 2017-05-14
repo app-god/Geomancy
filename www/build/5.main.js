@@ -711,8 +711,9 @@ House.houses = House.numbers.map(function (number) { return new House(number); }
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__house__ = __webpack_require__(277);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__placement_type__ = __webpack_require__(297);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Placement; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return PlacementType; });
+
 
 var Placement = (function () {
     function Placement(house, tetragram) {
@@ -723,7 +724,7 @@ var Placement = (function () {
         // is placement a warning?
         if (this.house.number == 1) {
             if (['Rubeus', 'Cauda Draconis'].indexOf(this.tetragram.name) >= 0) {
-                this.setTypeIfUndefined(PlacementType.Warning);
+                this.setTypeIfUndefined(__WEBPACK_IMPORTED_MODULE_1__placement_type__["a" /* PlacementType */].Warning);
             }
         }
         // is placement an accidental dignitary?
@@ -734,7 +735,7 @@ var Placement = (function () {
             }
         });
         // if placement isn't any of the others, it's weak
-        this.setTypeIfUndefined(PlacementType.Weak);
+        this.setTypeIfUndefined(__WEBPACK_IMPORTED_MODULE_1__placement_type__["a" /* PlacementType */].Weak);
     }
     Placement.prototype.getMeaning = function () {
         return this.tetragram.getHouseMeaning(this.house.number);
@@ -746,37 +747,37 @@ var Placement = (function () {
     };
     Placement.prototype.getTypeString = function () {
         switch (this.type) {
-            case PlacementType.Warning:
+            case __WEBPACK_IMPORTED_MODULE_1__placement_type__["a" /* PlacementType */].Warning:
                 return 'Warning';
-            case PlacementType.Strongest:
-                return 'Strongest';
-            case PlacementType.VeryStrong:
+            case __WEBPACK_IMPORTED_MODULE_1__placement_type__["a" /* PlacementType */].Strongest:
+                return 'Extremely Strong';
+            case __WEBPACK_IMPORTED_MODULE_1__placement_type__["a" /* PlacementType */].VeryStrong:
                 return 'Very Strong';
-            case PlacementType.Strong:
+            case __WEBPACK_IMPORTED_MODULE_1__placement_type__["a" /* PlacementType */].Strong:
                 return 'Strong';
-            case PlacementType.Weak:
+            case __WEBPACK_IMPORTED_MODULE_1__placement_type__["a" /* PlacementType */].Weak:
                 return 'Weak';
-            case PlacementType.VeryWeak:
+            case __WEBPACK_IMPORTED_MODULE_1__placement_type__["a" /* PlacementType */].VeryWeak:
                 return 'Very Weak';
-            case PlacementType.Weakest:
-                return 'Weakest';
+            case __WEBPACK_IMPORTED_MODULE_1__placement_type__["a" /* PlacementType */].Weakest:
+                return 'Extremely Weak';
         }
     };
     Placement.prototype.getColor = function () {
         switch (this.type) {
-            case PlacementType.Warning:
+            case __WEBPACK_IMPORTED_MODULE_1__placement_type__["a" /* PlacementType */].Warning:
                 return 'warning';
-            case PlacementType.Strongest:
+            case __WEBPACK_IMPORTED_MODULE_1__placement_type__["a" /* PlacementType */].Strongest:
                 return 'strongest';
-            case PlacementType.VeryStrong:
+            case __WEBPACK_IMPORTED_MODULE_1__placement_type__["a" /* PlacementType */].VeryStrong:
                 return 'very-strong';
-            case PlacementType.Strong:
+            case __WEBPACK_IMPORTED_MODULE_1__placement_type__["a" /* PlacementType */].Strong:
                 return 'strong';
-            case PlacementType.Weak:
+            case __WEBPACK_IMPORTED_MODULE_1__placement_type__["a" /* PlacementType */].Weak:
                 return 'weak';
-            case PlacementType.VeryWeak:
+            case __WEBPACK_IMPORTED_MODULE_1__placement_type__["a" /* PlacementType */].VeryWeak:
                 return 'very-weak';
-            case PlacementType.Weakest:
+            case __WEBPACK_IMPORTED_MODULE_1__placement_type__["a" /* PlacementType */].Weakest:
                 return 'weakest';
         }
     };
@@ -789,34 +790,24 @@ var Placement = (function () {
     Placement.getTypeFromKey = function (key) {
         switch (key) {
             case 'warning':
-                return PlacementType.Warning;
+                return __WEBPACK_IMPORTED_MODULE_1__placement_type__["a" /* PlacementType */].Warning;
             case 'rules':
-                return PlacementType.Strongest;
+                return __WEBPACK_IMPORTED_MODULE_1__placement_type__["a" /* PlacementType */].Strongest;
             case 'exalted':
-                return PlacementType.VeryStrong;
+                return __WEBPACK_IMPORTED_MODULE_1__placement_type__["a" /* PlacementType */].VeryStrong;
             case 'triplicity':
-                return PlacementType.Strong;
+                return __WEBPACK_IMPORTED_MODULE_1__placement_type__["a" /* PlacementType */].Strong;
             case 'detriment':
-                return PlacementType.VeryWeak;
+                return __WEBPACK_IMPORTED_MODULE_1__placement_type__["a" /* PlacementType */].VeryWeak;
             case 'fall':
-                return PlacementType.Weakest;
+                return __WEBPACK_IMPORTED_MODULE_1__placement_type__["a" /* PlacementType */].Weakest;
             default:
-                return PlacementType.Weak;
+                return __WEBPACK_IMPORTED_MODULE_1__placement_type__["a" /* PlacementType */].Weak;
         }
     };
     return Placement;
 }());
 
-var PlacementType;
-(function (PlacementType) {
-    PlacementType[PlacementType["Warning"] = 0] = "Warning";
-    PlacementType[PlacementType["Strongest"] = 1] = "Strongest";
-    PlacementType[PlacementType["VeryStrong"] = 2] = "VeryStrong";
-    PlacementType[PlacementType["Strong"] = 3] = "Strong";
-    PlacementType[PlacementType["Weak"] = 4] = "Weak";
-    PlacementType[PlacementType["VeryWeak"] = 5] = "VeryWeak";
-    PlacementType[PlacementType["Weakest"] = 6] = "Weakest";
-})(PlacementType || (PlacementType = {}));
 //# sourceMappingURL=placement.js.map
 
 /***/ }),
@@ -887,6 +878,9 @@ var Reading = (function () {
         ];
         return tetragrams[houseNumber - 1];
     };
+    Reading.prototype.getPlacementForHouseNumber = function (houseNumber) {
+        return this.placements[houseNumber - 1];
+    };
     Reading.prototype.getPartOfFortune = function () {
         /*
           return house number where Part of Fortune resides
@@ -914,12 +908,12 @@ var Reading = (function () {
     Reading.prototype.getHouse = function (number) {
         return this.houses[number - 1];
     };
-    Reading.prototype.getTopicHouse = function () {
+    Reading.prototype.getTopicPlacement = function () {
         var _this = this;
         if (!this.topic)
             return null;
-        return this.houses.find(function (house) {
-            return house.topics.indexOf(_this.topic) >= 0;
+        return this.placements.find(function (placement) {
+            return placement.house.topics.indexOf(_this.topic) >= 0;
         });
     };
     return Reading;
@@ -1028,6 +1022,25 @@ ReadingPage = __decorate([
 ], ReadingPage);
 
 //# sourceMappingURL=reading.js.map
+
+/***/ }),
+
+/***/ 297:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PlacementType; });
+var PlacementType;
+(function (PlacementType) {
+    PlacementType[PlacementType["Warning"] = 0] = "Warning";
+    PlacementType[PlacementType["Strongest"] = 1] = "Strongest";
+    PlacementType[PlacementType["VeryStrong"] = 2] = "VeryStrong";
+    PlacementType[PlacementType["Strong"] = 3] = "Strong";
+    PlacementType[PlacementType["Weak"] = 4] = "Weak";
+    PlacementType[PlacementType["VeryWeak"] = 5] = "VeryWeak";
+    PlacementType[PlacementType["Weakest"] = 6] = "Weakest";
+})(PlacementType || (PlacementType = {}));
+//# sourceMappingURL=placement.type.js.map
 
 /***/ })
 

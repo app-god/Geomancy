@@ -9,14 +9,24 @@
   <ion-list *ngIf="warning">
     <ion-list-header class="warning">Warning</ion-list-header>
     <ion-item-group>
-      <!--<placement-item [placement]="warning"></placement-item>-->
+      <placement-item [placement]="warning"></placement-item>
     </ion-item-group>
   </ion-list>
 
-  <ion-list *ngIf="topicHouse">
+  <ion-list>
+    <ion-list-header>Judge</ion-list-header>
+    <ion-item-group>
+      <tetragram-item [tetragram]="reading.judge" (tap)="showTetragram(reading.judge)">
+      </tetragram-item>
+    </ion-item-group>
+  </ion-list>
+
+  <ion-list *ngIf="topicPlacement">
     <ion-list-header>Topic</ion-list-header>
     <ion-item-divider>{{reading.topic}}</ion-item-divider>
-    <!--<placement-item [placement]="topicHouse"></placement-item>-->
+
+    <placement-item [placement]="topicPlacement">
+    </placement-item>
   </ion-list>
 
   <ion-list *ngIf="keys.length > 0">
@@ -49,7 +59,10 @@
 
     <ion-item-group>
 
-      <!--<placement-item [placement]="partOfFortune" (tap)="showPlacement(placement)"></placement-item>-->
+      <placement-item
+        [placement]="partOfFortune"
+        (tap)="showPlacement(partOfFortune)">
+      </placement-item>
 
     </ion-item-group>
 

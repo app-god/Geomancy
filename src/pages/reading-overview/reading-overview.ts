@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Reading } from '../../models/reading'
-import { Placement, PlacementType } from '../../models/placement'
+import { Placement } from '../../models/placement'
+import { PlacementType } from '../../models/placement.type'
 
 @IonicPage()
 @Component({
@@ -13,7 +14,7 @@ export class ReadingOverviewPage {
   reading
   placements: any
   keys
-  topicHouse
+  topicPlacement
   warning
   partOfFortune
 
@@ -35,14 +36,19 @@ export class ReadingOverviewPage {
 
     this.keys = Object.keys(this.placements)
 
-    this.topicHouse = this.reading.getTopicHouse()
+    this.topicPlacement = this.reading.getTopicPlacement()
 
-    this.partOfFortune = this.reading.getHouse(this.reading.getPartOfFortune())
+    let partOfFortuneNumber = this.reading.getPartOfFortune()
+    this.partOfFortune = this.reading.getPlacementForHouseNumber(partOfFortuneNumber)
 
   }
 
   ionViewWillEnter() {
     this.parent.title = 'Overview'
+  }
+
+  showTetragram(tetragram) {
+    this.parent.navCtrl.push('TetragramPage', { tetragram: tetragram })
   }
 
   showPlacement(placement) {

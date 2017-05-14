@@ -127,6 +127,10 @@ export class Reading {
     return tetragrams[houseNumber - 1]
   }
 
+  getPlacementForHouseNumber(houseNumber: number): Placement {
+    return this.placements[houseNumber - 1]
+  }
+
   getPartOfFortune(): number {
     /*
       return house number where Part of Fortune resides
@@ -160,11 +164,11 @@ export class Reading {
     return this.houses[number - 1]
   }
 
-  getTopicHouse() {
+  getTopicPlacement(): Placement {
     if (!this.topic) return null
 
-    return this.houses.find(house => {
-      return house.topics.indexOf(this.topic) >= 0
+    return this.placements.find(placement => {
+      return placement.house.topics.indexOf(this.topic) >= 0
     })
   }
 }

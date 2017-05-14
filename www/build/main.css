@@ -64464,7 +64464,7 @@ ion-list-header {
 }
 
 ion-list-header ion-label {
-  font-size: 1.5em !important;
+  font-size: 1em !important;
   font-weight: bold;
   margin: 0 !important;
   line-height: 2em;
@@ -64490,7 +64490,7 @@ ion-item-divider {
 
 ion-item-divider ion-label {
   margin: 1em 0 !important;
-  font-size: 1.5em !important;
+  font-size: 1em !important;
   color: #ddd;
 }
 

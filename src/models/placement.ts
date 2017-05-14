@@ -1,5 +1,6 @@
 import { Tetragram } from './tetragram';
 import { House } from './house';
+import { PlacementType } from "./placement.type";
 
 export class Placement {
 
@@ -48,7 +49,7 @@ export class Placement {
       case PlacementType.Warning:
         return 'Warning'
       case PlacementType.Strongest:
-        return 'Strongest'
+        return 'Extremely Strong'
       case PlacementType.VeryStrong:
         return 'Very Strong'
       case PlacementType.Strong:
@@ -58,7 +59,7 @@ export class Placement {
       case PlacementType.VeryWeak:
         return 'Very Weak'
       case PlacementType.Weakest:
-        return 'Weakest'
+        return 'Extremely Weak'
     }
   }
 
@@ -109,14 +110,4 @@ export class Placement {
             return PlacementType.Weak
       }
   }
-}
-
-export enum PlacementType {
-  Warning,
-  Strongest,
-  VeryStrong,
-  Strong,
-  Weak,
-  VeryWeak,
-  Weakest
 }
