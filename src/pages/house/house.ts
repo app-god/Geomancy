@@ -27,8 +27,8 @@ export class HousePage {
 
   }
 
-  showHouse(house) {
-    this.navCtrl.push('HousePage', { house: house })
+  showPlacement(placement) {
+    this.navCtrl.push('PlacementPage', { placement: placement })
   }
 
 }

@@ -13,9 +13,9 @@
 
     <ion-list-header>Placements</ion-list-header>
 
-    <ion-item-group *ngFor="let house of tetragramsInHouse">
-      <ion-item-divider>{{house.tetragram.name}}</ion-item-divider>
-      <house [house]="house" (onTap)="showHouse($event)"></house>
+    <ion-item-group *ngFor="let placement of placements">
+      <ion-item-divider>{{placement.tetragram.name}}</ion-item-divider>
+      <placement-item [placement]="placement" (tap)="showPlacement(placement)"></placement-item>
     </ion-item-group>
 
   </ion-list>
