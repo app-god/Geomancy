@@ -15,26 +15,22 @@
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
 
-ion-app {
-  background-color: black !important;
+ion-content {
+  background: url('/assets/bg.png') scroll repeat center;
 }
 
-.ion-page {
-  position: relative;
-  margin: 0 auto !important;
-}
-
-ion-navbar .toolbar-background {
-  background: url('/assets/toolbar-bg.jpg') scroll repeat top center !important;
+ion-content[padding] {
+  padding: 1em !important;
 }
 
 ion-navbar {
+
   border-top: solid thin color($colors, black);
 
-}
+  .toolbar-background {
+    background: url('/assets/toolbar-bg.jpg') scroll repeat top center !important;
+  }
 
-ion-content {
-  background: url('/assets/bg.png') scroll repeat center;
 }
 
 .tabbar {
@@ -42,15 +38,14 @@ ion-content {
   background: url('/assets/toolbar-bg.jpg') scroll repeat bottom center !important;
 }
 
-ion-content[padding] {
-  padding: 1em !important;
-}
-
 /*
   list
 */
 
 ion-list {
+
+  padding: 1em 0 !important;
+
   .label {
     margin: 0;
   }
@@ -58,7 +53,7 @@ ion-list {
 
 ion-item {
   background: none !important;
-  margin-bottom: 1em !important;
+  margin: 1em 0 !important;
 }
 
 .item-inner {
@@ -69,7 +64,7 @@ ion-item {
 
 ion-list-header {
   padding: 0 !important;
-  margin: 2em 0 0 0 !important;
+  margin: 1em 0 !important;
   background: none !important;
 
   ion-label {
@@ -83,7 +78,6 @@ ion-list-header {
 
 ion-list-header.warning ion-label {
   color: color($colors, warning) !important;
-  border-color: color($colors, warning) !important;
 }
 
 .list-header {
@@ -115,7 +109,7 @@ ion-item ion-label {
 }
 
 button[ion-item] {
-  margin-bottom: 1em !important;
+  margin: 0.5em 0 1em 0 !important;
   padding: 0.5em !important;
   background-color: color($colors, dark) !important;
   background: url('/assets/item-bg.jpg') scroll repeat center;
@@ -216,3 +210,15 @@ ion-label {
 .alert-head h2 {
     color: color($colors, white);
 }
+
+/*
+  theme colors
+*/
+
+.warning     { color: color($colors, warning); }
+.strongest   { color: color($colors, strongest); }
+.very-strong { color: color($colors, very-strong); }
+.strong      { color: color($colors, strong); }
+.weak        { color: color($colors, weak); }
+.very-weak   { color: color($colors, very-weak); }
+.weakest     { color: color($colors, weakest); }

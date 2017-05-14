@@ -12,6 +12,7 @@ import { Placement } from "../../models/placement";
 export class HousePage {
   house: House
   placements: Placement[] = []
+  details: any[]
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
 
@@ -24,6 +25,17 @@ export class HousePage {
         new Placement(this.house, tetragram)
       )
     })
+
+    this.details = [
+      {
+        name: 'Topics',
+        value: this.house.topics.join(', ')
+      },
+      {
+        name: 'Sign',
+        value: this.house.sign
+      }
+    ]
 
   }
 

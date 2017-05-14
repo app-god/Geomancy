@@ -31,7 +31,7 @@
 
   <ion-list *ngIf="keys.length > 0">
 
-    <ion-list-header>Placements</ion-list-header>
+    <ion-list-header>Strong Placements</ion-list-header>
 
     <ion-item-group *ngFor="let key of keys">
 
@@ -39,12 +39,11 @@
 
         <div *ngFor="let placement of placements[key]">
 
-          <ion-item-divider>{{placement.getTypeString()}}</ion-item-divider>
-
           <placement-item
             [placement]="placement"
             (tap)="showPlacement(placement)">
           </placement-item>
+
         </div>
 
       </div>

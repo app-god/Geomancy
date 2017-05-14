@@ -14,7 +14,7 @@ export class TetragramPage {
 
   tetragram: Tetragram
   placements
-  attributions: any
+  details: any[]
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
 
@@ -22,7 +22,15 @@ export class TetragramPage {
 
     this.placements = Placement.getPlacementsForTetragram(this.tetragram)
 
-    this.attributions = [
+    this.details = [
+      {
+        name: 'Name',
+        value: this.tetragram.name
+      },
+      {
+        name: 'Meaning',
+        value: this.tetragram.desc
+      },
       {
         name: 'Keyword',
         value: this.tetragram.phrase
@@ -36,5 +44,9 @@ export class TetragramPage {
         value: this.tetragram.sign
       },
     ]
+  }
+
+  showPlacement(placement) {
+    this.navCtrl.push('PlacementPage', { placement: placement })
   }
 }

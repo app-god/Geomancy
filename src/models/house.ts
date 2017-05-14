@@ -6,8 +6,8 @@ export class House {
 
   title: string
   description: string
-  placement: Placement
 
+  sign: string
   topics: string[]
   phrase: string
 
@@ -21,6 +21,7 @@ export class House {
     this.description = info.description
     this.topics =      info.topics.sort()
     this.phrase =      info.phrase
+    this.sign =        info.sign
 
   }
 

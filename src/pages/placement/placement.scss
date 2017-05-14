@@ -1,3 +1,57 @@
 page-placement {
 
+    ion-grid {
+        padding: 0 !important;
+        margin-bottom: 0.5em !important;
+    }
+
+    ion-col {
+        border-left: solid thin color($colors, black);
+        padding: 0.5em !important;
+    }
+
+    ion-col:first-child {
+        border: none;
+    }
+
+    ion-row {
+        border-top: solid thin color($colors, black);
+    }
+
+    ion-row:first-child {
+        border: none;
+    }
+
+
+
+    .placement-tetragram {
+        text-align: center;
+        
+        tetragram {
+            font-size: 150%;
+        }
+    }
+
+    .placement-house {
+
+        border: none;
+
+        text-align: center;
+        line-height: 200%;
+
+        .big {
+            font-size: 400%;
+            line-height: 150%;
+        }
+    }
+
+    ion-grid.placement-details {
+
+        ion-col:first-child {
+            color: color($colors, light);
+        }
+
+    }
+
+
 }

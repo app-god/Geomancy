@@ -9,13 +9,60 @@
 
 <ion-content padding>
 
-  meaning: {{placement.getMeaning()}}
+  <ion-grid>
 
-  <br>
+    <ion-row class="placement-header-row">
 
-  strength: {{placement.getTypeString()}}
+      <ion-col col-6 class="placement-tetragram">
 
-  <br>
+        <tetragram [tetragram]="placement.tetragram"></tetragram>
+
+        <p>{{placement.tetragram.name}}</p>
+
+      </ion-col>
+
+      <ion-col col-6 class="placement-house">
+
+        <div class="big">{{placement.house.number}}</div>
+        
+        {{placement.house.title}}
+
+      </ion-col>
+
+    </ion-row>
+
+  </ion-grid>
+
+  <ion-grid class="placement-details">
+
+    <ion-row>
+      <ion-col col-4>
+        Strength
+      </ion-col>
+      <ion-col col-8 [class]="placement.getColor()">
+        {{placement.getTypeString()}}
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col col-4>
+        Phrase
+      </ion-col>
+      <ion-col col-8>
+        {{placement.getPhrase()}}
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col col-4>
+        Meaning
+      </ion-col>
+      <ion-col col-8>
+        {{placement.getMeaning()}}
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
 
   <ion-list>
 

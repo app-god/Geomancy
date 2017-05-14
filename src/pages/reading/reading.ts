@@ -53,7 +53,7 @@ export class ReadingPage {
           let toast = this.toastCtrl.create({
             message: 'Reading was saved successfully',
             duration: 2000,
-            position: 'bottom'
+            position: 'top'
           })
           this.saved = true
           toast.present()
@@ -71,7 +71,7 @@ export class ReadingPage {
           let toast = this.toastCtrl.create({
             message: 'Reading was deleted successfully',
             duration: 2000,
-            position: 'bottom'
+            position: 'top'
           })
           this.saved = false
           toast.present()

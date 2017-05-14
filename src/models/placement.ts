@@ -38,6 +38,10 @@ export class Placement {
     return this.tetragram.getHouseMeaning(this.house.number)
   }
 
+  getPhrase(): string {
+    return this.tetragram.phrase + ' in ' + this.house.phrase + '.'
+  }
+
   setTypeIfUndefined(type: PlacementType) {
     if (this.type === undefined) {
       this.type = type

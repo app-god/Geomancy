@@ -9,6 +9,26 @@
 
 <ion-content padding>
 
+  <div padding class="center">
+    <div class="big">{{house.number}}</div>
+    {{house.title}}
+  </div>
+
+
+  <ion-grid>
+    <ion-row *ngFor="let detail of details">
+
+      <ion-col col-4>
+        {{detail.name}}
+      </ion-col>
+
+      <ion-col col-8>
+        {{detail.value}}
+      </ion-col>
+
+    </ion-row>
+  </ion-grid>
+
   <ion-list no-lines>
 
     <ion-list-header>Placements</ion-list-header>

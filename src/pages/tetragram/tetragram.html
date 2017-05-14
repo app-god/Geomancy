@@ -8,19 +8,13 @@
 
 
 <ion-content padding>
-  <div padding class="big center">
-    <tetragram [tetragram]="tetragram"></tetragram>
-    <p>{{tetragram.desc}}</p>
-  </div>
 
   <ion-list no-lines>
 
-    <ion-list-header>Attributions</ion-list-header>
-
-    <ion-item-group *ngFor="let attribution of attributions">
-      <ion-item-divider>
-        <div class="left-column">{{attribution.name}}</div>
-        <div>{{attribution.value}}</div>
+    <ion-item-group *ngFor="let detail of details">
+      <ion-item-divider text-wrap>
+        <div class="left-column">{{detail.name}}</div>
+        <div>{{detail.value}}</div>
       </ion-item-divider>
     </ion-item-group>
 
@@ -31,8 +25,7 @@
     <ion-list-header>Placements</ion-list-header>
 
     <ion-item-group *ngFor="let placement of placements">
-      <ion-item-divider>{{placement.house.title}}</ion-item-divider>
-      <placement-item [placement]="placement"></placement-item>
+      <placement-item [placement]="placement" (tap)="showPlacement(placement)"></placement-item>
     </ion-item-group>
 
   </ion-list>
