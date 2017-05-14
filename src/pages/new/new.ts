@@ -11,7 +11,7 @@ import {
 } from 'ionic-angular';
 
 import { ReadingData } from '../../models/reading'
-import { House, houseInfo } from '../../models/house'
+import { houseInfo } from '../../models/house.info'
 import { Tetragram } from "../../models/tetragram";
 import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 

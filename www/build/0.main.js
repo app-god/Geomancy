@@ -1,16 +1,16 @@
 webpackJsonp([0],{
 
-/***/ 271:
+/***/ 267:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_house_house_module__ = __webpack_require__(278);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_house_item_house_item_module__ = __webpack_require__(282);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(97);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__tetragram__ = __webpack_require__(288);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_tetragram_tetragram_module__ = __webpack_require__(274);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TetragramPageModule", function() { return TetragramPageModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__placement__ = __webpack_require__(290);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_tetragram_item_tetragram_item_module__ = __webpack_require__(284);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PlacementPageModule", function() { return PlacementPageModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -22,32 +22,32 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var TetragramPageModule = (function () {
-    function TetragramPageModule() {
+var PlacementPageModule = (function () {
+    function PlacementPageModule() {
     }
-    return TetragramPageModule;
+    return PlacementPageModule;
 }());
-TetragramPageModule = __decorate([
+PlacementPageModule = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["a" /* NgModule */])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_3__tetragram__["a" /* TetragramPage */],
+            __WEBPACK_IMPORTED_MODULE_3__placement__["a" /* PlacementPage */],
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_3__tetragram__["a" /* TetragramPage */]),
-            __WEBPACK_IMPORTED_MODULE_4__components_tetragram_tetragram_module__["a" /* TetragramComponentModule */],
-            __WEBPACK_IMPORTED_MODULE_0__components_house_house_module__["a" /* HouseComponentModule */]
+            __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_3__placement__["a" /* PlacementPage */]),
+            __WEBPACK_IMPORTED_MODULE_0__components_house_item_house_item_module__["a" /* HouseItemComponentModule */],
+            __WEBPACK_IMPORTED_MODULE_4__components_tetragram_item_tetragram_item_module__["a" /* TetragramItemComponentModule */],
         ],
         exports: [
-            __WEBPACK_IMPORTED_MODULE_3__tetragram__["a" /* TetragramPage */]
+            __WEBPACK_IMPORTED_MODULE_3__placement__["a" /* PlacementPage */]
         ]
     })
-], TetragramPageModule);
+], PlacementPageModule);
 
-//# sourceMappingURL=tetragram.module.js.map
+//# sourceMappingURL=placement.module.js.map
 
 /***/ }),
 
-/***/ 273:
+/***/ 274:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -592,13 +592,13 @@ var tetragramInfo = [
 
 /***/ }),
 
-/***/ 274:
+/***/ 275:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__tetragram__ = __webpack_require__(277);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common__ = __webpack_require__(37);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_ionic_angular__ = __webpack_require__(97);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__tetragram__ = __webpack_require__(278);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TetragramComponentModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -615,15 +615,15 @@ var TetragramComponentModule = (function () {
     return TetragramComponentModule;
 }());
 TetragramComponentModule = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["a" /* NgModule */])({
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["a" /* NgModule */])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_1__tetragram__["a" /* TetragramComponent */],
+            __WEBPACK_IMPORTED_MODULE_2__tetragram__["a" /* TetragramComponent */],
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_2__angular_common__["e" /* CommonModule */]
+            __WEBPACK_IMPORTED_MODULE_0_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__tetragram__["a" /* TetragramComponent */])
         ],
         exports: [
-            __WEBPACK_IMPORTED_MODULE_1__tetragram__["a" /* TetragramComponent */]
+            __WEBPACK_IMPORTED_MODULE_2__tetragram__["a" /* TetragramComponent */]
         ]
     })
 ], TetragramComponentModule);
@@ -632,53 +632,11 @@ TetragramComponentModule = __decorate([
 
 /***/ }),
 
-/***/ 275:
+/***/ 276:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__placement__ = __webpack_require__(276);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return House; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return houseInfo; });
-
-var House = (function () {
-    function House(number, tetragram) {
-        this.number = number;
-        this.tetragram = tetragram;
-        var info = houseInfo[number - 1];
-        this.topics = info.topics.sort();
-        this.phrase = info.phrase;
-        this.title = info.title;
-        this.description = info.title;
-        this.getPlacement();
-    }
-    House.getHousesWithTetragram = function (tetragram) {
-        var houses = House.numbers.map(function (number) {
-            return new House(number, tetragram);
-        });
-        return houses;
-    };
-    House.prototype.getTetragramMeaning = function () {
-        return this.tetragram.getHouseMeaning(this.number);
-    };
-    House.prototype.getPlacement = function () {
-        var _this = this;
-        if (this.number == 1) {
-            if (['Rubeus', 'Cauda Draconis'].indexOf(this.tetragram.name) >= 0) {
-                this.placement = new __WEBPACK_IMPORTED_MODULE_0__placement__["a" /* Placement */]('warning');
-            }
-        }
-        var keys = ['rules', 'exalted', 'triplicity', 'detriment', 'fall'];
-        keys.forEach(function (key) {
-            if (_this.tetragram[key].indexOf(_this.number) >= 0) {
-                _this.placement = _this.placement || new __WEBPACK_IMPORTED_MODULE_0__placement__["a" /* Placement */](key);
-            }
-        });
-        this.placement = this.placement || new __WEBPACK_IMPORTED_MODULE_0__placement__["a" /* Placement */]('normal');
-    };
-    return House;
-}());
-
-House.numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return houseInfo; });
 var houseInfo = [
     {
         number: 1,
@@ -765,133 +723,7 @@ var houseInfo = [
         topics: ['Spirituality', 'Sacrifice', 'Hidden Enemies']
     }
 ];
-//# sourceMappingURL=house.js.map
-
-/***/ }),
-
-/***/ 276:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Placement; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return PlacementType; });
-var Placement = (function () {
-    function Placement(key) {
-        this.type = Placement.getTypeFromKey(key);
-    }
-    Placement.keyToString = function (key) {
-        switch (key) {
-            case 'warning':
-                return 'Warning!';
-            case 'rules':
-                return 'Strongest';
-            case 'exalted':
-                return 'Very Strong';
-            case 'triplicity':
-                return 'Strong';
-            case 'detriment':
-                return 'Very Weak';
-            case 'fall':
-                return 'Weakest';
-            default:
-                return 'Weak';
-        }
-    };
-    Placement.getTypeFromKey = function (key) {
-        switch (key) {
-            case 'warning':
-                return PlacementType.Warning;
-            case 'rules':
-                return PlacementType.Strongest;
-            case 'exalted':
-                return PlacementType.VeryStrong;
-            case 'triplicity':
-                return PlacementType.Strong;
-            case 'detriment':
-                return PlacementType.VeryWeak;
-            case 'fall':
-                return PlacementType.Weakest;
-            default:
-                return PlacementType.Weak;
-        }
-    };
-    Placement.prototype.getColor = function () {
-        switch (this.type) {
-            case PlacementType.Warning:
-                return 'warning';
-            case PlacementType.Strongest:
-                return 'strongest';
-            case PlacementType.VeryStrong:
-                return 'very-strong';
-            case PlacementType.Strong:
-                return 'strong';
-            case PlacementType.Weak:
-                return 'weak';
-            case PlacementType.VeryWeak:
-                return 'very-weak';
-            case PlacementType.Weakest:
-                return 'weakest';
-        }
-    };
-    Placement.prototype.getTypeString = function () {
-        switch (this.type) {
-            case PlacementType.Warning:
-                return 'Warning';
-            case PlacementType.Strongest:
-                return 'Strongest';
-            case PlacementType.VeryStrong:
-                return 'Very Strong';
-            case PlacementType.Strong:
-                return 'Strong';
-            case PlacementType.Weak:
-                return 'Weak';
-            case PlacementType.VeryWeak:
-                return 'Very Weak';
-            case PlacementType.Weakest:
-                return 'Weakest';
-        }
-    };
-    Placement.prototype.getIcon = function () {
-        var icon;
-        var prefix = '/assets/image/';
-        switch (this.type) {
-            case PlacementType.Warning:
-                icon = 'skull.png';
-                break;
-            case PlacementType.Strongest:
-                icon = 'battery4.png';
-                break;
-            case PlacementType.VeryStrong:
-                icon = 'battery3.png';
-                break;
-            case PlacementType.Strong:
-                icon = 'battery2.png';
-                break;
-            case PlacementType.VeryWeak:
-                icon = 'battery1.png';
-                break;
-            case PlacementType.Weakest:
-                icon = 'battery0.png';
-                break;
-            default:
-                return null;
-        }
-        return prefix + icon;
-    };
-    return Placement;
-}());
-
-var PlacementType;
-(function (PlacementType) {
-    PlacementType[PlacementType["Warning"] = 0] = "Warning";
-    PlacementType[PlacementType["Strongest"] = 1] = "Strongest";
-    PlacementType[PlacementType["VeryStrong"] = 2] = "VeryStrong";
-    PlacementType[PlacementType["Strong"] = 3] = "Strong";
-    PlacementType[PlacementType["Weak"] = 4] = "Weak";
-    PlacementType[PlacementType["VeryWeak"] = 5] = "VeryWeak";
-    PlacementType[PlacementType["Weakest"] = 6] = "Weakest";
-})(PlacementType || (PlacementType = {}));
-//# sourceMappingURL=placement.js.map
+//# sourceMappingURL=house.info.js.map
 
 /***/ }),
 
@@ -899,8 +731,33 @@ var PlacementType;
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__house_info__ = __webpack_require__(276);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return House; });
+
+var House = (function () {
+    function House(number) {
+        this.number = number;
+        var info = __WEBPACK_IMPORTED_MODULE_0__house_info__["a" /* houseInfo */].find(function (i) { return i.number === number; });
+        this.title = info.title;
+        this.description = info.description;
+        this.topics = info.topics.sort();
+        this.phrase = info.phrase;
+    }
+    return House;
+}());
+
+House.numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+House.houses = House.numbers.map(function (number) { return new House(number); });
+//# sourceMappingURL=house.js.map
+
+/***/ }),
+
+/***/ 278:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__models_tetragram__ = __webpack_require__(273);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__models_tetragram__ = __webpack_require__(274);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TetragramComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -946,15 +803,15 @@ TetragramComponent = __decorate([
 
 /***/ }),
 
-/***/ 278:
+/***/ 282:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(97);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__house__ = __webpack_require__(279);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__tetragram_tetragram_module__ = __webpack_require__(274);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HouseComponentModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__tetragram_tetragram_module__ = __webpack_require__(275);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(97);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__house_item__ = __webpack_require__(283);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HouseItemComponentModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -965,37 +822,37 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var HouseComponentModule = (function () {
-    function HouseComponentModule() {
+var HouseItemComponentModule = (function () {
+    function HouseItemComponentModule() {
     }
-    return HouseComponentModule;
+    return HouseItemComponentModule;
 }());
-HouseComponentModule = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["a" /* NgModule */])({
+HouseItemComponentModule = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["a" /* NgModule */])({
         declarations: [
-            __WEBPACK_IMPORTED_MODULE_2__house__["a" /* HouseComponent */]
+            __WEBPACK_IMPORTED_MODULE_3__house_item__["a" /* HouseItemComponent */],
         ],
         imports: [
-            __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* IonicModule */],
-            __WEBPACK_IMPORTED_MODULE_3__tetragram_tetragram_module__["a" /* TetragramComponentModule */]
+            __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_3__house_item__["a" /* HouseItemComponent */]),
+            __WEBPACK_IMPORTED_MODULE_0__tetragram_tetragram_module__["a" /* TetragramComponentModule */]
         ],
         exports: [
-            __WEBPACK_IMPORTED_MODULE_2__house__["a" /* HouseComponent */]
+            __WEBPACK_IMPORTED_MODULE_3__house_item__["a" /* HouseItemComponent */]
         ]
     })
-], HouseComponentModule);
+], HouseItemComponentModule);
 
-//# sourceMappingURL=house.module.js.map
+//# sourceMappingURL=house-item.module.js.map
 
 /***/ }),
 
-/***/ 279:
+/***/ 283:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__models_house__ = __webpack_require__(275);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__models_house__ = __webpack_require__(277);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HouseComponent; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HouseItemComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1007,40 +864,75 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-var HouseComponent = (function () {
-    function HouseComponent() {
-        this.onTap = new __WEBPACK_IMPORTED_MODULE_1__angular_core__["k" /* EventEmitter */]();
+var HouseItemComponent = (function () {
+    function HouseItemComponent() {
     }
-    return HouseComponent;
+    return HouseItemComponent;
 }());
 __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["u" /* Input */])(),
     __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__models_house__["a" /* House */])
-], HouseComponent.prototype, "house", void 0);
-__decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["M" /* Output */])(),
-    __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1__angular_core__["k" /* EventEmitter */])
-], HouseComponent.prototype, "onTap", void 0);
-HouseComponent = __decorate([
+], HouseItemComponent.prototype, "house", void 0);
+HouseItemComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["_5" /* Component */])({
-        selector: 'house',template:/*ion-inline-start:"/Users/adam/AppGod/geomancy/src/components/house/house.html"*/'<button ion-item text-wrap (tap)="onTap.emit(house)">\n\n  <tetragram [color]="house.placement.getColor()" [tetragram]="house.tetragram" item-left></tetragram>\n\n  <div>\n    {{house.tetragram.phrase}} in {{house.phrase}}\n  </div>\n\n</button>\n'/*ion-inline-end:"/Users/adam/AppGod/geomancy/src/components/house/house.html"*/
-    }),
-    __metadata("design:paramtypes", [])
-], HouseComponent);
+        selector: 'house-item',template:/*ion-inline-start:"/Users/adam/AppGod/geomancy/src/components/house-item/house-item.html"*/'<button ion-item text-wrap>\n\n  <div item-left class="house-number">\n    {{house.number}}\n  </div>\n\n  {{house.title}}\n\n</button>\n\n'/*ion-inline-end:"/Users/adam/AppGod/geomancy/src/components/house-item/house-item.html"*/
+    })
+], HouseItemComponent);
 
-//# sourceMappingURL=house.js.map
+//# sourceMappingURL=house-item.js.map
 
 /***/ }),
 
-/***/ 288:
+/***/ 284:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__tetragram_tetragram_module__ = __webpack_require__(275);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(97);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__tetragram_item__ = __webpack_require__(285);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TetragramItemComponentModule; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+
+var TetragramItemComponentModule = (function () {
+    function TetragramItemComponentModule() {
+    }
+    return TetragramItemComponentModule;
+}());
+TetragramItemComponentModule = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["a" /* NgModule */])({
+        declarations: [
+            __WEBPACK_IMPORTED_MODULE_3__tetragram_item__["a" /* TetragramItemComponent */],
+        ],
+        imports: [
+            __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["d" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_3__tetragram_item__["a" /* TetragramItemComponent */]),
+            __WEBPACK_IMPORTED_MODULE_0__tetragram_tetragram_module__["a" /* TetragramComponentModule */]
+        ],
+        exports: [
+            __WEBPACK_IMPORTED_MODULE_3__tetragram_item__["a" /* TetragramItemComponent */]
+        ]
+    })
+], TetragramItemComponentModule);
+
+//# sourceMappingURL=tetragram-item.module.js.map
+
+/***/ }),
+
+/***/ 285:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(97);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__models_tetragram__ = __webpack_require__(273);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__models_house__ = __webpack_require__(275);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TetragramPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__models_tetragram__ = __webpack_require__(274);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TetragramItemComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1052,42 +944,67 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
+var TetragramItemComponent = (function () {
+    function TetragramItemComponent() {
+    }
+    return TetragramItemComponent;
+}());
+__decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* Input */])(),
+    __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1__models_tetragram__["a" /* Tetragram */])
+], TetragramItemComponent.prototype, "tetragram", void 0);
+TetragramItemComponent = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({
+        selector: 'tetragram-item',template:/*ion-inline-start:"/Users/adam/AppGod/geomancy/src/components/tetragram-item/tetragram-item.html"*/'<button ion-item text-wrap>\n\n  <tetragram [tetragram]="tetragram" item-left></tetragram>\n\n  {{tetragram.name}}\n\n</button>\n'/*ion-inline-end:"/Users/adam/AppGod/geomancy/src/components/tetragram-item/tetragram-item.html"*/
+    }),
+    __metadata("design:paramtypes", [])
+], TetragramItemComponent);
+
+//# sourceMappingURL=tetragram-item.js.map
+
+/***/ }),
+
+/***/ 290:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(97);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PlacementPage; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
 
 
-var TetragramPage = (function () {
-    function TetragramPage(navCtrl, navParams) {
+var PlacementPage = (function () {
+    function PlacementPage(navCtrl, navParams) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
-        this.tetragram = new __WEBPACK_IMPORTED_MODULE_2__models_tetragram__["a" /* Tetragram */](navParams.get('key'));
-        this.houses = __WEBPACK_IMPORTED_MODULE_3__models_house__["a" /* House */].getHousesWithTetragram(this.tetragram);
-        this.attributions = [
-            {
-                name: 'Keyword',
-                value: this.tetragram.phrase
-            },
-            {
-                name: 'Planet',
-                value: this.tetragram.planet
-            },
-            {
-                name: 'Zodiac',
-                value: this.tetragram.sign
-            },
-        ];
+        this.placement = navParams.get('placement');
     }
-    return TetragramPage;
+    PlacementPage.prototype.showTetragram = function (tetragram) {
+        this.navCtrl.push('TetragramPage', { tetragram: tetragram });
+    };
+    PlacementPage.prototype.showHouse = function (house) {
+        this.navCtrl.push('HousePage', { house: house });
+    };
+    return PlacementPage;
 }());
-TetragramPage = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPage */])({
-        segment: 'tetragram/:key'
-    }),
+PlacementPage = __decorate([
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPage */])(),
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({
-        selector: 'page-tetragram',template:/*ion-inline-start:"/Users/adam/AppGod/geomancy/src/pages/tetragram/tetragram.html"*/'<ion-header>\n\n  <ion-navbar>\n    <ion-title>{{tetragram.name}}</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n  <div padding class="big center">\n    <tetragram [tetragram]="tetragram"></tetragram>\n    <p>{{tetragram.desc}}</p>\n  </div>\n\n  <ion-list no-lines>\n\n    <ion-list-header>Attributions</ion-list-header>\n\n    <ion-item-group *ngFor="let attribution of attributions">\n      <ion-item-divider>\n        <div class="left-column">{{attribution.name}}</div>\n        <div>{{attribution.value}}</div>\n      </ion-item-divider>\n    </ion-item-group>\n\n  </ion-list>\n\n  <ion-list no-lines>\n\n    <ion-list-header>Placements</ion-list-header>\n\n    <ion-item-group *ngFor="let house of houses">\n      <ion-item-divider>{{house.title}}</ion-item-divider>\n      <house [house]="house"></house>\n    </ion-item-group>\n\n  </ion-list>\n\n</ion-content>\n'/*ion-inline-end:"/Users/adam/AppGod/geomancy/src/pages/tetragram/tetragram.html"*/,
+        selector: 'page-placement',template:/*ion-inline-start:"/Users/adam/AppGod/geomancy/src/pages/placement/placement.html"*/'<ion-header>\n\n  <ion-navbar>\n    <ion-title>Placement</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n  meaning: {{placement.getMeaning()}}\n\n  <br>\n\n  strength: {{placement.getTypeString()}}\n\n  <br>\n\n  <ion-list>\n\n    <ion-list-header>More Information</ion-list-header>\n\n    <ion-item-divider>{{placement.tetragram.name}}</ion-item-divider>\n    <tetragram-item [tetragram]="placement.tetragram" (tap)="showTetragram(placement.tetragram)"></tetragram-item>\n\n    <ion-item-divider>House {{placement.house.number}}</ion-item-divider>\n    <house-item [house]="placement.house" (tap)="showHouse(placement.house)"></house-item>\n\n  </ion-list>\n\n</ion-content>\n'/*ion-inline-end:"/Users/adam/AppGod/geomancy/src/pages/placement/placement.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]])
-], TetragramPage);
+], PlacementPage);
 
-//# sourceMappingURL=tetragram.js.map
+//# sourceMappingURL=placement.js.map
 
 /***/ })
 

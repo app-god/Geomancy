@@ -30,9 +30,9 @@
 
     <ion-list-header>Placements</ion-list-header>
 
-    <ion-item-group *ngFor="let house of houses">
-      <ion-item-divider>{{house.title}}</ion-item-divider>
-      <house [house]="house"></house>
+    <ion-item-group *ngFor="let placement of placements">
+      <ion-item-divider>{{placement.house.title}}</ion-item-divider>
+      <placement-item [placement]="placement"></placement-item>
     </ion-item-group>
 
   </ion-list>

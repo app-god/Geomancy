@@ -1,7 +1,7 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>Placement</ion-title>
+    <ion-title>House {{house.number}}</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -11,29 +11,7 @@
 
   <ion-list no-lines>
 
-    <ion-list-header>Tetragram</ion-list-header>
-
-    <ion-item-divider>
-      <div class="left-column">Name</div>
-      {{house.tetragram.name}}
-    </ion-item-divider>
-
-    <ion-item-divider>
-      <div class="left-column">Translation</div>
-      {{house.tetragram.translation}}
-    </ion-item-divider>
-
-    <ion-item-divider>
-      <div class="left-column">Name</div>
-      {{house.tetragram.name}}
-    </ion-item-divider>
-
-  </ion-list>
-
-
-  <ion-list no-lines>
-
-    <ion-list-header>House {{house.number}} Placements</ion-list-header>
+    <ion-list-header>Placements</ion-list-header>
 
     <ion-item-group *ngFor="let house of tetragramsInHouse">
       <ion-item-divider>{{house.tetragram.name}}</ion-item-divider>

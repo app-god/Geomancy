@@ -2,15 +2,16 @@ tetragram {
   text-align: center;
 
   .tetragram {
-    height: 6em;
-    width: 3em;
+    text-align: center !important;
+    height: 4em;
+    width: 4em;
     margin: 0 auto !important;
     text-shadow: 1px 0 black, 0 1px black, 1px 1px black;
-
   }
 
   .tetragram-row {
-    font-size: 1.5em;
+    width: 4em;
+    font-size: 1em;
     line-height: 1em;
   }
 

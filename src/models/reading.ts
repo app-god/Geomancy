@@ -3,9 +3,11 @@ import { Tetragram } from './tetragram'
 import { House } from './house'
 
 export class Reading {
+
   question?: string
   topic?: string
   houses: House[]
+  placements: Placement[]
 
   mother0: Tetragram
   mother1: Tetragram
@@ -39,7 +41,6 @@ export class Reading {
 
     this.question = data.question
     this.topic = data.topic
-
     this.date = data.date
 
     this.mother0 = new Tetragram(data.key0)
@@ -55,25 +56,30 @@ export class Reading {
       this.mother2.row0,
       this.mother3.row0
     )
+
     this.daughter1 = this.createFromRows(
       this.mother0.row1,
       this.mother1.row1,
       this.mother2.row1,
       this.mother3.row1
     )
+
     this.daughter2 = this.createFromRows(
       this.mother0.row2,
       this.mother1.row2,
       this.mother2.row2,
       this.mother3.row2
     )
+
     this.daughter3 = this.createFromRows(
       this.mother0.row3,
       this.mother1.row3,
       this.mother2.row3,
       this.mother3.row3
     )
+
     this.daughters = [this.daughter0, this.daughter1, this.daughter2, this.daughter3]
+
     this.nephew0 = this.mother0.add(this.mother1)
     this.nephew1 = this.mother2.add(this.mother3)
     this.nephew2 = this.daughter0.add(this.daughter1)
@@ -90,9 +96,14 @@ export class Reading {
     this.partOfFortune = this.getPartOfFortune()
 
     this.houses = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
-      .map(number => {
-        let tetragram = this.getTetragramForHouse(number)
-        return new House(number, tetragram)
+      .map(houseNumber => {
+        return new House(houseNumber)
+      })
+
+    this.placements = this.houses
+      .map(house => {
+        let tetragram = this.getTetragramForHouseNumber(house.number)
+        return new Placement(house, tetragram)
       })
   }
 
@@ -105,7 +116,7 @@ export class Reading {
     return new Tetragram(key)
   }
 
-  getTetragramForHouse(house: number): Tetragram {
+  getTetragramForHouseNumber(houseNumber: number): Tetragram {
     let tetragrams: Tetragram[] = [
       this.mother1, this.daughter1, this.nephew1,
       this.mother2, this.daughter2, this.nephew2,
@@ -113,7 +124,7 @@ export class Reading {
       this.mother0, this.daughter0, this.nephew0
     ]
 
-    return tetragrams[house - 1]
+    return tetragrams[houseNumber - 1]
   }
 
   getPartOfFortune(): number {
@@ -166,8 +177,4 @@ export interface ReadingData {
   key1: number
   key2: number
   key3: number
-}
-
-export interface ReadingSaveData extends ReadingData {
-  judgeKey: number
 }

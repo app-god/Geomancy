@@ -2,68 +2,44 @@ import { Tetragram } from './tetragram';
 import { House } from './house';
 
 export class Placement {
+
   type: PlacementType
-  house: House
-  tetragram: Tetragram
 
-  constructor (key: string) {
-      this.type = Placement.getTypeFromKey(key)
-  }
+  constructor (public house: House, public tetragram: Tetragram) {
 
-  static keyToString(key: string): string {
-      switch (key) {
-          case 'warning':
-          return 'Warning!'
-          case 'rules':
-          return 'Strongest'
-          case 'exalted':
-          return 'Very Strong'
-          case 'triplicity':
-          return 'Strong'
-          case 'detriment':
-          return 'Very Weak'
-          case 'fall':
-          return 'Weakest'
-          default:
-          return 'Weak'
+    // determine type
+
+    // is placement a warning?
+
+    if (this.house.number == 1) {
+      if (['Rubeus', 'Cauda Draconis'].indexOf(this.tetragram.name) >= 0) {
+        this.setTypeIfUndefined(PlacementType.Warning)
       }
-  }
+    }
 
-  static getTypeFromKey(key: string) {
-      switch (key) {
-          case 'warning':
-          return PlacementType.Warning
-          case 'rules':
-          return PlacementType.Strongest
-          case 'exalted':
-          return PlacementType.VeryStrong
-          case 'triplicity':
-          return PlacementType.Strong
-          case 'detriment':
-          return PlacementType.VeryWeak
-          case 'fall':
-          return PlacementType.Weakest
-          default:
-          return PlacementType.Weak
+    // is placement an accidental dignitary?
+
+    let keys = ['rules', 'exalted', 'triplicity', 'detriment', 'fall']
+    
+    keys.forEach(key => {
+      if (this.tetragram[key].indexOf(this.house.number) >= 0) {
+        this.setTypeIfUndefined(Placement.getTypeFromKey(key))
       }
+    })
+
+    // if placement isn't any of the others, it's weak
+
+    this.setTypeIfUndefined(PlacementType.Weak)
+
   }
 
-  getColor(): string {
-    switch (this.type) {
-      case PlacementType.Warning:
-        return 'warning'
-      case PlacementType.Strongest:
-        return 'strongest'
-      case PlacementType.VeryStrong:
-        return 'very-strong'
-      case PlacementType.Strong:
-        return 'strong'
-      case PlacementType.Weak:
-        return 'weak'
-      case PlacementType.VeryWeak:
-        return 'very-weak'
-      case PlacementType.Weakest:
-        return 'weakest'
+  getMeaning(): string {
+    return this.tetragram.getHouseMeaning(this.house.number)
+  }
+
+  setTypeIfUndefined(type: PlacementType) {
+    if (this.type === undefined) {
+      this.type = type
     }
   }
 
@@ -86,32 +62,52 @@ export class Placement {
     }
   }
 
-  getIcon() {
-    let icon: string
-    let prefix = '/assets/image/'
+  getColor(): string {
     switch (this.type) {
       case PlacementType.Warning:
-        icon = 'skull.png'
-        break
+        return 'warning'
       case PlacementType.Strongest:
-        icon = 'battery4.png'
-        break
+        return 'strongest'
       case PlacementType.VeryStrong:
-        icon = 'battery3.png'
-        break
+        return 'very-strong'
       case PlacementType.Strong:
-        icon = 'battery2.png'
-        break
+        return 'strong'
+      case PlacementType.Weak:
+        return 'weak'
       case PlacementType.VeryWeak:
-        icon = 'battery1.png'
-        break
+        return 'very-weak'
       case PlacementType.Weakest:
-        icon = 'battery0.png'
-        break
-      default:
-        return null
+        return 'weakest'
     }
-    return prefix + icon
+  }
+
+  static getPlacementsForTetragram(tetragram: Tetragram) {
+
+    let placements = House.houses.map(house => {
+      return new Placement(house, tetragram)
+    })
+
+    return placements
+
+  }
+
+  static getTypeFromKey(key: string) {
+      switch (key) {
+          case 'warning':
+            return PlacementType.Warning
+          case 'rules':
+            return PlacementType.Strongest
+          case 'exalted':
+            return PlacementType.VeryStrong
+          case 'triplicity':
+            return PlacementType.Strong
+          case 'detriment':
+            return PlacementType.VeryWeak
+          case 'fall':
+            return PlacementType.Weakest
+          default:
+            return PlacementType.Weak
+      }
   }
 }
 

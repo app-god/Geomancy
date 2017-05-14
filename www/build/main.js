@@ -27,7 +27,7 @@
 /******/
 /******/ 	// objects to store loaded and loading chunks
 /******/ 	var installedChunks = {
-/******/ 		9: 0
+/******/ 		10: 0
 /******/ 	};
 /******/
 /******/ 	// The require function
@@ -74170,39 +74170,43 @@ exports.tryCatch = tryCatch;
 var map = {
 	"../pages/history/history.module": [
 		264,
-		8
+		9
 	],
 	"../pages/house/house.module": [
 		265,
-		3
+		4
 	],
 	"../pages/new/new.module": [
 		266,
-		5
+		7
+	],
+	"../pages/placement/placement.module": [
+		267,
+		0
 	],
 	"../pages/reading-figures/reading-figures.module": [
-		267,
+		268,
 		6
 	],
 	"../pages/reading-houses/reading-houses.module": [
-		268,
-		2
+		269,
+		3
 	],
 	"../pages/reading-overview/reading-overview.module": [
-		269,
-		1
+		270,
+		2
 	],
 	"../pages/reading/reading.module": [
-		270,
-		4
+		271,
+		5
 	],
 	"../pages/tetragram/tetragram.module": [
-		271,
-		0
+		272,
+		1
 	],
 	"../pages/tutorial/tutorial.module": [
-		272,
-		7
+		273,
+		8
 	]
 };
 function webpackAsyncContext(req) {
@@ -74262,11 +74266,12 @@ AppModule = __decorate([
                     { loadChildren: '../pages/history/history.module#HistoryPageModule', name: 'HistoryPage', segment: 'history', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/house/house.module#HousePageModule', name: 'HousePage', segment: 'house', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/new/new.module#NewPageModule', name: 'NewPage', segment: 'new', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/placement/placement.module#PlacementPageModule', name: 'PlacementPage', segment: 'placement', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/reading/reading.module#ReadingPageModule', name: 'ReadingPage', segment: 'reading/:question/:topic/:date/:key0/:key1/:key2/:key3', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/reading-figures/reading-figures.module#ReadingFiguresPageModule', name: 'ReadingFiguresPage', segment: 'reading-figures', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/reading-houses/reading-houses.module#ReadingHousesPageModule', name: 'ReadingHousesPage', segment: 'reading-houses', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/reading-overview/reading-overview.module#ReadingOverviewPageModule', name: 'ReadingOverviewPage', segment: 'reading-overview', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/tetragram/tetragram.module#TetragramPageModule', name: 'TetragramPage', segment: 'tetragram/:key', priority: 'low', defaultHistory: [] },
+                    { loadChildren: '../pages/tetragram/tetragram.module#TetragramPageModule', name: 'TetragramPage', segment: 'tetragram', priority: 'low', defaultHistory: [] },
                     { loadChildren: '../pages/tutorial/tutorial.module#TutorialPageModule', name: 'TutorialPage', segment: 'tutorial', priority: 'low', defaultHistory: [] }
                 ]
             }),

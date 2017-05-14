@@ -9,25 +9,34 @@
   <ion-list *ngIf="warning">
     <ion-list-header class="warning">Warning</ion-list-header>
     <ion-item-group>
-      <house [house]="warning" (onTap)="showHouse($event)"></house>
+      <!--<placement-item [placement]="warning"></placement-item>-->
     </ion-item-group>
   </ion-list>
 
   <ion-list *ngIf="topicHouse">
     <ion-list-header>Topic</ion-list-header>
     <ion-item-divider>{{reading.topic}}</ion-item-divider>
-    <house [house]="topicHouse" (onTap)="showHouse($event)"></house>
+    <!--<placement-item [placement]="topicHouse"></placement-item>-->
   </ion-list>
 
   <ion-list *ngIf="keys.length > 0">
 
-    <ion-list-header>Strong Placements</ion-list-header>
+    <ion-list-header>Placements</ion-list-header>
 
     <ion-item-group *ngFor="let key of keys">
 
-      <div *ngIf="houses[key].length > 0">
-        <ion-item-divider>{{keyToString(key)}}</ion-item-divider>
-        <house [house]="house" *ngFor="let house of houses[key]" (onTap)="showHouse($event)"></house>
+      <div *ngIf="placements[key].length > 0">
+
+        <div *ngFor="let placement of placements[key]">
+
+          <ion-item-divider>{{placement.getTypeString()}}</ion-item-divider>
+
+          <placement-item
+            [placement]="placement"
+            (tap)="showPlacement(placement)">
+          </placement-item>
+        </div>
+
       </div>
 
     </ion-item-group>
@@ -40,7 +49,7 @@
 
     <ion-item-group>
 
-      <house [house]="partOfFortune" (onTap)="showHouse($event)"></house>
+      <!--<placement-item [placement]="partOfFortune" (tap)="showPlacement(placement)"></placement-item>-->
 
     </ion-item-group>
 

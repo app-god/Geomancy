@@ -1,0 +1,32 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Placement</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  meaning: {{placement.getMeaning()}}
+
+  <br>
+
+  strength: {{placement.getTypeString()}}
+
+  <br>
+
+  <ion-list>
+
+    <ion-list-header>More Information</ion-list-header>
+
+    <ion-item-divider>{{placement.tetragram.name}}</ion-item-divider>
+    <tetragram-item [tetragram]="placement.tetragram" (tap)="showTetragram(placement.tetragram)"></tetragram-item>
+
+    <ion-item-divider>House {{placement.house.number}}</ion-item-divider>
+    <house-item [house]="placement.house" (tap)="showHouse(placement.house)"></house-item>
+
+  </ion-list>
+
+</ion-content>

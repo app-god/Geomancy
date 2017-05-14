@@ -1,9 +1,7 @@
-import { HouseComponentModule } from './../../components/house/house.module';
-import { PlacementComponentModule } from './../../components/placement/placement.module';
 import { NgModule } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
 import { ReadingHousesPage } from './reading-houses';
-import { TetragramComponentModule } from '../../components/tetragram/tetragram.module'
+import { PlacementItemComponentModule } from "../../components/placement-item/placement-item.module";
 
 @NgModule({
   declarations: [
@@ -11,8 +9,7 @@ import { TetragramComponentModule } from '../../components/tetragram/tetragram.m
   ],
   imports: [
     IonicPageModule.forChild(ReadingHousesPage),
-    TetragramComponentModule,
-    HouseComponentModule
+    PlacementItemComponentModule
   ],
   exports: [
     ReadingHousesPage

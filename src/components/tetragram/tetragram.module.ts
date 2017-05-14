@@ -1,13 +1,13 @@
+import { IonicPageModule } from 'ionic-angular';
 import { NgModule } from '@angular/core';
 import { TetragramComponent } from './tetragram';
-import { CommonModule } from "@angular/common";
 
 @NgModule({
   declarations: [
     TetragramComponent,
   ],
   imports: [
-    CommonModule
+    IonicPageModule.forChild(TetragramComponent)
   ],
   exports: [
     TetragramComponent

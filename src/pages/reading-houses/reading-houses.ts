@@ -17,8 +17,8 @@ export class ReadingHousesPage {
     this.reading = this.parent.reading
   }
 
-  showHouse(house) {
-    this.parent.navCtrl.push('HousePage', { house: house })
+  showPlacement(placement) {
+    this.parent.navCtrl.push('PlacementPage', { placement: placement })
   }
 
   ionViewWillEnter() {

@@ -2,9 +2,9 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Tetragram } from '../../models/tetragram'
 import { House } from '../../models/house'
+import { Placement } from "../../models/placement";
 
 @IonicPage({
-  segment: 'tetragram/:key'
 })
 @Component({
   selector: 'page-tetragram',
@@ -13,14 +13,14 @@ import { House } from '../../models/house'
 export class TetragramPage {
 
   tetragram: Tetragram
-  houses
+  placements
   attributions: any
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
 
-    this.tetragram = new Tetragram(navParams.get('key'))
+    this.tetragram = navParams.get('tetragram')
 
-    this.houses = House.getHousesWithTetragram(this.tetragram)
+    this.placements = Placement.getPlacementsForTetragram(this.tetragram)
 
     this.attributions = [
       {
@@ -37,5 +37,4 @@ export class TetragramPage {
       },
     ]
   }
-
 }

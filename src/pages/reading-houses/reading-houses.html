@@ -3,13 +3,13 @@
 <ion-content padding>
 
   <ion-list>
-    <ion-item-group *ngFor="let house of reading.houses">
+    <ion-item-group *ngFor="let placement of reading.placements">
 
       <ion-item-divider>
-        {{house.title}}
+        {{placement.house.title}}
       </ion-item-divider>
 
-      <house [house]="house" (onTap)="showHouse(house)"></house>
+      <placement-item [placement]="placement" (onTap)="showPlacement(placement)"></placement-item>
 
     </ion-item-group>
   </ion-list>

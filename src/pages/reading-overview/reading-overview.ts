@@ -11,39 +11,41 @@ import { Placement, PlacementType } from '../../models/placement'
 export class ReadingOverviewPage {
   parent
   reading
-  houses: any
+  placements: any
   keys
   topicHouse
   warning
-  keyToString = Placement.keyToString
   partOfFortune
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+
     this.parent = navParams.get('parent')
+
     this.reading = this.parent.reading
 
-    let houses = this.reading.houses
+    let placements = this.reading.placements
 
-    this.warning = houses.find(house => { return house.placement.type === PlacementType.Warning }),
+    this.warning = placements.find(placement => { return placement.type === PlacementType.Warning }),
 
-    this.houses = {
-      rules:      houses.filter(house => { return house.placement.type === PlacementType.Strongest }),
-      exalted:    houses.filter(house => { return house.placement.type === PlacementType.VeryStrong }),
-      triplicity: houses.filter(house => { return house.placement.type === PlacementType.Strong })
+    this.placements = {
+      rules:      placements.filter(placement => { return placement.type === PlacementType.Strongest }),
+      exalted:    placements.filter(placement => { return placement.type === PlacementType.VeryStrong }),
+      triplicity: placements.filter(placement => { return placement.type === PlacementType.Strong })
     }
 
-    this.keys = Object.keys(this.houses)
+    this.keys = Object.keys(this.placements)
 
     this.topicHouse = this.reading.getTopicHouse()
 
     this.partOfFortune = this.reading.getHouse(this.reading.getPartOfFortune())
+
   }
 
   ionViewWillEnter() {
     this.parent.title = 'Overview'
   }
 
-  showHouse(house) {
-    this.parent.navCtrl.push('HousePage', { house: house })
+  showPlacement(placement) {
+    this.parent.navCtrl.push('PlacementPage', { placement: placement })
   }
 }
