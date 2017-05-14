@@ -28,6 +28,10 @@ export class HousePage {
 
     this.details = [
       {
+        name: 'Title',
+        value: 'House of ' + this.house.title
+      },
+      {
         name: 'Topics',
         value: this.house.topics.join(', ')
       },

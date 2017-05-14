@@ -1,6 +1,6 @@
 import { Tetragram } from './tetragram';
 import { House } from './house';
-import { PlacementType } from "./placement.type";
+import { PlacementType, getTypeAsString, getTypeColor, getTypeFromKey } from "./placement.type";
 
 export class Placement {
 
@@ -24,7 +24,7 @@ export class Placement {
     
     keys.forEach(key => {
       if (this.tetragram[key].indexOf(this.house.number) >= 0) {
-        this.setTypeIfUndefined(Placement.getTypeFromKey(key))
+        this.setTypeIfUndefined(getTypeFromKey(key))
       }
     })
 
@@ -48,42 +48,12 @@ export class Placement {
     }
   }
 
-  getTypeString(): string {
-    switch (this.type) {
-      case PlacementType.Warning:
-        return 'Warning'
-      case PlacementType.Strongest:
-        return 'Extremely Strong'
-      case PlacementType.VeryStrong:
-        return 'Very Strong'
-      case PlacementType.Strong:
-        return 'Strong'
-      case PlacementType.Weak:
-        return 'Weak'
-      case PlacementType.VeryWeak:
-        return 'Very Weak'
-      case PlacementType.Weakest:
-        return 'Extremely Weak'
-    }
+  getTypeAsString(): string {
+    return getTypeAsString(this.type)
   }
 
-  getColor(): string {
-    switch (this.type) {
-      case PlacementType.Warning:
-        return 'warning'
-      case PlacementType.Strongest:
-        return 'strongest'
-      case PlacementType.VeryStrong:
-        return 'very-strong'
-      case PlacementType.Strong:
-        return 'strong'
-      case PlacementType.Weak:
-        return 'weak'
-      case PlacementType.VeryWeak:
-        return 'very-weak'
-      case PlacementType.Weakest:
-        return 'weakest'
-    }
+  getTypeColor(): string {
+    return getTypeColor(this.type)
   }
 
   static getPlacementsForTetragram(tetragram: Tetragram) {
@@ -94,24 +64,5 @@ export class Placement {
 
     return placements
 
-  }
-
-  static getTypeFromKey(key: string) {
-      switch (key) {
-          case 'warning':
-            return PlacementType.Warning
-          case 'rules':
-            return PlacementType.Strongest
-          case 'exalted':
-            return PlacementType.VeryStrong
-          case 'triplicity':
-            return PlacementType.Strong
-          case 'detriment':
-            return PlacementType.VeryWeak
-          case 'fall':
-            return PlacementType.Weakest
-          default:
-            return PlacementType.Weak
-      }
   }
 }

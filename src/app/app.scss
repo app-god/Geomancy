@@ -45,6 +45,7 @@ ion-navbar {
 ion-list {
 
   padding: 1em 0 !important;
+  margin: 0 !important;
 
   .label {
     margin: 0;
@@ -66,6 +67,7 @@ ion-list-header {
   padding: 0 !important;
   margin: 1em 0 !important;
   background: none !important;
+  border-bottom: solid thin color($colors, white) !important;
 
   ion-label {
     font-size: 1em !important;
@@ -76,8 +78,11 @@ ion-list-header {
   }
 }
 
-ion-list-header.warning ion-label {
-  color: color($colors, warning) !important;
+ion-list-header.warning {
+  border-color: color($colors, warning) !important;
+  ion-label {
+    color: color($colors, warning) !important;
+  }
 }
 
 .list-header {
@@ -92,7 +97,7 @@ ion-item-divider {
   padding: 0 !important;
 
   ion-label {
-    margin: 1em 0 !important;
+    margin: 0.5em 0 !important;
     font-size: 1em !important;
     color: color($colors, white);
   }
@@ -222,3 +227,22 @@ ion-label {
 .weak        { color: color($colors, weak); }
 .very-weak   { color: color($colors, very-weak); }
 .weakest     { color: color($colors, weakest); }
+
+/*
+  shadows
+*/
+
+tetragram .tetragram {
+  text-shadow: 1px 0px black,
+               0px 1px black,
+               1px 1px black;
+}
+
+.strongest {
+  text-shadow: 1px 0px black,
+               0px 1px black,
+               1px 1px black,
+               0px 0px 10px color($colors, strongest)
+               !important;
+}
+

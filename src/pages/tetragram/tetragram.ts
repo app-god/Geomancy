@@ -24,24 +24,16 @@ export class TetragramPage {
 
     this.details = [
       {
-        name: 'Name',
-        value: this.tetragram.name
-      },
-      {
         name: 'Meaning',
         value: this.tetragram.desc
-      },
-      {
-        name: 'Keyword',
-        value: this.tetragram.phrase
       },
       {
         name: 'Planet',
         value: this.tetragram.planet
       },
       {
-        name: 'Zodiac',
-        value: this.tetragram.sign
+        name: 'Keyword',
+        value: this.tetragram.phrase
       },
     ]
   }

@@ -37,6 +37,8 @@
 
       <div *ngIf="placements[key].length > 0">
 
+        <ion-item-divider>{{getTypeAsStringFromKey(key)}}</ion-item-divider>
+
         <div *ngFor="let placement of placements[key]">
 
           <placement-item

@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { Reading } from '../../models/reading'
 import { Placement } from '../../models/placement'
-import { PlacementType } from '../../models/placement.type'
+import { PlacementType, getTypeAsStringFromKey } from '../../models/placement.type'
 
 @IonicPage()
 @Component({
@@ -17,6 +17,7 @@ export class ReadingOverviewPage {
   topicPlacement
   warning
   partOfFortune
+  getTypeAsStringFromKey = getTypeAsStringFromKey
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
 

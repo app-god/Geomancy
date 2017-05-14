@@ -44,7 +44,6 @@ export class ReadingPage {
   }
 
   saveReading() {
-
     this.storage.ready().then(() => {
       this.storage.get('history').then(history => {
         history = history || []

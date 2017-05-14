@@ -1,12 +1,8 @@
-<ion-item-divider>
-  {{placement.house.title}}
-</ion-item-divider>
-
 <button ion-item text-wrap>
 
   <tetragram item-left
     [tetragram]="placement.tetragram"
-    [color]="placement.getColor()">
+    [color]="placement.getTypeColor()">
   </tetragram>
 
   {{placement.getMeaning()}}

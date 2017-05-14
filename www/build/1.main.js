@@ -841,7 +841,7 @@ var Placement = (function () {
         var keys = ['rules', 'exalted', 'triplicity', 'detriment', 'fall'];
         keys.forEach(function (key) {
             if (_this.tetragram[key].indexOf(_this.house.number) >= 0) {
-                _this.setTypeIfUndefined(Placement.getTypeFromKey(key));
+                _this.setTypeIfUndefined(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__placement_type__["b" /* getTypeFromKey */])(key));
             }
         });
         // if placement isn't any of the others, it's weak
@@ -858,65 +858,17 @@ var Placement = (function () {
             this.type = type;
         }
     };
-    Placement.prototype.getTypeString = function () {
-        switch (this.type) {
-            case __WEBPACK_IMPORTED_MODULE_1__placement_type__["a" /* PlacementType */].Warning:
-                return 'Warning';
-            case __WEBPACK_IMPORTED_MODULE_1__placement_type__["a" /* PlacementType */].Strongest:
-                return 'Extremely Strong';
-            case __WEBPACK_IMPORTED_MODULE_1__placement_type__["a" /* PlacementType */].VeryStrong:
-                return 'Very Strong';
-            case __WEBPACK_IMPORTED_MODULE_1__placement_type__["a" /* PlacementType */].Strong:
-                return 'Strong';
-            case __WEBPACK_IMPORTED_MODULE_1__placement_type__["a" /* PlacementType */].Weak:
-                return 'Weak';
-            case __WEBPACK_IMPORTED_MODULE_1__placement_type__["a" /* PlacementType */].VeryWeak:
-                return 'Very Weak';
-            case __WEBPACK_IMPORTED_MODULE_1__placement_type__["a" /* PlacementType */].Weakest:
-                return 'Extremely Weak';
-        }
+    Placement.prototype.getTypeAsString = function () {
+        return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__placement_type__["c" /* getTypeAsString */])(this.type);
     };
-    Placement.prototype.getColor = function () {
-        switch (this.type) {
-            case __WEBPACK_IMPORTED_MODULE_1__placement_type__["a" /* PlacementType */].Warning:
-                return 'warning';
-            case __WEBPACK_IMPORTED_MODULE_1__placement_type__["a" /* PlacementType */].Strongest:
-                return 'strongest';
-            case __WEBPACK_IMPORTED_MODULE_1__placement_type__["a" /* PlacementType */].VeryStrong:
-                return 'very-strong';
-            case __WEBPACK_IMPORTED_MODULE_1__placement_type__["a" /* PlacementType */].Strong:
-                return 'strong';
-            case __WEBPACK_IMPORTED_MODULE_1__placement_type__["a" /* PlacementType */].Weak:
-                return 'weak';
-            case __WEBPACK_IMPORTED_MODULE_1__placement_type__["a" /* PlacementType */].VeryWeak:
-                return 'very-weak';
-            case __WEBPACK_IMPORTED_MODULE_1__placement_type__["a" /* PlacementType */].Weakest:
-                return 'weakest';
-        }
+    Placement.prototype.getTypeColor = function () {
+        return __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__placement_type__["d" /* getTypeColor */])(this.type);
     };
     Placement.getPlacementsForTetragram = function (tetragram) {
         var placements = __WEBPACK_IMPORTED_MODULE_0__house__["a" /* House */].houses.map(function (house) {
             return new Placement(house, tetragram);
         });
         return placements;
-    };
-    Placement.getTypeFromKey = function (key) {
-        switch (key) {
-            case 'warning':
-                return __WEBPACK_IMPORTED_MODULE_1__placement_type__["a" /* PlacementType */].Warning;
-            case 'rules':
-                return __WEBPACK_IMPORTED_MODULE_1__placement_type__["a" /* PlacementType */].Strongest;
-            case 'exalted':
-                return __WEBPACK_IMPORTED_MODULE_1__placement_type__["a" /* PlacementType */].VeryStrong;
-            case 'triplicity':
-                return __WEBPACK_IMPORTED_MODULE_1__placement_type__["a" /* PlacementType */].Strong;
-            case 'detriment':
-                return __WEBPACK_IMPORTED_MODULE_1__placement_type__["a" /* PlacementType */].VeryWeak;
-            case 'fall':
-                return __WEBPACK_IMPORTED_MODULE_1__placement_type__["a" /* PlacementType */].Weakest;
-            default:
-                return __WEBPACK_IMPORTED_MODULE_1__placement_type__["a" /* PlacementType */].Weak;
-        }
     };
     return Placement;
 }());
@@ -930,6 +882,10 @@ var Placement = (function () {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PlacementType; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return getTypeAsString; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return getTypeColor; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return getTypeFromKey; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return getTypeAsStringFromKey; });
 var PlacementType;
 (function (PlacementType) {
     PlacementType[PlacementType["Warning"] = 0] = "Warning";
@@ -940,6 +896,63 @@ var PlacementType;
     PlacementType[PlacementType["VeryWeak"] = 5] = "VeryWeak";
     PlacementType[PlacementType["Weakest"] = 6] = "Weakest";
 })(PlacementType || (PlacementType = {}));
+var getTypeAsString = function (type) {
+    switch (type) {
+        case PlacementType.Warning:
+            return 'Warning';
+        case PlacementType.Strongest:
+            return 'Extremely Strong';
+        case PlacementType.VeryStrong:
+            return 'Very Strong';
+        case PlacementType.Strong:
+            return 'Strong';
+        case PlacementType.Weak:
+            return 'Weak';
+        case PlacementType.VeryWeak:
+            return 'Very Weak';
+        case PlacementType.Weakest:
+            return 'Extremely Weak';
+    }
+};
+var getTypeColor = function (type) {
+    switch (type) {
+        case PlacementType.Warning:
+            return 'warning';
+        case PlacementType.Strongest:
+            return 'strongest';
+        case PlacementType.VeryStrong:
+            return 'very-strong';
+        case PlacementType.Strong:
+            return 'strong';
+        case PlacementType.Weak:
+            return 'weak';
+        case PlacementType.VeryWeak:
+            return 'very-weak';
+        case PlacementType.Weakest:
+            return 'weakest';
+    }
+};
+var getTypeFromKey = function (key) {
+    switch (key) {
+        case 'warning':
+            return PlacementType.Warning;
+        case 'rules':
+            return PlacementType.Strongest;
+        case 'exalted':
+            return PlacementType.VeryStrong;
+        case 'triplicity':
+            return PlacementType.Strong;
+        case 'detriment':
+            return PlacementType.VeryWeak;
+        case 'fall':
+            return PlacementType.Weakest;
+        default:
+            return PlacementType.Weak;
+    }
+};
+var getTypeAsStringFromKey = function (key) {
+    return getTypeAsString(getTypeFromKey(key));
+};
 //# sourceMappingURL=placement.type.js.map
 
 /***/ }),
@@ -1016,7 +1029,7 @@ __decorate([
 ], PlacementItemComponent.prototype, "placement", void 0);
 PlacementItemComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({
-        selector: 'placement-item',template:/*ion-inline-start:"/Users/adam/AppGod/geomancy/src/components/placement-item/placement-item.html"*/'<ion-item-divider>\n  {{placement.house.title}}\n</ion-item-divider>\n\n<button ion-item text-wrap>\n\n  <tetragram item-left\n    [tetragram]="placement.tetragram"\n    [color]="placement.getColor()">\n  </tetragram>\n\n  {{placement.getMeaning()}}\n\n</button>\n'/*ion-inline-end:"/Users/adam/AppGod/geomancy/src/components/placement-item/placement-item.html"*/
+        selector: 'placement-item',template:/*ion-inline-start:"/Users/adam/AppGod/geomancy/src/components/placement-item/placement-item.html"*/'<button ion-item text-wrap>\n\n  <tetragram item-left\n    [tetragram]="placement.tetragram"\n    [color]="placement.getTypeColor()">\n  </tetragram>\n\n  {{placement.getMeaning()}}\n\n</button>\n'/*ion-inline-end:"/Users/adam/AppGod/geomancy/src/components/placement-item/placement-item.html"*/
     }),
     __metadata("design:paramtypes", [])
 ], PlacementItemComponent);
@@ -1053,24 +1066,16 @@ var TetragramPage = (function () {
         this.placements = __WEBPACK_IMPORTED_MODULE_2__models_placement__["a" /* Placement */].getPlacementsForTetragram(this.tetragram);
         this.details = [
             {
-                name: 'Name',
-                value: this.tetragram.name
-            },
-            {
                 name: 'Meaning',
                 value: this.tetragram.desc
-            },
-            {
-                name: 'Keyword',
-                value: this.tetragram.phrase
             },
             {
                 name: 'Planet',
                 value: this.tetragram.planet
             },
             {
-                name: 'Zodiac',
-                value: this.tetragram.sign
+                name: 'Keyword',
+                value: this.tetragram.phrase
             },
         ];
     }
@@ -1082,11 +1087,12 @@ var TetragramPage = (function () {
 TetragramPage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* IonicPage */])({}),
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({
-        selector: 'page-tetragram',template:/*ion-inline-start:"/Users/adam/AppGod/geomancy/src/pages/tetragram/tetragram.html"*/'<ion-header>\n\n  <ion-navbar>\n    <ion-title>{{tetragram.name}}</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n  <ion-list no-lines>\n\n    <ion-item-group *ngFor="let detail of details">\n      <ion-item-divider text-wrap>\n        <div class="left-column">{{detail.name}}</div>\n        <div>{{detail.value}}</div>\n      </ion-item-divider>\n    </ion-item-group>\n\n  </ion-list>\n\n  <ion-list no-lines>\n\n    <ion-list-header>Placements</ion-list-header>\n\n    <ion-item-group *ngFor="let placement of placements">\n      <placement-item [placement]="placement" (tap)="showPlacement(placement)"></placement-item>\n    </ion-item-group>\n\n  </ion-list>\n\n</ion-content>\n'/*ion-inline-end:"/Users/adam/AppGod/geomancy/src/pages/tetragram/tetragram.html"*/,
+        selector: 'page-tetragram',template:/*ion-inline-start:"/Users/adam/AppGod/geomancy/src/pages/tetragram/tetragram.html"*/'<ion-header>\n\n  <ion-navbar>\n    <ion-title>{{tetragram.name}}</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n  <ion-grid>\n    <ion-row *ngFor="let detail of details">\n      <ion-col col-4>{{detail.name}}</ion-col>\n      <ion-col col-8>{{detail.value}}</ion-col>\n    </ion-row>\n  </ion-grid>\n\n  <ion-list no-lines>\n\n    <ion-list-header>Placements</ion-list-header>\n\n    <ion-item-group *ngFor="let placement of placements">\n      <ion-item-divider>House of {{placement.house.title}}</ion-item-divider>\n      <placement-item [placement]="placement" (tap)="showPlacement(placement)"></placement-item>\n    </ion-item-group>\n\n  </ion-list>\n\n</ion-content>\n'/*ion-inline-end:"/Users/adam/AppGod/geomancy/src/pages/tetragram/tetragram.html"*/,
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]])
+    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavParams */]) === "function" && _b || Object])
 ], TetragramPage);
 
+var _a, _b;
 //# sourceMappingURL=tetragram.js.map
 
 /***/ })
