@@ -1,13 +1,18 @@
 <ion-header>
 
   <ion-navbar>
+    <ion-buttons left>
+      <button ion-button icon-only (click)="clickBack()">
+        <ion-icon name="close"></ion-icon>
+      </button>
+    </ion-buttons>
     <ion-title>{{title}}</ion-title>
     <ion-buttons right>
-      <button ion-button icon-only (click)="saveReading()" *ngIf="!saved">
-        <ion-icon name="bookmark" class="not-saved"></ion-icon>
+      <button ion-button (click)="saveReading()" *ngIf="!saved" class="save">
+        Save
       </button>
-      <button ion-button icon-only (click)="deleteReading()" *ngIf="saved">
-        <ion-icon name="bookmark" class="saved"></ion-icon>
+      <button ion-button (click)="deleteReading()" *ngIf="saved" class="saved">
+        Saved
       </button>
     </ion-buttons>
   </ion-navbar>

@@ -126,6 +126,16 @@ ion-item-sliding {
   background: none !important;
 }
 
+ion-item-options {
+  border: none !important;
+  padding: 0 !important;
+
+  button {
+    background: none !important;
+    color: color($colors, danger) !important;
+  }
+}
+
 button[ion-item]:not([detail-none]) .item-inner {
   background-position: right 0 center;
 }
@@ -212,8 +222,10 @@ ion-label {
   border: 0 !important;
 }
 
-.alert-head h2 {
-    color: color($colors, white);
+.alert-head h2,
+.alert-message {
+    color: color($colors, white) !important;
+    overflow: hidden;
 }
 
 /*

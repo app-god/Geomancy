@@ -1,10 +1,14 @@
 page-reading {
 
-    ion-icon.not-saved {
+    button.back-button {
+        display: none !important;
+    }
+
+    .not-saved {
         color: color($colors, dark);
     }
 
-    ion-icon.saved {
+    .saved {
         color: color($colors, secondary);
     }
 

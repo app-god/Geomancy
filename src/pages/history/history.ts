@@ -52,8 +52,13 @@ export class HistoryPage {
 
   showReading(readingData) {
     this.navCtrl.push('ReadingPage', {
-      readingData: readingData,
-      saved: true
+      question: readingData.question,
+      topic: readingData.topic,
+      date: readingData.date,
+      key0: readingData.key0,
+      key1: readingData.key1,
+      key2: readingData.key2,
+      key3: readingData.key3,
     })
   }
 

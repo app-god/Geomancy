@@ -126,7 +126,7 @@ export const tetragramInfo: TetragramInfo[] = [
       'Indifferent. Good for journeys.',
       'Good.',
       'Very good.',
-      'Excellent'
+      'Excellent.'
     ]
   },
   {

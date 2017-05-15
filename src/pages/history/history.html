@@ -1,5 +1,10 @@
 <ion-header>
   <ion-navbar>
+    <ion-buttons left>
+      <button ion-button icon-only (click)="navCtrl.setRoot('NewPage')">
+        <ion-icon name="arrow-back"></ion-icon>
+      </button>
+    </ion-buttons>
     <ion-title>
       Load Reading
     </ion-title>
@@ -11,33 +16,27 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content>
+<ion-content padding>
 
-  <ion-card *ngIf="readings.length == 0">
-    <ion-card-content>
-      Save a reading and it will show up here.
-    </ion-card-content>
-  </ion-card>
+  <div class="center" *ngIf="readings.length == 0">
+    Save a reading and it will show up here.
+  </div>
 
   <ion-list margin *ngIf="readings.length > 0">
 
-    <ion-item-group>
+    <ion-item-sliding *ngFor="let reading of readings">
 
-      <ion-item-sliding *ngFor="let reading of readings">
+      <button ion-item (click)="showReading(reading)">
+        <div class="question" text-wrap>{{reading.question || 'No question'}}</div>
+        <div class="topic">{{reading.topic || 'No topic'}}</div>
+        <div class="date">{{reading.date | date:'medium'}}</div>
+      </button>
 
-        <button ion-item (click)="showReading(reading)">
-          <div class="question" text-wrap>{{reading.question || 'No question'}}</div>
-          <div class="topic">{{reading.topic || 'No topic'}}</div>
-          <div class="date">{{reading.date | date:'medium'}}</div>
-        </button>
-
-        <ion-item-options side="right">
-          <button ion-button (click)="deleteReading(reading)"
-            color="danger">Delete</button>
-        </ion-item-options>
-      </ion-item-sliding>
-
-    </ion-item-group>
+      <ion-item-options side="right">
+        <button ion-button (click)="deleteReading(reading)"
+          color="danger">Delete</button>
+      </ion-item-options>
+    </ion-item-sliding>
 
   </ion-list>
 </ion-content>
