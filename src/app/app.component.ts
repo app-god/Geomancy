@@ -17,11 +17,13 @@ export class MyApp {
     storage: Storage
   ) {
 
+    /*
     storage.get('hasSeenTutorial').then(hasSeenTutorial => {
       if (hasSeenTutorial != true) {
         this.rootPage = 'TutorialPage'
       }
     })
+    */
 
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.

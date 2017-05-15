@@ -144,13 +144,13 @@ export class NewPage {
             this.navCtrl.push('HistoryPage')
           }
         },
-        {
+        /*{
           text: 'Show Introduction',
           handler: () => {
             let introMod = this.modCtrl.create('TutorialPage')
             introMod.present()
           }
-        },
+        },*/
         {
           text: 'Cancel',
           role: 'cancel'
