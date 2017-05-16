@@ -28,6 +28,9 @@ export class NewPage {
   topic: string = ''
   topics: string[]
 
+  tips: string[]
+  tip: string = ''
+
   // for manual reading
   manualForm: FormGroup
   row = {}
@@ -42,17 +45,22 @@ export class NewPage {
     private formBuilder: FormBuilder
   ) {
 
+    // load topics
     let nestedTopics = houseInfo.map(house => { return house.topics })
-
     this.topics = [].concat.apply([], nestedTopics)
-
     this.topics.sort()
     this.topics.unshift('None')
-
+    // set 'None' as default topic
     this.topic = this.topics[0]
 
-    // manual
+    // create tips
+    this.tips = [
+      'Manually generating the numbers is a more powerful way of forming the divination.',
+      'Choosing a question that you feel strongly about will lead to more meaningful insights.',
+      'Asking a question and choosing a topic is optional. All you need to do is click "create."'
+    ]
 
+    // manual
     this.manualForm = formBuilder.group({
       row_1:  ['', Validators.required],
       row_2:  ['', Validators.required],
@@ -71,7 +79,12 @@ export class NewPage {
       row_15: ['', Validators.required],
       row_16: ['', Validators.required]
     })
+  }
 
+  ionViewDidEnter() {
+    // load random tip
+    let tipIndex = Math.floor(Math.random() * this.tips.length)
+    this.tip = this.tips[tipIndex]
   }
 
   createReading() {
