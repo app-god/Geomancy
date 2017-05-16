@@ -8,6 +8,4 @@ You can see this code running at http://geomancy.appgod.org/
 TODO
 ====
 
-* Improve introduction
-* Cleanup/refactor code
-* Remove duplicate placements
+* Create introduction
