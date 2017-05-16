@@ -1039,7 +1039,7 @@ __decorate([
 ], PlacementItemComponent.prototype, "placement", void 0);
 PlacementItemComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({
-        selector: 'placement-item',template:/*ion-inline-start:"/Users/adam/AppGod/geomancy/src/components/placement-item/placement-item.html"*/'<button ion-item text-wrap>\n\n  <tetragram item-left\n    [tetragram]="placement.tetragram"\n    [color]="placement.getTypeColor()">\n  </tetragram>\n\n  {{placement.getMeaning()}}\n\n</button>\n'/*ion-inline-end:"/Users/adam/AppGod/geomancy/src/components/placement-item/placement-item.html"*/
+        selector: 'placement-item',template:/*ion-inline-start:"/Users/adam/AppGod/geomancy/src/components/placement-item/placement-item.html"*/'<button ion-item text-wrap detail-push>\n\n  <tetragram item-left\n    [tetragram]="placement.tetragram"\n    [color]="placement.getTypeColor()">\n  </tetragram>\n\n  {{placement.getMeaning()}}\n\n</button>\n'/*ion-inline-end:"/Users/adam/AppGod/geomancy/src/components/placement-item/placement-item.html"*/
     }),
     __metadata("design:paramtypes", [])
 ], PlacementItemComponent);
@@ -1120,7 +1120,7 @@ __decorate([
 ], TetragramItemComponent.prototype, "tetragram", void 0);
 TetragramItemComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({
-        selector: 'tetragram-item',template:/*ion-inline-start:"/Users/adam/AppGod/geomancy/src/components/tetragram-item/tetragram-item.html"*/'<button ion-item text-wrap>\n\n  <tetragram [tetragram]="tetragram" item-left></tetragram>\n\n  {{tetragram.name}}\n\n</button>\n'/*ion-inline-end:"/Users/adam/AppGod/geomancy/src/components/tetragram-item/tetragram-item.html"*/
+        selector: 'tetragram-item',template:/*ion-inline-start:"/Users/adam/AppGod/geomancy/src/components/tetragram-item/tetragram-item.html"*/'<button ion-item text-wrap detail-push>\n\n  <tetragram [tetragram]="tetragram" item-left></tetragram>\n\n  {{tetragram.name}}\n\n</button>\n'/*ion-inline-end:"/Users/adam/AppGod/geomancy/src/components/tetragram-item/tetragram-item.html"*/
     }),
     __metadata("design:paramtypes", [])
 ], TetragramItemComponent);

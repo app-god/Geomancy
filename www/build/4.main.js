@@ -982,7 +982,7 @@ __decorate([
 ], HouseItemComponent.prototype, "house", void 0);
 HouseItemComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["_5" /* Component */])({
-        selector: 'house-item',template:/*ion-inline-start:"/Users/adam/AppGod/geomancy/src/components/house-item/house-item.html"*/'<button ion-item text-wrap>\n\n  <div item-left class="house-number">\n    {{house.number}}\n  </div>\n\n  {{house.title}}\n\n</button>\n\n'/*ion-inline-end:"/Users/adam/AppGod/geomancy/src/components/house-item/house-item.html"*/
+        selector: 'house-item',template:/*ion-inline-start:"/Users/adam/AppGod/geomancy/src/components/house-item/house-item.html"*/'<button ion-item text-wrap detail-push>\n\n  <div item-left class="house-number">\n    {{house.number}}\n  </div>\n\n  {{house.title}}\n\n</button>\n\n'/*ion-inline-end:"/Users/adam/AppGod/geomancy/src/components/house-item/house-item.html"*/
     })
 ], HouseItemComponent);
 
