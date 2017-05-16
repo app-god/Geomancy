@@ -55,9 +55,9 @@ export class NewPage {
 
     // create tips
     this.tips = [
-      'Manually generating the numbers is a more powerful way of forming the divination.',
-      'Choosing a question that you feel strongly about will lead to more meaningful insights.',
-      'Asking a question and choosing a topic is optional. All you need to do is click "create."'
+      'Manually generate the numbers to create a more powerful divination.',
+      'Choose a question that you feel strongly about for the most meaningful insights.',
+      'Leave the question and topic blank if you feel like it. All you need to do is click "create."'
     ]
 
     // manual

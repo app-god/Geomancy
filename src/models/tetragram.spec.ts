@@ -1,4 +1,5 @@
-import { Tetragram, TetragramInfo, tetragramInfo } from './tetragram'
+import { Tetragram } from './tetragram'
+import { TetragramInfo, tetragramInfo } from './tetragram.info'
 
 describe('Tetragram', () => {
 
