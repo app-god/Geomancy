@@ -1,4 +1,3 @@
-
 export interface HouseInfo {
   number: number
   title: string
@@ -15,7 +14,7 @@ export const houseInfo: HouseInfo[] = [
     description: '',
     phrase: 'yourself',
     sign: 'Aries',
-    topics: ['Self', 'Life', 'Health']
+    topics: ['Self', 'Life', 'Health', 'First impression']
   },
   {
     number: 2,
@@ -23,7 +22,7 @@ export const houseInfo: HouseInfo[] = [
     description: '',
     phrase: 'wealth',
     sign: 'Taurus',
-    topics: ['Wealth', 'Resources', 'Self-esteem']
+    topics: ['Wealth', 'Resources', 'Self-esteem', 'Survival']
   },
   {
     number: 3,
@@ -31,7 +30,7 @@ export const houseInfo: HouseInfo[] = [
     description: '',
     phrase: 'perception',
     sign: 'Gemini',
-    topics: ['Siblings', 'Friends', 'Short Journeys']
+    topics: ['Siblings', 'Friends', 'Short Journeys', 'Traffic']
   },
   {
     number: 4,
@@ -39,7 +38,7 @@ export const houseInfo: HouseInfo[] = [
     description: '',
     phrase: 'your home',
     sign: 'Cancer',
-    topics: ['Family', 'Inheritence', 'Home']
+    topics: ['Family', 'Inheritence', 'Home', 'Mother']
   },
   {
     number: 5,
@@ -47,7 +46,7 @@ export const houseInfo: HouseInfo[] = [
     description: '',
     phrase: 'creativity',
     sign: 'Leo',
-    topics: ['Children', 'Pleasure', 'Gambling']
+    topics: ['Children', 'Romance', 'Gambling', 'Love']
   },
   {
     number: 6,
@@ -55,7 +54,7 @@ export const houseInfo: HouseInfo[] = [
     description: '',
     phrase: 'daily work',
     sign: 'Virgo',
-    topics: ['Work', 'Habits', 'Service']
+    topics: ['Work', 'Habits', 'Service', 'Illness']
   },
   {
     number: 7,
@@ -63,7 +62,7 @@ export const houseInfo: HouseInfo[] = [
     description: '',
     phrase: 'partnerships',
     sign: 'Libra',
-    topics: ['Marriage', 'Partnerships', 'Public Enemies']
+    topics: ['Marriage', 'Partnerships', 'Enemies (Public)', 'Negotiation']
   },
   {
     number: 8,
@@ -71,7 +70,7 @@ export const houseInfo: HouseInfo[] = [
     description: '',
     phrase: 'power',
     sign: 'Scorpio',
-    topics: ['Deaths', 'Occult Abilities', 'Sex']
+    topics: ['Deaths', 'Occult Abilities', 'Sex', 'Inheritance']
   },
   {
     number: 9,
@@ -79,7 +78,7 @@ export const houseInfo: HouseInfo[] = [
     description: '',
     phrase: 'education',
     sign: 'Sagittarius',
-    topics: ['Long Journeys', 'Religion', 'Education']
+    topics: ['Long Journeys', 'Religion', 'Education', 'Philosophy']
   },
   {
     number: 10,
@@ -87,7 +86,7 @@ export const houseInfo: HouseInfo[] = [
     description: '',
     phrase: 'career',
     sign: 'Capricorn',
-    topics: ['Honor', 'Career', 'Reputation']
+    topics: ['Honor', 'Career', 'Reputation', 'Father']
   },
   {
     number: 11,
@@ -95,14 +94,14 @@ export const houseInfo: HouseInfo[] = [
     description: '',
     phrase: 'the world',
     sign: 'Aquarius',
-    topics: ['Society', 'Hopes', 'Humanity']
+    topics: ['Society', 'Hopes', 'Humanity', 'Social Media']
   },
   {
     number: 12,
-    title: 'Spirit',
+    title: 'Spirituality',
     description: '',
-    phrase: 'spirit',
+    phrase: 'spirituality',
     sign: 'Pisces',
-    topics: ['Spirituality', 'Sacrifice', 'Hidden Enemies']
+    topics: ['Spirituality', 'Sacrifice', 'Enemies (Secret)', 'The Unknown']
   }
 ]
