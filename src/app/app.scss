@@ -16,7 +16,7 @@
 // automatically applied to the <body> element in the app.
 
 ion-content {
-  background: url('/assets/bg.png') scroll repeat center;
+  background: url('../assets/bg.png') scroll repeat center;
   font-size: 125%;
   line-height: 125%;
 }
@@ -30,14 +30,14 @@ ion-navbar {
   border-top: solid thin color($colors, black);
 
   .toolbar-background {
-    background: url('/assets/toolbar-bg.jpg') scroll repeat top center !important;
+    background: url('../assets/toolbar-bg.jpg') scroll repeat top center !important;
   }
 
 }
 
 .tabbar {
   border-top: solid thin color($colors, dark);
-  background: url('/assets/toolbar-bg.jpg') scroll repeat bottom center !important;
+  background: url('../assets/toolbar-bg.jpg') scroll repeat bottom center !important;
 }
 
 /*
@@ -119,7 +119,7 @@ button[ion-item] {
   margin: 0.5em 0 1em 0 !important;
   padding: 0.5em !important;
   background-color: color($colors, dark) !important;
-  background: url('/assets/item-bg.jpg') scroll repeat center;
+  background: url('../assets/item-bg.jpg') scroll repeat center;
   line-height: 150% !important;
   border-radius: 0.5em;
 }
@@ -253,10 +253,10 @@ tetragram .tetragram {
 }
 
 .strongest {
-  text-shadow: 1px 0px black,
-               0px 1px black,
-               1px 1px black,
-               0px 0px 10px color($colors, strongest)
+  text-shadow: 2px 0px black,
+               0px 2px black,
+               2px 2px black,
+               0px 0px 100px color($colors, strongest)
                !important;
 }
 
