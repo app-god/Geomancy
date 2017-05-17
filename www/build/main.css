@@ -64621,12 +64621,28 @@ ion-label {
 /*
   theme colors
 */
+.fire {
+  color: #c40233;
+}
+
+.water {
+  color: royalblue;
+}
+
+.air {
+  color: lightyellow;
+}
+
+.earth {
+  color: #80461b;
+}
+
 .moon {
-  color: blue;
+  color: lightblue;
 }
 
 .mercury {
-  color: yellow;
+  color: lightyellow;
 }
 
 .venus {
@@ -64638,7 +64654,7 @@ ion-label {
 }
 
 .mars {
-  color: #ff2400;
+  color: #c40233;
 }
 
 .jupiter {

@@ -816,8 +816,11 @@ var TetragramComponent = (function () {
         this.color = '';
     }
     TetragramComponent.prototype.ngOnInit = function () {
-        if (this.tetragram && this.color === 'planet') {
+        if (this.color === 'planet') {
             this.color = this.tetragram.planet.toLowerCase();
+        }
+        if (this.color === 'element') {
+            this.color = this.tetragram.element.toLowerCase();
         }
     };
     TetragramComponent.prototype.renderRow = function (key) {

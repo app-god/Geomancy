@@ -32,6 +32,11 @@ export class TetragramPage {
         value: this.tetragram.phrase
       },
       {
+        name: 'Element',
+        value: this.tetragram.element,
+        class: this.tetragram.element.toLowerCase()
+      },
+      {
         name: 'Planet',
         value: this.tetragram.planet,
         class: this.tetragram.planet.toLowerCase()
