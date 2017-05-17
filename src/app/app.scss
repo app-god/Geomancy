@@ -237,7 +237,7 @@ ion-label {
 .fire  { color: #c40233}
 .water { color: royalblue }
 .air   { color: lightyellow }
-.earth { color: #80461b }
+.earth { color: black }
 
 .moon    { color: lightblue; }
 .mercury { color: lightyellow; }
@@ -245,7 +245,7 @@ ion-label {
 .sun     { color: orange; }
 .mars    { color: #c40233; }
 .jupiter { color: violet; }
-.saturn  { color: indigo; }
+.saturn  { color: black; }
 
 .aries       { color: #ff2400; }
 .taurus      { color: #ff5349; }
@@ -273,16 +273,18 @@ ion-label {
 */
 
 tetragram .tetragram {
-  text-shadow: 1px 0px black,
-               0px 1px black,
-               1px 1px black;
+  text-shadow: 1px 1px 1px black;
 }
 
 .strongest {
-  text-shadow: 1px 0px black,
-               0px 1px black,
-               1px 1px black,
+  text-shadow: 1px 1px black,
                0px 0px 10px color($colors, strongest)
                !important;
 }
 
+.earth,
+tetragram .earth,
+.saturn,
+tetragram .saturn {
+  text-shadow: 1px 1px 1px white;
+}
