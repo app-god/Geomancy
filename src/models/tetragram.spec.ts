@@ -3,10 +3,6 @@ import { TetragramInfo, tetragramInfo } from './tetragram.info'
 
 describe('Tetragram', () => {
 
-    beforeAll(() => {
-
-    })
-
     it('loads tetragramInfo', () => {
         let t = new Tetragram(0)
         let ti = tetragramInfo[0]
@@ -27,5 +23,29 @@ describe('Tetragram', () => {
         let tLaetitia = new Tetragram(14)
 
         expect(tVia.add(tCaput).key).toEqual(tLaetitia.key)
+    })
+
+    it('determines reversed tetragram', () => {
+        let via = new Tetragram(0)
+        expect(via.reversed().name).toEqual('Via')
+
+        let caput = new Tetragram(1)
+        expect(caput.reversed().name).toEqual('Cauda Draconis')
+    })
+
+    it('determines inversed tetragram', () => {
+        let via = new Tetragram(0)
+        expect(via.inversed().name).toEqual('Populus')
+
+        let caput = new Tetragram(1)
+        expect(caput.inversed().name).toEqual('Laetitia')
+    })
+
+    it('determines conversed tetragram', () => {
+        let via = new Tetragram(0)
+        expect(via.conversed().name).toEqual('Populus')
+
+        let caput = new Tetragram(1)
+        expect(caput.conversed().name).toEqual('Tristitia')
     })
 })

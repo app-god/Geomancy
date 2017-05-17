@@ -58,6 +58,30 @@ export class Tetragram {
     return this.houseMeanings[houseNumber - 1]
   }
 
+  reversed(): Tetragram {
+    // flip entire tetragram
+    let row0 = this.row3
+    let row1 = this.row2
+    let row2 = this.row1
+    let row3 = this.row0
+    let key = Tetragram.generateKey(row0, row1, row2, row3)
+    return new Tetragram(key)
+  }
+
+  inversed(): Tetragram {
+    // flip each row
+    let row0 = (this.row0 + 1) % 2
+    let row1 = (this.row1 + 1) % 2
+    let row2 = (this.row2 + 1) % 2
+    let row3 = (this.row3 + 1) % 2
+    let key = Tetragram.generateKey(row0, row1, row2, row3)
+    return new Tetragram(key)
+  }
+
+  conversed(): Tetragram {
+    return this.reversed().inversed()
+  }
+
   static generateKey(num1, num2, num3, num4): number {
     let row1 = num1 ? (num1 % 2) * 1 : 0
     let row2 = num2 ? (num2 % 2) * 2 : 0
