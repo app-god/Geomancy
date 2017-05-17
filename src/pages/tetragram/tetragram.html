@@ -18,6 +18,21 @@
 
   <ion-list no-lines>
 
+    <ion-list-header>Related Tetragrams</ion-list-header>
+
+    <ion-item-divider>Reverse</ion-item-divider>
+    <tetragram-item [tetragram]="tetragram.reversed()" (tap)="showTetragram(tetragram.reversed())"></tetragram-item>
+
+    <ion-item-divider>Inverse</ion-item-divider>
+    <tetragram-item [tetragram]="tetragram.inversed()" (tap)="showTetragram(tetragram.inversed())"></tetragram-item>
+
+    <ion-item-divider>Converse</ion-item-divider>
+    <tetragram-item [tetragram]="tetragram.conversed()" (tap)="showTetragram(tetragram.conversed())"></tetragram-item>
+
+  </ion-list>
+
+  <ion-list no-lines>
+
     <ion-list-header>Placements</ion-list-header>
 
     <ion-item-group *ngFor="let placement of placements">

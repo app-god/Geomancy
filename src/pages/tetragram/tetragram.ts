@@ -38,6 +38,10 @@ export class TetragramPage {
     ]
   }
 
+  showTetragram(tetragram) {
+    this.navCtrl.push('TetragramPage', { tetragram: tetragram })
+  }
+
   showPlacement(placement) {
     this.navCtrl.push('PlacementPage', { placement: placement })
   }

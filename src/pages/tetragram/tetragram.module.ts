@@ -1,3 +1,4 @@
+import { TetragramItemComponentModule } from './../../components/tetragram-item/tetragram-item.module';
 import { NgModule } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
 import { TetragramPage } from './tetragram';
@@ -11,7 +12,8 @@ import { PlacementItemComponentModule } from "../../components/placement-item/pl
   imports: [
     IonicPageModule.forChild(TetragramPage),
     TetragramComponentModule,
-    PlacementItemComponentModule
+    PlacementItemComponentModule,
+    TetragramItemComponentModule
   ],
   exports: [
     TetragramPage
