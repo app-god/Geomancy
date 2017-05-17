@@ -30,14 +30,14 @@ ion-navbar {
   border-top: solid thin color($colors, black);
 
   .toolbar-background {
-    background: url('../assets/toolbar-bg.jpg') scroll repeat top center !important;
+    background: url('../assets/toolbar-bg.png') scroll repeat top center !important;
   }
 
 }
 
 .tabbar {
   border-top: solid thin color($colors, dark);
-  background: url('../assets/toolbar-bg.jpg') scroll repeat bottom center !important;
+  background: url('../assets/toolbar-bg.png') scroll repeat bottom center !important;
 }
 
 /*
