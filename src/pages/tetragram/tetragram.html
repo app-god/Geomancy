@@ -12,7 +12,7 @@
   <ion-grid>
     <ion-row *ngFor="let detail of details">
       <ion-col col-4>{{detail.name}}</ion-col>
-      <ion-col col-8>{{detail.value}}</ion-col>
+      <ion-col col-8 [ngClass]="detail.class">{{detail.value}}</ion-col>
     </ion-row>
   </ion-grid>
 

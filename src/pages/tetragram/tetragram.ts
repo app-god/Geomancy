@@ -28,12 +28,13 @@ export class TetragramPage {
         value: this.tetragram.desc
       },
       {
-        name: 'Planet',
-        value: this.tetragram.planet
-      },
-      {
         name: 'Keyword',
         value: this.tetragram.phrase
+      },
+      {
+        name: 'Planet',
+        value: this.tetragram.planet,
+        class: this.tetragram.planet.toLowerCase()
       },
     ]
   }

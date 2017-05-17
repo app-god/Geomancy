@@ -31,19 +31,25 @@
 
     <ion-row>
       <ion-col col-4>
-        Astrology
+        Meaning
       </ion-col>
       <ion-col col-8>
-        {{placement.tetragram.planet}} in {{placement.house.sign}}
+        {{placement.getMeaning()}}
       </ion-col>
     </ion-row>
 
     <ion-row>
       <ion-col col-4>
-        Meaning
+        Astrology
       </ion-col>
       <ion-col col-8>
-        {{placement.getMeaning()}}
+        <span [ngClass]="placement.tetragram.planet.toLowerCase()">
+          {{placement.tetragram.planet}}
+        </span>
+        in
+        <span [ngClass]="placement.house.sign.toLowerCase()">
+          {{placement.house.sign}}
+        </span>
       </ion-col>
     </ion-row>
 

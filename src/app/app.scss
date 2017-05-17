@@ -234,6 +234,27 @@ ion-label {
   theme colors
 */
 
+.moon    { color: blue; }
+.mercury { color: yellow; }
+.venus   { color: #50c878; }
+.sun     { color: orange; }
+.mars    { color: #ff2400; }
+.jupiter { color: violet; }
+.saturn  { color: indigo; }
+
+.aries       { color: #ff2400; }
+.taurus      { color: #ff5349; }
+.gemini      { color: orange; }
+.cancer      { color: #ffbf00; }
+.leo         { color: #9acd32; }
+.virgo       { color: #adff2f; }
+.libra       { color: #50c878; }
+.scorpio     { color: #1164b4; }
+.sagittarius { color: blue; }
+.capricorn   { color: indigo; }
+.aquarius    { color: violet; }
+.pisces      { color: #e54b95; }
+
 .warning     { color: color($colors, warning); }
 .strongest   { color: color($colors, strongest); }
 .very-strong { color: color($colors, very-strong); }

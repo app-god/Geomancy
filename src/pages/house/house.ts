@@ -37,7 +37,8 @@ export class HousePage {
       },
       {
         name: 'Sign',
-        value: this.house.sign
+        value: this.house.sign,
+        class: this.house.sign.toLowerCase()
       }
     ]
 
