@@ -64936,6 +64936,10 @@ page-reading-overview .question {
   display: none;
 }
 
+page-tetragram .big.tetragram {
+  margin: 1em 0;
+}
+
 page-tutorial .swiper-pagination-bullet {
   background-color: #A5622A;
 }

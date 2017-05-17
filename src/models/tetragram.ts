@@ -5,7 +5,7 @@ export class Tetragram {
   name: string
   translation: string
   desc: string
-  good: boolean
+  element: string
   rules: number[]
   exalted: number[]
   fall: number[]
@@ -27,7 +27,7 @@ export class Tetragram {
     this.name = info.name
     this.translation = info.translation
     this.desc = info.desc
-    this.good = info.good
+    this.element = info.element
     this.rules = info.rules
     this.exalted = info.exalted
     this.fall = info.fall

@@ -59,7 +59,7 @@ var Tetragram = (function () {
         this.name = info.name;
         this.translation = info.translation;
         this.desc = info.desc;
-        this.good = info.good;
+        this.element = info.element;
         this.rules = info.rules;
         this.exalted = info.exalted;
         this.fall = info.fall;
@@ -181,6 +181,7 @@ var tetragramInfo = [
         translation: 'Way',
         desc: 'Injurious to the goodness of other figures generally, but good for journeys and voyages.',
         planet: 'Moon',
+        element: 'Water',
         rules: [4],
         exalted: [2],
         fall: [8],
@@ -188,7 +189,6 @@ var tetragramInfo = [
         triplicity: [12],
         dots: 4,
         sign: 'Cancer',
-        good: false,
         phrase: 'Activity',
         houseMeanings: [
             'Evil except for prison.',
@@ -211,6 +211,7 @@ var tetragramInfo = [
         translation: "Dragon's Head",
         desc: 'Good with good, evil with evil. Gives good issue for gain.',
         planet: 'Venus',
+        element: 'Earth',
         rules: [2, 7, 9, 12],
         exalted: [12, 4],
         fall: [6, 10],
@@ -218,7 +219,6 @@ var tetragramInfo = [
         triplicity: [],
         dots: 5,
         sign: 'Sagittarius',
-        good: true,
         phrase: 'Preparation',
         houseMeanings: [
             'Good in all things',
@@ -241,6 +241,7 @@ var tetragramInfo = [
         translation: 'Maid',
         desc: 'Good in all demands, especially in those things relating to women.',
         planet: 'Venus',
+        element: 'Air',
         rules: [2, 7],
         exalted: [12],
         fall: [6],
@@ -248,7 +249,6 @@ var tetragramInfo = [
         triplicity: [3, 11],
         dots: 5,
         sign: 'Libra',
-        good: true,
         phrase: 'Harmony',
         houseMeanings: [
             'Good except in war.',
@@ -271,6 +271,7 @@ var tetragramInfo = [
         translation: 'Greater Fortune',
         desc: 'Good for gain in all things where a person has hopes to win.',
         planet: 'Sun',
+        element: 'Fire',
         rules: [5],
         exalted: [1],
         fall: [7],
@@ -278,7 +279,6 @@ var tetragramInfo = [
         triplicity: [1, 9],
         dots: 6,
         sign: 'Leo',
-        good: true,
         phrase: 'Lasting success',
         houseMeanings: [
             'Good save in secrecy.',
@@ -301,6 +301,7 @@ var tetragramInfo = [
         translation: 'Child',
         desc: 'Evil in most demands, except in those things relating to war or love.',
         planet: 'Mars',
+        element: 'Fire',
         rules: [1, 8],
         exalted: [10],
         fall: [4],
@@ -308,7 +309,6 @@ var tetragramInfo = [
         triplicity: [5, 9],
         dots: 5,
         sign: 'Aries',
-        good: false,
         phrase: 'Enthusiasm',
         houseMeanings: [
             'Indifferent. Best in war.',
@@ -331,6 +331,7 @@ var tetragramInfo = [
         translation: 'Gain',
         desc: 'Generally good for profit and gain.',
         planet: 'Jupiter',
+        element: 'Fire',
         rules: [9, 12],
         exalted: [4],
         fall: [10],
@@ -338,7 +339,6 @@ var tetragramInfo = [
         triplicity: [1, 5],
         dots: 6,
         sign: 'Sagittarius',
-        good: true,
         phrase: 'Acquisition',
         houseMeanings: [
             'Happy, success in all things.',
@@ -361,6 +361,7 @@ var tetragramInfo = [
         translation: 'Prison',
         desc: 'Generally evil. Delay, binding, bar, restriction.',
         planet: 'Saturn',
+        element: 'Earth',
         rules: [10, 11],
         exalted: [7],
         fall: [1],
@@ -368,7 +369,6 @@ var tetragramInfo = [
         triplicity: [2, 6],
         dots: 6,
         sign: "Capricorn",
-        good: false,
         phrase: 'Limitation',
         houseMeanings: [
             'Evil except to fortify a place.',
@@ -391,6 +391,7 @@ var tetragramInfo = [
         translation: 'Sorrow',
         desc: 'Evil in almost all things.',
         planet: 'Saturn',
+        element: 'Air',
         rules: [10, 11],
         exalted: [7],
         fall: [1],
@@ -398,7 +399,6 @@ var tetragramInfo = [
         triplicity: [3, 7],
         dots: 7,
         sign: 'Aquarius',
-        good: false,
         phrase: 'Melancholy',
         houseMeanings: [
             'Medium, but good for treasure and fortifying.',
@@ -421,6 +421,7 @@ var tetragramInfo = [
         translation: "Dragon's Tail",
         desc: 'Good with evil, and evil with good. Good for loss, and for passing out of an affair.',
         planet: 'Mars',
+        element: 'Fire',
         rules: [8, 10, 11],
         exalted: [10, 7],
         fall: [4, 1],
@@ -428,7 +429,6 @@ var tetragramInfo = [
         triplicity: [],
         dots: 5,
         sign: 'Virgo',
-        good: false,
         phrase: 'An ending',
         houseMeanings: [
             'Destroy figure if it falls here! Makes judgment worthless.',
@@ -451,6 +451,7 @@ var tetragramInfo = [
         translation: 'Connection',
         desc: 'Good with good, or evil with evil. Recovery from things lost.',
         planet: 'Mercury',
+        element: 'Earth',
         rules: [3, 6],
         exalted: [11],
         fall: [5],
@@ -458,7 +459,6 @@ var tetragramInfo = [
         triplicity: [2, 10],
         dots: 6,
         sign: 'Virgo',
-        good: true,
         phrase: 'Combination',
         houseMeanings: [
             'Good with good, evil with evil.',
@@ -481,6 +481,7 @@ var tetragramInfo = [
         translation: 'Loss',
         desc: 'Good for loss of substance and sometimes for love, but very bad for gain.',
         planet: 'Venus',
+        element: 'Earth',
         rules: [2, 7],
         exalted: [12],
         fall: [6],
@@ -488,7 +489,6 @@ var tetragramInfo = [
         triplicity: [10],
         dots: 6,
         sign: 'Taurus',
-        good: false,
         phrase: 'Sacrifice',
         houseMeanings: [
             'Ill in all things but for prisoners.',
@@ -511,6 +511,7 @@ var tetragramInfo = [
         translation: 'White',
         desc: 'Good for profit and for entering into a place or undertaking.',
         planet: 'Mercury',
+        element: 'Air',
         rules: [3, 6],
         exalted: [11],
         fall: [5],
@@ -518,7 +519,6 @@ var tetragramInfo = [
         triplicity: [7, 11],
         dots: 7,
         sign: 'Gemini',
-        good: true,
         phrase: 'Wisdom',
         houseMeanings: [
             'Good for marriage. Mercurial. Peace.',
@@ -541,6 +541,7 @@ var tetragramInfo = [
         translation: 'Lesser Fortune',
         desc: 'Good in any manner in which a person wishes to proceed quickly.',
         planet: 'Sun',
+        element: 'Fire',
         rules: [5],
         exalted: [1],
         fall: [7],
@@ -548,7 +549,6 @@ var tetragramInfo = [
         triplicity: [1, 9],
         dots: 6,
         sign: 'Leo',
-        good: true,
         phrase: 'Temporary success',
         houseMeanings: [
             'Speed in victory and in love, but choleric.',
@@ -571,6 +571,7 @@ var tetragramInfo = [
         translation: 'Red',
         desc: 'Evil in all that is good and good in all that is evil.',
         planet: 'Mars',
+        element: 'Water',
         rules: [1, 8],
         exalted: [10],
         fall: [4],
@@ -578,7 +579,6 @@ var tetragramInfo = [
         triplicity: [12],
         dots: 7,
         sign: 'Scorpio',
-        good: false,
         phrase: 'Toxicity',
         houseMeanings: [
             'Destroy the figure if it falls here! It makes the judgement worthless.',
@@ -601,6 +601,7 @@ var tetragramInfo = [
         translation: 'Joy',
         desc: 'Good for joy, present or to come.',
         planet: 'Jupiter',
+        element: 'Water',
         rules: [9, 12],
         exalted: [4],
         fall: [10],
@@ -608,7 +609,6 @@ var tetragramInfo = [
         triplicity: [4, 8],
         dots: 7,
         sign: 'Pisces',
-        good: true,
         phrase: 'Happiness',
         houseMeanings: [
             'Good, except in war.',
@@ -631,6 +631,7 @@ var tetragramInfo = [
         translation: 'People',
         desc: 'Sometimes good and sometimes bad; good with good, and evil with evil.',
         planet: 'Moon',
+        element: 'Water',
         rules: [4],
         exalted: [2],
         fall: [8],
@@ -638,7 +639,6 @@ var tetragramInfo = [
         triplicity: [12],
         dots: 8,
         sign: 'Cancer',
-        good: true,
         phrase: 'Passivity',
         houseMeanings: [
             'Good in marriages.',

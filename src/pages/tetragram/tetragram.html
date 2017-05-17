@@ -9,6 +9,10 @@
 
 <ion-content padding>
 
+  <div class="big tetragram">
+    <tetragram [tetragram]="tetragram" color="planet"></tetragram>
+  </div>
+
   <ion-grid>
     <ion-row *ngFor="let detail of details">
       <ion-col col-4>{{detail.name}}</ion-col>

@@ -7,21 +7,15 @@ describe('Tetragram', () => {
         let t = new Tetragram(0)
         let ti = tetragramInfo[0]
 
-        expect(t.key).toBe(ti.key)
-        expect(t.desc).toBe(ti.desc)
-        expect(t.good).toBe(ti.good)
-        expect(t.houseMeanings).toBe(ti.houseMeanings)
-        expect(t.planet).toBe(ti.planet)
-        expect(t.dots).toBe(ti.dots)
-        expect(t.sign).toBe(ti.sign)
-
+        for (var key in ti) {
+            expect(t[key]).toEqual(ti[key])
+        }
     })
 
     it('adds tetragrams', () => {
         let tVia = new Tetragram(0)
         let tCaput = new Tetragram(1)
         let tLaetitia = new Tetragram(14)
-
         expect(tVia.add(tCaput).key).toEqual(tLaetitia.key)
     })
 
@@ -47,5 +41,19 @@ describe('Tetragram', () => {
 
         let caput = new Tetragram(1)
         expect(caput.conversed().name).toEqual('Tristitia')
+    })
+
+    it('has an element', () => {
+        let via = new Tetragram(0)
+        expect(via.element).toEqual('Water')
+
+        let puer = new Tetragram(4)
+        expect(puer.element).toEqual('Fire')
+
+        let caudo = new Tetragram(8)
+        expect(caudo.element).toEqual('Fire')
+
+        let fMinor = new Tetragram(12)
+        expect(fMinor.element).toEqual('Fire')
     })
 })
