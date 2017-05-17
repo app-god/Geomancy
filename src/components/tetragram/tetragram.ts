@@ -13,6 +13,12 @@ export class TetragramComponent {
   constructor() {
   }
 
+  ngOnInit() {
+    if (this.tetragram && this.color === 'planet') {
+      this.color = this.tetragram.planet.toLowerCase()
+    }
+  }
+
   renderRow(key: number) {
     if (key == 0) {
       return '●'

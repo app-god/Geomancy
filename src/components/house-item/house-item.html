@@ -1,6 +1,6 @@
 <button ion-item text-wrap detail-push>
 
-  <div item-left class="house-number">
+  <div item-left [ngClass]="['house-number', house.sign.toLowerCase()]">
     {{house.number}}
   </div>
 

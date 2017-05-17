@@ -815,6 +815,11 @@ var TetragramComponent = (function () {
     function TetragramComponent() {
         this.color = '';
     }
+    TetragramComponent.prototype.ngOnInit = function () {
+        if (this.tetragram && this.color === 'planet') {
+            this.color = this.tetragram.planet.toLowerCase();
+        }
+    };
     TetragramComponent.prototype.renderRow = function (key) {
         if (key == 0) {
             return '●';
@@ -827,7 +832,7 @@ var TetragramComponent = (function () {
 }());
 __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* Input */])(),
-    __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1__models_tetragram__["a" /* Tetragram */])
+    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__models_tetragram__["a" /* Tetragram */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__models_tetragram__["a" /* Tetragram */]) === "function" && _a || Object)
 ], TetragramComponent.prototype, "tetragram", void 0);
 __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* Input */])(),
@@ -840,6 +845,7 @@ TetragramComponent = __decorate([
     __metadata("design:paramtypes", [])
 ], TetragramComponent);
 
+var _a;
 //# sourceMappingURL=tetragram.js.map
 
 /***/ }),
