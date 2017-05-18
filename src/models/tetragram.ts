@@ -46,11 +46,8 @@ export class Tetragram {
   }
 
   add(tetragram: Tetragram): Tetragram {
-    let row0 = (this.row0 + tetragram.row0 + 1) % 2
-    let row1 = (this.row1 + tetragram.row1 + 1) % 2
-    let row2 = (this.row2 + tetragram.row2 + 1) % 2
-    let row3 = (this.row3 + tetragram.row3 + 1) % 2
-    let key = (row3 << 3) + (row2 << 2) + (row1 << 1) + (row0 << 0)
+    // add two tetragrams
+    let key = (15 - this.key ^ tetragram.key) % 16
     return new Tetragram(key)
   }
 
