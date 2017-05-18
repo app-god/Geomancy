@@ -14,7 +14,7 @@ export const houseInfo: HouseInfo[] = [
     description: '',
     phrase: 'yourself',
     sign: 'Aries',
-    topics: ['Self', 'Life', 'Health', 'First impression']
+    topics: ['Self', 'Life', 'Health', 'First Impressions']
   },
   {
     number: 2,
@@ -86,7 +86,7 @@ export const houseInfo: HouseInfo[] = [
     description: '',
     phrase: 'career',
     sign: 'Capricorn',
-    topics: ['Honor', 'Career', 'Reputation', 'Father']
+    topics: ['Fame', 'Business', 'Reputation', 'Father']
   },
   {
     number: 11,

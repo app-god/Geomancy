@@ -155,7 +155,7 @@ export const tetragramInfo: TetragramInfo[] = [
     triplicity: [5, 9],
     dots: 5,
     sign: 'Aries',
-    phrase: 'Enthusiasm',
+    phrase: 'Intensity',
     houseMeanings: [
       'Indifferent. Best in war.',
       'Good, but with trouble.',
