@@ -32,6 +32,9 @@ describe('Tetragram', () => {
 
         let caput = new Tetragram(1)
         expect(caput.reversed().name).toEqual('Cauda Draconis')
+
+        let amissio = new Tetragram(10)
+        expect(amissio.reversed().key).toEqual(5)
     })
 
     it('determines inversed tetragram', () => {
