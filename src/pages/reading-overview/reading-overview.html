@@ -29,7 +29,7 @@
     <ion-list-header>Topic</ion-list-header>
     <ion-item-divider>{{reading.topic}}</ion-item-divider>
 
-    <placement-item [placement]="topicPlacement">
+    <placement-item [placement]="topicPlacement" (tap)="showPlacement(topicPlacement)">
     </placement-item>
   </ion-list>
 
