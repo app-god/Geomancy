@@ -24,6 +24,10 @@ export class TetragramPage {
 
     this.details = [
       {
+        name: 'Translation',
+        value: this.tetragram.translation
+      },
+      {
         name: 'Meaning',
         value: this.tetragram.desc
       },
