@@ -68,7 +68,7 @@
     color="primary"
     (tap)="createReading()"
     [disabled]="startDisabled || !manualForm.valid">
-    Create
+    Create Reading
   </button>
 
   <button ion-button block large
@@ -76,11 +76,11 @@
     color="primary"
     (tap)="createReading()"
     [disabled]="startDisabled">
-    Create
+    Create Reading
   </button>
 
   <div class="tips" *ngIf="readingType == 'automatic'">
-    Some tips to help you get started:
+    Some tips:
     <ul>
       <li *ngFor="let tip of tips">{{tip}}</li>
     </ul>
