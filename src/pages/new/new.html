@@ -79,10 +79,12 @@
     Create
   </button>
 
-  <p class="instructions" *ngIf="readingType == 'automatic'">
-    <ion-icon name="information-circle"></ion-icon>
-    {{tip}}
-  </p>
+  <div class="tips" *ngIf="readingType == 'automatic'">
+    Some tips to help you get started:
+    <ul>
+      <li *ngFor="let tip of tips">{{tip}}</li>
+    </ul>
+  </div>
 
   <br>
 

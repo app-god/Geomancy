@@ -1,55 +1,23 @@
-/*
-
 page-new {
-    button.create,
-    button.create,
-    button.create {
-        position: absolute;
-        right: 0;
-        left: 0;
-        margin: 0 auto $content-margin auto;
-        z-index: 10000;
-        width: calc(100% - #{$content-margin * 2});
-    }
-}
-.md page-new {
-    .scroll-content {
-        bottom: calc(#{$content-margin * 3} + #{$button-md-height})
-    }
-    button.create {
-        bottom: $tabs-md-tab-min-height;
-    }
-}
-.ios page-new{
-    .scroll-content {
-        bottom: calc(#{$content-margin * 3} + #{$button-ios-height})
-    }
-    button.create {
-        bottom: $tabs-ios-tab-min-height;
-    }
-}
-.wp page-new {
-    .scroll-content {
-        bottom: calc(#{$content-margin * 3} + #{$button-wp-height})
-    }
-    button.create {
-        bottom: $tabs-wp-tab-min-height;
-    }
-}
 
-*/
+    .tips {
+        margin: 2em 0;
+        line-height: 200%;
+        color: color($colors, light);
+    }
 
-.instructions {
-    color: color($colors, white);
-    text-align: center;
-    font-style: italic;
-    line-height: 200%;
-}
+    .instructions {
+        color: color($colors, white);
+        text-align: center;
+        font-style: italic;
+        line-height: 200%;
+    }
 
-ion-icon.float-right {
-    float: right;
-}
+    ion-icon.float-right {
+        float: right;
+    }
 
-ion-select {
-    width: 100%;
+    ion-select {
+        width: 100%;
+    }
 }
