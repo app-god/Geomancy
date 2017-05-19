@@ -64574,6 +64574,13 @@ ion-label {
 /*
   misc
 */
+.instructions {
+  color: #ddd;
+  text-align: center;
+  font-style: italic;
+  line-height: 200%;
+}
+
 .big {
   font-size: 150%;
 }
@@ -64817,13 +64824,6 @@ page-new .tips {
   margin: 2em 0;
   line-height: 200%;
   color: #666;
-}
-
-page-new .instructions {
-  color: #ddd;
-  text-align: center;
-  font-style: italic;
-  line-height: 200%;
 }
 
 page-new ion-icon.float-right {
