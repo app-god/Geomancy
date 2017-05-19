@@ -68,7 +68,7 @@
     color="primary"
     (tap)="createReading()"
     [disabled]="startDisabled || !manualForm.valid">
-    Create
+    Create Reading
   </button>
 
   <button ion-button block large
@@ -76,13 +76,15 @@
     color="primary"
     (tap)="createReading()"
     [disabled]="startDisabled">
-    Create
+    Create Reading
   </button>
 
-  <p class="instructions" *ngIf="readingType == 'automatic'">
-    <ion-icon name="information-circle"></ion-icon>
-    {{tip}}
-  </p>
+  <div class="tips" *ngIf="readingType == 'automatic'">
+    Some tips:
+    <ul>
+      <li *ngFor="let tip of tips">{{tip}}</li>
+    </ul>
+  </div>
 
   <br>
 

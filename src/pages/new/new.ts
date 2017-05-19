@@ -29,7 +29,6 @@ export class NewPage {
   topics: string[]
 
   tips: string[]
-  tip: string = ''
 
   // for manual reading
   manualForm: FormGroup
@@ -55,10 +54,11 @@ export class NewPage {
 
     // create tips
     this.tips = [
-      'Manually generate the numbers to create a more powerful divination.',
+      'Ask a yes or no question for the most accurate results.',
       'Choose a question that you feel strongly about for the most meaningful insights.',
       'Leave the question and topic blank if you feel like it. All you need to do is click "create."',
-      'All of your readings are kept 100% private. Nobody can see them but you.'
+      'Manually generate the numbers to create a more powerful divination.',
+      'All of your readings are kept 100% private. Nobody can see them but you.',
     ]
 
     // manual
@@ -80,12 +80,6 @@ export class NewPage {
       row_15: ['', Validators.required],
       row_16: ['', Validators.required]
     })
-  }
-
-  ionViewDidEnter() {
-    // load random tip
-    let tipIndex = Math.floor(Math.random() * this.tips.length)
-    this.tip = this.tips[tipIndex]
   }
 
   createReading() {

@@ -185,6 +185,13 @@ ion-label {
   misc
 */
 
+.instructions {
+    color: color($colors, white);
+    text-align: center;
+    font-style: italic;
+    line-height: 200%;
+}
+
 .big {
   font-size: 150%;
 }
