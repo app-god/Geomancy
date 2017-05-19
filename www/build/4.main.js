@@ -82,11 +82,8 @@ var Tetragram = (function () {
         this.row3 = (key >> 3) % 2;
     }
     Tetragram.prototype.add = function (tetragram) {
-        var row0 = (this.row0 + tetragram.row0 + 1) % 2;
-        var row1 = (this.row1 + tetragram.row1 + 1) % 2;
-        var row2 = (this.row2 + tetragram.row2 + 1) % 2;
-        var row3 = (this.row3 + tetragram.row3 + 1) % 2;
-        var key = (row3 << 3) + (row2 << 2) + (row1 << 1) + (row0 << 0);
+        // add two tetragrams
+        var key = (15 - this.key ^ tetragram.key) % 16;
         return new Tetragram(key);
     };
     Tetragram.prototype.getHouseMeaning = function (houseNumber) {
@@ -94,20 +91,14 @@ var Tetragram = (function () {
     };
     Tetragram.prototype.reversed = function () {
         // flip entire tetragram
-        var row0 = this.row3;
-        var row1 = this.row2;
-        var row2 = this.row1;
-        var row3 = this.row0;
-        var key = Tetragram.generateKey(row0, row1, row2, row3);
+        var key = (this.key >> 3) % 2 * 1
+            + (this.key >> 2) % 2 * 2
+            + (this.key >> 1) % 2 * 4
+            + (this.key >> 0) % 2 * 8;
         return new Tetragram(key);
     };
     Tetragram.prototype.inversed = function () {
-        // flip each row
-        var row0 = (this.row0 + 1) % 2;
-        var row1 = (this.row1 + 1) % 2;
-        var row2 = (this.row2 + 1) % 2;
-        var row3 = (this.row3 + 1) % 2;
-        var key = Tetragram.generateKey(row0, row1, row2, row3);
+        var key = 15 ^ this.key;
         return new Tetragram(key);
     };
     Tetragram.prototype.conversed = function () {
@@ -315,7 +306,7 @@ var tetragramInfo = [
         triplicity: [5, 9],
         dots: 5,
         sign: 'Aries',
-        phrase: 'Enthusiasm',
+        phrase: 'Intensity',
         houseMeanings: [
             'Indifferent. Best in war.',
             'Good, but with trouble.',
@@ -678,7 +669,7 @@ var houseInfo = [
         description: '',
         phrase: 'yourself',
         sign: 'Aries',
-        topics: ['Self', 'Life', 'Health', 'First impression']
+        topics: ['Self', 'Life', 'Health', 'First Impressions']
     },
     {
         number: 2,
@@ -750,7 +741,7 @@ var houseInfo = [
         description: '',
         phrase: 'career',
         sign: 'Capricorn',
-        topics: ['Honor', 'Career', 'Reputation', 'Father']
+        topics: ['Fame', 'Business', 'Reputation', 'Father']
     },
     {
         number: 11,

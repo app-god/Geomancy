@@ -64752,11 +64752,10 @@ tetragram .tetragram {
   text-shadow: 1px 1px black, 0px 0px 10px #ffdf00 !important;
 }
 
-.earth,
-tetragram .earth,
-.saturn,
-tetragram .saturn {
-  text-shadow: 1px 1px 1px white;
+.weakest,
+.earth, tetragram .earth,
+.saturn, tetragram .saturn {
+  text-shadow: 1px 1px 1px white !important;
 }
 
 house-item .house-number {

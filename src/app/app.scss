@@ -282,9 +282,8 @@ tetragram .tetragram {
                !important;
 }
 
-.earth,
-tetragram .earth,
-.saturn,
-tetragram .saturn {
-  text-shadow: 1px 1px 1px white;
+.weakest,
+.earth, tetragram .earth,
+.saturn, tetragram .saturn {
+  text-shadow: 1px 1px 1px white !important;
 }
