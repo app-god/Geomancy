@@ -1,7 +1,7 @@
 {
   "name": "Geomancy",
-  "author": "Ionic Framework",
-  "homepage": "http://ionicframework.com/",
+  "author": "appgod",
+  "homepage": "http://appgod.org/",
   "private": true,
   "config": {
     "ionic_webpack": "./webpack.config.js"
@@ -12,7 +12,8 @@
     "ionic:build": "ionic-app-scripts build",
     "ionic:serve": "ionic-app-scripts serve",
     "build:www": "rm -rf www && ionic-app-scripts build --prod",
-    "test": "ng test"
+    "test": "ng test",
+    "ios": "cordova run ios"
   },
   "dependencies": {
     "@angular/common": "4.1.2",
@@ -56,6 +57,6 @@
     "tslint-eslint-rules": "^4.0.0",
     "typescript": "2.3.2"
   },
-  "version": "0.0.1",
-  "description": "An Ionic project"
+  "version": "1.0.1",
+  "description": "A fortune-telling app based on the ancient divinatory system of geomancy."
 }

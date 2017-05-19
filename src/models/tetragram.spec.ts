@@ -15,8 +15,15 @@ describe('Tetragram', () => {
     it('adds tetragrams', () => {
         let tVia = new Tetragram(0)
         let tCaput = new Tetragram(1)
+        let tAquisitio = new Tetragram(5)
+        let tAmissio = new Tetragram(10)
         let tLaetitia = new Tetragram(14)
+        let tPopulus = new Tetragram(15)
+
         expect(tVia.add(tCaput).key).toEqual(tLaetitia.key)
+        expect(tVia.add(tVia).key).toEqual(tPopulus.key)
+        expect(tAmissio.add(tAquisitio).key).toEqual(tVia.key)
+        expect(tPopulus.add(tPopulus).key).toEqual(tPopulus.key)
     })
 
     it('determines reversed tetragram', () => {
@@ -25,6 +32,9 @@ describe('Tetragram', () => {
 
         let caput = new Tetragram(1)
         expect(caput.reversed().name).toEqual('Cauda Draconis')
+
+        let amissio = new Tetragram(10)
+        expect(amissio.reversed().key).toEqual(5)
     })
 
     it('determines inversed tetragram', () => {

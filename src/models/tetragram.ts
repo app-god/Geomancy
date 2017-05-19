@@ -46,11 +46,8 @@ export class Tetragram {
   }
 
   add(tetragram: Tetragram): Tetragram {
-    let row0 = (this.row0 + tetragram.row0 + 1) % 2
-    let row1 = (this.row1 + tetragram.row1 + 1) % 2
-    let row2 = (this.row2 + tetragram.row2 + 1) % 2
-    let row3 = (this.row3 + tetragram.row3 + 1) % 2
-    let key = (row3 << 3) + (row2 << 2) + (row1 << 1) + (row0 << 0)
+    // add two tetragrams
+    let key = (15 - this.key ^ tetragram.key) % 16
     return new Tetragram(key)
   }
 
@@ -60,21 +57,15 @@ export class Tetragram {
 
   reversed(): Tetragram {
     // flip entire tetragram
-    let row0 = this.row3
-    let row1 = this.row2
-    let row2 = this.row1
-    let row3 = this.row0
-    let key = Tetragram.generateKey(row0, row1, row2, row3)
+    let key = (this.key >> 3) % 2 * 1
+            + (this.key >> 2) % 2 * 2
+            + (this.key >> 1) % 2 * 4
+            + (this.key >> 0) % 2 * 8
     return new Tetragram(key)
   }
 
   inversed(): Tetragram {
-    // flip each row
-    let row0 = (this.row0 + 1) % 2
-    let row1 = (this.row1 + 1) % 2
-    let row2 = (this.row2 + 1) % 2
-    let row3 = (this.row3 + 1) % 2
-    let key = Tetragram.generateKey(row0, row1, row2, row3)
+    let key = 15 ^ this.key
     return new Tetragram(key)
   }
 
