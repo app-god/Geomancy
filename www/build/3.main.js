@@ -108,10 +108,10 @@ var Tetragram = (function () {
         return this.reversed().inversed();
     };
     Tetragram.generateKey = function (num1, num2, num3, num4) {
-        var row1 = num1 ? (num1 % 2) * 1 : 0;
-        var row2 = num2 ? (num2 % 2) * 2 : 0;
-        var row3 = num3 ? (num3 % 2) * 4 : 0;
-        var row4 = num4 ? (num4 % 2) * 8 : 0;
+        var row1 = (num1 % 2) * 1;
+        var row2 = (num2 % 2) * 2;
+        var row3 = (num3 % 2) * 4;
+        var row4 = (num4 % 2) * 8;
         var key = row1 + row2 + row3 + row4;
         return key;
     };
