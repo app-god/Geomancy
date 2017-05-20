@@ -66,4 +66,18 @@ describe('Tetragram', () => {
         let fMinor = new Tetragram(12)
         expect(fMinor.element).toEqual('Fire')
     })
+
+    it('uses getRow(n) to get the value of a row', () => {
+        let via = new Tetragram(0)
+        expect(via.getRow(1)).toEqual(0)
+        expect(via.getRow(2)).toEqual(0)
+        expect(via.getRow(3)).toEqual(0)
+        expect(via.getRow(4)).toEqual(0)
+
+        let fMinor = new Tetragram(12)
+        expect(fMinor.getRow(1)).toEqual(0)
+        expect(fMinor.getRow(2)).toEqual(0)
+        expect(fMinor.getRow(3)).toEqual(1)
+        expect(fMinor.getRow(4)).toEqual(1)
+    })
 })

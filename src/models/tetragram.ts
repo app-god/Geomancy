@@ -38,11 +38,13 @@ export class Tetragram {
     this.planet = info.planet
     this.dots = info.dots
     this.sign = info.sign
+  }
 
-    this.row0 = (key >> 0) % 2
-    this.row1 = (key >> 1) % 2
-    this.row2 = (key >> 2) % 2
-    this.row3 = (key >> 3) % 2
+  getRow(num: number): number {
+    // get value of row (0 = 1 dot, 1 = 2 dots)
+    let shift = num - 1
+    let mask = 0x0001 << shift
+    return (this.key & mask) >> shift
   }
 
   add(tetragram: Tetragram): Tetragram {
