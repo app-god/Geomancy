@@ -2,6 +2,10 @@ import { TetragramInfo, tetragramInfo } from './tetragram.info'
 
 export class Tetragram {
 
+  static all = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15].map((num) => {
+    return new Tetragram(num)
+  })
+
   name: string
   translation: string
   desc: string
@@ -93,10 +97,6 @@ export class Tetragram {
   }
 
   static getAll(): Tetragram[] {
-    let numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
-    let tetragrams = numbers.map(number => {
-      return new Tetragram(number)
-    })
-    return tetragrams
+    return Tetragram.all
   }
 }

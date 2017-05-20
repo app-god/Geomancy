@@ -113,15 +113,14 @@ var Tetragram = (function () {
         return key;
     };
     Tetragram.getAll = function () {
-        var numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
-        var tetragrams = numbers.map(function (number) {
-            return new Tetragram(number);
-        });
-        return tetragrams;
+        return Tetragram.all;
     };
     return Tetragram;
 }());
 
+Tetragram.all = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15].map(function (num) {
+    return new Tetragram(num);
+});
 //# sourceMappingURL=tetragram.js.map
 
 /***/ }),
