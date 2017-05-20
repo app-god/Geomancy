@@ -373,7 +373,7 @@ export const tetragramInfo: TetragramInfo[] = [
       'Very good except in war.',
       'Good.',
       'Good in all things.',
-      'Good except in all things.',
+      'Good except for war.',
       'Good.',
       'A messenger brings a letter.',
       'Excellent in all.',
