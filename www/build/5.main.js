@@ -913,10 +913,10 @@ var Reading = (function () {
         this.mother2 = new __WEBPACK_IMPORTED_MODULE_1__tetragram__["a" /* Tetragram */](data.key2);
         this.mother3 = new __WEBPACK_IMPORTED_MODULE_1__tetragram__["a" /* Tetragram */](data.key3);
         this.mothers = [this.mother0, this.mother1, this.mother2, this.mother3];
-        this.daughter0 = this.createFromRows(this.mother0.row0, this.mother1.row0, this.mother2.row0, this.mother3.row0);
-        this.daughter1 = this.createFromRows(this.mother0.row1, this.mother1.row1, this.mother2.row1, this.mother3.row1);
-        this.daughter2 = this.createFromRows(this.mother0.row2, this.mother1.row2, this.mother2.row2, this.mother3.row2);
-        this.daughter3 = this.createFromRows(this.mother0.row3, this.mother1.row3, this.mother2.row3, this.mother3.row3);
+        this.daughter0 = this.createFromRows(this.mother0.getRow(1), this.mother1.getRow(1), this.mother2.getRow(1), this.mother3.getRow(1));
+        this.daughter1 = this.createFromRows(this.mother0.getRow(2), this.mother1.getRow(2), this.mother2.getRow(2), this.mother3.getRow(2));
+        this.daughter2 = this.createFromRows(this.mother0.getRow(3), this.mother1.getRow(3), this.mother2.getRow(3), this.mother3.getRow(3));
+        this.daughter3 = this.createFromRows(this.mother0.getRow(4), this.mother1.getRow(4), this.mother2.getRow(4), this.mother3.getRow(4));
         this.daughters = [this.daughter0, this.daughter1, this.daughter2, this.daughter3];
         this.nephew0 = this.mother0.add(this.mother1);
         this.nephew1 = this.mother2.add(this.mother3);
@@ -939,12 +939,8 @@ var Reading = (function () {
             return new __WEBPACK_IMPORTED_MODULE_0__placement__["a" /* Placement */](house, tetragram);
         });
     }
-    Reading.prototype.createFromRows = function (row0, row1, row2, row3) {
-        var r0 = row0 % 2;
-        var r1 = row1 % 2;
-        var r2 = row2 % 2;
-        var r3 = row3 % 2;
-        var key = (r3 << 3) + (r2 << 2) + (r1 << 1) + (r0 << 0);
+    Reading.prototype.createFromRows = function (row1, row2, row3, row4) {
+        var key = __WEBPACK_IMPORTED_MODULE_1__tetragram__["a" /* Tetragram */].generateKey(row1, row2, row3, row4);
         return new __WEBPACK_IMPORTED_MODULE_1__tetragram__["a" /* Tetragram */](key);
     };
     Reading.prototype.getTetragramForHouseNumber = function (houseNumber) {

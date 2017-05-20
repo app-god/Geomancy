@@ -51,31 +51,31 @@ export class Reading {
     this.mothers = [this.mother0, this.mother1, this.mother2, this.mother3]
 
     this.daughter0 = this.createFromRows(
-      this.mother0.row0,
-      this.mother1.row0,
-      this.mother2.row0,
-      this.mother3.row0
+      this.mother0.getRow(1),
+      this.mother1.getRow(1),
+      this.mother2.getRow(1),
+      this.mother3.getRow(1)
     )
 
     this.daughter1 = this.createFromRows(
-      this.mother0.row1,
-      this.mother1.row1,
-      this.mother2.row1,
-      this.mother3.row1
+      this.mother0.getRow(2),
+      this.mother1.getRow(2),
+      this.mother2.getRow(2),
+      this.mother3.getRow(2)
     )
 
     this.daughter2 = this.createFromRows(
-      this.mother0.row2,
-      this.mother1.row2,
-      this.mother2.row2,
-      this.mother3.row2
+      this.mother0.getRow(3),
+      this.mother1.getRow(3),
+      this.mother2.getRow(3),
+      this.mother3.getRow(3)
     )
 
     this.daughter3 = this.createFromRows(
-      this.mother0.row3,
-      this.mother1.row3,
-      this.mother2.row3,
-      this.mother3.row3
+      this.mother0.getRow(4),
+      this.mother1.getRow(4),
+      this.mother2.getRow(4),
+      this.mother3.getRow(4)
     )
 
     this.daughters = [this.daughter0, this.daughter1, this.daughter2, this.daughter3]
@@ -107,12 +107,8 @@ export class Reading {
       })
   }
 
-  createFromRows(row0, row1, row2, row3) {
-    let r0 = row0 % 2
-    let r1 = row1 % 2
-    let r2 = row2 % 2
-    let r3 = row3 % 2
-    let key = (r3 << 3) + (r2 << 2) + (r1 << 1) + (r0 << 0)
+  createFromRows(row1, row2, row3, row4) {
+    let key = Tetragram.generateKey(row1, row2, row3, row4)
     return new Tetragram(key)
   }
 
