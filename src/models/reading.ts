@@ -26,11 +26,6 @@ export class Reading {
   judge: Tetragram
   reconciler: Tetragram
 
-  mothers: Tetragram[]
-  daughters: Tetragram[]
-  nephews: Tetragram[]
-  witnesses: Tetragram[]
-
   date: number
   partOfFortune: number
   readingData: ReadingData
@@ -47,8 +42,6 @@ export class Reading {
     this.mother1 = new Tetragram(data.key1)
     this.mother2 = new Tetragram(data.key2)
     this.mother3 = new Tetragram(data.key3)
-
-    this.mothers = [this.mother0, this.mother1, this.mother2, this.mother3]
 
     this.daughter0 = this.createFromRows(
       this.mother0.getRow(1),
@@ -78,17 +71,13 @@ export class Reading {
       this.mother3.getRow(4)
     )
 
-    this.daughters = [this.daughter0, this.daughter1, this.daughter2, this.daughter3]
-
     this.nephew0 = this.mother0.add(this.mother1)
     this.nephew1 = this.mother2.add(this.mother3)
     this.nephew2 = this.daughter0.add(this.daughter1)
     this.nephew3 = this.daughter2.add(this.daughter3)
-    this.nephews = [this.nephew0, this.nephew1, this.nephew2, this.nephew3]
 
     this.witness0 = this.nephew0.add(this.nephew1)
     this.witness1 = this.nephew2.add(this.nephew3)
-    this.witnesses = [this.witness0, this.witness1]
 
     this.judge = this.witness0.add(this.witness1)
     this.reconciler = this.mother0.add(this.judge)
