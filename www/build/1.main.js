@@ -80,6 +80,13 @@ var Tetragram = (function () {
         var mask = 0x0001 << shift;
         return (this.key & mask) >> shift;
     };
+    Tetragram.prototype.renderRow = function (num) {
+        var row = this.getRow(num);
+        if (row == 0)
+            return '●';
+        if (row == 1)
+            return '● ●';
+    };
     Tetragram.prototype.add = function (tetragram) {
         // add two tetragrams
         var key = (15 - this.key ^ tetragram.key) % 16;
@@ -819,19 +826,11 @@ var TetragramComponent = (function () {
             this.color = this.tetragram.element.toLowerCase();
         }
     };
-    TetragramComponent.prototype.renderRow = function (key) {
-        if (key == 0) {
-            return '●';
-        }
-        else if (key == 1) {
-            return '●    ●';
-        }
-    };
     return TetragramComponent;
 }());
 __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* Input */])(),
-    __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1__models_tetragram__["a" /* Tetragram */])
+    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__models_tetragram__["a" /* Tetragram */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__models_tetragram__["a" /* Tetragram */]) === "function" && _a || Object)
 ], TetragramComponent.prototype, "tetragram", void 0);
 __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["u" /* Input */])(),
@@ -839,11 +838,11 @@ __decorate([
 ], TetragramComponent.prototype, "color", void 0);
 TetragramComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({
-        selector: 'tetragram',template:/*ion-inline-start:"/Users/adam/AppGod/geomancy/src/components/tetragram/tetragram.html"*/'<div class="tetragram" [ngClass]="color">\n  <div class="tetragram-row">\n    {{renderRow(tetragram.row0)}}\n  </div>\n  <div class="tetragram-row">\n    {{renderRow(tetragram.row1)}}\n  </div>\n  <div class="tetragram-row">\n    {{renderRow(tetragram.row2)}}\n  </div>\n  <div class="tetragram-row">\n    {{renderRow(tetragram.row3)}}\n  </div>\n</div>\n'/*ion-inline-end:"/Users/adam/AppGod/geomancy/src/components/tetragram/tetragram.html"*/
-    }),
-    __metadata("design:paramtypes", [])
+        selector: 'tetragram',template:/*ion-inline-start:"/Users/adam/AppGod/geomancy/src/components/tetragram/tetragram.html"*/'<div class="tetragram" [ngClass]="color">\n  <div class="tetragram-row">\n    {{tetragram.renderRow(1)}}\n  </div>\n  <div class="tetragram-row">\n    {{tetragram.renderRow(2)}}\n  </div>\n  <div class="tetragram-row">\n    {{tetragram.renderRow(3)}}\n  </div>\n  <div class="tetragram-row">\n    {{tetragram.renderRow(4)}}\n  </div>\n</div>\n'/*ion-inline-end:"/Users/adam/AppGod/geomancy/src/components/tetragram/tetragram.html"*/
+    })
 ], TetragramComponent);
 
+var _a;
 //# sourceMappingURL=tetragram.js.map
 
 /***/ }),

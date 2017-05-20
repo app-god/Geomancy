@@ -10,9 +10,6 @@ export class TetragramComponent {
   @Input() tetragram: Tetragram
   @Input() color: string = ''
 
-  constructor() {
-  }
-
   ngOnInit() {
     if (this.color === 'planet') {
       this.color = this.tetragram.planet.toLowerCase()
@@ -20,14 +17,6 @@ export class TetragramComponent {
 
     if (this.color === 'element') {
       this.color = this.tetragram.element.toLowerCase()
-    }
-  }
-
-  renderRow(key: number) {
-    if (key == 0) {
-      return '●'
-    } else if (key == 1) {
-      return '●    ●'
     }
   }
 }

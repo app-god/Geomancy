@@ -74,6 +74,13 @@ var Tetragram = (function () {
         var mask = 0x0001 << shift;
         return (this.key & mask) >> shift;
     };
+    Tetragram.prototype.renderRow = function (num) {
+        var row = this.getRow(num);
+        if (row == 0)
+            return '●';
+        if (row == 1)
+            return '● ●';
+    };
     Tetragram.prototype.add = function (tetragram) {
         // add two tetragrams
         var key = (15 - this.key ^ tetragram.key) % 16;

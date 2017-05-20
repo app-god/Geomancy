@@ -47,6 +47,14 @@ export class Tetragram {
     return (this.key & mask) >> shift
   }
 
+  renderRow(num: number) {
+    let row = this.getRow(num)
+    if (row == 0)
+      return '●'
+    if (row == 1)
+      return '● ●'
+  }
+
   add(tetragram: Tetragram): Tetragram {
     // add two tetragrams
     let key = (15 - this.key ^ tetragram.key) % 16
