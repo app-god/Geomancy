@@ -38,7 +38,7 @@ export const houseInfo: HouseInfo[] = [
     description: '',
     phrase: 'your home',
     sign: 'Cancer',
-    topics: ['Family', 'Inheritence', 'Home', 'Mother']
+    topics: ['Family', 'Ancestors', 'Home', 'Mother']
   },
   {
     number: 5,
