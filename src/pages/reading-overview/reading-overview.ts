@@ -21,9 +21,15 @@ export class ReadingOverviewPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
 
-    this.parent = navParams.get('parent')
+    let parent = navParams.get('parent')
 
-    this.reading = this.parent.reading
+    if (parent) {
+      this.parent = parent
+      this.reading = parent.reading
+    } else {
+      this.parent = this
+      this.reading = new Reading(navParams.data)
+    }
 
     let placements = this.reading.placements
 
@@ -45,7 +51,8 @@ export class ReadingOverviewPage {
   }
 
   ionViewWillEnter() {
-    this.parent.title = 'Overview'
+    if (this.parent)
+      this.parent.title = 'Overview'
   }
 
   showTetragram(tetragram) {

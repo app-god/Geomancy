@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ViewController } from 'ionic-angular';
+import { Reading } from "../../models/reading";
 
 @IonicPage()
 @Component({
@@ -13,8 +14,17 @@ export class ReadingFiguresPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
     public viewCtrl: ViewController) {
-    this.parent = navParams.get('parent')
-    this.reading = this.parent.reading
+
+    let parent = navParams.get('parent')
+
+    if (parent) {
+      this.parent = parent
+      this.reading = parent.reading
+    } else {
+      this.parent = this
+      this.reading = new Reading(navParams.data)
+    }
+
   }
 
   showTetragram(tetragram, house?: number) {

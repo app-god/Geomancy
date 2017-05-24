@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { House } from '../../models/house'
 import { Placement } from "../../models/placement";
+import { Reading } from "../../models/reading";
+import { ReadingPage } from "../reading/reading";
 
 @IonicPage()
 @Component({
@@ -13,8 +15,15 @@ export class ReadingHousesPage {
   parent
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-    this.parent = navParams.get('parent')
-    this.reading = this.parent.reading
+    let parent = navParams.get('parent')
+
+    if (parent) {
+      this.parent = parent
+      this.reading = parent.reading
+    } else {
+      this.parent = this
+      this.reading = new Reading(navParams.data)
+    }
   }
 
   showPlacement(placement) {
