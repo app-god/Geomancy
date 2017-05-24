@@ -9,3 +9,5 @@ TODO
 ====
 
 * Create introduction
+* Add house descriptions
+

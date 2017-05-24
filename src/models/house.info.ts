@@ -1,7 +1,7 @@
 export interface HouseInfo {
   number: number
   title: string
-  description: string
+  description: string // TODO
   phrase: string
   sign: string
   topics: string[]
