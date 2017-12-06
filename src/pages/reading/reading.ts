@@ -1,11 +1,11 @@
-import { NewPage } from './../new/new';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ViewController, ActionSheetController, ToastController, AlertController, App } from 'ionic-angular';
 import { Storage } from '@ionic/storage'
 import { Reading } from '../../models/reading'
 
 @IonicPage({
-  segment: 'reading/:question/:topic/:date/:key0/:key1/:key2/:key3'
+  segment: 'reading/:question/:topic/:date/:key0/:key1/:key2/:key3',
+  defaultHistory: ['page-new']
 })
 @Component({
   selector: 'page-reading',
@@ -26,22 +26,23 @@ export class ReadingPage {
     public viewCtrl: ViewController,
     public alertCtrl: AlertController,
   ) {
+    console.log('views:', navCtrl.getViews())
 
-      let readingData = {
-        question: navParams.get('question'),
-        topic:    navParams.get('topic'),
-        date:     parseInt(navParams.get('date')),
-        key0:     parseInt(navParams.get('key0')),
-        key1:     parseInt(navParams.get('key1')),
-        key2:     parseInt(navParams.get('key2')),
-        key3:     parseInt(navParams.get('key3'))
-      }
+    let readingData = {
+      question: navParams.get('question'),
+      topic:    navParams.get('topic'),
+      date:     parseInt(navParams.get('date')),
+      key0:     parseInt(navParams.get('key0')),
+      key1:     parseInt(navParams.get('key1')),
+      key2:     parseInt(navParams.get('key2')),
+      key3:     parseInt(navParams.get('key3'))
+    }
 
-      this.reading = new Reading(readingData)
+    this.reading = new Reading(readingData)
 
-      this.rootParams = {
-        parent: this
-      }
+    this.rootParams = {
+      parent: this
+    }
   }
 
   ionViewDidLoad() {
@@ -64,13 +65,24 @@ export class ReadingPage {
 
   }
 
+  goBack() {
+    console.log('can go back: ', this.navCtrl.canGoBack())
+    if (this.navCtrl.canGoBack()) {
+      this.app.getRootNav().pop()
+    } else {
+      this.app.getRootNav().setRoot('page-new')
+    }
+  }
+
   clickBack() {
 
     if (this.saved) {
-      this.navCtrl.setRoot(NewPage)
+      console.log('saved')
+      this.goBack()
     }
 
     if (!this.saved) {
+      console.log('not saved')
       let alert = this.alertCtrl.create({
         title: 'Are you sure you want to leave this reading?',
         message: 'If you leave without saving, this reading will be lost.',
@@ -79,14 +91,14 @@ export class ReadingPage {
             text: 'Save and Leave',
             handler: () => {
               this.saveReading()
-              this.navCtrl.setRoot(NewPage)
+              this.goBack()
             }
           },
           {
             text: 'Leave without Saving',
             handler: () => {
               console.log('leaving')
-              this.navCtrl.setRoot(NewPage)
+              this.goBack()
             }
           },
           {

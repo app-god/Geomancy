@@ -21,7 +21,8 @@ export class ReadingOverviewPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
 
-    let parent = navParams.get('parent')
+    let data = (navCtrl as any).rootParams
+    let parent = data.parent
 
     if (parent) {
       this.parent = parent

@@ -13,7 +13,11 @@ import { ReadingData } from '../../models/reading'
 import { houseInfo } from '../../models/house.info'
 import { Tetragram } from "../../models/tetragram";
 import { FormBuilder, FormGroup, Validators } from "@angular/forms";
+import { App } from 'ionic-angular/components/app/app';
 
+@IonicPage({
+  name: 'page-new'
+})
 @Component({
   selector: 'page-new',
   templateUrl: 'new.html'
@@ -33,6 +37,7 @@ export class NewPage {
   row = {}
 
   constructor(
+    public app: App,
     public navCtrl: NavController,
     private modCtrl: ModalController,
     private storage: Storage,
@@ -126,7 +131,7 @@ export class NewPage {
     this.topic = 'None'
     this.startDisabled = false
 
-    this.navCtrl.push('ReadingPage', {
+    this.app.getRootNav().push('ReadingPage', {
       question: readingData.question,
       topic: readingData.topic,
       date: readingData.date,

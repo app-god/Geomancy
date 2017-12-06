@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 
 import {
+  App,
   IonicPage,
   NavController,
   ModalController,
@@ -9,7 +10,9 @@ import {
 } from 'ionic-angular';
 import { Storage } from '@ionic/storage'
 
-@IonicPage()
+@IonicPage({
+  defaultHistory: ['new-page']
+})
 @Component({
   selector: 'page-history',
   templateUrl: 'history.html'
@@ -18,6 +21,7 @@ export class HistoryPage {
   readings = []
 
   constructor(
+    public app: App,
     public navCtrl: NavController,
     public storage: Storage,
     public modCtrl: ModalController,
@@ -51,7 +55,7 @@ export class HistoryPage {
   }
 
   showReading(readingData) {
-    this.navCtrl.push('ReadingPage', {
+    this.app.getRootNav().push('ReadingPage', {
       question: readingData.question,
       topic: readingData.topic,
       date: readingData.date,
