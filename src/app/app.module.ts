@@ -1,3 +1,4 @@
+import { NewPage } from './../pages/new/new';
 import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser'
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
@@ -11,6 +12,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 @NgModule({
   declarations: [
     MyApp,
+    NewPage
   ],
   imports: [
     BrowserModule,
@@ -20,6 +22,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
+    NewPage,
   ],
   providers: [
     StatusBar,

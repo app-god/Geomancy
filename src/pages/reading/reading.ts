@@ -1,5 +1,6 @@
+import { NewPage } from './../new/new';
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, ViewController, ActionSheetController, ToastController, AlertController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ViewController, ActionSheetController, ToastController, AlertController, App } from 'ionic-angular';
 import { Storage } from '@ionic/storage'
 import { Reading } from '../../models/reading'
 
@@ -17,13 +18,14 @@ export class ReadingPage {
   saved: boolean = false
 
   constructor(
+    public app: App,
     public navCtrl: NavController,
     public navParams: NavParams,
     public storage: Storage,
     public actionCtrl: ActionSheetController,
     public viewCtrl: ViewController,
     public alertCtrl: AlertController,
-    private toastCtrl: ToastController) {
+  ) {
 
       let readingData = {
         question: navParams.get('question'),
@@ -63,8 +65,9 @@ export class ReadingPage {
   }
 
   clickBack() {
+
     if (this.saved) {
-      this.navCtrl.setRoot('NewPage')
+      this.navCtrl.setRoot(NewPage)
     }
 
     if (!this.saved) {
@@ -76,13 +79,14 @@ export class ReadingPage {
             text: 'Save and Leave',
             handler: () => {
               this.saveReading()
-              this.navCtrl.setRoot('NewPage')
+              this.navCtrl.setRoot(NewPage)
             }
           },
           {
             text: 'Leave without Saving',
             handler: () => {
-              this.navCtrl.setRoot('NewPage')
+              console.log('leaving')
+              this.navCtrl.setRoot(NewPage)
             }
           },
           {

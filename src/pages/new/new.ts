@@ -4,7 +4,6 @@ import { Storage } from '@ionic/storage'
 import {
   NavController,
   ModalController,
-  LoadingController,
   AlertController,
   IonicPage,
   ActionSheetController
@@ -15,7 +14,6 @@ import { houseInfo } from '../../models/house.info'
 import { Tetragram } from "../../models/tetragram";
 import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 
-@IonicPage()
 @Component({
   selector: 'page-new',
   templateUrl: 'new.html'
@@ -37,7 +35,6 @@ export class NewPage {
   constructor(
     public navCtrl: NavController,
     private modCtrl: ModalController,
-    private loadingCtrl: LoadingController,
     private storage: Storage,
     private alertCtrl: AlertController,
     private actionCtrl: ActionSheetController,

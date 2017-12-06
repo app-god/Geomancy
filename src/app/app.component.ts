@@ -1,3 +1,4 @@
+import { NewPage } from './../pages/new/new';
 import { Component } from '@angular/core';
 import { Platform, MenuController, App, IonicApp } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
@@ -8,7 +9,7 @@ import { Storage } from '@ionic/storage'
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage = 'NewPage'
+  rootPage = NewPage
 
   constructor(
     platform: Platform,

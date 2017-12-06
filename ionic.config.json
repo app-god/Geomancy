@@ -1,5 +1,8 @@
 {
   "name": "Geomancy",
   "app_id": "a4e089bc",
-  "type": "ionic-angular"
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
 }
