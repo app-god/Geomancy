@@ -96,5 +96,4 @@ export class HistoryPage {
     })
     alert.present()
   }
-
 }

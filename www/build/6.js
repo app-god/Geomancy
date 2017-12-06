@@ -346,7 +346,6 @@ var ReadingPage = /** @class */ (function () {
         this.viewCtrl = viewCtrl;
         this.alertCtrl = alertCtrl;
         this.saved = false;
-        console.log('views:', navCtrl.getViews());
         var readingData = {
             question: navParams.get('question'),
             topic: navParams.get('topic'),
@@ -378,7 +377,6 @@ var ReadingPage = /** @class */ (function () {
         });
     };
     ReadingPage.prototype.goBack = function () {
-        console.log('can go back: ', this.navCtrl.canGoBack());
         if (this.navCtrl.canGoBack()) {
             this.app.getRootNav().pop();
         }
@@ -389,11 +387,9 @@ var ReadingPage = /** @class */ (function () {
     ReadingPage.prototype.clickBack = function () {
         var _this = this;
         if (this.saved) {
-            console.log('saved');
             this.goBack();
         }
         if (!this.saved) {
-            console.log('not saved');
             var alert = this.alertCtrl.create({
                 title: 'Are you sure you want to leave this reading?',
                 message: 'If you leave without saving, this reading will be lost.',
@@ -408,7 +404,6 @@ var ReadingPage = /** @class */ (function () {
                     {
                         text: 'Leave without Saving',
                         handler: function () {
-                            console.log('leaving');
                             _this.goBack();
                         }
                     },

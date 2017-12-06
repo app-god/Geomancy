@@ -26,7 +26,6 @@ export class ReadingPage {
     public viewCtrl: ViewController,
     public alertCtrl: AlertController,
   ) {
-    console.log('views:', navCtrl.getViews())
 
     let readingData = {
       question: navParams.get('question'),
@@ -66,7 +65,6 @@ export class ReadingPage {
   }
 
   goBack() {
-    console.log('can go back: ', this.navCtrl.canGoBack())
     if (this.navCtrl.canGoBack()) {
       this.app.getRootNav().pop()
     } else {
@@ -77,12 +75,10 @@ export class ReadingPage {
   clickBack() {
 
     if (this.saved) {
-      console.log('saved')
       this.goBack()
     }
 
     if (!this.saved) {
-      console.log('not saved')
       let alert = this.alertCtrl.create({
         title: 'Are you sure you want to leave this reading?',
         message: 'If you leave without saving, this reading will be lost.',
@@ -97,7 +93,6 @@ export class ReadingPage {
           {
             text: 'Leave without Saving',
             handler: () => {
-              console.log('leaving')
               this.goBack()
             }
           },
