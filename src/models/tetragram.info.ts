@@ -4,6 +4,7 @@ export interface TetragramInfo {
   key: number
 
   name: string
+  image: string
   translation: string
   desc: string
   planet: string
@@ -24,6 +25,7 @@ export const tetragramInfo: TetragramInfo[] = [
   {
     key: 0,
     name: 'Via',
+    image: 'A road or a path',
     translation: 'Way',
     desc: 'Injurious to the goodness of other figures generally, but good for journeys and voyages.',
     planet: 'Moon',
@@ -54,6 +56,7 @@ export const tetragramInfo: TetragramInfo[] = [
   {
     key: 1,
     name: 'Caput Draconis',
+    image: 'The north node of the moon (☊).',
     translation: "Dragon's Head",
     desc: 'Good with good, evil with evil. Gives good issue for gain.',
     planet: 'Venus',
@@ -84,6 +87,7 @@ export const tetragramInfo: TetragramInfo[] = [
   {
     key: 2,
     name: 'Puella',
+    image: 'A woman with exaggerated breasts.',
     translation: 'Maid',
     desc: 'Good in all demands, especially in those things relating to women.',
     planet: 'Venus',
@@ -114,6 +118,7 @@ export const tetragramInfo: TetragramInfo[] = [
   {
     key: 3,
     name: 'Fortuna Major',
+    image: 'Blessings growing from the earth and being fruitful in the air.',
     translation: 'Greater Fortune',
     desc: 'Good for gain in all things where a person has hopes to win.',
     planet: 'Sun',
@@ -144,6 +149,7 @@ export const tetragramInfo: TetragramInfo[] = [
   {
     key: 4,
     name: 'Puer',
+    image: 'An erect phallus',
     translation: 'Child',
     desc: 'Evil in most demands, except in those things relating to war or love.',
     planet: 'Mars',
@@ -174,6 +180,7 @@ export const tetragramInfo: TetragramInfo[] = [
   {
     key: 5,
     name: 'Acquisitio',
+    image: 'Two cups turned upright.',
     translation: 'Gain',
     desc: 'Generally good for profit and gain.',
     planet: 'Jupiter',
@@ -204,6 +211,7 @@ export const tetragramInfo: TetragramInfo[] = [
   {
     key: 6,
     name: 'Carcer',
+    image: 'The outline of an enclosure.',
     translation: 'Prison',
     desc: 'Generally evil. Delay, binding, bar, restriction.',
     planet: 'Saturn',
@@ -234,6 +242,7 @@ export const tetragramInfo: TetragramInfo[] = [
   {
     key: 7,
     name: 'Tristitia',
+    image: 'A broken arch or a knife being driven into the ground.',
     translation: 'Sorrow',
     desc: 'Evil in almost all things.',
     planet: 'Saturn',
@@ -264,6 +273,7 @@ export const tetragramInfo: TetragramInfo[] = [
   {
     key: 8,
     name: 'Cauda Draconis',
+    image: 'The south node of the moon (☋).',
     translation: "Dragon's Tail",
     desc: 'Good with evil, and evil with good. Good for loss, and for passing out of an affair.',
     planet: 'Mars',
@@ -294,6 +304,7 @@ export const tetragramInfo: TetragramInfo[] = [
   {
     key: 9,
     name: 'Conjunctio',
+    image: 'A joining of two figures.',
     translation: 'Connection',
     desc: 'Good with good, or evil with evil. Recovery from things lost.',
     planet: 'Mercury',
@@ -324,6 +335,7 @@ export const tetragramInfo: TetragramInfo[] = [
   {
     key: 10,
     name: 'Amissio',
+    image: 'Two bowls turned upside-down.',
     translation: 'Loss',
     desc: 'Good for loss of substance and sometimes for love, but very bad for gain.',
     planet: 'Venus',
@@ -354,6 +366,7 @@ export const tetragramInfo: TetragramInfo[] = [
   {
     key: 11,
     name: 'Albus',
+    image: 'An upright glass.',
     translation: 'White',
     desc: 'Good for profit and for entering into a place or undertaking.',
     planet: 'Mercury',
@@ -384,6 +397,7 @@ export const tetragramInfo: TetragramInfo[] = [
   {
     key: 12,
     name: 'Fortuna Minor',
+    image: 'Beams of light coming from the Sun.',
     translation: 'Lesser Fortune',
     desc: 'Good in any manner in which a person wishes to proceed quickly.',
     planet: 'Sun',
@@ -414,6 +428,7 @@ export const tetragramInfo: TetragramInfo[] = [
   {
     key: 13,
     name: 'Rubeus',
+    image: 'An overturned glass.',
     translation: 'Red',
     desc: 'Evil in all that is good and good in all that is evil.',
     planet: 'Mars',
@@ -444,6 +459,7 @@ export const tetragramInfo: TetragramInfo[] = [
   {
     key: 14,
     name: 'Laetitia',
+    image: 'An arch, fountain, or rainbow.',
     translation: 'Joy',
     desc: 'Good for joy, present or to come.',
     planet: 'Jupiter',
@@ -474,6 +490,7 @@ export const tetragramInfo: TetragramInfo[] = [
   {
     key: 15,
     name: 'Populus',
+    image: 'A group of people.',
     translation: 'People',
     desc: 'Sometimes good and sometimes bad; good with good, and evil with evil.',
     planet: 'Moon',

@@ -497,16 +497,20 @@ var TetragramPage = /** @class */ (function () {
         this.placements = __WEBPACK_IMPORTED_MODULE_2__models_placement__["a" /* Placement */].getPlacementsForTetragram(this.tetragram);
         this.details = [
             {
-                name: 'Translation',
-                value: this.tetragram.translation
-            },
-            {
                 name: 'Meaning',
                 value: this.tetragram.desc
             },
             {
+                name: 'Image',
+                value: this.tetragram.image
+            },
+            {
                 name: 'Keyword',
                 value: this.tetragram.phrase
+            },
+            {
+                name: 'Translation',
+                value: this.tetragram.translation
             },
             {
                 name: 'Element',
@@ -530,9 +534,10 @@ var TetragramPage = /** @class */ (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
             selector: 'page-tetragram',template:/*ion-inline-start:"/Users/aneeley/Code/geomancy/src/pages/tetragram/tetragram.html"*/'<ion-header>\n\n  <ion-navbar>\n    <ion-title>{{tetragram.name}}</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n  <div class="big tetragram">\n    <tetragram [tetragram]="tetragram" color="planet"></tetragram>\n  </div>\n\n  <ion-grid>\n    <ion-row *ngFor="let detail of details">\n      <ion-col col-4>{{detail.name}}</ion-col>\n      <ion-col col-8 [ngClass]="detail.class">{{detail.value}}</ion-col>\n    </ion-row>\n  </ion-grid>\n\n  <ion-list no-lines>\n\n    <ion-list-header>Related Tetragrams</ion-list-header>\n\n    <ion-item-divider>Reverse</ion-item-divider>\n    <tetragram-item [tetragram]="tetragram.reversed()" (tap)="showTetragram(tetragram.reversed())"></tetragram-item>\n\n    <ion-item-divider>Inverse</ion-item-divider>\n    <tetragram-item [tetragram]="tetragram.inversed()" (tap)="showTetragram(tetragram.inversed())"></tetragram-item>\n\n    <ion-item-divider>Converse</ion-item-divider>\n    <tetragram-item [tetragram]="tetragram.conversed()" (tap)="showTetragram(tetragram.conversed())"></tetragram-item>\n\n  </ion-list>\n\n  <ion-list no-lines>\n\n    <ion-list-header>Placements</ion-list-header>\n\n    <ion-item-group *ngFor="let placement of placements">\n      <ion-item-divider>House of {{placement.house.title}}</ion-item-divider>\n      <placement-item [placement]="placement" (tap)="showPlacement(placement)"></placement-item>\n    </ion-item-group>\n\n  </ion-list>\n\n</ion-content>\n'/*ion-inline-end:"/Users/aneeley/Code/geomancy/src/pages/tetragram/tetragram.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavParams */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavParams */]) === "function" && _b || Object])
     ], TetragramPage);
     return TetragramPage;
+    var _a, _b;
 }());
 
 //# sourceMappingURL=tetragram.js.map

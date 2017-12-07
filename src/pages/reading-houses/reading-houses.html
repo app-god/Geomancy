@@ -5,7 +5,7 @@
   <ion-list>
     <ion-item-group *ngFor="let placement of reading.placements">
 
-      <ion-item-divider>House of {{placement.house.title}}</ion-item-divider>
+      <ion-item-divider>{{placement.house.title}}</ion-item-divider>
 
       <placement-item [placement]="placement" (tap)="showPlacement(placement)"></placement-item>
 

@@ -527,7 +527,7 @@ var ReadingHousesPage = /** @class */ (function () {
     };
     ReadingHousesPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-reading-houses',template:/*ion-inline-start:"/Users/aneeley/Code/geomancy/src/pages/reading-houses/reading-houses.html"*/'<ion-header><ion-navbar></ion-navbar></ion-header>\n\n<ion-content padding>\n\n  <ion-list>\n    <ion-item-group *ngFor="let placement of reading.placements">\n\n      <ion-item-divider>House of {{placement.house.title}}</ion-item-divider>\n\n      <placement-item [placement]="placement" (tap)="showPlacement(placement)"></placement-item>\n\n    </ion-item-group>\n  </ion-list>\n\n</ion-content>\n'/*ion-inline-end:"/Users/aneeley/Code/geomancy/src/pages/reading-houses/reading-houses.html"*/,
+            selector: 'page-reading-houses',template:/*ion-inline-start:"/Users/aneeley/Code/geomancy/src/pages/reading-houses/reading-houses.html"*/'<ion-header><ion-navbar></ion-navbar></ion-header>\n\n<ion-content padding>\n\n  <ion-list>\n    <ion-item-group *ngFor="let placement of reading.placements">\n\n      <ion-item-divider>{{placement.house.title}}</ion-item-divider>\n\n      <placement-item [placement]="placement" (tap)="showPlacement(placement)"></placement-item>\n\n    </ion-item-group>\n  </ion-list>\n\n</ion-content>\n'/*ion-inline-end:"/Users/aneeley/Code/geomancy/src/pages/reading-houses/reading-houses.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* NavParams */]])
     ], ReadingHousesPage);

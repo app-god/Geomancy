@@ -7,6 +7,7 @@ export class Tetragram {
   })
 
   name: string
+  image: string
   translation: string
   desc: string
   element: string
@@ -29,6 +30,7 @@ export class Tetragram {
   constructor(public key: number = Math.floor(Math.random() * 15)) {
     let info: TetragramInfo = tetragramInfo[key]
     this.name = info.name
+    this.image = info.image
     this.translation = info.translation
     this.desc = info.desc
     this.element = info.element
